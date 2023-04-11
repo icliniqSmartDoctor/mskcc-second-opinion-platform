@@ -1,4 +1,17 @@
 {
   "extends": "astro/tsconfigs/strict",
-  "exclude": ["functions/**/*"],
+  "exclude": [
+    "functions/**/*"
+  ],
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "jsxImportSource": "react",
+    "baseUrl": "./src",
+    "paths": {
+      "@/utils/*": ["src/utils/*"],
+      "@/assets/*": ["src/assets/*"],
+      "@/stores/*": ["src/stores/*"],
+      "@/styles/*": ["src/styles/*"]
+    }
+  }
 }
