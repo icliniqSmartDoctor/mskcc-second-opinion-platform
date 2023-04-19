@@ -8,7 +8,7 @@ import * as CONSTANTS from '../constants';
 import type { Meta, StoryFn } from "@storybook/react";
 
 export default {
-  title: 'Tests/Nav',
+  title: 'Element/Nav',
   component: Nav,
 } as Meta;
 
@@ -25,4 +25,6 @@ export const NavTest = Template.bind({});
 
 NavTest.play = async ({ canvasElement }) => {
   const canvas = within(canvasElement);
+
 };
+

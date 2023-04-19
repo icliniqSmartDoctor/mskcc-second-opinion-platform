@@ -17,3 +17,16 @@ export const SIDEMENU = [
     },
     
 ]
+
+export const MSKCC_MENU = [
+    {
+        'home': './'
+    },
+    {
+        'about us': [
+           {'about msk' :  './about-msk'},
+           {'cancer specialities' :  './cancer-specialities'},
+        ]
+    }
+    
+]
