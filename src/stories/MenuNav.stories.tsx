@@ -3,18 +3,18 @@
 
 import React from 'react';
 import { within, fireEvent, userEvent, screen } from '@storybook/testing-library';
-import Nav from '../components/Nav';
 import * as CONSTANTS from '../constants';
 import type { Meta, StoryFn } from "@storybook/react";
+import MenuNav from 'components/MenuNav';
 
 export default {
   title: 'Home/Nav',
-  component: Nav,
+  component: MenuNav,
 } as Meta;
 
-const Template  : StoryFn = (args) => <Nav {...args} />;
+const Template  : StoryFn = (args) => <MenuNav {...args} />;
 
-export const Navbar = Template.bind({});
+export const NavMenu = Template.bind({});
 
 // CasesTest.parameters = {
 //   design: {
@@ -23,7 +23,7 @@ export const Navbar = Template.bind({});
 //   },
 // };
 
-Navbar.play = async ({ canvasElement }) => {
+NavMenu.play = async ({ canvasElement }) => {
   const canvas = within(canvasElement);
 
 };
