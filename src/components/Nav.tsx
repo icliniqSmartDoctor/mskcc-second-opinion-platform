@@ -1,5 +1,5 @@
 
-import { Button, Navbar, Accordion, ListGroup } from 'flowbite-react'
+import { Navbar } from 'flowbite-react'
 import AssetAccessor from 'utils/AssetAccessor';
 import * as CONSTANTS from '../constants'
 
@@ -17,13 +17,11 @@ function Nav() {
         }
     }
 
-
     return (
         <>
             <Navbar
-                className='  z-30  w-full fixed left-0 right-0 pt-7 pb-7'
+                className='  z-30  w-full relative left-0 right-0 pt-7 pb-7'
             >
-
                 <Navbar.Brand href="#">
                     <img
                         src={AssetAccessor.mskcc_Logo}
@@ -31,18 +29,29 @@ function Nav() {
                         alt="Logo"
                     />
                 </Navbar.Brand>
-                <div className="flex md:order-2">
+                <div className="flex md:order-2 md:!flex-row-reverse">
                     <div className="flex md:order-2  pr-3 md:pr-8 items-center">
                         <img className="h-9 md:h-10 " src={AssetAccessor.ic_white_logo} />
                     </div>
-                    <Navbar.Toggle onClick={openAccordation} />
+                    <Navbar.Toggle className='block md:!block lg:!hidden' onClick={openAccordation} />
                 </div>
-
-
-                <div className='md:hidden custom-accordation bg-primary w-full mt-5 pt-0 border-none '>
-                    <div className='border-collapse'>
-
-
+                
+                <Navbar.Collapse className='hidden md:hidden lg:block'>
+                    <div className='text-md flex items-center tracking-wide	font-light'>
+                        <i className='fa fa-envelope text-primary pr-2  text-xl'></i>
+                        <p>Email: </p>
+                        <a className="pl-2 text-secondary" href="mailto:mskccindia@icliniq.com">mskccindia@icliniq.com</a>
+                    </div>
+                    <div className='text-md flex items-center tracking-wide	font-light'>
+                        <i className='fa fa-phone text-primary pr-2 mt-1 text-xl'></i>
+                        <p>Phone Number: </p>
+                        <a className="pl-2 text-secondary" href="tel:+918270070000">+91 82 700 70000</a>
+                    </div>
+                </Navbar.Collapse>
+                
+            </Navbar>
+            <div className='lg:hidden custom-accordation bg-white w-full border-none '>
+                    <div className='border-collapse bg-primary m-10 mt-2'>
                         {
                             CONSTANTS.MSKCC_MENU.map(data => {
                                 return Object.values(data).map(res => {
@@ -94,78 +103,14 @@ function Nav() {
                             })
                         }
 
-                        <div className='mskcc-nav-options'>
-                            <div className='h-auto py-3  w-full bg-primary border border-gray-400 text-lg'>
-                                <span className='ml-8 text-gray-400'>About MSK</span>
+                        <a href='./login'>
+                            <div className='h-auto py-3 w-full bg-primary border text-white uppercase text-md '>
+                                <span className='ml-4'>Login</span>
                             </div>
-                            <div className='h-auto py-3  w-full bg-primary border border-gray-400 text-lg'>
-                                <span className='ml-8 text-gray-400'>About MSK</span>
-                            </div>
-                            <div className='h-auto py-3  w-full bg-primary border border-gray-400 text-lg'>
-                                <span className='ml-8 text-gray-400'>About MSK</span>
-                            </div>
-                            <div className='h-auto py-3  w-full bg-primary border border-gray-400 text-lg'>
-                                <span className='ml-8 text-gray-400'>About MSK</span>
-                            </div>
-                            <div className='h-auto py-3  w-full bg-primary border border-gray-400 text-lg'>
-                                <span className='ml-8 text-gray-400'>About MSK</span>
-                            </div>
-                        </div>
-
-
-
-
-
+                        </a>
 
                     </div>
-
-
                 </div>
-                {/* <Accordion collapseAll={true} flush={true} >
-                    <Accordion.Panel>
-                        <Accordion.Title className='!text-white'>
-                            What is Flowbite?
-                        </Accordion.Title>
-                        <Accordion.Content className='pl-5'>
-                            <ListGroup className='	bg-primary border-none'>
-                                <ListGroup.Item className='custom-accordation-item'>
-                                    <span >Profile</span>
-                                    <i className='fa fa-caret-right'></i>
-                                </ListGroup.Item>
-                                <ListGroup.Item>
-                                    Settings
-                                </ListGroup.Item>
-                                <ListGroup.Item>
-                                    Messages
-                                </ListGroup.Item>
-                                <ListGroup.Item>
-                                    Download
-                                </ListGroup.Item>
-                            </ListGroup>
-                        </Accordion.Content>
-                    </Accordion.Panel>
-                    <Accordion.Panel>
-                        <Accordion.Title className='!text-white'>
-                            Is there a Figma file available?
-                        </Accordion.Title>
-                        <Accordion.Content>
-
-                        </Accordion.Content>
-                    </Accordion.Panel>
-                    <Accordion.Panel >
-                        <Accordion.Title className='!text-white'>
-                            What are the differences between Flowbite and Tailwind UI?
-                        </Accordion.Title>
-                        <Accordion.Content>
-
-                        </Accordion.Content>
-                    </Accordion.Panel>
-                </Accordion> */}
-
-
-
-
-            </Navbar>
         </>
     )
 }

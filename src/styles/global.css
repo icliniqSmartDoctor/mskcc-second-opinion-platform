@@ -20,16 +20,27 @@
 
 .custom-accordation-open {
     max-height: 500px;
-    transition: max-height 0.2s  ease-in;
+    transition: max-height 0.2s ease-in;
 }
 
 .mskcc-nav-options {
     overflow: hidden;
-    transition: all 0.2s  ease-out;
+    transition: all 0.2s ease-out;
     max-height: 0px;
 }
 
 .mskcc-nav-option-open {
     max-height: 500px;
-    transition: max-height 0.2s  ease-in;
+    transition: max-height 0.2s ease-in;
+}
+
+.mskcc-menu-nav-options {
+    opacity: 0;
+    transform: translateY(10%);
+    transition: transform 0.5s, opacity 0.5s;
+}
+
+.menu-opt:hover ~ .mskcc-menu-nav-options {
+    opacity: 1;
+    transform: translateY(0);
 }
