@@ -4,6 +4,172 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+    background: #fff;
+    font-family: 'rubik', sans-serif;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+    color: #223645;
+    font-family: 'Poppins', sans-serif;
+}
+
+.poppins-font {
+    font-family: 'Poppins', sans-serif;
+}
+
+.rubik-font {
+    font-family: 'rubik', sans-serif;
+}
+
+.gray-bg {
+    background: #f4f9fc;
+}
+
+.text-gradient {
+    background-image: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 400%;
+    background-position: 0%;
+}
+
+.container-alternate {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto
+}
+
+.btn-icon {
+    display: inline-flex;
+    min-height: 60px;
+    align-items: center;
+    transition: all .3s ease 0s;
+    position: relative;
+    text-transform: uppercase;
+    color: #fff;
+    border-radius: 60px;
+    padding-left: 84px;
+    padding-right: 50px;
+    background-color: #002569;
+    box-shadow: 0 8px 16px 0 #06488546;
+}
+
+.btn-icon span {
+    position: absolute;
+    left: 5px;
+    text-align: center;
+    width: 50px;
+    height: 50px;
+    top: 5px;
+    line-height: 50px;
+    background: #fff;
+    transition: .3s;
+    font-size: 20px;
+    font-weight: 600;
+    color: #223645;
+    border-radius: 100%;
+}
+
+.btn-icon:hover {
+    transition: all .3s ease 0s;
+    background-color: #f7fbff;
+    box-shadow: 0 8px 16px 0 rgba(125, 178, 73, .2);
+    color: #223645;
+}
+
+.instructions {
+    line-height: 1.6;
+    margin: 1rem 0;
+    border: 1px solid rgba(var(--accent), 25%);
+    background-color: white;
+    padding: 1rem;
+    border-radius: 0.4rem;
+}
+
+.instructions code {
+    font-size: 0.875em;
+    font-weight: bold;
+    background: rgba(var(--accent), 12%);
+    color: rgb(var(--accent));
+    border-radius: 4px;
+    padding: 0.3em 0.45em;
+}
+
+.instructions strong {
+    color: rgb(var(--accent));
+}
+
+.link-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+    gap: 1rem;
+    padding: 0;
+}
+
+@media (max-width: 768px) and (max-width: 991px) {
+    .btn-icon {
+        min-height: 53px;
+        border-radius: 30px;
+        padding-left: 55px;
+        padding-right: 20px;
+        background-color: #002569;
+        box-shadow: 0px 8px 16px 0px #06488546;
+    }
+
+    .btn-icon span {
+        position: absolute;
+        left: 10px;
+        text-align: center;
+        width: 35px;
+        height: 35px;
+        top: 8px;
+        line-height: 35px;
+        background: #fff;
+        transition: .3s;
+        font-size: 20px;
+        font-weight: 600;
+        color: #223645;
+        border-radius: 100%;
+    }
+}
+
+@media (min-width: 576px) {
+    .container-alternate {
+        max-width: 540px
+    }
+}
+
+@media (min-width: 768px) {
+    .container-alternate {
+        max-width: 720px
+    }
+}
+
+@media (min-width: 992px) {
+    .container-alternate {
+        max-width: 960px
+    }
+}
+
+@media (min-width: 1200px) {
+    .container-alternate {
+        max-width: 1200px
+    }
+}
 
 .custom-accordation-item>button {
     display: flex;
@@ -41,7 +207,7 @@
     transition: transform 0.5s, opacity 0.5s ease-in-out;
 }
 
-.menu-opt:hover ~ .mskcc-menu-nav-options {
+.menu-opt:hover~.mskcc-menu-nav-options {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
@@ -51,4 +217,47 @@
     visibility: visible;
     opacity: 1;
     transform: translateY(0);
+}
+
+.slider-height-3 {
+    background-image: url("https://assets.icliniq.com/v2/assets/images/mskcc/img/mskcc-cancer/home-banner-doctor-v2.jpg");
+    min-height: 780px;
+    z-index: -1;
+}
+.hero-text-box {
+    padding: 75px;
+    background: #fff;
+    padding-right: 66px;
+}
+.banner-text-color{
+    color: #647589;
+}
+
+.service-box {
+    padding: 25px;
+    background: #fff;
+    transition: .4s;
+}
+.service-box:hover {
+    background-color: #fff;
+    box-shadow: 0 16px 32px 0 rgba(196,203,255,.3);
+}
+.service-link {
+    color: #011a39;
+}
+.service-box a {
+    transition: .4s;
+}
+.service-box a:hover {
+    transition: .4s;
+    color: #0073e0;
+}
+
+@media (max-width: 767px){
+    .hero-text {
+        text-align: center;
+    }
+    .hero-text-box{
+        padding: 30px;
+    }
 }

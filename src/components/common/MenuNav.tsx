@@ -1,7 +1,6 @@
-import * as CONSTANTS from '../constants'
+import * as CONSTANTS from '../../constants'
 
 function MenuNav() {
-
     return (
         <>
             <div className='bg-primary absolute h-20 w-full hidden lg:block'>

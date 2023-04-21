@@ -1,7 +1,7 @@
 
 import { Navbar } from 'flowbite-react'
 import AssetAccessor from 'utils/AssetAccessor';
-import * as CONSTANTS from '../constants'
+import * as CONSTANTS from '../../constants'
 
 function Nav() {
 
@@ -51,7 +51,7 @@ function Nav() {
                 
             </Navbar>
             <div className='lg:hidden custom-accordation bg-white w-full border-none '>
-                    <div className='border-collapse bg-primary m-10 mt-2'>
+                    <div className='border-collapse bg-primary m-5 mt-2'>
                         {
                             CONSTANTS.MSKCC_MENU.map(data => {
                                 return Object.values(data).map(res => {
