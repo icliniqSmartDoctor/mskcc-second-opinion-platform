@@ -1,6 +1,5 @@
 import * as CONSTANTS from '../../constants'
 
-
 function MenuNav() {
 
     return (

@@ -46,8 +46,10 @@ export const SPECIALITIES = [
         'Kidney Cancer (Renal Cell Cancer)': './cancer-care/types/benign-blood-disorders',
         'Leukemia': './cancer-care/types/benign-blood-disorders',
         'Liver, Biliary, and Pancreatic Cancer': './cancer-care/types/benign-blood-disorders',
-    }, {
+    },
+    {
         'Lung Cancer': './cancer-care/types/benign-blood-disorders',
+        'Lymphoma': '/cancer-care/types/lymphoma',
         'Multiple Myeloma': './cancer-care/types/benign-blood-disorders',
         'Ovarian, Cervical, and Endometrial Cancer': './cancer-care/types/benign-blood-disorders',
         'Pediatric (Childhood) Cancers': './cancer-care/types/benign-blood-disorders',

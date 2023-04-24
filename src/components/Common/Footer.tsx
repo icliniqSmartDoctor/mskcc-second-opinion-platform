@@ -2,8 +2,6 @@ import AssetAccessor from 'utils/AssetAccessor';
 import * as CONSTANTS from '../../constants'
 
 function Footer() {
-    const footerMenu: string[] = [];
-
     return (
         <>
             <div className='bg-primary h-auto relative mt-10 w-full'>

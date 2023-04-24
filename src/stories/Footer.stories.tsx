@@ -7,7 +7,7 @@ import * as CONSTANTS from '../constants';
 import type { Meta, StoryFn } from "@storybook/react";
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
 import { expect } from '@storybook/jest'
-import Footer from 'components/common/Footer';
+import Footer from 'components/Common/Footer';
 
 export default {
   title: 'Home/Footer',

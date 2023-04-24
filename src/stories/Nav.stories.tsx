@@ -3,7 +3,7 @@
 
 import React from 'react';
 import { within, fireEvent, userEvent, screen } from '@storybook/testing-library';
-import Nav from '../components/common/Nav';
+import Nav from '../components/Common/Nav';
 import * as CONSTANTS from '../constants';
 import type { Meta, StoryFn } from "@storybook/react";
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
