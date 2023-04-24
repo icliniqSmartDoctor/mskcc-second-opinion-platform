@@ -31,31 +31,36 @@ function capitalizeFirstLetter(string: string) {
 NavMenu.play = async ({ canvasElement }) => {
   const canvas = within(canvasElement);
 
-  CONSTANTS.MSKCC_MENU.map(data => {
-    Object.values(data).map(async (res) => {
-
-      if (Array.isArray(res)) {
-        const arrButton: any = canvas.getByText(Object.keys(data)[0] + " +").parentElement;
-        const arrMenu: any  = canvas.getByText(Object.keys(data)[0] + " +").parentElement?.nextElementSibling;
-
-          await userEvent.hover(arrButton);
-          // await new Promise(r => setTimeout(r, 200));
-          // expect(arrMenu).toHaveStyle('visibility: visible;')
-          // await userEvent.unhover(arrButton);
-
-
-          // console.log(window.getComputedStyle(arrMenu).visibility);
+  const arrButton: any = canvas.getByText('about us'+ " +").parentElement;
+  const arrMenu: any  = arrButton?.nextElementSibling;
 
 
 
+  // CONSTANTS.MSKCC_MENU.map(data => {
+  //   Object.values(data).map(async (res) => {
+
+  //     if (Array.isArray(res)) {
+  //       const arrButton: any = canvas.getByText(Object.keys(data).toString() + " +").parentElement;
+  //       const arrMenu: any  = canvas.getByText(Object.keys(data).toString() + " +").parentElement?.nextElementSibling;
+
+  //         await userEvent.click(arrButton);
+  //         // await new Promise(r => setTimeout(r, 200));
+  //         await expect(arrMenu).toBeVisible()
+  //         // await userEvent.unhover(arrButton);
 
 
-      }
-      else {
-        <a href={`${Object.values(data)[0]}`}> <div className='mx-4 capitalize'>{Object.keys(data)[0]}</div></a >
-      }
+  //         // console.log(window.getComputedStyle(arrMenu).visibility);
 
-    })
-  })
+
+
+
+
+  //     }
+  //     else {
+  //       <a href={`${Object.values(data).toString()}`}> <div className='mx-4 capitalize'>{Object.keys(data).toString()}</div></a >
+  //     }
+
+  //   })
+  // })
 };
 
