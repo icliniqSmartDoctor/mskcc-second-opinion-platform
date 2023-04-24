@@ -14,7 +14,7 @@ export default {
 
 const Template  : StoryFn = (args) => <DashNav {...args} />;
 
-export const DashNavbar = Template.bind({});
+export const DashboardNavbar = Template.bind({});
 
 // CasesTest.parameters = {
 //   design: {
@@ -23,6 +23,6 @@ export const DashNavbar = Template.bind({});
 //   },
 // };
 
-DashNavbar.play = async ({ canvasElement }) => {
+DashboardNavbar.play = async ({ canvasElement }) => {
   const canvas = within(canvasElement);
 };

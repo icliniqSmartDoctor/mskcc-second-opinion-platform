@@ -58,3 +58,61 @@ export const SPECIALITIES = [
         'View Other Types of Cancer': './cancer-care/types/benign-blood-disorders'
     }
 ]
+
+
+export const MSK_DOCTORS = [
+    {
+        'drName' : 'Sir Dr. Murray Brennan',
+        'specialist': 'surgical oncologist',
+        'doctorPage': 'cancer-care/doctors/murray-brennan',
+        'drImg': 'https://assets.icliniq.com/v2/assets/images/mskcc/img/mskcc-cancer/doctor-details-310-3.jpg'
+    },
+    {
+        'drName' : 'Dr. Mrinal Gounder',
+        'specialist': 'medical oncologist',
+        'doctorPage': 'cancer-care/doctors/murray-brennan',
+        'drImg': 'https://assets.icliniq.com/v2/assets/images/mskcc/img/mskcc-cancer/doctor-details-310-7.jpg'
+    },
+    {
+        'drName' : 'Dr. Lisa DeAngelis',
+        'specialist': 'neuro-oncologist',
+        'doctorPage': 'cancer-care/doctors/murray-brennan',
+        'drImg': 'https://assets.icliniq.com/v2/assets/images/mskcc/img/mskcc-cancer/doctor-details-310-1.jpg'
+    },
+    {
+        'drName' : 'Dr. Monica Morrow',
+        'specialist': 'surgical oncologist',
+        'doctorPage': 'cancer-care/doctors/murray-brennan',
+        'drImg': 'https://assets.icliniq.com/v2/assets/images/mskcc/img/mskcc-cancer/doctor-details-310-6.jpg'
+    },
+    {
+        'drName' : 'Dr. Jatin Shah',
+        'specialist': 'surgical oncologist',
+        'doctorPage': 'cancer-care/doctors/murray-brennan',
+        'drImg': 'https://assets.icliniq.com/v2/assets/images/mskcc/img/mskcc-cancer/doctor-details-310-2.jpg'
+    },
+    {
+        'drName' : 'Dr. Christopher Crane',
+        'specialist': 'radiation oncologist',
+        'doctorPage': 'cancer-care/doctors/murray-brennan',
+        'drImg': 'https://assets.icliniq.com/v2/assets/images/mskcc/img/mskcc-cancer/doctor-details-310-4.jpg'
+    },
+    {
+        'drName' : 'Dr. Andrew Seidman',
+        'specialist': 'medical oncologist',
+        'doctorPage': 'cancer-care/doctors/murray-brennan',
+        'drImg': 'https://assets.icliniq.com/v2/assets/images/mskcc/img/mskcc-cancer/doctor-details-310-8.jpg'
+    },
+    {
+        'drName' : 'Dr. Sergio Giralt',
+        'specialist': 'hematologic oncologist',
+        'doctorPage': 'cancer-care/doctors/murray-brennan',
+        'drImg': 'https://assets.icliniq.com/v2/assets/images/mskcc/img/mskcc-cancer/doctor-details-310-5.jpg'
+    },
+    {
+        'drName' : 'Dr. James A. Eastham',
+        'specialist': 'surgical oncologist',
+        'doctorPage': 'cancer-care/doctors/murray-brennan',
+        'drImg': 'https://assets.icliniq.com/v2/assets/images/mskcc/img/mskcc-cancer/james-eastham-mskcc.jpg'
+    }
+]

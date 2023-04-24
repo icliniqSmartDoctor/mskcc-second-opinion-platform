@@ -1,8 +1,7 @@
-import React from 'react';
 import { within, fireEvent} from '@storybook/testing-library';
 import { expect } from '@storybook/jest';
 import SideNav from 'components/Dashboard/Common/SideNav';
-import * as CONSTANTS from 'constants.tsx';
+import * as CONSTANTS from '../constants';
 import type { Meta, StoryFn } from "@storybook/react";
 
 

@@ -1,9 +1,4 @@
-
- 
-
-import React from 'react';
-import { within, fireEvent, userEvent, screen } from '@storybook/testing-library';
-import { expect } from '@storybook/jest';
+import { within,  userEvent  } from '@storybook/testing-library';
 import Draft from 'components/Dashboard/Home/Draft';
 import type { Meta, StoryFn } from "@storybook/react";
 

@@ -1,6 +1,4 @@
-import React from 'react';
-import { within, fireEvent, userEvent, screen } from '@storybook/testing-library';
-import { expect } from '@storybook/jest';
+import { within} from '@storybook/testing-library';
 import CalendarSchedular from 'components/Dashboard/Account/CalendarSchedular';
 import type { Meta, StoryFn } from "@storybook/react";
 

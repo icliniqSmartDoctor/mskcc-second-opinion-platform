@@ -159,18 +159,7 @@ function CancerSpecialties() {
                 </div>
             </div>
         </div>
-        <div className='gray-bg pt-24 pb-28'>
-            <div className='container-alternate mx-auto px-4'>
-                <p className='h5 text-xl font-semibold'>MSK India</p>
-                <h2 className="text-4xl font-semibold mb-5">Services Offered by MSK in India</h2>
-                <div className="mb-20">
-                    <img src="https://assets.icliniq.com/v2/assets/images/mskcc/img/shape/section-title-line-v1.png" alt="Title line" title="Title line"/>
-                </div>
-                <div className="grid grid-cols-2 gap-8 items-center">
-
-                </div>
-            </div>
-        </div>
+        
     </>
   )
 }
