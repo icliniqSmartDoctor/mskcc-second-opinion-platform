@@ -2,56 +2,67 @@
 import Banner from "./Banner";
 import PioneeringWorldClass from "./PioneeringWorldClass";
 import CancerSpecialties from "./CancerSpecialties";
-import ServicesOffered from './ServicesOffered'
+import ServicesOffered from "./ServicesOffered";
 import MskDoctors from "./MskDoctors";
+import * as CONSTANTS from "../../constants";
 ---
 
 <Banner />
 <PioneeringWorldClass />
 <CancerSpecialties />
-<section id='Services Offered by MSK'>
-    <div class='gray-bg pt-24 pb-28'>
-        <div class='container-alternate mx-auto px-4'>
-            <p class='h5 text-xl font-semibold'>MSK India</p>
-            <h2 class="text-4xl font-semibold mb-5">Services Offered by MSK in India</h2>
-            <div class="mb-10">
-                <img src="https://assets.icliniq.com/v2/assets/images/mskcc/img/shape/section-title-line-v1.png" alt="Title line" title="Title line"/>
-            </div>
-            <ServicesOffered />
-            
-        </div>
-    </div>
-</section>
-<section id='MSK Doctors' class='bg-white pt-24 pb-28'>
+<section id="Services Offered by MSK">
+    <div class="gray-bg pt-24 pb-28">
         <div class="container-alternate mx-auto px-4">
-            <h2 class="text-center text-4xl font-semibold mb-5">MSK Doctors</h2>
-            <div class="text-center">
+            <p class="h5 text-xl font-semibold">MSK India</p>
+            <h2 class="text-4xl font-semibold mb-5">
+                Services Offered by MSK in India
+            </h2>
+            <div class="mb-10">
                 <img
-                    class="mx-auto"
                     src="https://assets.icliniq.com/v2/assets/images/mskcc/img/shape/section-title-line-v1.png"
                     alt="Title line"
                     title="Title line"
                 />
             </div>
-            <p class=" px-0 lg:px-20 mt-8 text-base leading-7 text-gray-600">
-                MSK’s cancer specialists have one focus: providing compassionate
-                cancer care to help each patient achieve their best possible
-                outcome. Our multidisciplinary Disease Management Teams consist
-                of medical oncologists, surgeons, radiologists, radiation
-                oncologists, oncology nurses, and nurse practitioners, all
-                working together to create personalized treatment plans for each
-                person we care for.
-            </p>
-            <p class="px-0 lg:px-20 mt-5 text-base leading-7 text-gray-600">
-                Included below are a selection of MSK physicians who work at
-                Memorial Sloan Kettering Cancer Center. Along with other experts
-                in New York, they are dedicated to advancing our mission across
-                research, education, and patient care — around the world.
-            </p>
-            <div class="mt-16">
-                <MskDoctors />
+            <ServicesOffered />
+        </div>
+    </div>
+</section>
+<section id="MSK Doctors" class="bg-white pt-24 pb-28">
+    <div class="container-alternate mx-auto px-4">
+        <h2 class="text-center text-4xl font-semibold mb-5">MSK Doctors</h2>
+        <div class="text-center">
+            <img
+                class="mx-auto"
+                src="https://assets.icliniq.com/v2/assets/images/mskcc/img/shape/section-title-line-v1.png"
+                alt="Title line"
+                title="Title line"
+            />
+        </div>
+        <p class="px-0 lg:px-20 mt-8 text-base leading-7 text-gray-600">
+            MSK’s cancer specialists have one focus: providing compassionate
+            cancer care to help each patient achieve their best possible
+            outcome. Our multidisciplinary Disease Management Teams consist of
+            medical oncologists, surgeons, radiologists, radiation oncologists,
+            oncology nurses, and nurse practitioners, all working together to
+            create personalized treatment plans for each person we care for.
+        </p>
+        <p class="px-0 lg:px-20 mt-5 text-base leading-7 text-gray-600">
+            Included below are a selection of MSK physicians who work at
+            Memorial Sloan Kettering Cancer Center. Along with other experts in
+            New York, they are dedicated to advancing our mission across
+            research, education, and patient care — around the world.
+        </p>
+        <div class="mt-16">
+            <div class="grid grid-cols-3 md:grid-cols-2 lg:grid-cols-3 justify-items-center gap-10">
+                {
+                    CONSTANTS.MSK_DOCTORS.map((res) => {
+                        return <MskDoctors doctorInfo={res} />;
+                    })
+                }
             </div>
         </div>
+    </div>
 </section>
 
 <style is:global>

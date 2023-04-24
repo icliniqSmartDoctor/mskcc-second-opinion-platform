@@ -16,7 +16,7 @@ ServicesOfferedByMsk.parameters = {
     default: 'light',
     values: [
 
-      { name: 'light', value: '#949494' },
+      { name: 'light', value: '#F4F4F4' },
       { name: 'dark', value: '#222' },
     ],
   }
@@ -36,7 +36,6 @@ ServicesOfferedByMsk.play = async ({ canvasElement }) => {
     const ServiceTitle : any = data.parentElement?.nextElementSibling?.firstElementChild?.firstChild;
     userEvent.hover(ServiceTitle);
     expect(ServiceTitle).toHaveClass('hover:text-secondary')
-
   })
 
 };
