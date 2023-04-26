@@ -40,13 +40,13 @@ function Nav() {
                     <Navbar.Collapse className='hidden md:hidden lg:block'>
                         <div className='flex items-center tracking-wide font-normal	'>
                             <i className='fa fa-envelope text-primary pr-2 -mt-1 text-xl'></i>
-                            <p className='text-primary'>Email: </p>
-                            <a className="pl-2 text-secondary" href="mailto:mskccindia@icliniq.com">mskccindia@icliniq.com</a>
+                            <p className='text-primary text-base'>Email: </p>
+                            <a className="pl-2 text-secondary text-base" href="mailto:mskccindia@icliniq.com">mskccindia@icliniq.com</a>
                         </div>
                         <div className='flex items-center tracking-wide font-normal	'>
                             <i className='fa fa-phone text-primary pr-2  text-xl'></i>
-                            <p className='text-primary'>Phone Number: </p>
-                            <a className="pl-2 text-secondary" href="tel:+918270070000">+91 82 700 70000</a>
+                            <p className='text-primary text-base'>Phone Number: </p>
+                            <a className="pl-2 text-secondary text-base" href="tel:+918270070000">+91 82 700 70000</a>
                         </div>
                     </Navbar.Collapse>
                 </div>
