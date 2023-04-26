@@ -22,31 +22,31 @@ function Nav() {
             <Navbar
                 className='z-30 w-full relative left-0 right-0 pt-7 pb-7'
             >
-                <div className='container-alternate mx-auto flex w-full justify-between items-center'>
+                <div className='container-alternate mx-auto flex w-full justify-between items-center !p-0'>
                     <Navbar.Brand href="https://mskcc.icliniq.com/">
                         <img
                             src='https://assets.icliniq.com/mskcc/logo/msk-logo-blue.svg'
-                            className="mr-3 h-14 md:h-14 pl-2 "
+                            className="pr-3 h-14 md:h-14 pl-2"
                             alt="Logo"
                         />
                     </Navbar.Brand>
                     <div className="flex md:order-2 md:!flex-row-reverse">
                         <div className="flex md:order-2  pr-3 md:pr-8 items-center">
-                            <a href="https://mskcc.icliniq.com/"><img className="h-7 md:h-10 " src={AssetAccessor.ic_white_logo} /></a>
+                            <a href="https://mskcc.icliniq.com/"><img className="h-14 md:h-14" src="https://assets.icliniq.com/v2/assets/images/iCliniq-logo/ic-white-logo.svg" /></a>
                         </div>
                         <Navbar.Toggle className='block md:!block lg:!hidden' onClick={openAccordation} />
                     </div>
 
                     <Navbar.Collapse className='hidden md:hidden lg:block'>
                         <div className='flex items-center tracking-wide font-normal	'>
-                            <i className='fa fa-envelope text-primary pr-2 -mt-1 text-xl'></i>
+                            <span className="material-symbols-outlined text-primary pr-2 -mt-1 text-3xl">mail</span>
                             <p className='text-primary text-base'>Email: </p>
-                            <a className="pl-2 text-secondary text-base" href="mailto:mskccindia@icliniq.com">mskccindia@icliniq.com</a>
+                            <a className="pl-2 text-secondary text-base underline hover:no-underline" href="mailto:mskccindia@icliniq.com">mskccindia@icliniq.com</a>
                         </div>
                         <div className='flex items-center tracking-wide font-normal	'>
-                            <i className='fa fa-phone text-primary pr-2  text-xl'></i>
+                            <span className="material-symbols-outlined text-primary pr-2 -mt-1 text-3xl">call</span>
                             <p className='text-primary text-base'>Phone Number: </p>
-                            <a className="pl-2 text-secondary text-base" href="tel:+918270070000">+91 82 700 70000</a>
+                            <a className="pl-2 text-secondary text-base underline hover:no-underline" href="tel:+918270070000">+91 82 700 70000</a>
                         </div>
                     </Navbar.Collapse>
                 </div>
@@ -54,12 +54,11 @@ function Nav() {
             <div className='lg:hidden custom-accordation bg-white w-full border-none '>
                 <div className='border-collapse bg-primary m-5 mt-2'>
                     {
-                        
                            Object.keys( CONSTANTS.MSKCC_MENU ).map(res => {
                                 return <>
                                     {Array.isArray(CONSTANTS.MSKCC_MENU[res]) ?
                                         <>
-                                            <div className='h-auto   w-full bg-primary border text-white text-md flex justify-between'
+                                            <div className='h-auto w-full bg-primary border text-white text-md flex justify-between'
                                                 onClick={
                                                     (e: React.MouseEvent<HTMLElement>) => {
                                                         e.stopPropagation();
@@ -103,12 +102,6 @@ function Nav() {
                             })
                    
                     }
-
-                    <a href='./login'>
-                        <div className='h-auto py-3 w-full bg-primary border text-white uppercase text-md '>
-                            <span className='ml-4'>Login</span>
-                        </div>
-                    </a>
 
                 </div>
             </div>

@@ -15,7 +15,7 @@ function MenuNav() {
 
                                         res.toLowerCase() === 'login' ?
                                             <div className='relative  h-full flex items-center ml-auto'>
-                                                <div className='px-4 capitalize cursor-pointer menu-opt w-full h-full flex items-center'> <span>{res} +</span> </div>
+                                                <div className='px-4 capitalize cursor-pointer menu-opt w-full h-full flex items-center'> <span>{res} </span> </div>
                                                 <div className='mskcc-menu-nav-options h-auto top-20  right-5 absolute w-60 max-w-60 leading-9 bg-primary  border-t-4 border-secondary px-5 py-3'>
                                                     {
                                                         (CONSTANTS.MSKCC_MENU[res]).map((menuOpt: string) => {
