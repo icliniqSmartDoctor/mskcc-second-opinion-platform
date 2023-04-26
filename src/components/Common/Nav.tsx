@@ -20,13 +20,13 @@ function Nav() {
     return (
         <>
             <Navbar
-                className='  z-30  w-full relative left-0 right-0 pt-7 pb-7'
+                className='z-30 w-full relative left-0 right-0 pt-7 pb-7'
             >
                 <div className='container-alternate mx-auto flex w-full justify-between items-center'>
                     <Navbar.Brand href="https://mskcc.icliniq.com/">
                         <img
-                            src={AssetAccessor.mskcc_Logo}
-                            className="mr-3 h-8 md:h-10 pl-2 "
+                            src='https://assets.icliniq.com/mskcc/logo/msk-logo-blue.svg'
+                            className="mr-3 h-14 md:h-14 pl-2 "
                             alt="Logo"
                         />
                     </Navbar.Brand>
@@ -38,14 +38,14 @@ function Nav() {
                     </div>
 
                     <Navbar.Collapse className='hidden md:hidden lg:block'>
-                        <div className='text-md flex items-center tracking-wide	font-light'>
+                        <div className='flex items-center tracking-wide font-normal	'>
                             <i className='fa fa-envelope text-primary pr-2 -mt-1 text-xl'></i>
-                            <p>Email: </p>
+                            <p className='text-primary'>Email: </p>
                             <a className="pl-2 text-secondary" href="mailto:mskccindia@icliniq.com">mskccindia@icliniq.com</a>
                         </div>
-                        <div className='text-md flex items-center tracking-wide	font-light'>
+                        <div className='flex items-center tracking-wide font-normal	'>
                             <i className='fa fa-phone text-primary pr-2  text-xl'></i>
-                            <p>Phone Number: </p>
+                            <p className='text-primary'>Phone Number: </p>
                             <a className="pl-2 text-secondary" href="tel:+918270070000">+91 82 700 70000</a>
                         </div>
                     </Navbar.Collapse>
