@@ -1,3 +1,8 @@
+type CancerSpecialty = {
+    cancer_label: string;
+    cancer_description: string;
+    cancer_path_url: string;
+}
 export const SIDEMENU = [
     {
         title: 'Home',
@@ -122,3 +127,21 @@ export const MSK_DOCTORS = [
         'drImg': 'https://assets.icliniq.com/v2/assets/images/mskcc/img/mskcc-cancer/james-eastham-mskcc.jpg'
     }
 ]
+
+export const CANCER_SPECIALTIES:CancerSpecialty[] = [
+    {
+    cancer_label: "Head & Neck Cancer (Oral Cancer)",
+      cancer_description : "Head and neck cancers include cancers that start in several areas of the head and throat, such as the sinuses, tongue, gums, roof of the mouth, larynx, lips, and salivary glands, but not including cancers of the brain and eyes. The skill and experience of MSK's surgeons in head and neck surgery are unprecedented...",
+      cancer_path_url : "https://mskcc.icliniq.com/cancer-care/types/head-and-neck-cancer"
+    },
+    {
+      cancer_label : "Ovarian, Cervical, and Endometrial Cancer",
+      cancer_description : "The type of cancer where the cells in the ovaries, cervix, and endometrium (the inner lining of the uterus) multiply and grow out of control are called ovarian, cervical, and endometrial cancer, respectively. MSK's surgeons are continually working and leading the way to improve surgical methods...",
+      cancer_path_url : "https://mskcc.icliniq.com/cancer-care/types/ovarian-cervical-and-endometrial-cancer"
+    },
+    {
+      cancer_label : "Breast Cancer",
+      cancer_description : "In breast cancer, the cells in the breast grow out of control. MSK is a leader in pioneering new ways to treat breast cancer, which has resulted in optimal outcomes for the 4,500 new breast cancer patients that consult each year. Most of the latest and effective breast cancer treatments developed in the last ten years were studied...",
+      cancer_path_url : "https://mskcc.icliniq.com/cancer-care/types/breast-cancer"
+    }
+];
