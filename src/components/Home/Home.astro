@@ -5,9 +5,29 @@ import CancerSpecialties from "./CancerSpecialties";
 import ServicesOffered from "./ServicesOffered";
 import MskDoctors from "./MskDoctors";
 import * as CONSTANTS from "../../constants";
----
 
-<Banner />
+---
+<section class="flex items-center slider-height-3 lg:pt-28	">
+    <div class='container-alternate mx-auto !px-0'>
+        <div class='grid grid-cols-6 gap-4 relative  lg:left-10 lg:px-20 '>
+            <div class=" col-span-6 md:col-span-6 lg:col-span-4 lg:col-start-3  hero-text hero-text-box">
+                <div class="hero-slider-caption ">
+                    <h4 class='font-semibold text-xl'>An expert opinion from Memorial Sloan Kettering Cancer Center, just for you</h4>
+                    <h5 class="text-lg rubik-font mb-5 banner-text-color font-semibold">We are here to care for you.</h5>
+                    <div class="hero-slider-btn block mt-4 mb-4">
+                        <a id="Request-consult" href="https://mskcc.icliniq.com/mskcc-india-services/book-an-appointment-online" class="btn btn-icon ml-0 font-medium text-sm"><span>+</span>Request a consult</a>
+                    </div>
+                    <p class="mb-2">
+                        From our center in Chennai, Memorial Sloan Kettering Cancer Center (MSK) now provides people facing cancer across India access to our institution’s world-renowned oncologists, research, clinical trials, and education.
+                    </p>
+                    <p>
+                        In collaboration with iCliniq, a leading provider of telemedicine services, a dedicated team of clinicians and patient care coordinators in Chennai is ready to guide each person on their unique cancer journey.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 <PioneeringWorldClass />
 <CancerSpecialties />
 <section id="Services Offered by MSK">
@@ -70,6 +90,8 @@ import * as CONSTANTS from "../../constants";
         background-image: url("https://assets.icliniq.com/v2/assets/images/mskcc/img/mskcc-cancer/home-banner-doctor-v2.jpg");
         min-height: 780px;
         z-index: -1;
+        background-position: center;
+        background-repeat: no-repeat;
     }
     .hero-text-box {
         padding: 75px;
