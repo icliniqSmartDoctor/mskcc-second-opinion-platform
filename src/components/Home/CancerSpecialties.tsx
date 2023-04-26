@@ -1,7 +1,7 @@
 function CancerSpecialties() {
   return (
     <>
-        <div id="specialitiesCancerCare" className='gray-bg pt-24 pb-28'>
+        <div id="cancer-specialities" className='gray-bg pt-24 pb-28'>
             <div className='container-alternate mx-auto px-4'>
                 <p className="h5 text-center text-xl font-semibold">Cancer Specialties </p>
                 <h2 className="text-center text-4xl font-semibold mb-5">Exceptional Patient Care and Cancer Expertise</h2>
