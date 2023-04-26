@@ -23,7 +23,7 @@ function Nav() {
                 className='  z-30  w-full relative left-0 right-0 pt-7 pb-7'
             >
                 <div className='container-alternate mx-auto flex w-full justify-between items-center'>
-                    <Navbar.Brand href="#">
+                    <Navbar.Brand href="https://mskcc.icliniq.com/">
                         <img
                             src={AssetAccessor.mskcc_Logo}
                             className="mr-3 h-8 md:h-10 pl-2 "
@@ -32,7 +32,7 @@ function Nav() {
                     </Navbar.Brand>
                     <div className="flex md:order-2 md:!flex-row-reverse">
                         <div className="flex md:order-2  pr-3 md:pr-8 items-center">
-                            <img className="h-7 md:h-10 " src={AssetAccessor.ic_white_logo} />
+                            <a href="https://mskcc.icliniq.com/"><img className="h-7 md:h-10 " src={AssetAccessor.ic_white_logo} /></a>
                         </div>
                         <Navbar.Toggle className='block md:!block lg:!hidden' onClick={openAccordation} />
                     </div>
