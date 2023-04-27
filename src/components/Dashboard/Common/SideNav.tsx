@@ -1,5 +1,5 @@
 import { Sidebar } from 'flowbite-react'
-import * as CONSTANTS from 'constants.tsx';
+import * as CONSTANTS from '../../../constants';
 import { isLoggedIn } from 'stores/authStore'
 import { Cookies } from 'react-cookie'
 
