@@ -1,5 +1,6 @@
 import * as CONSTANTS from '../../constants'
 import type {Specialities} from '../../TypeSpecifier'
+import AssetAccessor from 'utils/AssetAccessor';
 
 function Footer() {
     const CANCER_SPECIALITIES: Specialities[] = CONSTANTS.SPECIALITIES;
@@ -46,6 +47,12 @@ function Footer() {
                         </div>
                     </div>
                 </div>
+                <a  href="https://api.whatsapp.com/send?phone=918270070000" target="_blank">
+                    <img className='fixed banner-whatsapp-icon' src={AssetAccessor.whatsappIcon} alt="Whatsapp Icon" title="Whatsapp Icon" />
+                </a>
+                <a href="tel:+91-82-700-70000">
+                    <img className='fixed banner-call-icon' src={AssetAccessor.telephoneIcon} alt="Telephone Icon" title="Telephone Icon" />
+                </a>
                 <div className='footer-bottom h-16 flex items-center justify-center'>
                     <span>Powered by iCliniq</span>
                 </div>
