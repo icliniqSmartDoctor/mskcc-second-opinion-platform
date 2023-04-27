@@ -46,7 +46,21 @@ import * as CONSTANTS from "../../constants";
         </div>
     </div>
 </section>
-<CancerSpecialties />
+<div id="cancer-specialities" class='gray-bg pt-24 pb-28'>
+    <div class='container-alternate mx-auto px-4'>
+        <p class="h5 text-center text-xl font-semibold">Cancer Specialties </p>
+        <h2 class="text-center text-4xl font-semibold mb-5">Exceptional Patient Care and Cancer Expertise</h2>
+        <div class="mb-20 text-center">
+            <img  class='mx-auto' src="https://assets.icliniq.com/v2/assets/images/mskcc/img/shape/section-title-line-v1.png" alt="Title line" title="Title line"/>
+        </div>
+        <div class="grid grid-cols-3 gap-8 items-center">
+            <CancerSpecialties />
+        </div>
+        <div class='block text-center mt-8'>
+            <a id="view-other-type-cancer" href="https://mskcc.icliniq.com/cancer-care/types/other-common-types-of-cancer" class="inline-block btn btn-icon ml-0 font-medium"><span>+</span>View Other Types Of Cancers</a>
+        </div>
+    </div>
+</div>
 <section id="Services Offered by MSK">
     <div class="gray-bg pt-24 pb-28">
         <div class="container-alternate mx-auto px-4">
@@ -143,7 +157,9 @@ import * as CONSTANTS from "../../constants";
         transition: 0.4s;
         color: #0073e0;
     }
-
+    .shadow-card{
+        box-shadow: 0 8px 16px 0 rgba(181,179,255,.1);
+    }
     @media (max-width: 767px) {
         .hero-text {
             text-align: center;
