@@ -213,7 +213,7 @@ h6,
     visibility: hidden;
     opacity: 0;
     transform: translateY(10%);
-    transition: transform 0.5s, opacity 0.5s ease-in-out;
+    transition: transform 0.3s, opacity 0.3s ease-in-out;
     z-index: 500;
 }
 
@@ -227,4 +227,8 @@ h6,
     visibility: visible;
     opacity: 1;
     transform: translateY(0);
+}
+.footer-bottom {
+    color: #9aacbb;
+    background: #0d1b26;
 }
