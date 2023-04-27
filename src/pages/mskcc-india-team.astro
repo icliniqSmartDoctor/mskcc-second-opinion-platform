@@ -6,10 +6,65 @@ import Footer from "components/Common/Footer";
 
 export const prerender = true;
 ---
+
 <Layout title="MSK India | Get Second Opinion From Best Cancer Experts">
-	<Nav client:idle />
-	<MenuNav />
-
-	<Footer />
+    <Nav client:idle />
+    <MenuNav />
+    <div class="container-alternate mx-auto px-4 mb-32 pt-28">
+        <div class="block md:flex items-center justify-between">
+            <div class="mb-5">
+                <p class="text-lg pb-15 text-gray-600 font-medium">
+                    We are here to care for you.
+                </p>
+                <h1 class="mt-5 font-semibold text-3xl md:text-6xl">
+                    India Center Team
+                </h1>
+            </div>
+            <div class="font-medium">
+                <a href="https://mskcc.icliniq.com/" class="text-gray-400 mr-2"
+                    >Home</a
+                >
+                <span class="mr-2 text-gray-400">|</span>
+                <a class="text-primary mr-2">India Center Team</a>
+            </div>
+        </div>
+        <div class="flex items-center justify-center flex-col mt-20">
+            <h2 class="text-4xl font-semibold mb-5">MSK India Center</h2>
+            <div class="mb-10">
+                <img
+                    src="https://assets.icliniq.com/v2/assets/images/mskcc/img/shape/section-title-line-v1.png"
+                    alt="Title line"
+                    title="Title line"
+                />
+            </div>
+            <div class="px-24">
+                <video
+                    class="w-100 mt-10"
+                    id="video-player"
+                    poster="https://assets.icliniq.com/mskcc-india/mskcc-india-front-pause.png"
+                    preload="metadata"
+                    controls=""
+                >
+                    <source
+                        src="https://s3.amazonaws.com/images.icliniq.com/video/MSK+India+welcome+video_icliniq+site+and+phone.mp4"
+                        type="video/mp4"
+                    />
+                </video>
+            </div>
+        </div>
+        <div class="flex items-center justify-center flex-col mt-20">
+            <h2 class="text-4xl font-semibold mb-5">Medical Team</h2>
+            <div class="mb-5">
+                <img
+                    src="https://assets.icliniq.com/v2/assets/images/mskcc/img/shape/section-title-line-v1.png"
+                    alt="Title line"
+                    title="Title line"
+                />
+            </div>
+            <p class="px-24 text-gray-600">
+				The Chennai-based medical team is led by a Board-certified Medical Oncologist and includes other clinical and operations experts who guide patients through every step of their journey with MSK. From the first phone call or email, patients can expect thoughtful, customized, and compassionate interactions with our team—from describing services in detail and gathering patient medical records to setting up appointments with MSK’s doctors in New York. For every unique cancer journey, the medical team in India serves as a crucial bridge between patients and MSK physicians in New York.
+			</p>
+        </div>
+    </div>
+    <Footer />
 </Layout>
-

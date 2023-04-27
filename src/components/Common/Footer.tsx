@@ -31,7 +31,7 @@ function Footer() {
                         </div>
 
                         <div className='col-span-2 mt-10 lg:mt-0 lg:col-span-1 lg:ml-12'>
-                            <span className='text-white text-2xl font-semibold'>Specialities</span>
+                            <h3 className='text-white text-2xl font-semibold'>Specialities</h3>
 
                             <div className="grid grid-cols-1 gap-2 ml-4 md:ml-0 md:gap-10">
                                 {
