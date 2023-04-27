@@ -1,0 +1,56 @@
+---
+import Layout from "layouts/Layout.astro";
+import { DOCTOR_DETAILS } from "../../constants";
+
+export function getStaticPaths() {
+  return [
+    DOCTOR_DETAILS.map((data) => {
+      return {
+        params: { doctor: data.path },
+        props: { data },
+      };
+    }),
+  ];
+}
+
+const { doctor } = Astro.params;
+
+const docData = DOCTOR_DETAILS.map((data) => {
+  return data;
+});
+const docArr = docData.find((data) => data.path === doctor);
+---
+
+<Layout title={`About ${docArr?.drName} -MSK India`}>
+  <h2 class="text-lg text-gray-500">we are here to care for you.</h2>
+  <h1 class="text-5xl">Doctor Details</h1>
+
+  <div class="text-2xl pt-10 pb-3">About {docArr?.drName}</div>
+  <div>
+    <img
+      src="https://assets.icliniq.com/v2/assets/images/mskcc/img/shape/section-title-line-v1.png"
+      alt="Title line"
+      title="Title line"
+    />
+  </div>
+  <section class="pt-2">{docArr?.About}</section>
+  <div class="pt-4 pb-4">
+    <img
+      src="https://assets.icliniq.com/v2/assets/images/mskcc/img/shape/section-title-line-v1.png"
+      alt="Title line"
+      title="Title line"
+    />
+  </div>
+  <section>
+    Rescidency:<ul>
+      {
+        docArr?.doctorInfo.Residency.map((data) => (
+          <li>
+            <i class="fa fa-check" />
+            {data}
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+</Layout>
