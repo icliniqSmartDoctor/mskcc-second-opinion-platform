@@ -3,9 +3,6 @@ import { Navbar } from 'flowbite-react'
 import AssetAccessor from 'utils/AssetAccessor';
 import * as CONSTANTS from '../../constants'
 
-type MskccMenu = {
-    
-}
 
 function Nav() {
     const openAccordation = () => {

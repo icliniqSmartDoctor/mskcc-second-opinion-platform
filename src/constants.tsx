@@ -24,7 +24,7 @@ export const SIDEMENU = [
 
 ]
 
-export const MSKCC_MENU = {
+export const MSKCC_MENU : any = {
     'home': 'https://mskcc.icliniq.com/' ,
     'about us': [
         { 'about msk': 'https://mskcc.icliniq.com/about-mskcc-india' },
