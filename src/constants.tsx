@@ -1,8 +1,4 @@
-type CancerSpecialty = {
-    cancer_label: string;
-    cancer_description: string;
-    cancer_path_url: string;
-}
+
 export const SIDEMENU = [
     {
         title: 'Home',
@@ -128,7 +124,7 @@ export const MSK_DOCTORS = [
     }
 ]
 
-export const CANCER_SPECIALTIES:CancerSpecialty[] = [
+export const CANCER_SPECIALTIES= [
     {
     cancer_label: "Head & Neck Cancer (Oral Cancer)",
       cancer_description : "Head and neck cancers include cancers that start in several areas of the head and throat, such as the sinuses, tongue, gums, roof of the mouth, larynx, lips, and salivary glands, but not including cancers of the brain and eyes. The skill and experience of MSK's surgeons in head and neck surgery are unprecedented...",

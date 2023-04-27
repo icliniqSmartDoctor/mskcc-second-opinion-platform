@@ -14,7 +14,7 @@ function MskDoctors({ doctorInfo }: DoctorInfo) {
         <>
             <div className="col-span-3 md:col-span-1 lg:col-span-1 max-w-sm w-full bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                 <a href={`${doctorInfo.doctorPage}`}>
-                    <img className="rounded-t-lg w-full" src={doctorInfo.drImg} alt="" />
+                    <img className="rounded-t-lg w-full" src={doctorInfo.drImg} alt={doctorInfo.drName} title={doctorInfo.drName} />
                 </a>
                 <div className="p-5 text-center mt-2">
                     <a href={`${doctorInfo.doctorPage}`}>
