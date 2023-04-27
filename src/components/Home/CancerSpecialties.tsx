@@ -1,16 +1,9 @@
 import { CANCER_SPECIALTIES } from '../../constants'
 
-type CancerSpecialty = {
-    specialites: {
-        cancer_label: string;
-        cancer_description: string;
-        cancer_path_url: string;
-    }
-}
-
-function CancerSpecialties({ specialites }: CancerSpecialty) {
+function CancerSpecialties() {
     return (
         <>
+        {CANCER_SPECIALTIES.map((specialites) => (
             <div className="lg:col-span-1 md:col-span-1 sm:col-span-3 col-span-3">
                 <div className='service-box mb-30'>
                     <h3 className='text-2xl font-semibold mb-5'>
@@ -20,6 +13,7 @@ function CancerSpecialties({ specialites }: CancerSpecialty) {
                     <a className='block h5 font-semibold text-center' href={specialites.cancer_path_url}>Read More</a>
                 </div>
             </div>
+        ))}
         </>
     )
 }
