@@ -3,20 +3,21 @@ import { Navbar } from 'flowbite-react'
 import AssetAccessor from 'utils/AssetAccessor';
 import * as CONSTANTS from '../../constants'
 
-function Nav() {
+type MskccMenu = {
+    
+}
 
+function Nav() {
     const openAccordation = () => {
         const customAccordation = document.getElementsByClassName('custom-accordation')[0];
         customAccordation.classList.toggle('custom-accordation-open');
     }
-
     const menutoggleOptions = (e: React.MouseEvent<HTMLElement>) => {
         if (e.currentTarget?.nextElementSibling?.classList.contains('mskcc-nav-options')) {
             const additionalMenu = e.currentTarget?.nextElementSibling;
             additionalMenu.classList.toggle('mskcc-nav-option-open');
         }
     }
-
     return (
         <>
             <Navbar

@@ -1,7 +1,10 @@
 import AssetAccessor from 'utils/AssetAccessor';
 import * as CONSTANTS from '../../constants'
+import type {Specialities} from '../../TypeSpecifier'
 
 function Footer() {
+    const CANCER_SPECIALITIES: Specialities[] = CONSTANTS.SPECIALITIES;
+
     return (
         <>
             <div className='bg-primary h-auto relative mt-10 w-full'>
@@ -30,11 +33,11 @@ function Footer() {
                         <div className='col-span-2 mt-10 lg:mt-0 lg:col-span-1 lg:ml-12'>
                             <span className='text-white text-2xl font-semibold'>Specialities</span>
 
-                            <div className="grid grid-cols-2 gap-2 ml-4 md:ml-0 md:gap-10">
+                            <div className="grid grid-cols-1 gap-2 ml-4 md:ml-0 md:gap-10">
                                 {
-                                    CONSTANTS.SPECIALITIES.map((res, i) => {
-                                        return <div className='col-span-2 md:col-span-1'>
-                                            {Object.keys(res).map(data =>
+                                    CANCER_SPECIALITIES.map((res) => {
+                                        return <div className='h-full col-span-2 md:col-span-1'>
+                                            {Object.keys(res).map((data) =>
                                                 <div className='mt-5 w-auto break-words '><a className='text-gray-400 capitalize hover:text-gray-200' href={res[data]}>{data}</a></div>
                                             )}
                                         </div>

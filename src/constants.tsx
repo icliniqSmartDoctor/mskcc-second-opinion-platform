@@ -18,7 +18,7 @@ export const SIDEMENU = [
 
 ]
 
-export const MSKCC_MENU: any = {
+export const MSKCC_MENU = {
     'home': 'https://mskcc.icliniq.com/' ,
     'about us': [
         { 'about msk': 'https://mskcc.icliniq.com/about-mskcc-india' },
@@ -52,8 +52,6 @@ export const SPECIALITIES = [
         'Kidney Cancer (Renal Cell Cancer)': 'https://mskcc.icliniq.com/cancer-care/types/kidney-cancer',
         'Leukemia': 'https://mskcc.icliniq.com/cancer-care/types/leukemia',
         'Liver, Biliary, and Pancreatic Cancer': 'https://mskcc.icliniq.com/cancer-care/types/liver-biliary-and-pancreatic-cancer',
-    },
-    {
         'Lung Cancer': 'https://mskcc.icliniq.com/cancer-care/types/lung-cancer',
         'Lymphoma': 'https://mskcc.icliniq.com/cancer-care/types/lymphoma',
         'Multiple Myeloma': 'https://mskcc.icliniq.com/cancer-care/types/multiple-myeloma',
@@ -63,6 +61,7 @@ export const SPECIALITIES = [
         'Sarcoma': 'https://mskcc.icliniq.com/cancer-care/types/sarcoma',
         'View Other Types of Cancer': 'https://mskcc.icliniq.com/cancer-care/types/other-common-types-of-cancer'
     }
+        
 ]
 
 
