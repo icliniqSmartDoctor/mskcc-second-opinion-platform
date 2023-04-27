@@ -36,7 +36,7 @@ function Footer() {
                             <div className="grid grid-cols-1 gap-2 ml-4 md:ml-0 md:gap-10">
                                 {
                                     CANCER_SPECIALITIES.map((res) => {
-                                        return <div className='h-full col-span-2 md:col-span-1'>
+                                        return <div className='col-span-2 h-4/5  lg:flex flex-wrap flex-col md:col-span-1'>
                                             {Object.keys(res).map((data) =>
                                                 <div className='mt-5 w-auto break-words '><a className='text-gray-400 capitalize hover:text-gray-200' href={res[data]}>{data}</a></div>
                                             )}

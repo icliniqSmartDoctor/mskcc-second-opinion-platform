@@ -1,7 +1,8 @@
 import * as CONSTANTS from '../../constants'
+import type { MskccMenu } from 'TypeSpecifier'
 
 function MenuNav() {
-
+    
     return (
         <>
             <div className='bg-primary relative h-16 w-full hidden lg:block'>
