@@ -15,7 +15,7 @@ function MenuNav() {
 
                                         res.toLowerCase() === 'login' ?
                                             <div className='relative  h-full flex items-center ml-auto'>
-                                                <div className='px-4 capitalize cursor-pointer menu-opt w-full h-full flex items-center'> <span>{res} </span> </div>
+                                                <div className='px-4 capitalize cursor-pointer menu-opt w-full h-full flex items-center font-medium'> <span>{res} </span> </div>
                                                 <div className='mskcc-menu-nav-options h-auto top-12 right-5 absolute w-60 max-w-60 leading-9 bg-primary  border-t-4 border-secondary px-5 py-3'>
                                                     {
                                                         (CONSTANTS.MSKCC_MENU[res]).map((menuOpt: string) => {
@@ -32,7 +32,7 @@ function MenuNav() {
                                                 </div>
                                             </div> :
                                             <div className='relative  h-full flex items-center'>
-                                                <div className='px-4 capitalize cursor-pointer menu-opt w-full h-full flex items-center'> <span>{res} +</span> </div>
+                                                <div className='px-4 capitalize cursor-pointer menu-opt w-full h-full flex items-center font-medium'> <span>{res} +</span> </div>
                                                 <div className='mskcc-menu-nav-options h-auto top-12  left-5 absolute w-60 max-w-60 leading-9 bg-primary  border-t-4 border-secondary px-5 py-3'>
                                                     {
                                                         (CONSTANTS.MSKCC_MENU[res]).map((menuOpt: string) => {
@@ -49,7 +49,7 @@ function MenuNav() {
                                                 </div>
                                             </div>
                                         :
-                                        <a href={`${CONSTANTS.MSKCC_MENU[res]}`}><div className='mx-4 capitalize'>{res.toString()}</div></a>
+                                        <a href={`${CONSTANTS.MSKCC_MENU[res]}`}><div className='mx-4 capitalize font-medium'>{res.toString()}</div></a>
                                     }
                                 </>
 
