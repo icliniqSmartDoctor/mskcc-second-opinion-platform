@@ -18,9 +18,9 @@ function MskDoctors({ doctorInfo }: DoctorInfo) {
                 </a>
                 <div className="p-5 text-center mt-2">
                     <a href={`${doctorInfo.doctorPage}`}>
-                        <h3 className="mb-2 text-2xl font-semibold hover:text-secondary transition-colors duration-500 text-doctorTitle">{doctorInfo.drName}</h3>
+                        <h3 className="mb-2 text-2xl font-semibold hover:text-secondary transition-colors duration-500 text-darkblue">{doctorInfo.drName}</h3>
                     </a>
-                    <p className="mb-3 tracking-[.14rem] mt-2.5 font-medium text-sm text-doctorTitle uppercase">{doctorInfo.specialist}</p>
+                    <p className="mb-3 tracking-[.14rem] mt-2.5 font-medium text-sm text-darkblue uppercase">{doctorInfo.specialist}</p>
 
                 </div>
             </div>

@@ -7,7 +7,7 @@ module.exports = {
 		colors: {
 			primary: '#002569',
 			secondary: '#0073E0',
-			doctorTitle: '#223645'
+			darkblue: '#223645'
 		}
 	},
 	plugins: [require('flowbite/plugin')],
