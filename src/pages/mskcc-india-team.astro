@@ -1,5 +1,5 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import Layout from "layouts/Layout.astro";
 import Nav from "components/Common/Nav";
 import MenuNav from "components/Common/MenuNav";
 import Footer from "components/Common/Footer";
@@ -16,7 +16,7 @@ export const prerender = true;
     <MenuNav />
     <div class="container-alternate mx-auto px-4 mb-32 pt-28">
         <div class="block md:flex items-center justify-between">
-            <div class="mb-5">
+            <div class="mb-5  w-4/6">
                 <p class="text-lg pb-15 text-gray-600 font-medium">
                     We are here to care for you.
                 </p>
@@ -24,7 +24,7 @@ export const prerender = true;
                     India Center Team
                 </h1>
             </div>
-            <div class="font-medium">
+            <div class="font-medium w-full lg:w-60 ">
                 <a href="https://mskcc.icliniq.com/" class="text-gray-400 mr-2"
                     >Home</a
                 >

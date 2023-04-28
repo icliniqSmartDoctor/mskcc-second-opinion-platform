@@ -7,7 +7,10 @@ module.exports = {
 		colors: {
 			primary: '#002569',
 			secondary: '#0073E0',
-			darkblue: '#223645'
+			darkblue: '#223645',
+		},
+		fontFamily: {
+			'rubik': ['rubik','sans-serif']
 		}
 	},
 	plugins: [require('flowbite/plugin')],

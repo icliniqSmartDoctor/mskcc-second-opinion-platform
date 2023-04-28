@@ -51,7 +51,7 @@ export const MSKCC_MENU: any = {
             'care at msk in new york': 'https://mskcc.icliniq.com/mskcc-india-services/travel-guide-to-mskcc-new-york' 
         }
     ],
-    'frequently asked questions': 'https://mskcc.icliniq.com/faq',
+    'frequently asked questions': 'https://mskcc.icliniq.com/mskcc-india-services/mskcc-patient-faqs',
     'login': [
         { 'patient login': 'https://mskcc.icliniq.com/users/signin' },
         { 'msk physician login': 'https://mskcc.icliniq.com/sso/web/index.php?sso' },

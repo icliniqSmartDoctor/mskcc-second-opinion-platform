@@ -1,0 +1,269 @@
+---
+import Layout from "layouts/Layout.astro";
+import Nav from "components/Common/Nav";
+import MenuNav from "components/Common/MenuNav";
+import Footer from "components/Common/Footer";
+
+export const prerender = true;
+---
+
+<Layout title="MSK India | Get Second Opinion From Best Cancer Experts">
+    <Nav client:idle />
+    <MenuNav />
+    <div class="container-alternate mx-auto mb-32 pt-28">
+        <div class="block lg:flex items-center justify-between">
+            <div class="mb-5 w-4/6">
+                <p class="text-lg pb-15 text-gray-600 font-medium">
+                    We are here to care for you.
+                </p>
+                <h1 class="mt-5 font-semibold text-3xl md:text-6xl">
+                    Remote Second Opinion from MSK Oncologists
+                </h1>
+            </div>
+            <div class="font-medium w-full lg:w-60">
+                <a href="https://mskcc.icliniq.com/" class="text-gray-400 mr-2"
+                    >Home</a
+                >
+                <span class="mr-2 text-gray-400">|</span>
+                <a
+                    href="https://mskcc.icliniq.com/mskcc-india-services"
+                    class="text-gray-400 mr-2"
+                >
+                    MSK India Services</a
+                >
+                <span class="mr-2 text-gray-400">|</span>
+                <a class="text-primary mr-2">
+                    Remote Second Opinion from MSK Oncologists</a
+                >
+            </div>
+        </div>
+        <div class="px-5">
+            <p class="mt-5 text-gray-600">
+                MSK in India is built on the concierge model of care. The team
+                in India will coordinate with patients, their family members, or
+                other representatives to schedule the services which are
+                clinically advisable. For physicians in India whose patients are
+                affected by cancer, our team can directly liaise with local
+                medical teams to coordinate services on the behalf of patients.
+                We can also arrange the most convenient time for a consultation
+                involving local physicians, their patients, and MSK physicians
+                in New York.
+            </p>
+            <p class="mt-5 text-gray-600">
+                Our comprehensive remote second opinion package can include
+                several types of services, depending on a patient’s cancer
+                diagnosis and care needs. An MSK oncologist specializing in a
+                specific disease will review medical records, test results, and
+                other materials. They’ll provide a detailed written opinion or
+                participate in a live video conference with a local treating
+                physician to discuss the specific diagnosis and care plan.
+            </p>
+            <p class="mt-5 text-gray-600">
+                We understand that not everyone needs a comprehensive second
+                opinion. For people who require select services, our standalone
+                consults include:
+            </p>
+            <p class="text-darkblue font-semibold mt-5">
+                Expert pathology and radiology review
+            </p>
+            <p class="mt-5 text-gray-600">
+                Review of original pathology slides of tissue samples and
+                radiology test results, such as PET and CT scans, by MSK
+                specialists to ensure accurate and consistent diagnoses.
+            </p>
+            <p class="text-darkblue font-semibold mt-5">
+                Genetic sequencing and analysis of cancer
+            </p>
+            <ul class="list-disc mx-10 mt-3 leading-7 text-gray-700">
+                <li>
+                    If clinically appropriate, genetic sequencing and analysis
+                    of a patient’s cancer for quick assessment of proper
+                    treatment regimens through <a
+                        href="https://www.mskcc.org/msk-impact"
+                        class="hover:text-secondary transition-colors duration-300"
+                        >MSK’s FDA-approved proprietary technology
+                    </a> known as MSK IMPACT®
+                </li>
+                <li class="mt-2">
+                    Helps match patients to the best available therapies or
+                    clinical trials
+                </li>
+            </ul>
+            <p class="text-darkblue font-semibold mt-5">
+                Customized written care plan:
+            </p>
+            <p class="mt-5 text-gray-600">
+                Detailed written consult of medical reports and recommended care
+                plan created by MSK surgeons, oncologists, and integrative
+                medicine experts and shared with a patient’s local treating
+                physician
+            </p>
+            <p class="text-darkblue font-semibold mt-5">
+                Live video consultation
+            </p>
+            <ul class="list-disc mx-10 mt-3 leading-7 text-gray-700">
+                <li>
+                    Video conference with an MSK subspecialist, along with an
+                    oncologist from our team in Chennai and/or the local
+                    treating doctor in India
+                </li>
+                <li class="mt-2">
+                    After a live review and discussion of individual test
+                    results and diagnosis, a detailed written report is provided
+                    by our oncologist summarizing the visit and our care
+                    recommendations
+                </li>
+            </ul>
+            <p class="text-darkblue font-semibold mt-5">Integrative medicine</p>
+            <ul class="list-disc mx-10 mt-3 leading-7 text-gray-700">
+                <li>
+                    Personalized advice from integrative medicine experts at MSK
+                    can be added to remote second opinions or as a standalone
+                    consult
+                </li>
+                <li class="mt-2">
+                    Science-based holistic health services include natural
+                    treatments, touch and mind-body therapies, acupuncture,
+                    exercise programs, and consultations on nutrition, herbs,
+                    botanicals, and supplements
+                </li>
+            </ul>
+            <p class="text-darkblue font-semibold mt-5">
+                A Life-Changing Remote Second Opinion
+            </p>
+            <ul class="list-disc mx-10 mt-3 leading-7 text-gray-700">
+                <li>
+                    Hear from Srinivasan, a patient in India who received a
+                    remote second opinion from MSK physician, Dr. Andrea Cercek.
+                    Srinivasan recovered following Dr Cerek’s treatment plan.
+                </li>
+                <li class="mt-2">
+                    <b>Listen here</b>
+                </li>
+            </ul>
+            <video
+                class="w-full mt-5"
+                id="video-player"
+                poster="https://assets.icliniq.com/mskcc-india/testimonals-pause.png"
+                preload="metadata"
+                controls=""
+            >
+                <source
+                    src="https://assets.icliniq.com/mskcc-india/iCliniq-mskcc-Testimonial-Final.mp4"
+                    type="video/mp4"
+                />
+            </video>
+            <h3 class="text-3xl font-semibold mt-16 tracking-tighter">
+                The Benefit of a Second Opinion
+            </h3>
+            <p class="mt-5 text-gray-600">
+                Whether you’ve been diagnosed with a more common cancer like
+                lung cancer, breast cancer, prostate cancer, or colon cancer or
+                a more rare type like sarcoma, there may be value in getting a
+                remote second opinion after your cancer diagnosis. Here are some
+                things you should know about how and why to get a remote second
+                opinion through MSK
+            </p>
+            <p class="text-darkblue font-semibold mt-5">
+                People with any cancer diagnosis can benefit from getting a
+                second opinion
+            </p>
+            <p class="mt-5 text-gray-600">
+                Second opinions offer different things in different
+                circumstances. If you have a common cancer with a
+                well-established standard of care, another doctor can offer
+                insight into clinical trials or novel treatments that may be
+                better than the standard treatment. Second opinions also can
+                provide insight into genetics and family risk. Additionally,
+                another doctor may have suggestions for complementary or
+                integrative medicine approaches that can help to manage your
+                symptoms
+            </p>
+            <p class="mt-5 text-gray-600">
+                For cancers that are less common, second opinions can offer more
+                treatment options. In circumstances where there may not be a
+                single established standard of care for your cancer, doctors at
+                MSK can ensure that your treatment plan incorporates the most
+                up-to-date information
+            </p>
+            <p class="mt-5 text-gray-600">
+                If you have already begun treatment somewhere else, a second
+                opinion can inform and refine the course of your care. You may
+                have questions about how well the treatment is working. It can
+                also be valuable to get a second opinion at the end of a course
+                of treatment to figure out next steps for additional treatment
+                or for monitoring for recurrence
+            </p>
+            <p class="text-darkblue font-semibold mt-5">
+                Questions to help you prepare for a second-opinion appointment
+            </p>
+            <p class="mt-5 text-gray-600">
+                If you have already begun treatment somewhere else, a second
+                opinion can inform and refine the course of your care. You may
+                have questions about how well the treatment is working. It can
+                also be valuable to get a second opinion at the end of a course
+                of treatment to figure out next steps for additional treatment
+                or for monitoring for recurrence
+            </p>
+            <ul class="list-disc mx-10 mt-3 leading-7 text-gray-700">
+                <li>
+                    Are you sure my diagnosis is correct and is as accurate and
+                    precise as is necessary? For many cancers, molecular
+                    diagnosis is an important part of matching patients with the
+                    best treatment. If you’re not sure whether you had molecular
+                    or genetic testing or if it’s important for your type of
+                    cancer, you should ask
+                </li>
+                <li class="mt-2">
+                    What is the standard-of-care treatment, and is there more
+                    than one option? There may be multiple treatments that offer
+                    the same likelihood of success. It’s important to understand
+                    the pros and cons of each one, including how the side
+                    effects of various treatments may differ
+                </li>
+                <li class="mt-2">
+                    Are any clinical trials relevant to me — and if so, where?
+                    Every hospital has its own portfolio of clinical trials, and
+                    it may be helpful to understand the full landscape of
+                    ongoing research in India or through MSK
+                </li>
+                <li class="mt-2">
+                    Do I need to receive treatment at MSK in New York? An expert
+                    at an academic medical center such as MSK often collaborates
+                    with oncologists at other hospitals to help patients get the
+                    same treatment at their local hospital, as they would at MSK
+                    in New York
+                </li>
+            </ul>
+            <p class="text-darkblue font-semibold mt-5">
+                MSK in India has a team of experts to help you find the right
+                specialist
+            </p>
+            <p class="mt-5 text-gray-600">
+                MSK’s India Center team is led by an oncologist and other
+                medical and operations professionals who will help guide you to
+                the most appropriate subspecialized expertise at MSK, based on
+                your individual diagnosis. Our aim is to connect patients in
+                India to an expert in New York who is familiar with the type of
+                cancer you have and who can provide deeper insights on your
+                diagnosis and treatment, throughout your cancer journey.
+            </p>
+            <p class="mt-5 text-gray-600">
+                You can <a
+                    class="hover:text-secondary transition-colors duration-300 underline"
+                    href="https://mskcc.icliniq.com/mskcc-india-services/book-an-appointment-online"
+                    >request an appointment online</a
+                >. After you fill out your information and answer some basic
+                questions about your diagnosis, you can schedule a time to speak
+                with a member of our India Center team.
+            </p>
+        </div>
+        <p class="mt-5 text-gray-600">
+            <b>*Note:*</b> Remote second opinions cannot be expedited as these services
+            are only appropriate for non-emergency cases. In the event of a medical
+            emergency, please go to the nearest emergency room or call a local emergency
+            service.
+        </p>
+    </div>
+    <Footer />
+</Layout>
