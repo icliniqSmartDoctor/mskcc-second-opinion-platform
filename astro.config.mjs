@@ -8,9 +8,13 @@ import partytown from "@astrojs/partytown";
 
 // https://astro.build/config
 export default defineConfig({
-  // output: "server",
-  // adapter: cloudflare({
-  //   mode: "directory"
-  // }),
-  integrations: [react(), tailwind()]
+  output: "server",
+  adapter: cloudflare({
+    mode: "directory"
+  }),
+  integrations: [react(), tailwind(), compress(), partytown({
+    config: {
+      forward: ["dataLayer.push"]
+    },
+  })]
 });
