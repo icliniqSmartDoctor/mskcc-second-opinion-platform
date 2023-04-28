@@ -222,6 +222,11 @@ export const CANCER_SPECIALTIES: CancerSpecialty[] = [
         cancer_label: "Benign Blood Disorders",
         cancer_description: "Certain cancer treatment or some types of cancer puts cancer patients at risk for some blood disorders. These blood disorders or blood-related complications due to cancer treatment include blood clots, bleeding disorders, and anemia. These complications can make cancer treatment challenging. For patients...",
         cancer_path_url: "https://mskcc.icliniq.com/cancer-care/types/benign-blood-disorders"
+    },
+    {
+        cancer_label: "View Other Types of Cancer",
+        cancer_description: "Other Types of Cancer",
+        cancer_path_url: "https://mskcc.icliniq.com/cancer-care/types/other-common-types-of-cancer"
     }
 ];
 
