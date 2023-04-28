@@ -1,7 +1,7 @@
 
 import { Navbar } from 'flowbite-react'
 import AssetAccessor from 'utils/AssetAccessor';
-import * as CONSTANTS from '../../constants'
+import * as CONSTANTS from '../../GlobalConstants'
 
 
 function Nav() {

@@ -6,11 +6,17 @@ export type Specialities = {
 
 export type MskccMenu = {
     [key: string]: string | {
-        [key: string]: 
-            {
-                [key: string]: string 
-            }[]
-        
-    }[]
+        [key: string]:
+        {
+            [key: string]: string
+        }[]
 
-} 
+    }[]
+}
+
+
+export type MskccIndiaTeamCard = {
+    [key: string]: {
+        [key: string]: string
+    }[]
+};

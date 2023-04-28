@@ -224,3 +224,59 @@ export const CANCER_SPECIALTIES: CancerSpecialty[] = [
         cancer_path_url: "https://mskcc.icliniq.com/cancer-care/types/benign-blood-disorders"
     }
 ];
+
+
+export const MSKCC_INDIA_TEAM = {
+    'Medical Team' : [
+        {
+            'drName': 'Dr. Subha Jagannathan',
+            'designation' : 'Chief Medical Officer',
+            'img': 'https://assets.icliniq.com/v2/assets/images/team/subha.jpg'
+        },
+        {
+            'drName': 'Dr. Hemalatha Ramachandran',
+            'designation' : 'Head-Medical Team',
+            'img': 'https://assets.icliniq.com/v2/assets/images/mskcc/img/mskcc-cancer/hema-ic.jpg'
+        },
+        {
+            'drName': 'Dr. Varadarajan Senthil Kumar',
+            'designation' : 'Chief Medical Oncologist',
+            'img': 'https://assets.icliniq.com/v2/assets/images/mskcc/img/mskcc-cancer/varadarajan-icliniq-mskcc.jpg'
+        },
+        {
+            'drName': 'Dr. Arun Kumar',
+            'designation' : 'Medical Team Doctor',
+            'img': 'https://assets.icliniq.com/v2/assets/images/mskcc/img/mskcc-cancer/Dr.Arun-Kumar.jpg'
+        },
+        {
+            'drName': 'Dr. Prince Lenin',
+            'designation' : 'Medical Team Doctor',
+            'img': 'https://assets.icliniq.com/v2/assets/images/mskcc/img/mskcc-cancer/Prince-Lenin.jpg'
+        },
+        {
+            'drName': 'Dr. Eunice Joanna Grace.T',
+            'designation' : 'Medical Team Doctor',
+            'img': 'https://assets.icliniq.com/v2/assets/images/mskcc/img/mskcc-cancer/Dr.Eunice.jpg'
+        }
+    ],
+    'Patient Material Coordinators' : [
+        {
+            'drName': 'Mark Praveen Kumar',
+            'img': 'https://assets.icliniq.com/v2/assets/images/mskcc/img/mskcc-cancer/Mark.jpg'
+        },
+        {
+            'drName': 'Zaheer Ahmed',
+            'img': 'https://assets.icliniq.com/v2/assets/images/mskcc/img/mskcc-cancer/Zaheer-Ahmed.jpg'
+        },
+        {
+            'drName': 'Vikrant Agrawal',
+            'img': 'https://assets.icliniq.com/v2/assets/images/mskcc/img/mskcc-cancer/vikrant-agarwal.jpg'
+        }
+    ],
+    'Patient Relation Associate' : [
+        {
+            'drName': 'Chaitali Kundu',
+            'img': 'https://assets.icliniq.com/v2/assets/images/mskcc/img/mskcc-cancer/chaitali-kundu.jpg'
+        },
+    ]
+}

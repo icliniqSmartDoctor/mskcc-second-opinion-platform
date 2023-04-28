@@ -3,7 +3,7 @@
 
 import { within, userEvent } from '@storybook/testing-library';
 import Nav from 'components/Common/Nav';
-import * as CONSTANTS from '../constants';
+import * as CONSTANTS from '../GlobalConstants';
 import type { Meta, StoryFn } from "@storybook/react";
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
 import { expect } from '@storybook/jest'

@@ -3,7 +3,11 @@ import Layout from "../layouts/Layout.astro";
 import Nav from "components/Common/Nav";
 import MenuNav from "components/Common/MenuNav";
 import Footer from "components/Common/Footer";
+import TeamCard from "components/MskccIndiaTeam/TeamCard";
+import { MSKCC_INDIA_TEAM } from "GlobalConstants";
+import type { MskccIndiaTeamCard } from "TypeSpecifier";
 
+const MSKCC_IND_TEAM_CARD: MskccIndiaTeamCard = MSKCC_INDIA_TEAM;
 export const prerender = true;
 ---
 
@@ -37,7 +41,7 @@ export const prerender = true;
                     title="Title line"
                 />
             </div>
-            <div class="px-24">
+            <div class="px-5 lg:px-24">
                 <video
                     class="w-100 mt-10"
                     id="video-player"
@@ -61,9 +65,108 @@ export const prerender = true;
                     title="Title line"
                 />
             </div>
-            <p class="px-24 text-gray-600">
-				The Chennai-based medical team is led by a Board-certified Medical Oncologist and includes other clinical and operations experts who guide patients through every step of their journey with MSK. From the first phone call or email, patients can expect thoughtful, customized, and compassionate interactions with our team—from describing services in detail and gathering patient medical records to setting up appointments with MSK’s doctors in New York. For every unique cancer journey, the medical team in India serves as a crucial bridge between patients and MSK physicians in New York.
-			</p>
+            <p class="px-5 lg:px-24 text-gray-600">
+                The Chennai-based medical team is led by a Board-certified
+                Medical Oncologist and includes other clinical and operations
+                experts who guide patients through every step of their journey
+                with MSK. From the first phone call or email, patients can
+                expect thoughtful, customized, and compassionate interactions
+                with our team—from describing services in detail and gathering
+                patient medical records to setting up appointments with MSK’s
+                doctors in New York. For every unique cancer journey, the
+                medical team in India serves as a crucial bridge between
+                patients and MSK physicians in New York.
+            </p>
+            <div
+                class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-5 mt-20"
+            >
+                {
+                    MSKCC_IND_TEAM_CARD["Medical Team"].map((res) => {
+                        return (
+                            <TeamCard
+                                drName={res["drName"]}
+                                img={res["img"]}
+                                designation={res["designation"]}
+                            />
+                        );
+                    })
+                }
+            </div>
+        </div>
+        <div class="flex items-center justify-center flex-col mt-20">
+            <h2 class="text-4xl font-semibold mb-5">
+                Patient Material Coordinators
+            </h2>
+            <div class="mb-5">
+                <img
+                    src="https://assets.icliniq.com/v2/assets/images/mskcc/img/shape/section-title-line-v1.png"
+                    alt="Title line"
+                    title="Title line"
+                />
+            </div>
+            <p class="px-5 lg:px-24 text-gray-600">
+                Our energetic and dedicated Patient Material Coordinators play
+                an indispensable role in the entire remote second opinion
+                process. They help patients gather all the required reports,
+                images, and other crucial documents for the remote consultation,
+                while clarifying their doubts and addressing questions on the
+                remote service process. When required, they travel to any
+                location across the country to visit the patient/caretaker’s
+                home or concerned hospital to collect the pathology slides/wax
+                blocks/report/DICOM CDs, and other materials to make the process
+                more convenient. They serve as a critical liaison between
+                patients, hospitals, and MSK’s India Center.
+            </p>
+            <div
+                class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-5 mt-20"
+            >
+                {
+                    MSKCC_IND_TEAM_CARD["Patient Material Coordinators"].map(
+                        (res) => {
+                            return (
+                                <TeamCard
+                                    drName={res["drName"]}
+                                    img={res["img"]}
+                                />
+                            );
+                        }
+                    )
+                }
+            </div>
+        </div>
+        <div class="flex items-center justify-center flex-col mt-20">
+            <h2 class="text-4xl font-semibold mb-5">
+                Patient Relation Associate
+            </h2>
+            <div class="mb-5">
+                <img
+                    src="https://assets.icliniq.com/v2/assets/images/mskcc/img/shape/section-title-line-v1.png"
+                    alt="Title line"
+                    title="Title line"
+                />
+            </div>
+            <p class="px-5 lg:px-24 text-gray-600">
+                Our zestful and passionate Patient Relation Associate plays a
+                prime role in reaching out to the patient to assist and support
+                the patients and visitors as per their needs and effectively
+                manage the front desk service.
+            </p>
+            <div
+                class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-5 mt-20"
+            >
+                {
+                    MSKCC_IND_TEAM_CARD["Patient Relation Associate"].map(
+                        (res) => {
+                            return (
+                                <TeamCard
+                                    drName={res["drName"]}
+                                    img={res["img"]}
+                                />
+                            );
+                        }
+                    )
+                }
+            </div>
         </div>
     </div>
     <Footer />

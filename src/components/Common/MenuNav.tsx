@@ -1,8 +1,8 @@
-import * as CONSTANTS from '../../constants'
+import * as CONSTANTS from '../../GlobalConstants'
 import type { MskccMenu } from 'TypeSpecifier'
 
 function MenuNav() {
-    
+
     return (
         <>
             <div className='bg-primary relative h-16 w-full hidden lg:block'>
@@ -17,7 +17,7 @@ function MenuNav() {
                                         res.toLowerCase() === 'login' ?
                                             <div className='relative  h-full flex items-center ml-auto'>
                                                 <div className='px-4 capitalize cursor-pointer menu-opt w-full h-full flex items-center font-medium'> <span>{res} </span> </div>
-                                                <div className='mskcc-menu-nav-options h-auto top-12 right-5 absolute w-60 max-w-60 leading-9 bg-primary  border-t-4 border-secondary px-5 py-3'>
+                                                <div className='mskcc-menu-nav-options h-auto top-16 right-5 absolute w-60 max-w-60 leading-9 bg-primary  border-t-4 border-secondary px-5 py-3'>
                                                     {
                                                         (CONSTANTS.MSKCC_MENU[res]).map((menuOpt: string) => {
                                                             return <>
@@ -34,7 +34,7 @@ function MenuNav() {
                                             </div> :
                                             <div className='relative  h-full flex items-center'>
                                                 <div className='px-4 capitalize cursor-pointer menu-opt w-full h-full flex items-center font-medium'> <span>{res} +</span> </div>
-                                                <div className='mskcc-menu-nav-options h-auto top-12  left-5 absolute w-60 max-w-60 leading-9 bg-primary  border-t-4 border-secondary px-5 py-3'>
+                                                <div className='mskcc-menu-nav-options h-auto top-16  left-5 absolute w-60 max-w-60 leading-9 bg-primary  border-t-4 border-secondary px-5 py-3'>
                                                     {
                                                         (CONSTANTS.MSKCC_MENU[res]).map((menuOpt: string) => {
                                                             return <>
@@ -50,7 +50,14 @@ function MenuNav() {
                                                 </div>
                                             </div>
                                         :
-                                        <a href={`${CONSTANTS.MSKCC_MENU[res]}`}><div className='mx-4 capitalize font-medium'>{res.toString()}</div></a>
+
+                                        <a href={`${CONSTANTS.MSKCC_MENU[res]}`}>
+                                            <div className='mx-4 capitalize font-medium'>
+                                                {
+                                                    res.toString().toLowerCase() === 'home' ? <i className='fal fa-home-alt text-2xl'></i> : res
+                                                }
+                                            </div>
+                                        </a>
                                     }
                                 </>
 

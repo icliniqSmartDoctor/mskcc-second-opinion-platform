@@ -6,9 +6,9 @@ import Layout from 'layouts/Layout.astro';
 
 
 const cookie = Astro.request.headers.get('cookie');
-if (!cookie.includes('session')) {
-  return Astro.redirect('/login');
-}
+// if (!cookie.includes('session')) {
+//   return Astro.redirect('/login');
+// }
 
 
 

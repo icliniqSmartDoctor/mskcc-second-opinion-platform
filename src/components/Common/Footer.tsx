@@ -1,4 +1,4 @@
-import * as CONSTANTS from '../../constants'
+import * as CONSTANTS from '../../GlobalConstants'
 import type {Specialities} from '../../TypeSpecifier'
 import AssetAccessor from 'utils/AssetAccessor';
 

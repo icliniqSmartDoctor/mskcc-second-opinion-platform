@@ -1,0 +1,133 @@
+---
+import Layout from "layouts/Layout.astro";
+import { DOCTOR_DETAILS } from "../../constants";
+import DoctorCard from "components/Home/DoctorCard";
+import Footer from "components/Common/Footer";
+import Nav from "components/Common/Nav";
+import MenuNav from "components/Common/MenuNav";
+
+export function getStaticPaths() {
+  return [
+    DOCTOR_DETAILS.map((data) => {
+      return {
+        params: { doctor: data["path"] },
+      };
+    }),
+  ];
+}
+
+const { doctor } = Astro.params;
+
+const docData = DOCTOR_DETAILS.map((data) => {
+  return data;
+});
+const docArr = DOCTOR_DETAILS.find((data) => data.path === doctor);
+---
+
+<Layout title={`About ${docArr!.drName} -MSK India`}>
+  <Nav />
+  <MenuNav />
+  <div class="w-4/5 container-alternate bg-white">
+    <h2 class="text-md font-semibold text-gray-600 pt-20 mb-12">
+      We are here to care for you.
+    </h2>
+    <h1 class="text-6xl font-semibold">Doctor Details</h1>
+    <div class="flex pt-20">
+      <span class="w-1/2">
+        <section class="pr-0">
+          <div class="text-4xl font-medium pt-10 pb-5">
+            About {docArr!.drName}
+          </div>
+          <div class="pb-4">
+            <img
+              src="https://assets.icliniq.com/v2/assets/images/mskcc/img/shape/section-title-line-v1.png"
+              alt="Title line"
+              title="Title line"
+            />
+          </div>
+
+          <div class="pt-10 flex">
+            <div class="w-11/12">
+              {docArr!.About}
+            </div>
+          </div>
+        </section>
+
+        <div class="pt-10 pb-4">
+          <img
+            src="https://assets.icliniq.com/v2/assets/images/mskcc/img/shape/section-title-line-v1.png"
+            alt="Title line"
+            title="Title line"
+          />
+        </div>
+
+        <section class="pt-10">
+          <span class="uppercase tracking-widest font-medium text-md"
+            >Residency:</span
+          >
+          <ul class="pt-5 pb-10">
+            {
+              docArr?.doctorInfo.Residency.map((data) => (
+                <li class="pl-5">
+                  <i class="fa fa-check" style="color:blue;" />
+                  {data}
+                </li>
+              ))
+            }
+          </ul>
+          <span class="uppercase tracking-widest font-medium">fellowship:</span>
+          <ul class="pt-5 pb-10">
+            {
+              docArr!.doctorInfo.Area.map((data) => (
+                <li class="pl-5">
+                  <i class="fa fa-check" style="color:blue;" />
+                  {data}
+                </li>
+              ))
+            }
+          </ul>
+          <span class="uppercase tracking-widest font-medium"
+            >Board Certification :</span
+          >
+          <ul class="pt-5 pb-10">
+            {
+              docArr!.doctorInfo.BoardCertification.map((data) => (
+                <li class="pl-5">
+                  <i class="fa fa-check" style="color:blue;" />
+                  {data}
+                </li>
+              ))
+            }
+          </ul>
+          <span class="uppercase tracking-widest font-medium">
+            area of Expertise:</span
+          >
+          <ul class="pt-5 pb-10">
+            {
+              docArr!.doctorInfo.Expertise.map((data) => (
+                <li class="pl-5">
+                  <i class="fa fa-check" style="color:blue;" />
+                  {data}
+                </li>
+              ))
+            }
+          </ul>
+        </section>
+      </span>
+
+      <span class="pt-10 pr-16">
+        <DoctorCard
+          doctorName={docArr!.drName}
+          speciality={docArr!.specialist}
+          designation={docArr!.designation}
+          image={docArr!.img}
+          education={docArr!.education}
+        />
+      </span>
+
+      <div class=""></div>
+    </div>
+  </div>
+
+  <Footer />
+</Layout>

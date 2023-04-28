@@ -7,6 +7,7 @@ import CancerSpecialties from "components/Home/CancerSpecialties";
 import ServicesOffered from "components/Home/ServicesOffered";
 import MskDoctors from "components/Home/MskDoctors";
 import * as CONSTANTS from "../constants";
+import VideoFloat from "components/Home/VIdeoFloat";
 ---
 
 <Layout title="MSK India | Get Second Opinion From Best Cancer Experts" >
@@ -19,6 +20,8 @@ import * as CONSTANTS from "../constants";
 		<link rel="canonical" href="https://mskcc.icliniq.com/" slot="meta-header" />
 	</>
 	<Nav client:idle />
+	<VideoFloat client:load/>
+
 	<MenuNav />
 	<section id="Banner MSK" class="flex items-center slider-height-3 lg:pt-28	">
 		<div class='container-alternate mx-auto !px-0'>
@@ -131,6 +134,7 @@ import * as CONSTANTS from "../constants";
 		</div>
 	</section>
 	<Footer />
+	
 </Layout>
 
 
