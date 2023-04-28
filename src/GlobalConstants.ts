@@ -280,3 +280,43 @@ export const MSKCC_INDIA_TEAM = {
         },
     ]
 }
+
+export const DOCTOR_DETAILS = [
+    {
+      path: "murray-brennan",
+      drName: "Dr.Murray Brennan",
+      specialist: "SURGICAL ONCOLOGIST",
+      designation:
+        "Senior Vice President of International Programs, Benno C. Schmidt Chair in Clinical Oncology",
+      img: "https://assets.icliniq.com/v2/assets/images/mskcc/img/mskcc-cancer/doctor-details-370-3.jpg",
+      About:
+        "Dr.Eastham is a surgeon who specializes in nerve-sparing radical prostatectomy for prostate cancer and salvage radical prostatectomy for recurrent prostate cancer. He has been in practice for the last 15 years, and he exclusively cares for men with prostate cancer. Dr.Eastham sees about 300 prostate cancer patients each year. He performs robotic-assisted radical prostatectomy and traditional open surgery for men with high-risk prostate cancer. [[newline]] His area of special interest includes treating men with high-risk prostate cancer who are not considered candidates for traditional open surgery or those previously treated with radiation therapy but whose cancer has returned. His clinical research focuses on improving surgical outcomes for prostate cancer, including cancer control and restoration of normal urinary and sexual function. During the course of his career, he has given more than 180 invited presentations at meetings and symposia in the US and around the world. He has published 300 peer-reviewed studies in prestigious national and international journals.",
+      doctorInfo: {
+        Residency: ["Surgery - Peter Bent Brigham Hospital"],
+        Area: ["Surgery - Peter Bent Brigham Hospital"],
+        BoardCertification: ["Surgery"],
+        Expertise: ["Soft Tissue Sarcoma"],
+      },
+      education: "MD - University Of Otago",
+    },
+    {
+      path: "mrinal-gounder",
+      drName: "Dr.Mrinal Gounder",
+      specialist: "MEDICAL ONCOLOGIST",
+      designation:
+        "Physician Ambassador – India and Asia MSK Bobst International Center",
+      img: "https://assets.icliniq.com/v2/assets/images/mskcc/img/mskcc-cancer/doctor-details-370-7.jpg",
+      About:
+        "Dr. Mrinal Gounder, MD, is the MSK Physician Ambassador to India and Asia. He is an internationally recognized medical oncologist specializing in sarcomas and rare cancers. He specializes in developing new drugs in cancer with a specific focus on sarcoma, a rare and devastating cancer that affects children, adolescents, and adults. He joined MSK in 2008 and specializes in personalized medicine, where genetic testing of cancer is used to inform the right therapies for an individual patient. He is the principal investigator of several global clinical trials (phase I – III) evaluating promising new drugs for sarcoma and many other solid cancers. He was the global lead for the study that led to FDA approval of tazemetostat in sarcoma. His work is internationally known and has been published in the New England Journal of Medicine, Journal of Clinical Oncology, Lancet Oncology, Nature Medicine, and others. His research contributions to rare cancers were recognized as the top 10 Advances of the Year in 2018 in the field of oncology. As the Physician Ambassador to India and Asia, he is passionate about building collaborations between MSK and India to improve access to patient care and collaborate on education, graduate medical training, and advancing cancer research and clinical trials globally. He is fluent in Tamil, Hindi, and English.",
+      doctorInfo: {
+        Residency: ["Northwestern University"],
+        Area: ["Memorial Sloan Kettering Cancer Center"],
+        BoardCertification: ["Medical Oncology"],
+        Expertise: [
+          "Soft Tissue and Bone Sarcomas",
+          "Early Drug Development (Phase I/II clinical trials) – solid tumors",
+        ],
+      },
+      education: "MD - State University Of New York, Syracuse",
+    },
+  ];
