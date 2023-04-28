@@ -13,6 +13,15 @@ dependencies:
   '@astrojs/tailwind':
     specifier: ^3.1.1
     version: 3.1.1(astro@2.2.1)(tailwindcss@3.0.24)(ts-node@10.9.1)
+  '@fontsource/material-icons-outlined':
+    specifier: ^4.5.4
+    version: 4.5.4
+  '@fontsource/poppins':
+    specifier: ^4.5.10
+    version: 4.5.10
+  '@fontsource/rubik':
+    specifier: ^4.5.14
+    version: 4.5.14
   '@fullcalendar/core':
     specifier: ^6.1.6
     version: 6.1.6
@@ -43,6 +52,9 @@ dependencies:
   astro:
     specifier: ^2.2.1
     version: 2.2.1(@types/node@18.15.11)
+  astro-compressor:
+    specifier: ^0.4.0
+    version: 0.4.0
   css-loader:
     specifier: ^6.7.3
     version: 6.7.3(webpack@5.78.0)
@@ -2234,6 +2246,18 @@ packages:
       react: 18.0.0
       react-dom: 18.0.0(react@18.0.0)
       tabbable: 6.1.1
+    dev: false
+
+  /@fontsource/material-icons-outlined@4.5.4:
+    resolution: {integrity: sha512-2SLQe/pAlOzoE2Kd5cBxqTgI9U63hf3a7RrCF8GFvgPkYhF6WOcIzFzsLc1Fdf+UhcYS+Hgpp6o8peguwZGK9Q==}
+    dev: false
+
+  /@fontsource/poppins@4.5.10:
+    resolution: {integrity: sha512-oYZVHsnlwV3VWM1SE/m6SUxVh0QLk5+2wB+lBiXcI7N/0KVQWmV9YykaPqfJHBLvmdya+MAOnv+BQHeLU1vOOw==}
+    dev: false
+
+  /@fontsource/rubik@4.5.14:
+    resolution: {integrity: sha512-EvMK3kkeAgKkk8qAeT4PjpyAYyu72pIlJm+SXJ5vR/xhCX2yj2xoq3+YS38rPmPcCAnrAVONoQ3ezLxVm6jhBA==}
     dev: false
 
   /@fullcalendar/core@6.1.6:
@@ -4751,6 +4775,10 @@ packages:
     dependencies:
       tslib: 2.5.0
     dev: true
+
+  /astro-compressor@0.4.0:
+    resolution: {integrity: sha512-yw6wM+cjkdyAMc6HW2lrdinOxt64PwQuL5NCAe71cXF/5xjnyJhgg9nyyFE32oQtmtd5I/57Pyp/kPe9IfYAxg==}
+    dev: false
 
   /astro@2.2.1(@types/node@18.15.11):
     resolution: {integrity: sha512-yYPRzh3su38bi3VBCKmYAUBkQSaFQMKFsu8JAVDzFRoGLbskJ/6JkDX2abSB9/iRug8GAKaH/FWxXOTzIsSQ7Q==}
