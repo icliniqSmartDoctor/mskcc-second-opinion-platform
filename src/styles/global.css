@@ -1,4 +1,4 @@
-/* @import url("../assets/icons/fontawesome-pro-5/css/all.min.css"); */
+@import url("../assets/icons/fontawesome-pro-5/css/all.min.css");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
