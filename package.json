@@ -27,7 +27,7 @@
     "@types/react-dom": "^18.0.6",
     "@types/testing-library__jest-dom": "^5.14.5",
     "astro": "^2.2.1",
-    "astro-compress": "^1.1.42",
+    "astro-compressor": "^0.4.0",
     "css-loader": "^6.7.3",
     "flowbite": "^1.6.5",
     "flowbite-react": "^0.4.3",

@@ -2,9 +2,10 @@ import { defineConfig } from 'astro/config';
 import cloudflare from "@astrojs/cloudflare";
 import react from "@astrojs/react";
 import tailwind from "@astrojs/tailwind";
-// import compress from "astro-compress";
 
 import partytown from "@astrojs/partytown";
+
+import compressor from "astro-compressor";
 
 // https://astro.build/config
 export default defineConfig({
@@ -13,10 +14,9 @@ export default defineConfig({
     mode: "directory"
   }),
   integrations: [react(), tailwind(),
-    //  compress()
-    , partytown({
-      config: {
-        forward: ["dataLayer.push"]
-      },
-    })]
+  , partytown({
+    config: {
+      forward: ["dataLayer.push"]
+    }
+  }), compressor()]
 });
