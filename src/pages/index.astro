@@ -8,7 +8,7 @@ import ServicesOffered from "components/Home/ServicesOffered";
 import MskDoctors from "components/Home/MskDoctors";
 import * as CONSTANTS from "GlobalConstants";
 import VideoFloat from "components/Home/VIdeoFloat";
-
+import AssetAccessor from "utils/AssetAccessor";
 export const prerender = true;
 ---
 
@@ -49,7 +49,7 @@ export const prerender = true;
 		<div class="container-alternate mx-auto px-4">
 			<div class="grid grid-cols-2 gap-4 items-center">
 				<div class="lg:col-span-1 md:col-span-1 sm:col-span-2 col-span-2">
-					<img src="https://assets.icliniq.com/v2/assets/images/mskcc/img/mskcc-cancer/mskcc-building-v1.jpg" alt="mskcc-building" />
+					<img src={AssetAccessor.mskccBuilding} alt="mskcc-building" />
 				</div>
 				<div class="lg:pl-6 lg:col-span-1 md:col-span-1 sm:col-span-2 col-span-2">
 					<div class="about-title mb-4">
