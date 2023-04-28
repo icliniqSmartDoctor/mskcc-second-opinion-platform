@@ -24,18 +24,32 @@ export const SIDEMENU = [
 
 ]
 
-export const MSKCC_MENU : any = {
+export const MSKCC_MENU: any = {
     'home': 'https://mskcc.icliniq.com/',
     'about us': [
-        { 'about msk': 'https://mskcc.icliniq.com/about-mskcc-india' },
-        { 'cancer specialities': 'https://mskcc.icliniq.com/#cancer-specialities' },
-        { 'msk doctors': 'https://mskcc.icliniq.com/#msk-doctors' },
-        { 'india center team': 'https://mskcc.icliniq.com/mskcc-india-team' },
-        { 'contact us': 'https://mskcc.icliniq.com/contact-us' },
+        {
+            'about msk': 'https://mskcc.icliniq.com/about-mskcc-india'
+        },
+        {
+            'cancer specialities': 'https://mskcc.icliniq.com/#cancer-specialities'
+        },
+        {
+            'msk doctors': 'https://mskcc.icliniq.com/#msk-doctors'
+        },
+        {
+            'india center team': 'https://mskcc.icliniq.com/mskcc-india-team'
+        },
+        {
+            'contact us': 'https://mskcc.icliniq.com/contact-us'
+        },
     ],
     'our services': [
-        { 'remote second opinions': 'https://mskcc.icliniq.com/mskcc-india-services/remote-second-opinion' },
-        { 'care at msk in new york': 'https://mskcc.icliniq.com/mskcc-india-services/travel-guide-to-mskcc-new-york' }
+        { 
+            'remote second opinions': 'https://mskcc.icliniq.com/mskcc-india-services/remote-second-opinion' 
+        },
+        { 
+            'care at msk in new york': 'https://mskcc.icliniq.com/mskcc-india-services/travel-guide-to-mskcc-new-york' 
+        }
     ],
     'frequently asked questions': 'https://mskcc.icliniq.com/faq',
     'login': [
