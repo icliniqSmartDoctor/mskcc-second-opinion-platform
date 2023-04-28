@@ -54,7 +54,7 @@ function MenuNav() {
                                         <a href={`${CONSTANTS.MSKCC_MENU[res]}`}>
                                             <div className='mx-4 capitalize font-medium'>
                                                 {
-                                                    res.toString().toLowerCase() === 'home' ? <i className='fal fa-home-alt text-2xl'></i> : res
+                                                    res.toString().toLowerCase() === 'home' ? <i className='fa fa-home text-white text-2xl'></i> : res
                                                 }
                                             </div>
                                         </a>
