@@ -40,7 +40,7 @@ const VideoFloat = () => {
     <div className="video-wrap" ref={videoWrapRef}>
 		<div className="video-floating" ref={videoRef}>
 			<div className='relative w-full'>
-				<i className="icon-close-video far fa-window-close" onClick={handleVideoClose}></i>
+        <span className="icon-close-video material-icons-outlined" onClick={handleVideoClose}>close</span>
 				<video className="w-full cursor-pointer" id='video-player' poster="https://assets.icliniq.com/mskcc-india/mskcc-india-front-pause.png"  preload='metadata' controls>
 					<source src="https://s3.amazonaws.com/images.icliniq.com/video/MSK+India+welcome+video_icliniq+site+and+phone.mp4" type="video/mp4"/>
 				</video>
