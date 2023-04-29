@@ -288,40 +288,241 @@ export const MSKCC_INDIA_TEAM = {
 
 export const DOCTOR_DETAILS = [
     {
-      path: "murray-brennan",
-      drName: "Dr.Murray Brennan",
-      specialist: "SURGICAL ONCOLOGIST",
-      designation:
+      "path": "murray-brennan",
+      "drName": "Dr.Murray Brennan",
+      "specialist": "SURGICAL ONCOLOGIST",
+      "designation":
         "Senior Vice President of International Programs, Benno C. Schmidt Chair in Clinical Oncology",
-      img: "https://assets.icliniq.com/v2/assets/images/mskcc/img/mskcc-cancer/doctor-details-370-3.jpg",
-      About:
+      "img": "https://assets.icliniq.com/v2/assets/images/mskcc/img/mskcc-cancer/doctor-details-370-3.jpg",
+      "about":
         "Dr.Eastham is a surgeon who specializes in nerve-sparing radical prostatectomy for prostate cancer and salvage radical prostatectomy for recurrent prostate cancer. He has been in practice for the last 15 years, and he exclusively cares for men with prostate cancer. Dr.Eastham sees about 300 prostate cancer patients each year. He performs robotic-assisted radical prostatectomy and traditional open surgery for men with high-risk prostate cancer. [[newline]] His area of special interest includes treating men with high-risk prostate cancer who are not considered candidates for traditional open surgery or those previously treated with radiation therapy but whose cancer has returned. His clinical research focuses on improving surgical outcomes for prostate cancer, including cancer control and restoration of normal urinary and sexual function. During the course of his career, he has given more than 180 invited presentations at meetings and symposia in the US and around the world. He has published 300 peer-reviewed studies in prestigious national and international journals.",
-      doctorInfo: {
-        Residency: ["Surgery - Peter Bent Brigham Hospital"],
-        Area: ["Surgery - Peter Bent Brigham Hospital"],
-        BoardCertification: ["Surgery"],
-        Expertise: ["Soft Tissue Sarcoma"],
-      },
-      education: "MD - University Of Otago",
+      "doctorInfo": [{
+        "Residency": ["Surgery - Peter Bent Brigham Hospital"],
+        "Fellowships": ["Surgery - Peter Bent Brigham Hospital"],
+        "Board of Certification": ["Surgery"],
+        "Area of Expertise": ["Soft Tissue Sarcoma"],
+      }],
+      "education": ["MD - University Of Otago"],
     },
     {
-      path: "mrinal-gounder",
-      drName: "Dr.Mrinal Gounder",
-      specialist: "MEDICAL ONCOLOGIST",
-      designation:
-        "Physician Ambassador – India and Asia MSK Bobst International Center",
-      img: "https://assets.icliniq.com/v2/assets/images/mskcc/img/mskcc-cancer/doctor-details-370-7.jpg",
-      About:
-        "Dr. Mrinal Gounder, MD, is the MSK Physician Ambassador to India and Asia. He is an internationally recognized medical oncologist specializing in sarcomas and rare cancers. He specializes in developing new drugs in cancer with a specific focus on sarcoma, a rare and devastating cancer that affects children, adolescents, and adults. He joined MSK in 2008 and specializes in personalized medicine, where genetic testing of cancer is used to inform the right therapies for an individual patient. He is the principal investigator of several global clinical trials (phase I – III) evaluating promising new drugs for sarcoma and many other solid cancers. He was the global lead for the study that led to FDA approval of tazemetostat in sarcoma. His work is internationally known and has been published in the New England Journal of Medicine, Journal of Clinical Oncology, Lancet Oncology, Nature Medicine, and others. His research contributions to rare cancers were recognized as the top 10 Advances of the Year in 2018 in the field of oncology. As the Physician Ambassador to India and Asia, he is passionate about building collaborations between MSK and India to improve access to patient care and collaborate on education, graduate medical training, and advancing cancer research and clinical trials globally. He is fluent in Tamil, Hindi, and English.",
-      doctorInfo: {
-        Residency: ["Northwestern University"],
-        Area: ["Memorial Sloan Kettering Cancer Center"],
-        BoardCertification: ["Medical Oncology"],
-        Expertise: [
-          "Soft Tissue and Bone Sarcomas",
-          "Early Drug Development (Phase I/II clinical trials) – solid tumors",
-        ],
+        "path": "mrinal-gounder",
+        "drName": "Dr.Mrinal Gounder",
+        "specialist": "MEDICAL ONCOLOGIST",
+        "designation": "Physician Ambassador – India and Asia MSK Bobst International Center",
+        "img": "https://assets.icliniq.com/v2/assets/images/mskcc/img/mskcc-cancer/doctor-details-370-7.jpg",
+        "about": "Dr. Mrinal Gounder, MD, is the MSK Physician Ambassador to India and Asia. He is an internationally recognized medical oncologist specializing in sarcomas and rare cancers. He specializes in developing new drugs in cancer with a specific focus on sarcoma, a rare and devastating cancer that affects children, adolescents, and adults. He joined MSK in 2008 and specializes in personalized medicine, where genetic testing of cancer is used to inform the right therapies for an individual patient. He is the principal investigator of several global clinical trials (phase I – III) evaluating promising new drugs for sarcoma and many other solid cancers. He was the global lead for the study that led to FDA approval of tazemetostat in sarcoma. His work is internationally known and has been published in the New England Journal of Medicine, Journal of Clinical Oncology, Lancet Oncology, Nature Medicine, and others. His research contributions to rare cancers were recognized as the top 10 Advances of the Year in 2018 in the field of oncology. As the Physician Ambassador to India and Asia, he is passionate about building collaborations between MSK and India to improve access to patient care and collaborate on education, graduate medical training, and advancing cancer research and clinical trials globally. He is fluent in Tamil, Hindi, and English.",
+        "doctorInfo": [{
+           "Residency": ["Northwestern University"],
+           "Fellowships": ["Memorial Sloan Kettering Cancer Center"],
+           "Board of Certification": ["Medical Oncology"],
+           "Area Of Expertise": [
+              "Soft Tissue and Bone Sarcomas",
+              "Early Drug Development (Phase I/II clinical trials) – solid tumors"
+           ]
+        }],
+        "education": ["MD - State University Of New York, Syracuse"]
+     
       },
-      education: "MD - State University Of New York, Syracuse",
-    },
+      {
+        "path": "lisa-deangelis",
+        "drName": "Dr. Lisa DeAngelis",
+        "specialist": "Neuro-Oncologist",
+        "designation": "Physician-in-Chief, Memorial Hospital, Lillian Rojtman Berkman Chair in Honor of Jerome B. Posner",
+        "img": "https://assets.icliniq.com/v2/assets/images/mskcc/img/mskcc-cancer/doctor-details-370-1.jpg",
+        "about": "Dr. DeAngelis is a neuro-oncologist who has more than 30 years of experience in treating patients with brain tumors and associated complications, such as cognitive impairment and strokes. As the Physician-in-Chief and Chief Medical Officer at Memorial Sloan Kettering, Dr. DeAngelis oversees all clinical, research, and medical education efforts. She is also a co-founder and member of the Brain Tumor Center at Memorial Sloan Kettering. She has conducted and led various national trials of investigational drugs used in the treatment of primary central nervous system lymphoma and new brain tumor treatments.",
+        "doctorInfo":[{
+            "Residency": ["Northwestern University"],
+        "Fellowships": [
+        "Neuro-Oncology - Columbia-Presbyterian Medical Center","Neuro-Oncology - Memorial Sloan Kettering Cancer Center","Neurology - New York Hospital"
+        ],
+        "Board of Certification": [
+          "Neurology"
+        ],
+        "Area Of Expertise": [
+          "Neuro-oncology",
+          "Neurologic Complications of Cancer",
+          "Brain Tumors",
+          "Primary Central Nervous System Lymphoma"
+        ]}],
+        "education": ["MD - Columbia University","Neurology - Columbia - Presbyterian Medical Center"]
+     
+      },
+      {
+        "path":"monica-marrow",
+        "drName": "Dr. Monica Morrow",
+        "specialist": "Surgical Oncologist",
+        "designation": "Chief, Breast Surgery Service; Anne Burnett Windfohr Chair of Clinical Oncology",
+        "img": "https://assets.icliniq.com/v2/assets/images/mskcc/img/mskcc-cancer/doctor-details-370-6.jpg",
+        "about": "Dr. Morrow is a surgical oncologist who specializes in the treatment of breast cancer. In 2002 and 2007, she co-chaired the joint committee of the American College of Surgeons, American College of Radiology, and College of American Pathologists on Standards for Breast-Conserving Therapy for Invasive Breast Cancer and Ductal Carcinoma In Situ (DCIS). Dr. Morrow's current research interest is on how treatment choices for surgical treatment for breast cancer are made. She is the surgical editor of the textbook 'Diseases of the Breast' and the co-author of 'Breast Cancer for Dummies.' Dr. Morrow was the President of the Society of Surgical Oncology in the year 2012-2013.",
+        "doctorInfo": [{
+        "Residency": [
+        "General Surgery - Medical Center Hospital of Vermont"
+        ],
+        "Fellowships": [
+        "General Surgical Oncology - Memorial Sloan Kettering Cancer Center"
+        ],
+        "Board of Certification": [
+        "Surgery"
+        ],
+        "Area Of Expertise": [
+        "Breast disorders"
+        ]
+        }],"education": [
+        "MD - Jefferson Medical College"
+        ],
+        },
+        {
+            "path": "jatin-shah",
+            "drName": "Dr. Jatin Shah",
+            "specialist": "Surgical Oncologist",
+            "designation": "Elliot W. Strong Chair in Head and Neck Oncology",
+            "img": "https://assets.icliniq.com/v2/assets/images/mskcc/img/mskcc-cancer/doctor-details-370-2.jpg",
+            "about": "Dr. Jatin Shah is the former Chief of the Head and Neck Surgery department at MSK and a leading head and neck surgeon. After a surgical career of more than 40 years, Dr. Shah now provides consultations to discuss various treatment options, the advantages and disadvantages of surgical and non-surgical cancer treatments, the expected outcomes, and the quality of life. Memorial Sloan Kettering Cancer Center has established The 'Jatin Shah Chair in Head and Neck Surgery and Oncology' because of Dr. Shah's outstanding contributions and world leadership in Head and Neck Surgery.",
+            "doctorInfo": [{
+              "Residency": [
+                "General Surgery - SSG Hospital",
+                "Surgical Oncology - Memorial Sloan Kettering Cancer Center",
+                "Surgery - New York Infirmary"
+              ],
+              "Fellowships": [
+                "Memorial Sloan Kettering Cancer Center"
+              ],
+              "Board of Certification": [
+                "Surgery"
+              ],
+              "Area Of Expertise": [
+                "Head and Neck Surgery for:",
+                "Mouth",
+                "Throat",
+                "Larynx",
+                "Sinuses",
+                "Skull base",
+                "Thyroid",
+                "Salivary glands",
+                "Skin",
+                "Soft tissues",
+                "Bone tumors"
+              ]
+            }],
+            "education": [
+              "MD - Maharaja Sayajirao University"
+            ]
+          },
+
+           
+            {
+            "path":"christopher-crane",
+            "drName": "Dr.Christopher Crane",
+            "specialist": "Radiation Oncologist",
+            "designation": "Vice-Chair, Department of Radiation Oncology",
+            "about": "Dr.Christopher Crane, a radiation oncologist, treats patients suffering from gastrointestinal cancers. With the help of advanced technologies, Dr.Crane is an expert in deciding where in the body the radiation should be directed to, which avoids damage to healthy tissues and reduces the risk of severe radiation side effects. Dr.Crane is leading many cancer clinical trials focused on delivering radiation therapy doses to eliminate liver and pancreas tumors.",
+            "img": "https://assets.icliniq.com/v2/assets/images/mskcc/img/mskcc-cancer/doctor-details-370-4.jpg",
+            "doctorInfo":[{
+             "Residency": [
+               "Radiation Oncology - University of Virginia"
+            ],
+            "Fellowships": [
+               "Radiation Oncology"
+            ],
+            "Area Of Expertise": [
+               "Radiation therapy for:",
+               "Anal cancer",
+               "Gallbladder cancer",
+               "Liver cancer",
+               "Bile duct cancer",
+               "Gastric cancer",
+               "Pancreatic cancer"
+            ]}],
+           
+            "education": [
+                "MD-University of Virginia"
+           ],
+         },
+         {
+            "path":"andrew-seidman",
+            "drName": "Dr.Andrew Seidman",
+            "specialist": "Medical Oncologist",
+            "designation": "Medical Director, MSK Bobst International Center",
+            "about": "Dr.Seidman, a medical oncologist, is experienced in managing early and advanced breast cancer stages. His research interests include the clinical investigation of new chemotherapeutic drugs in the treatment of metastatic breast cancer.",
+            "img": "https://assets.icliniq.com/v2/assets/images/mskcc/img/mskcc-cancer/doctor-details-370-8.jpg",
+            "doctorInfo":[{
+             "Residency": [
+               "Internal Medicine - Pennsylvania Hospital"
+            ],
+            "Fellowships": [
+               "Medical Oncology/Hematology - Memorial Sloan Kettering Cancer Center"
+            ],
+            "Board Of Certification":[
+                "Internal Medicine","Medical Oncology"
+                ],
+
+            "Area Of Expertise": [
+               "Breast cancer"
+            ]}],
+           
+             "education": [
+			 "MD - Hahnemann University School Of Medicine"
+            ],
+         }
+         ,
+         {
+            "path":"sergio-giralt",
+            "drName": "Dr.Sergio Giralt",
+            "specialist": "Hemotologic oncologist",
+            "designation": "Chief, Adult Bone Marrow Transplant Service, Melvin Berlin Family Chair in Multiple Myeloma",
+            "about": "Dr.Giralt’s primary focus is stem cell transplantation for patients suffering from blood-related disorders. He is a board-certified hematologist-oncologist. He was the Deputy Chair of the Department of Stem Cell Transplantation and Cellular Therapies in the University of Texas MD Anderson Cancer Center. Dr.Giralt joined Memorial Sloan Kettering in May 2010 to lead the Adult Bone Marrow Transplant Service and served as Chief until February 2020. Until recently, Dr. Giralt chaired the executive board of the Center for International Blood and Marrow Transplant Research and was the Blood and Marrow Transplant Clinical Trials Network chair, a group that works on stem cell transplantation in the US. His research focus has been on improving treatments for older adults with acute and chronic leukemia, and he is an expert in the treatment of multiple myeloma.",
+            "img": "https://assets.icliniq.com/v2/assets/images/mskcc/img/mskcc-cancer/doctor-details-370-4.jpg",
+            "doctorInfo":[{
+             "Residency": [
+               "Internal Medicine - Good Samaritan Hospital"
+            ],
+            "Fellowships": [
+               "Medical Oncology - MD Anderson Cancer Center"
+            ],
+			"Board Of Certification":[
+			"Internal Medicine",
+               "Hematology",
+			   "Medical Oncology"],
+			
+            "Area Of Expertise": [
+			"Leukemia and Other Blood Cancers",
+			"Multiple Myeloma",
+			"Blood and Marrow Stem Cell Transplantation"
+			
+            ]}],
+           
+             "education": [
+			 "MD - Universidad Central De Venezuela"
+            ],
+         },
+         {
+            "path":"james-eastham",
+            "drName": "Dr.James A. Eastham",
+            "specialist": "Surgical oncologist",
+            "designation": "MD, University of Southern California, Los Angeles",
+            "about": "Dr.Eastham is a surgeon who specializes in nerve-sparing radical prostatectomy for prostate cancer and salvage radical prostatectomy for recurrent prostate cancer. He has been in practice for the last 15 years, and he exclusively cares for men with prostate cancer. Dr.Eastham sees about 300 prostate cancer patients each year. He performs robotic-assisted radical prostatectomy and traditional open surgery for men with high-risk prostate cancer. His area of special interest includes treating men with high-risk prostate cancer who are not considered candidates for traditional open surgery or those previously treated with radiation therapy but whose cancer has returned. His clinical research focuses on improving surgical outcomes for prostate cancer, including cancer control and restoration of normal urinary and sexual function. During the course of his career, he has given more than 180 invited presentations at meetings and symposia in the US and around the world. He has published 300 peer-reviewed studies in prestigious national and international journals.",
+            "img": "https://assets.icliniq.com/v2/assets/images/mskcc/img/mskcc-cancer/james-eastham-mskcc.jpg",
+            "doctorInfo":[{
+             "Residency": [
+                "Urology - Los Angeles County - University of Southern California Medical Center"
+            ],
+            "Fellowships": [
+                "Urologic Oncology - Baylor College of Medicine"
+            ],
+			"Board Of Certification":[
+			    "Urology"],
+			
+            "Area Of Expertise": [
+                "Prostate Cancer",
+                "Nerve-Sparing Techniques",
+                "Salvage Radical Prostatectomy",
+                "Robotic Prostatectomy"
+			
+            ]}],
+           
+             "education": [
+			 "MD, University Of Southern California, Los Angeles"
+            ],
+         }
+   
   ];
