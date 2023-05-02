@@ -30,10 +30,10 @@ export const MSKCC_MENU: any = {
       "about msk": "https://mskcc.icliniq.com/about-mskcc-india",
     },
     {
-      "cancer specialities": "https://mskcc.icliniq.com/#cancer-specialities",
+      "cancer specialities": "#cancer-specialities",
     },
     {
-      "msk doctors": "https://mskcc.icliniq.com/#msk-doctors",
+      "msk doctors": "#msk-doctors",
     },
     {
       "india center team": "https://mskcc.icliniq.com/mskcc-india-team",
