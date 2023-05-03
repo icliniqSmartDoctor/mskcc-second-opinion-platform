@@ -1,8 +1,111 @@
+import type { activities } from "components/Dashboard/Home/Activities";
+
 export type CancerSpecialty = {
   cancer_label: string;
   cancer_description: string;
   cancer_path_url: string;
 };
+
+export type CaseDetailType = {
+  general_info: {
+    patient_name: {
+      label: string;
+      value: string;
+    };
+    irn: {
+      label: string;
+      value: number;
+    };
+  }
+  medical_info: {
+    age_limit: {
+      query: string;
+      response: string;
+    };
+    diagnosis_status: {
+      query: string;
+      response: string;
+    };
+    call_time: {
+      query: string;
+      response: string;
+    };
+  };
+  patient_service: {
+    assistance_type: {
+      query: string;
+      response: string;
+    },
+
+    hospitalization_status: {
+      query: string;
+      response: string;
+    },
+    cancer_type: {
+      query: string;
+      response: string;
+    },
+    additional_details: {
+      query: string;
+      response: string;
+    }
+  };
+
+  personal_info: {
+    first_name: {
+      label: string;
+      value: string;
+    },
+    last_name: {
+      label: string;
+      value: string;
+    },
+    gender: {
+      label: string;
+      value: string;
+    },
+    dob: {
+      label: string,
+      value: string,
+    },
+    phone_type: {
+      label: string,
+      value: string,
+    },
+    contact: {
+      label: string,
+      value: string,
+    },
+    address: {
+      label: string,
+      value: string,
+    },
+    city: {
+      label: string,
+      value: string,
+    },
+    state: {
+      label: string,
+      value: string,
+    },
+    country: {
+      label: string,
+      value: string,
+    },
+    postal_code: {
+      label: string,
+      value: number,
+    },
+    interpreter_needed: {
+      label: string,
+      value: string,
+    },
+    learned_from: {
+      label: string,
+      value: string,
+    }
+  }
+  }
 
 export const SIDEMENU = [
   {
@@ -661,4 +764,171 @@ export const CANCER_TYPE_LIST = [
         },
        
 
+];
+
+export const ACTIVITIES:activities =
+[
+  {
+      id: 1,
+      "activity": "Sent a message",
+      "timestamp": "2023-02-10"
+  },
+  {
+      id: 2,
+      "activity": "Made a payment",
+      "timestamp": "2023-02-10"
+  },
+  {
+      id: 3,
+      "activity": "Uploaded a file",
+      "timestamp": "2023-02-10"
+  },
+  {
+      id: 4,
+      "activity": "Updated profile details",
+      "timestamp": "2023-02-10"
+  },
+  {
+      id: 5,
+      "activity": "Changed account password",
+      "timestamp": "2023-02-10"
+  },
+  {
+      id: 6,
+      "activity": "Opted-in for WhatsApp alerts",
+      "timestamp": "2023-02-10"
+  }
+]
+
+export const PHYSICIAN_CAROUSEL = [
+  {
+    image: "https://i.pravatar.cc/150?img=5",
+    name: "Raju",
+    link: "https://www.w3sAchools.com/",
+  },
+  {
+    image: "https://i.pravatar.cc/150?img=4",
+    name: "Hari",
+    link: "https://www.w3sSchools.com/",
+  },
+  {
+    image: "https://i.pravatar.cc/150?img=3",
+    name: "Dhan",
+    link: "https://www.w3sCchools.com/",
+  },
+];
+export const CASE_TABS=[
+  { 
+    title: "Case Details", 
+    path: "/cases" 
+  },
+  {
+    title: "Medical Records",
+    path: "/cases/medicalRecord",
+  },
+];
+
+export const MEDICAL_RECORDS: CaseDetailType[] = [
+  {
+    general_info: {
+      patient_name: {
+        label: "Patient Name",
+        value: "Sam",
+      },
+      irn: {
+        label: "IRN",
+        value: 2020202020,
+      },
+      
+    },
+    medical_info: {
+      age_limit: {
+        query: "You must be over the age of 18 to submit this form:",
+        response: "yes",
+      },
+      diagnosis_status: {
+        query: "Have you received a diagnosis of cancer:",
+        response: "newly diagnosed",
+      },
+      call_time: {
+        query: "Best Time to Call:",
+        response: "Tuesday at 3.30 PM",
+      },
+    },
+
+    patient_service:
+      {
+        assistance_type:{
+          query:"What type of assistance are you looking for?",
+          response: "Remote Consultation with MSK Doctor(s)"
+        },
+        hospitalization_status:{
+          query:"Are you currently admitted to the hospital?",
+          response:"No"
+        },
+        cancer_type:{
+          query:"Typs of cancer",
+          response:"Others"
+        },
+        additional_details:{
+          query:"Are there any details you’d like to share that might help us get you the care you need?",
+          response:"test"
+        }
+      },
+        personal_info: {
+          first_name: {
+            label: "First Name",
+            value: "BOB"
+          },
+          last_name: {
+            label: "Last Name",
+            value: "N"
+          },
+          gender: {
+            label: "Gender",
+            value: "Male",
+          },
+          dob: {
+            label: "Date Of Birth",
+            value: "12/05/1998",
+          },
+          phone_type: {
+            label: "Phone Type",
+            value: "string",
+          },
+          contact: {
+            label: "Contact",
+            value: "string",
+          },
+          address: {
+            label: "Address",
+            value: "string",
+          },
+          city: {
+            label: "City",
+            value: "string",
+          },
+          state: {
+            label: "State",
+            value: "string",
+          },
+          country: {
+            label: "Country",
+            value: "string",
+          },
+          postal_code: {
+            label: "Postal Code",
+            value: 999999999,
+          },
+          interpreter_needed: {
+            label: "Will you require an interpreter for language other than English?",
+            value: "string",
+          },
+          learned_from: {
+            label: "How did you learn about MSK India?",
+            value: "string",
+          },
+      }
+
+  },
 ];

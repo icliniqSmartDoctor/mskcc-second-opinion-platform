@@ -3,9 +3,11 @@ import Cases from 'components/Dashboard/Cases';
 import SideNav from 'components/Dashboard/Common/SideNav';
 import DashNav from 'components/Dashboard/Common/DashNav';
 import Layout from 'layouts/Layout.astro';
+import CaseDetails from 'components/Dashboard/Cases/CaseDetails';
+import { MEDICAL_RECORDS } from 'GlobalConstants';
 
 const cookie = Astro.request.headers.get('cookie');
-if (!cookie.includes('session')) {
+if (!cookie!.includes('session')) {
   return Astro.redirect('/login');
 }
 
@@ -13,8 +15,9 @@ if (!cookie.includes('session')) {
 
 <Layout title="Cases">
 	<DashNav />
-	<SideNav activeMenu="cases" />
-	<Cases client:load />
+	<!-- <SideNav activeMenu="cases" />  -->
+	<div class="pl-28 pt-16"><CaseDetails Rec={MEDICAL_RECORDS}/></div> 
+	<!-- <Cases client:load /> -->
 </Layout>
 
 <style is:global>
