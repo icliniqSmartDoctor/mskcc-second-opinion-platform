@@ -4,6 +4,7 @@ import AssetAccessor from 'utils/AssetAccessor';
 import * as CONSTANTS from '../../GlobalConstants'
 
 
+
 function Nav() {
     const openAccordation = () => {
         const customAccordation = document.getElementsByClassName('custom-accordation')[0];
@@ -37,12 +38,12 @@ function Nav() {
 
                     <Navbar.Collapse className='hidden md:hidden lg:block'>
                         <div className='flex items-center tracking-wide font-normal	'>
+                        <span className="material-symbols-outlined">face</span>
                             <span className="material-icons-outlined text-primary pr-2 -mt-1 text-3xl">mail</span>
                             <p className='text-primary text-base'>Email: </p>
                             <a className="pl-2 text-secondary text-base underline hover:no-underline" href="mailto:mskccindia@icliniq.com">mskccindia@icliniq.com</a>
                         </div>
-                        <div className='flex items-center tracking-wide font-normal	'>
-                      
+                        <div className='flex items-center tracking-wide font-normal'>
                             <span className="material-icons-outlined text-primary pr-2 -mt-1 text-3xl">call</span>
                             <p className='text-primary text-base'>Phone Number: </p>
                             <a className="pl-2 text-secondary text-base underline hover:no-underline" href="tel:+918270070000">+91 82 700 70000</a>

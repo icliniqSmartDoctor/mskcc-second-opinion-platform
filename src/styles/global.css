@@ -1,4 +1,4 @@
-@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+@import url("../assets/icons/fontawesome-pro-5/css/all.min.css");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
