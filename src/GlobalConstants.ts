@@ -932,3 +932,4 @@ export const MEDICAL_RECORDS: CaseDetailType[] = [
 
   },
 ];
+

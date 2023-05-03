@@ -90,7 +90,7 @@ const CaseDetails = ({ Rec }: RecType) => {
     </div>
   );
 };
-
+ 
 CaseDetails.propTypes = {};
 
 export default CaseDetails;
