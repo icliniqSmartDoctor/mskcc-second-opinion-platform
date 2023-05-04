@@ -11,12 +11,14 @@ import compressor from "astro-compressor";
 export default defineConfig({
   output: "server",
   adapter: cloudflare({
-    mode: "directory"
+    mode: "advanced"
   }),
   integrations: [react(), tailwind(),
   , partytown({
     config: {
       forward: ["dataLayer.push"]
     }
-  }), compressor()]
+  }), 
+  // compressor({ gzip: false, brotli: true })
+]
 });

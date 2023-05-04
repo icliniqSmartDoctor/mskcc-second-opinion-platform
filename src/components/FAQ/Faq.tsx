@@ -13,7 +13,7 @@ function Faq() {
         e.currentTarget.nextElementSibling?.classList.toggle('!border-t-0')
         e.currentTarget.nextElementSibling?.classList.toggle('!border-primary')
 
-        const panel = e.currentTarget.nextElementSibling;
+        const panel = e.currentTarget;
         if (panel.style.maxHeight) {
             panel.style.maxHeight = null;
         } else {
