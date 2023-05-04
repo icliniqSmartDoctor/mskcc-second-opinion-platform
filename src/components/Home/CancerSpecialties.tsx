@@ -4,6 +4,7 @@ function CancerSpecialties() {
     return (
         <>
         {CANCER_SPECIALTIES.map((specialites) => (
+            specialites.cancer_label !== 'View Other Types of Cancer' &&
             <div className="lg:col-span-1 md:col-span-1 sm:col-span-3 col-span-3">
                 <div className='service-box mb-30'>
                     <h3 className='text-2xl font-semibold mb-5'>
