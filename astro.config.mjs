@@ -5,8 +5,6 @@ import tailwind from "@astrojs/tailwind";
 
 import partytown from "@astrojs/partytown";
 
-import compressor from "astro-compressor";
-
 // https://astro.build/config
 export default defineConfig({
   output: "server",
