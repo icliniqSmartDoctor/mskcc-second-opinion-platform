@@ -3,7 +3,7 @@ import Footer from "components/Common/Footer";
 import MenuNav from "components/Common/MenuNav";
 import Nav from "components/Common/Nav";
 import Layout from "layouts/Layout.astro";
-import { CANCER_TYPE_LIST } from "constants/HomeConstants";
+import { CANCER_SPECIALTIES } from "constants/HomeConstants";
 ---
 
 <Layout title="">
@@ -23,11 +23,11 @@ import { CANCER_TYPE_LIST } from "constants/HomeConstants";
     </div>
     <div class="p-8 pt-24">
       {
-        CANCER_TYPE_LIST.map((data) => (
+        CANCER_SPECIALTIES.map((data) => (
           <>
             <ul class="list-disc">
               <li class="hover:text-blue-600 leading-9">
-                <a href={`${data.path}`}>{data.title}</a>
+                <a href={`${data.cancer_path_url}`}>{data.cancer_label}</a>
               </li>
             </ul>
           </>
