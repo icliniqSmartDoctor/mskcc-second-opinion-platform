@@ -14,7 +14,7 @@ export type CaseDetailType = {
     };
     irn: {
       label: string;
-      value: number;
+      value: string;
     };
   }
   medical_info: {
@@ -837,9 +837,8 @@ export const MEDICAL_RECORDS: CaseDetailType[] = [
       },
       irn: {
         label: "IRN",
-        value: 2020202020,
+        value: "2020202020",
       },
-      
     },
     medical_info: {
       age_limit: {

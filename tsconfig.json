@@ -4,6 +4,7 @@
     "functions/**/*"
   ],
   "compilerOptions": {
+    "esModuleInterop": true,
     "jsx": "react-jsx",
     "jsxImportSource": "react",
     "baseUrl": "./src",
