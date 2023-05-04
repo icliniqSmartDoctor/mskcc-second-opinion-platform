@@ -1,3 +1,5 @@
+import type { Activities } from 'GlobalConstants';
+
 const activity = [
   { id: 1, filename: "fa fa-comment", color: "bg-pink-200" },
   { id: 2, filename: "fa fa-dollar", color: "bg-purple-200" },
@@ -7,14 +9,10 @@ const activity = [
   { id: 6, filename: "fa fa-address-book", color: "bg-green-200" },
 ];
 
-export type activities = {
-  id: number;
-  activity: string;
-  timestamp: string;
-}[];
+
 
 type Props= {
-  Acts: activities
+  Acts: Activities
 }
 
 const Activities = ({Acts}:Props) => {

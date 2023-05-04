@@ -1,4 +1,8 @@
-import type { activities } from "components/Dashboard/Home/Activities";
+export type Activities = {
+  id: number;
+  activity: string;
+  timestamp: string;
+}[];
 
 export type CancerSpecialty = {
   cancer_label: string;
@@ -6,106 +10,32 @@ export type CancerSpecialty = {
   cancer_path_url: string;
 };
 
+export type CaseDetailLableVal={
+  label: string,
+  value: string|number
+}
+
+export type CaseDetailQueryResp={
+  query:string,
+  response:string|number
+}
+
 export type CaseDetailType = {
   general_info: {
-    patient_name: {
-      label: string;
-      value: string;
-    };
-    irn: {
-      label: string;
-      value: string;
-    };
+    [key:string]: CaseDetailLableVal 
   }
-  medical_info: {
-    age_limit: {
-      query: string;
-      response: string;
+    medical_info: {
+      [key:string]: CaseDetailQueryResp
+  }
+    patient_service: {
+      [key:string]: CaseDetailQueryResp
     };
-    diagnosis_status: {
-      query: string;
-      response: string;
-    };
-    call_time: {
-      query: string;
-      response: string;
-    };
-  };
-  patient_service: {
-    assistance_type: {
-      query: string;
-      response: string;
-    },
 
-    hospitalization_status: {
-      query: string;
-      response: string;
-    },
-    cancer_type: {
-      query: string;
-      response: string;
-    },
-    additional_details: {
-      query: string;
-      response: string;
-    }
-  };
-
-  personal_info: {
-    first_name: {
-      label: string;
-      value: string;
-    },
-    last_name: {
-      label: string;
-      value: string;
-    },
-    gender: {
-      label: string;
-      value: string;
-    },
-    dob: {
-      label: string,
-      value: string,
-    },
-    phone_type: {
-      label: string,
-      value: string,
-    },
-    contact: {
-      label: string,
-      value: string,
-    },
-    address: {
-      label: string,
-      value: string,
-    },
-    city: {
-      label: string,
-      value: string,
-    },
-    state: {
-      label: string,
-      value: string,
-    },
-    country: {
-      label: string,
-      value: string,
-    },
-    postal_code: {
-      label: string,
-      value: number,
-    },
-    interpreter_needed: {
-      label: string,
-      value: string,
-    },
-    learned_from: {
-      label: string,
-      value: string,
+    personal_info: {
+      [key:string]: CaseDetailLableVal
     }
   }
-  }
+
 
 export const SIDEMENU = [
   {
@@ -766,7 +696,7 @@ export const CANCER_TYPE_LIST = [
 
 ];
 
-export const ACTIVITIES:activities =
+export const ACTIVITIES:Activities =
 [
   {
       id: 1,
@@ -932,3 +862,45 @@ export const MEDICAL_RECORDS: CaseDetailType[] = [
   },
 ];
 
+export const CASE_STATUS=[
+  {
+    "milestone":"Inquiry Submitted",
+    "isPassed": true,
+    "timestamp": "2023-03-23"
+  },
+  {
+    "milestone":"Inquiry Accepted",
+    "isPassed": true,
+    "timestamp": "2023-03-23"
+  },
+  {
+    "milestone":"Case History Collected",
+    "isPassed": true,
+    "timestamp": "2023-03-23"
+  },
+  {
+    "milestone":"MSK Physician Assigned",
+    "isPassed": true,
+    "timestamp": "2023-03-23"
+  },
+  {
+    "milestone":"Video Appointment Scheduled",
+    "isPassed": false,
+    "timestamp": "2023-03-23"
+  },
+  {
+    "milestone":"Case Summary Received",
+    "isPassed": false,
+    "timestamp": ""
+  },
+  {
+    "milestone":"Follow-up Questions Submitted",
+    "isPassed": false,
+    "timestamp": ""
+  },
+  {
+    "milestone":"Answers Received",
+    "isPassed": false,
+    "timestamp": ""
+  }
+]

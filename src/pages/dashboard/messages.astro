@@ -3,12 +3,6 @@ import Messages from 'components/Dashboard/Messages';
 import SideNav from 'components/Dashboard/Common/SideNav';
 import DashNav from 'components/Dashboard/Common/DashNav';
 import Layout from 'layouts/Layout.astro';
-
-const cookie = Astro.request.headers.get('cookie');
-if (!cookie.includes('session')) {
-  return Astro.redirect('/login');
-}
-
 ---
 
 <Layout title="Cases">
