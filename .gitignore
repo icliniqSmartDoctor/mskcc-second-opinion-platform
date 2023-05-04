@@ -6,6 +6,7 @@ dist/
 
 # dependencies
 node_modules/
+storybook-static/
 
 # logs
 npm-debug.log*
