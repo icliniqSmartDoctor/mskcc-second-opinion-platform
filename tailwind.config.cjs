@@ -10,7 +10,8 @@ module.exports = {
 			darkblue: '#223645',
 		},
 		fontFamily: {
-			'rubik': ['rubik','sans-serif']
+			'rubik': ['rubik','sans-serif'],
+			'poppins': ['poppins']
 		}
 	},
 	plugins: [require('flowbite/plugin')],
