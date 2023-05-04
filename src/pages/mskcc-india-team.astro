@@ -4,10 +4,8 @@ import Nav from "components/Common/Nav";
 import MenuNav from "components/Common/MenuNav";
 import Footer from "components/Common/Footer";
 import TeamCard from "components/MskccIndiaTeam/TeamCard";
-import { MSKCC_INDIA_TEAM } from "GlobalConstants";
-import type { MskccIndiaTeamCard } from "TypeSpecifier";
+import { MSKCC_INDIA_TEAM } from "constants/HomeConstants";
 
-const MSKCC_IND_TEAM_CARD: MskccIndiaTeamCard = MSKCC_INDIA_TEAM;
 export const prerender = true;
 ---
 
@@ -81,7 +79,7 @@ export const prerender = true;
                 class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-5 mt-20"
             >
                 {
-                    MSKCC_IND_TEAM_CARD["Medical Team"].map((res) => {
+                    MSKCC_INDIA_TEAM["Medical Team"].map((res) => {
                         return (
                             <TeamCard
                                 drName={res["drName"]}
@@ -121,7 +119,7 @@ export const prerender = true;
                 class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-5 mt-20"
             >
                 {
-                    MSKCC_IND_TEAM_CARD["Patient Material Coordinators"].map(
+                    MSKCC_INDIA_TEAM["Patient Material Coordinators"].map(
                         (res) => {
                             return (
                                 <TeamCard
@@ -155,7 +153,7 @@ export const prerender = true;
                 class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-5 mt-20"
             >
                 {
-                    MSKCC_IND_TEAM_CARD["Patient Relation Associate"].map(
+                    MSKCC_INDIA_TEAM["Patient Relation Associate"].map(
                         (res) => {
                             return (
                                 <TeamCard

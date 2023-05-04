@@ -1,4 +1,4 @@
-import { CANCER_SPECIALTIES } from '../../GlobalConstants'
+import { CANCER_SPECIALTIES } from 'constants/HomeConstants'
 
 function CancerSpecialties() {
     return (

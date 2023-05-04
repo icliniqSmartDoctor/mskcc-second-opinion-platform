@@ -1,4 +1,4 @@
-import type { CaseDetailType } from "GlobalConstants";
+import type { CaseDetailType } from "constants/DashboardConstants";
 
 type RecType = {
   Rec: CaseDetailType[];

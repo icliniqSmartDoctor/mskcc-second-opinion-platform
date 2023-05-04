@@ -3,7 +3,7 @@
 
 import { within, userEvent } from '@storybook/testing-library';
 import Nav from 'components/Common/Nav';
-import * as CONSTANTS from '../GlobalConstants';
+import {MSKCC_MENU} from 'constants/HomeConstants';
 import type { Meta, StoryFn } from "@storybook/react";
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
 import { expect } from '@storybook/jest'
@@ -33,8 +33,8 @@ NavbarMobile.play = async ({ canvasElement }) => {
   await expect(customAccord[0]).toHaveClass('custom-accordation-open')
 
 
-  Object.keys(CONSTANTS.MSKCC_MENU).map(async (res) => {
-    if (Array.isArray(CONSTANTS.MSKCC_MENU[res])) {
+  Object.keys(MSKCC_MENU).map(async (res) => {
+    if (Array.isArray(MSKCC_MENU[res])) {
       const InnerAccordBtn = canvas.getByText(res.toUpperCase());
       const InnerAccordMenu = InnerAccordBtn.parentElement?.nextElementSibling;
       expect(InnerAccordMenu).toHaveClass('mskcc-nav-options');

@@ -1,7 +1,7 @@
 
 import { Navbar } from 'flowbite-react'
 import AssetAccessor from 'utils/AssetAccessor';
-import * as CONSTANTS from '../../GlobalConstants'
+import {MSKCC_MENU } from 'constants/HomeConstants'
 
 
 
@@ -53,9 +53,9 @@ function Nav() {
             <div className='lg:hidden custom-accordation bg-white w-full border-none '>
                 <div className='border-collapse bg-primary m-5 mt-2'>
                     {
-                           Object.keys( CONSTANTS.MSKCC_MENU ).map(res => {
+                           Object.keys( MSKCC_MENU ).map(res => {
                                 return <>
-                                    {Array.isArray(CONSTANTS.MSKCC_MENU[res]) ?
+                                    {Array.isArray(MSKCC_MENU[res]) ?
                                         <>
                                             <div className='h-auto w-full bg-primary border text-white text-md flex justify-between'
                                                 onClick={
@@ -72,7 +72,7 @@ function Nav() {
                                             </div>
                                             <div className='mskcc-nav-options'>
                                                 {
-                                                    CONSTANTS.MSKCC_MENU[res].map((menuOpt : string) => {
+                                                     (Object.values(MSKCC_MENU[res])).map((menuOpt : string) => {
                                                         return <>
                                                             <a href={`${Object.values(menuOpt).toString()}`}>
                                                                 <div className='h-auto py-3  w-full bg-primary border border-gray-400 text-md'>
@@ -86,7 +86,7 @@ function Nav() {
                                         </>
 
                                         :
-                                        <a href={`${CONSTANTS.MSKCC_MENU[res]}`}>
+                                        <a href={`${MSKCC_MENU[res]}`}>
                                             <div className='h-auto py-3 w-full bg-primary border text-white text-md ' onClick={
                                                 (e: React.MouseEvent<HTMLElement>) => {
                                                     e.stopPropagation();

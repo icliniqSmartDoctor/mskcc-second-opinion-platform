@@ -1,4 +1,4 @@
-import type { Activities } from 'GlobalConstants';
+import type { Activities } from 'constants/DashboardConstants';
 
 const activity = [
   { id: 1, filename: "fa fa-comment", color: "bg-pink-200" },

@@ -1,5 +1,5 @@
 import { Carousel } from "flowbite-react";
-import { PHYSICIAN_CAROUSEL } from "GlobalConstants";
+import { PHYSICIAN_CAROUSEL } from "constants/DashboardConstants";
 
 const PhyisicanCarousel = () => {
 

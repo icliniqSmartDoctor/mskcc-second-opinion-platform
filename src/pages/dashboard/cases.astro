@@ -4,7 +4,7 @@ import SideNav from 'components/Dashboard/Common/SideNav';
 import DashNav from 'components/Dashboard/Common/DashNav';
 import Layout from 'layouts/Layout.astro';
 import CaseDetails from 'components/Dashboard/Cases/CaseDetails';
-import { MEDICAL_RECORDS } from 'GlobalConstants';
+import { MEDICAL_RECORDS } from 'constants/DashboardConstants';
 
 const cookie = Astro.request.headers.get('cookie');
 if (!cookie!.includes('session')) {

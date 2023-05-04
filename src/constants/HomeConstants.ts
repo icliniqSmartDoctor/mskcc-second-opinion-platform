@@ -1,8 +1,4 @@
-export type Activities = {
-  id: number;
-  activity: string;
-  timestamp: string;
-}[];
+
 
 export type CancerSpecialty = {
   cancer_label: string;
@@ -10,70 +6,58 @@ export type CancerSpecialty = {
   cancer_path_url: string;
 };
 
-export type CaseDetailLableVal={
-  label: string,
-  value: string|number
+
+export type MskDoctorsType = {
+  drName: string,
+  specialist: string,
+  doctorPage: string,
+  drImg: string
 }
 
-export type CaseDetailQueryResp={
-  query:string,
-  response:string|number
+
+export type MskccMenuTypes = { [key: string]: string | { [key: string]: string }[] }
+
+export type MskccIndiaTeam = {
+  "Medical Team":
+  {
+    drName: string,
+    designation: string,
+    img: string
+  }[],
+  "Patient Material Coordinators":
+  {
+    drName: string,
+    img: string
+  }[]
+  ,
+  "Patient Relation Associate":
+  {
+    drName: string,
+    img: string
+  }[]
 }
 
-export type CaseDetailType = {
-  general_info: {
-    [key:string]: CaseDetailLableVal 
-  }
-    medical_info: {
-      [key:string]: CaseDetailQueryResp
-  }
-    patient_service: {
-      [key:string]: CaseDetailQueryResp
-    };
-
-    personal_info: {
-      [key:string]: CaseDetailLableVal
-    }
-  }
-
-
-export const SIDEMENU = [
-  {
-    title: "Home",
-    icon: "fa fa-home",
-  },
-  {
-    title: "Cases",
-    icon: "fa fa-file",
-  },
-  {
-    title: "Messages",
-    icon: "fa fa-envelope",
-  },
-  {
-    title: "Account",
-    icon: "fa fa-user",
-  },
-];
-
-export const MSKCC_MENU: any = {
-  home: "https://mskcc.icliniq.com/",
+export const MSKCC_MENU: MskccMenuTypes  = {
+  "home": "https://mskcc.icliniq.com/",
   "about us": [
     {
       "about msk": "https://mskcc.icliniq.com/about-mskcc-india",
     },
     {
       "cancer specialities": "#cancer-specialities",
+
     },
     {
       "msk doctors": "#msk-doctors",
     },
     {
       "india center team": "https://mskcc.icliniq.com/mskcc-india-team",
+
     },
     {
       "contact us": "https://mskcc.icliniq.com/contact-us",
-    },
+    }
+
   ],
   "our services": [
     {
@@ -83,56 +67,31 @@ export const MSKCC_MENU: any = {
     {
       "care at msk in new york":
         "https://mskcc.icliniq.com/mskcc-india-services/travel-guide-to-mskcc-new-york",
-    },
+    }
   ],
   "frequently asked questions":
     "https://mskcc.icliniq.com/mskcc-india-services/mskcc-patient-faqs",
-  login: [
-    { "patient login": "https://mskcc.icliniq.com/users/signin" },
+  "login": [
+    {
+      "patient login": "https://mskcc.icliniq.com/users/signin",
+    },
     {
       "msk physician login": "https://mskcc.icliniq.com/sso/web/index.php?sso",
     },
-    { "msk admin login": "https://mskcc.icliniq.com/sso/web/index.php?sso" },
-    { "msk india admin login": "https://mskcc.icliniq.com/h/admin" },
-  ],
+    {
+      "msk admin login": "https://mskcc.icliniq.com/sso/web/index.php?sso",
+
+    },
+
+    {
+      "msk india admin login": "https://mskcc.icliniq.com/h/admin"
+    }
+
+  ]
 };
 
-export const SPECIALITIES = [
-  {
-    "Benign Blood Disorders":
-      "https://mskcc.icliniq.com/cancer-care/types/benign-blood-disorders",
-    "Brain Tumors and Cancers":
-      "https://mskcc.icliniq.com/cancer-care/types/brain-tumor-and-cancer",
-    "Breast Cancer":
-      "https://mskcc.icliniq.com/cancer-care/types/breast-cancer",
-    "Colorectal Cancer":
-      "https://mskcc.icliniq.com/cancer-care/types/colorectal-cancer",
-    "Gastric and Esophageal Cancer":
-      "https://mskcc.icliniq.com/cancer-care/types/gastric-and-esophageal-cancer",
-    "Head & Neck Cancer (Oral Cancer)":
-      "https://mskcc.icliniq.com/cancer-care/types/head-and-neck-cancer",
-    "Kidney Cancer (Renal Cell Cancer)":
-      "https://mskcc.icliniq.com/cancer-care/types/kidney-cancer",
-    Leukemia: "https://mskcc.icliniq.com/cancer-care/types/leukemia",
-    "Liver, Biliary, and Pancreatic Cancer":
-      "https://mskcc.icliniq.com/cancer-care/types/liver-biliary-and-pancreatic-cancer",
-    "Lung Cancer": "https://mskcc.icliniq.com/cancer-care/types/lung-cancer",
-    Lymphoma: "https://mskcc.icliniq.com/cancer-care/types/lymphoma",
-    "Multiple Myeloma":
-      "https://mskcc.icliniq.com/cancer-care/types/multiple-myeloma",
-    "Ovarian, Cervical, and Endometrial Cancer":
-      "https://mskcc.icliniq.com/cancer-care/types/ovarian-cervical-and-endometrial-cancer",
-    "Pediatric (Childhood) Cancers":
-      "https://mskcc.icliniq.com/cancer-care/types/pediatric-cancers",
-    "Prostate Cancer":
-      "https://mskcc.icliniq.com/cancer-care/types/prostate-cancer",
-    Sarcoma: "https://mskcc.icliniq.com/cancer-care/types/sarcoma",
-    "View Other Types of Cancer":
-      "https://mskcc.icliniq.com/cancer-care/types/other-common-types-of-cancer",
-  },
-];
 
-export const MSK_DOCTORS = [
+export const MSK_DOCTORS: MskDoctorsType[] = [
   {
     drName: "Sir Dr. Murray Brennan",
     specialist: "surgical oncologist",
@@ -315,7 +274,7 @@ export const CANCER_SPECIALTIES: CancerSpecialty[] = [
   },
 ];
 
-export const MSKCC_INDIA_TEAM = {
+export const MSKCC_INDIA_TEAM: MskccIndiaTeam = {
   "Medical Team": [
     {
       drName: "Dr. Subha Jagannathan",
@@ -605,302 +564,5 @@ export const DOCTOR_DETAILS = [
   },
 ];
 
-export const CANCER_TYPE_LIST = [
-  
-        {
-            "title":"Head & Neck Cancer (Oral Cancer)",
-            "path":""
 
-        },
-        {
-            "title":"Ovarian, Cervical, and Endometrial Cancer",
-            "path":""
 
-        },
-        {
-            "title":"Breast Cancer",
-            "path":""
-
-        },
-        {
-            "title":"Lung Cancer",
-            "path":""
-
-        },
-        {
-            "title":"Gastric and Esophageal Cancer",
-            "path":""
-
-        },
-        {
-            "title":"Liver, Biliary, and Pancreatic Cancer",
-            "path":""
-
-        },
-        {
-            "title":"Colorectal Cancer",
-            "path":""
-
-        },
-        {
-            "title":"Kidney Cancer (Renal Cell Cancer)",
-            "path":""
-
-        },
-        {
-            "title":"Prostate Cancer",
-            "path":""
-
-        },
-        {
-            "title":"Sarcoma",
-            "path":""
-
-        },
-        {
-            "title":"Brain Tumors and Cancers",
-            "path":""
-
-        },
-        {
-            "title":"Lymphoma",
-            "path":""
-
-        },
-        {
-            "title":"Leukemia",
-            "path":""
-
-        },
-        {
-            "title":"Multiple Myeloma",
-            "path":""
-
-        },
-        {
-            "title":"Pediatric (Childhood) Cancers",
-            "path":""
-
-        },
-        {
-            "title":"Benign Blood Disorders",
-            "path":""
-
-        },
-        {
-            "title":"Other Types of Cancer",
-            "path":""
-
-        },
-       
-
-];
-
-export const ACTIVITIES:Activities =
-[
-  {
-      id: 1,
-      "activity": "Sent a message",
-      "timestamp": "2023-02-10"
-  },
-  {
-      id: 2,
-      "activity": "Made a payment",
-      "timestamp": "2023-02-10"
-  },
-  {
-      id: 3,
-      "activity": "Uploaded a file",
-      "timestamp": "2023-02-10"
-  },
-  {
-      id: 4,
-      "activity": "Updated profile details",
-      "timestamp": "2023-02-10"
-  },
-  {
-      id: 5,
-      "activity": "Changed account password",
-      "timestamp": "2023-02-10"
-  },
-  {
-      id: 6,
-      "activity": "Opted-in for WhatsApp alerts",
-      "timestamp": "2023-02-10"
-  }
-]
-
-export const PHYSICIAN_CAROUSEL = [
-  {
-    image: "https://i.pravatar.cc/150?img=5",
-    name: "Raju",
-    link: "https://www.w3sAchools.com/",
-  },
-  {
-    image: "https://i.pravatar.cc/150?img=4",
-    name: "Hari",
-    link: "https://www.w3sSchools.com/",
-  },
-  {
-    image: "https://i.pravatar.cc/150?img=3",
-    name: "Dhan",
-    link: "https://www.w3sCchools.com/",
-  },
-];
-export const CASE_TABS=[
-  { 
-    title: "Case Details", 
-    path: "/cases" 
-  },
-  {
-    title: "Medical Records",
-    path: "/cases/medicalRecord",
-  },
-];
-
-export const MEDICAL_RECORDS: CaseDetailType[] = [
-  {
-    general_info: {
-      patient_name: {
-        label: "Patient Name",
-        value: "Sam",
-      },
-      irn: {
-        label: "IRN",
-        value: "2020202020",
-      },
-    },
-    medical_info: {
-      age_limit: {
-        query: "You must be over the age of 18 to submit this form:",
-        response: "yes",
-      },
-      diagnosis_status: {
-        query: "Have you received a diagnosis of cancer:",
-        response: "newly diagnosed",
-      },
-      call_time: {
-        query: "Best Time to Call:",
-        response: "Tuesday at 3.30 PM",
-      },
-    },
-
-    patient_service:
-      {
-        assistance_type:{
-          query:"What type of assistance are you looking for?",
-          response: "Remote Consultation with MSK Doctor(s)"
-        },
-        hospitalization_status:{
-          query:"Are you currently admitted to the hospital?",
-          response:"No"
-        },
-        cancer_type:{
-          query:"Typs of cancer",
-          response:"Others"
-        },
-        additional_details:{
-          query:"Are there any details you’d like to share that might help us get you the care you need?",
-          response:"test"
-        }
-      },
-        personal_info: {
-          first_name: {
-            label: "First Name",
-            value: "BOB"
-          },
-          last_name: {
-            label: "Last Name",
-            value: "N"
-          },
-          gender: {
-            label: "Gender",
-            value: "Male",
-          },
-          dob: {
-            label: "Date Of Birth",
-            value: "12/05/1998",
-          },
-          phone_type: {
-            label: "Phone Type",
-            value: "string",
-          },
-          contact: {
-            label: "Contact",
-            value: "string",
-          },
-          address: {
-            label: "Address",
-            value: "string",
-          },
-          city: {
-            label: "City",
-            value: "string",
-          },
-          state: {
-            label: "State",
-            value: "string",
-          },
-          country: {
-            label: "Country",
-            value: "string",
-          },
-          postal_code: {
-            label: "Postal Code",
-            value: 999999999,
-          },
-          interpreter_needed: {
-            label: "Will you require an interpreter for language other than English?",
-            value: "string",
-          },
-          learned_from: {
-            label: "How did you learn about MSK India?",
-            value: "string",
-          },
-      }
-
-  },
-];
-
-export const CASE_STATUS=[
-  {
-    "milestone":"Inquiry Submitted",
-    "isPassed": true,
-    "timestamp": "2023-03-23"
-  },
-  {
-    "milestone":"Inquiry Accepted",
-    "isPassed": true,
-    "timestamp": "2023-03-23"
-  },
-  {
-    "milestone":"Case History Collected",
-    "isPassed": true,
-    "timestamp": "2023-03-23"
-  },
-  {
-    "milestone":"MSK Physician Assigned",
-    "isPassed": true,
-    "timestamp": "2023-03-23"
-  },
-  {
-    "milestone":"Video Appointment Scheduled",
-    "isPassed": false,
-    "timestamp": "2023-03-23"
-  },
-  {
-    "milestone":"Case Summary Received",
-    "isPassed": false,
-    "timestamp": ""
-  },
-  {
-    "milestone":"Follow-up Questions Submitted",
-    "isPassed": false,
-    "timestamp": ""
-  },
-  {
-    "milestone":"Answers Received",
-    "isPassed": false,
-    "timestamp": ""
-  }
-]

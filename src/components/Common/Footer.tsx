@@ -1,5 +1,4 @@
-import { CANCER_SPECIALTIES } from '../../GlobalConstants'
-import type {Specialities} from '../../TypeSpecifier'
+import { CANCER_SPECIALTIES } from 'constants/HomeConstants'
 import AssetAccessor from 'utils/AssetAccessor';
 
 function Footer() {
