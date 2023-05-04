@@ -1,0 +1,14 @@
+---
+import Nav from "components/Common/Nav";
+import ChatBox from "components/Dashboard/Messages/Message-Window/ChatBox";
+import Layout from "layouts/Layout.astro";
+
+---
+
+<Layout title="chatWindow">
+  <Nav client:load />
+  <!-- <SideNav activeMenu="messages" client:load /> -->
+  <!-- <ChatMessage client:load/> -->
+
+  <ChatBox client:load />
+</Layout>
