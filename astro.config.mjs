@@ -19,6 +19,5 @@ export default defineConfig({
       forward: ["dataLayer.push"]
     }
   }), 
-  // compressor({ gzip: false, brotli: true })
 ]
 });

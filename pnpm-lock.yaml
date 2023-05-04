@@ -52,9 +52,6 @@ dependencies:
   astro:
     specifier: ^2.3.4
     version: 2.3.4
-  astro-compressor:
-    specifier: ^0.4.0
-    version: 0.4.0
   css-loader:
     specifier: ^6.7.3
     version: 6.7.3(webpack@5.82.0)
@@ -5477,10 +5474,6 @@ packages:
     dependencies:
       tslib: 2.5.0
     dev: true
-
-  /astro-compressor@0.4.0:
-    resolution: {integrity: sha512-yw6wM+cjkdyAMc6HW2lrdinOxt64PwQuL5NCAe71cXF/5xjnyJhgg9nyyFE32oQtmtd5I/57Pyp/kPe9IfYAxg==}
-    dev: false
 
   /astro@2.3.4:
     resolution: {integrity: sha512-bP3HC8ayCPxB8n+PoeacabsfWna0eu4itiUDJklfP3uuMCAPZN0j5LbyZREMH/0qErUOai75ctpeLoKwZixTSQ==}
