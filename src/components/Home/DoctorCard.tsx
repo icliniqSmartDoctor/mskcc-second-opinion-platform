@@ -1,10 +1,9 @@
-
 type doctor_info = {
   doctorName: string;
   speciality: string;
   designation: string;
   image: string;
-  education:string[];
+  education: string[];
 };
 
 const DoctorCard = (props: doctor_info) => {
@@ -21,35 +20,40 @@ const DoctorCard = (props: doctor_info) => {
               />
             </div>
             <div className="font-sans mt-35 mb-35  text-sm pt-5">
-              <h3 className="text-3xl font-semibold pb-4">{props.doctorName}</h3>
+              <h3 className="text-base lg:text-3xl font-semibold pb-4">
+                {props.doctorName}
+              </h3>
               <h6 className="font-medium uppercase tracking-widest text-primary pb-2">
                 {props.speciality}
               </h6>
-              <h6 className="font-semibold text-center pb-10">{props.designation}</h6>
+              <h6 className="font-semibold text-center pb-10">
+                {props.designation}
+              </h6>
             </div>
           </div>
         </div>
         <div className="p-10 pt-6 pb-16 border-t-4 border-t-blue-500 shadow-lg mb-50">
-        <div className=" mb-30">
-          <h3 className=" text-3xl pl-3 p-2 font-semibold">Education</h3>
-        </div>
+          <div className=" mb-30">
+            <h3 className=" lg:text-3xl pl-3 p-2 font-semibold">Education</h3>
+          </div>
 
-        
-        <div className="">
-          <ul>
-            <li>
-            {props.education.map((data)=>(<>
-          <span>
-                <div className="p-4 pt-10 font-medium text-xl">
-                 {data}
-                </div>
-              </span>
-              <hr className="border"/>
-        </>))}
-            </li>
-          </ul>
+          <div className="">
+            <ul>
+              <li>
+                {props.education.map((data) => (
+                  <>
+                    <span>
+                      <div className="p-4 pt-10 font-medium lg:text-xl">
+                        {data}
+                      </div>
+                    </span>
+                    <hr className="border" />
+                  </>
+                ))}
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
       </div>
     </div>
   );

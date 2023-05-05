@@ -10,12 +10,12 @@ type CaseDetailLableVal = {
     value: string | number
 }
 
-type CaseDetailQueryResp = {
+export type CaseDetailQueryResp = {
     query: string,
     response: string | number
 }
 
-type CaseDetailType = {
+export type CaseDetailType = {
     general_info: {
         [key: string]: CaseDetailLableVal
     }

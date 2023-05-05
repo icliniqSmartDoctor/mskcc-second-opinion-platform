@@ -1,0 +1,88 @@
+---
+import Layout from "layouts/Layout.astro";
+import { DOCTOR_DETAILS } from "constants/HomeConstants";
+import DoctorCard from "components/Home/DoctorCard";
+import Footer from "components/Common/Footer";
+import Nav from "components/Common/Nav";
+import MenuNav from "components/Common/MenuNav";
+import DoctorInfo from "components/Home/DoctorInfo";
+
+export function getStaticPaths() {
+    return [
+        DOCTOR_DETAILS.map((data) => {
+            return {
+                params: { doctor: data.path },
+            };
+        }),
+    ];
+}
+
+const { doctor } = Astro.params;
+
+const docArr = DOCTOR_DETAILS.find((data) => data.path === doctor);
+---
+
+<Layout title={`About ${docArr!.drName} -MSK India`}>
+    <Nav />
+    <MenuNav />
+    <div class="container-alternate pt-20">
+        <h2 class="text-md font-semibold text-gray-600 mb-12">
+            We are here to care for you.
+        </h2>
+        <div class="md:flex justify-between">
+            <h1 class="text-4xl md:text-6xl font-semibold">Doctor Details</h1>
+            <div class="mr-6 font-medium pt-4 text-md md:text-lg md:font-medium">
+                <a href="https://mskcc.icliniq.com/" class="text-gray-400 mr-2">Home</a>
+                <span class="mr-2 text-gray-400">|</span>
+                <a class="text-primary mr-2">Doctor Details</a>
+            </div>
+        </div>
+
+        <div class="lg:flex justify-between lg:pt-20">
+            <div class="w-11/12">
+                <section class="">
+                    <div class="text-4xl font-medium pt-10 pb-5">
+                        About {docArr!.drName}
+                    </div>
+                    <div class="pb-4">
+                        <img
+                            src="https://assets.icliniq.com/v2/assets/images/mskcc/img/mskcc-cancer/img-compress/section-title-line.svg" width="140" height="3"
+                            alt="Title line"
+                            title="Title line"
+                        />
+                    </div>
+
+                    <div class="pt-10">
+                        <div class="w-11/12">
+                            {docArr!.about}
+                        </div>
+                    </div>
+                </section>
+
+                <div class="pt-10 pb-4">
+                    <img
+                        src="https://assets.icliniq.com/v2/assets/images/mskcc/img/mskcc-cancer/img-compress/section-title-line.svg" width="140" height="3"
+                        alt="Title line"
+                        title="Title line"
+                    />
+                </div>
+
+                <section class="pt-7 text-darkblue">
+                    <DoctorInfo doctorInfo={docArr!.doctorInfo} />
+                </section>
+            </div>
+
+            <div class="pt-10 w-3/5">
+                <DoctorCard
+                    doctorName={docArr!.drName}
+                    speciality={docArr!.specialist}
+                    designation={docArr!.designation}
+                    image={docArr!.img}
+                    education={docArr!.education as string[]}
+                />
+            </div>
+        </div>
+    </div>
+
+    <Footer />
+</Layout>
