@@ -25,8 +25,9 @@ function Nav() {
                     <Navbar.Brand href="https://mskcc.icliniq.com/">
                         <img
                             src='https://assets.icliniq.com/mskcc/logo/msk-logo-blue.svg'
-                            className="pr-3 h-14 md:h-14 pl-2"
+                            className="pr-3 h-14 md:h-14 pl-2 w-64"
                             title="MSK Logo" alt="MSK Logo"
+                            width="1165" height="246"
                         />
                     </Navbar.Brand>
                     <div className="flex md:order-2 md:!flex-row-reverse">
