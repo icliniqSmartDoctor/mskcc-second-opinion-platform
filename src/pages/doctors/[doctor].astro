@@ -20,7 +20,6 @@ import DoctorInfo from "components/Home/DoctorInfo";
 const { doctor } = Astro.params;
 
 const docArr = DOCTOR_DETAILS.find((data) => data.path === doctor);
-if (!docArr) return Astro.redirect("/404");
 
 ---
 
