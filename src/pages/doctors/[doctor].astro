@@ -17,9 +17,9 @@ import DoctorInfo from "components/Home/DoctorInfo";
 //     ];
 // }
 
-const { slug } = Astro.params;
+const { doctor } = Astro.params;
 
-const docArr = DOCTOR_DETAILS.find((data) => data.path === slug);
+const docArr = DOCTOR_DETAILS.find((data) => data.path === doctor);
 
 ---
 
