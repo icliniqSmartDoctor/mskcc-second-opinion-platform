@@ -52,9 +52,9 @@ function MenuNav() {
                                         <a href={`${MSKCC_MENU[res]}`}>
                                             <div className='mx-4 capitalize font-medium'>
                                                 {
-                                                    res.toString().toLowerCase() === 'home' ? <span className="material-symbols-outlined">
-                                                    home
-                                                    </span> : res
+                                                    res.toString().toLowerCase() === 'home' ? 
+                                                    <svg className="relative -top-1" id="Layer_1" fill="#fff" height="30" width="30" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 36"><path d="M24,6,2,22.75l1.8,2.4L8,22V42H40V22l4.2,3.2L46,22.8ZM37,39H11V19.65l13-9.9,13,9.9Z" transform="translate(-2 -6)"/></svg>
+                                                    : res
                                                 }
                                             </div>
                                         </a>
