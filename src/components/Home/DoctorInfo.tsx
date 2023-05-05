@@ -1,4 +1,3 @@
-import React from "react";
 import type { DoctorInfo } from "constants/HomeConstants";
 
 type DocInfo = {

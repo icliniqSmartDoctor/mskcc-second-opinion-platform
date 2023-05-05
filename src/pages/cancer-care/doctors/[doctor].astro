@@ -20,9 +20,30 @@ export function getStaticPaths() {
 const { doctor } = Astro.params;
 
 const docArr = DOCTOR_DETAILS.find((data) => data.path === doctor);
+
 ---
 
-<Layout title={`About ${docArr!.drName} -MSK India`}>
+<Layout title={`${docArr!.metaTitle}`}>
+    <meta 
+		name="title" 
+		content={`${docArr!.metaTitle}`}
+		slot="meta-header" 
+	/>
+	<meta 
+		name="description" 
+		content={`${docArr!.metaDescription}`}
+		slot="meta-header"
+	/>
+	<meta 
+		name="Keywords" 
+		content={`${docArr!.metaKeywords}`}
+		slot="meta-header"
+	/>
+	<link 
+		rel="canonical" 
+		href={`${docArr!.canonicalUrl}${docArr!.path}`}
+        slot="meta-header"
+	/>
     <Nav />
     <MenuNav />
     <div class="container-alternate pt-20">

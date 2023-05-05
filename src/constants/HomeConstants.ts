@@ -26,6 +26,10 @@ export type DoctorInfo={
 
 export type DoctorDetails={
   path:string,
+  metaTitle: string,
+  metaDescription: string,
+  metaKeywords: string,
+  canonicalUrl: string,
   drName:string,
   specialist:string,
   designation:string,
@@ -129,56 +133,56 @@ export const MSK_DOCTORS: MskDoctorsType[] = [
   {
     drName: "Dr. Mrinal Gounder",
     specialist: "medical oncologist",
-    doctorPage: "https://mskcc.icliniq.com/cancer-care/doctors/murray-brennan",
+    doctorPage: "https://mskcc.icliniq.com/cancer-care/doctors/mrinal-gounder",
     drImg:
       "https://assets.icliniq.com/v2/assets/images/mskcc/img/mskcc-cancer/doctor-details-310-7.jpg",
   },
   {
     drName: "Dr. Lisa DeAngelis",
     specialist: "neuro-oncologist",
-    doctorPage: "https://mskcc.icliniq.com/cancer-care/doctors/murray-brennan",
+    doctorPage: "https://mskcc.icliniq.com/cancer-care/doctors/lisa-deangelis",
     drImg:
       "https://assets.icliniq.com/v2/assets/images/mskcc/img/mskcc-cancer/doctor-details-310-1.jpg",
   },
   {
     drName: "Dr. Monica Morrow",
     specialist: "surgical oncologist",
-    doctorPage: "https://mskcc.icliniq.com/cancer-care/doctors/murray-brennan",
+    doctorPage: "https://mskcc.icliniq.com/cancer-care/doctors/monica-morrow",
     drImg:
       "https://assets.icliniq.com/v2/assets/images/mskcc/img/mskcc-cancer/doctor-details-310-6.jpg",
   },
   {
     drName: "Dr. Jatin Shah",
     specialist: "surgical oncologist",
-    doctorPage: "https://mskcc.icliniq.com/cancer-care/doctors/murray-brennan",
+    doctorPage: "https://mskcc.icliniq.com/cancer-care/doctors/Jatin-shah",
     drImg:
       "https://assets.icliniq.com/v2/assets/images/mskcc/img/mskcc-cancer/doctor-details-310-2.jpg",
   },
   {
     drName: "Dr. Christopher Crane",
     specialist: "radiation oncologist",
-    doctorPage: "https://mskcc.icliniq.com/cancer-care/doctors/murray-brennan",
+    doctorPage: "https://mskcc.icliniq.com/cancer-care/doctors/christopher-crane",
     drImg:
       "https://assets.icliniq.com/v2/assets/images/mskcc/img/mskcc-cancer/doctor-details-310-4.jpg",
   },
   {
     drName: "Dr. Andrew Seidman",
     specialist: "medical oncologist",
-    doctorPage: "https://mskcc.icliniq.com/cancer-care/doctors/murray-brennan",
+    doctorPage: "https://mskcc.icliniq.com/cancer-care/doctors/andrew-seidman",
     drImg:
       "https://assets.icliniq.com/v2/assets/images/mskcc/img/mskcc-cancer/doctor-details-310-8.jpg",
   },
   {
     drName: "Dr. Sergio Giralt",
     specialist: "hematologic oncologist",
-    doctorPage: "https://mskcc.icliniq.com/cancer-care/doctors/murray-brennan",
+    doctorPage: "https://mskcc.icliniq.com/cancer-care/doctors/sergio-giralt",
     drImg:
       "https://assets.icliniq.com/v2/assets/images/mskcc/img/mskcc-cancer/doctor-details-310-5.jpg",
   },
   {
     drName: "Dr. James A. Eastham",
     specialist: "surgical oncologist",
-    doctorPage: "https://mskcc.icliniq.com/cancer-care/doctors/murray-brennan",
+    doctorPage: "https://mskcc.icliniq.com/cancer-care/doctors/james-eastham",
     drImg:
       "https://assets.icliniq.com/v2/assets/images/mskcc/img/mskcc-cancer/james-eastham-mskcc.jpg",
   },
@@ -361,6 +365,10 @@ export const MSKCC_INDIA_TEAM: MskccIndiaTeam = {
 export const DOCTOR_DETAILS:DoctorDetails[] = [
   {
     path: "murray-brennan",
+    metaTitle: "About Sir Dr.Murray Brennan - MSK India",
+    metaDescription: "Sir Dr.Murray Brennan, an oncologic surgeon-scientist, is an expert in soft tissue sarcomas. Learn more about Sir Dr.Brennan here.",
+    metaKeywords: "Sir Dr.Murray Brennan,Surgical Oncologist",
+    canonicalUrl: "https://mskcc.icliniq.com/cancer-care/doctors/",
     drName: "Dr.Murray Brennan",
     specialist: "SURGICAL ONCOLOGIST",
     designation:
@@ -394,6 +402,10 @@ export const DOCTOR_DETAILS:DoctorDetails[] = [
   },
   {
     path: "mrinal-gounder",
+    metaTitle: "About Dr.Mrinal Gounder - MSK India",
+    metaDescription: "Dr.Mrinal Gounder, a medical oncologist, specializes in the treatment of soft tissue and bone sarcomas. Learn more about Dr.Gounder here.",
+    metaKeywords: "Dr.Mrinal Gounder,Medical Oncologist",
+    canonicalUrl: "https://mskcc.icliniq.com/cancer-care/doctors/",
     drName: "Dr.Mrinal Gounder",
     specialist: "MEDICAL ONCOLOGIST",
     designation:
@@ -431,6 +443,10 @@ export const DOCTOR_DETAILS:DoctorDetails[] = [
   },
   {
     path: "lisa-deangelis",
+    metaTitle: "About Dr.Lisa DeAngelis - MSK India",
+    metaDescription: "Dr.Lisa DeAngelis, a neuro-oncologist, has spent more than 30 years treating patients with brain tumors. Learn more about Dr.DeAngelis here.",
+    metaKeywords: "Dr.Lisa DeAngelis,Neuro-oncologist",
+    canonicalUrl: "https://mskcc.icliniq.com/cancer-care/doctors/",
     drName: "Dr. Lisa DeAngelis",
     specialist: "Neuro-Oncologist",
     designation:
@@ -476,7 +492,11 @@ export const DOCTOR_DETAILS:DoctorDetails[] = [
     ],
   },
   {
-    path: "monica-marrow",
+    path: "monica-morrow",
+    metaTitle: "About Dr.Monica Morrow - MSK India",
+    metaDescription: "Dr.Monica Morrow, a surgical oncologist, specializes in the treatment of breast cancer. Learn more about Dr.Morrow here.",
+    metaKeywords: "Dr.Monica Morrow,Surgical Oncologist",
+    canonicalUrl: "https://mskcc.icliniq.com/cancer-care/doctors/",
     drName: "Dr. Monica Morrow",
     specialist: "Surgical Oncologist",
     designation:
@@ -511,7 +531,11 @@ export const DOCTOR_DETAILS:DoctorDetails[] = [
     education: ["MD - Jefferson Medical College"],
   },
   {
-    path: "jatin-shah",
+    path: "Jatin-shah",
+    metaTitle: "About Dr.Jatin Shah - MSK India",
+    metaDescription: "Dr.Jatin Shah, a surgical oncologist, provides consultations to discuss various treatment options for head and neck cancers. Learn more about Dr.Shah here.",
+    metaKeywords: "Dr.Jatin Shah,Surgical Oncologist",
+    canonicalUrl: "https://mskcc.icliniq.com/cancer-care/doctors/",
     drName: "Dr. Jatin Shah",
     specialist: "Surgical Oncologist",
     designation: "Elliot W. Strong Chair in Head and Neck Oncology",
@@ -562,6 +586,10 @@ export const DOCTOR_DETAILS:DoctorDetails[] = [
 
   {
     path: "christopher-crane",
+    metaTitle: "About Dr.Christopher Crane - MSK India",
+    metaDescription: "Dr.Christopher Crane, a radiation oncologist, treats patients suffering from gastrointestinal cancers. Learn more about Dr.Crane here.",
+    metaKeywords: "Dr.Christopher Crane,Radiation Oncologist",
+    canonicalUrl: "https://mskcc.icliniq.com/cancer-care/doctors/",
     drName: "Dr.Christopher Crane",
     specialist: "Radiation Oncologist",
     designation: "Vice-Chair, Department of Radiation Oncology",
@@ -608,6 +636,10 @@ export const DOCTOR_DETAILS:DoctorDetails[] = [
   },
   {
     path: "andrew-seidman",
+    metaTitle: "About Dr.Andrew Seidman - MSK India",
+    metaDescription: "Dr.Andrew Seidman, a medical oncologist, is experienced in managing early and advanced breast cancer. Learn more about Dr.Seidman here.",
+    metaKeywords: "Dr.Andrew Seidman,Medical Oncologist",
+    canonicalUrl: "https://mskcc.icliniq.com/cancer-care/doctors/",
     drName: "Dr.Andrew Seidman",
     specialist: "Medical Oncologist",
     designation: "Medical Director, MSK Bobst International Center",
@@ -644,6 +676,10 @@ export const DOCTOR_DETAILS:DoctorDetails[] = [
   },
   {
     path: "sergio-giralt",
+    metaTitle: "About Dr.Sergio Giralt - MSK India",
+    metaDescription: "Dr.Sergio Giralt, a hematologic oncologist, specializes in treating various blood cancers. Learn more about Dr.Giralt here.",
+    metaKeywords: "Dr.Sergio Giralt ,Hematologic Oncologist",
+    canonicalUrl: "https://mskcc.icliniq.com/cancer-care/doctors/",
     drName: "Dr.Sergio Giralt",
     specialist: "Hemotologic oncologist",
     designation:
@@ -687,6 +723,10 @@ export const DOCTOR_DETAILS:DoctorDetails[] = [
   },
   {
     path: "james-eastham",
+    metaTitle: "About Dr.James A. Eastham - MSK India",
+    metaDescription: "Dr.James A. Eastham, a urologic surgeon, is experienced in managing early and advanced prostate cancer. Learn more about Dr.Eastham here.",
+    metaKeywords: "Dr.James A. Eastham, SURGICAL ONCOLOGIS",
+    canonicalUrl: "https://mskcc.icliniq.com/cancer-care/doctors/",
     drName: "Dr.James A. Eastham",
     specialist: "Surgical oncologist",
     designation: "MD, University of Southern California, Los Angeles",
