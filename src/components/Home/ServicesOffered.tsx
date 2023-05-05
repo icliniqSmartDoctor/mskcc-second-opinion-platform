@@ -4,7 +4,7 @@ function ServicesOffered() {
         <div className="w-full bg-white  rounded-lg dark:bg-gray-800 dark:border-gray-700 h-full relative">
             <div className='p-10 pb-20'>
                 <a href='mskcc-india-services/remote-second-opinion' aria-label="remote-second-opinion">
-                    <img className="rounded-t-lg w-full" src='https://assets.icliniq.com/v2/assets/images/mskcc/img/mskcc-cancer/mskcc-remote.png' alt="remote-second-opinion" title="remote-second-opinion" />
+                    <img className="rounded-t-lg w-full" width="370" height="300" src='https://assets.icliniq.com/v2/assets/images/mskcc/img/mskcc-cancer/img-compress/mskcc-remote.webp' alt="remote-second-opinion" title="remote-second-opinion" />
                 </a>
                 <div className="pt-5 text-center mt-2">
                     <a href='mskcc-india-services/remote-second-opinion' aria-label="remote-second-opinion">
@@ -20,7 +20,7 @@ function ServicesOffered() {
         <div className="w-full bg-white  rounded-lg dark:bg-gray-800 dark:border-gray-700 h-full relative">
             <div className='p-10 pb-20'>
                 <a href='mskcc-india-services/travel-guide-to-mskcc-new-york' aria-label="mskcc-travel">
-                    <img className="rounded-t-lg w-full" src='https://assets.icliniq.com/v2/assets/images/mskcc/img/mskcc-cancer/mskcc-travel.png' alt="mskcc-travel" title="mskcc-travel" />
+                    <img className="rounded-t-lg w-full" width="370" height="300" src='https://assets.icliniq.com/v2/assets/images/mskcc/img/mskcc-cancer/img-compress/mskcc-travel.webp' alt="mskcc-travel" title="mskcc-travel" />
                 </a>
                 <div className="pt-5 text-center mt-2">
                     <a href='mskcc-india-services/travel-guide-to-mskcc-new-york'>

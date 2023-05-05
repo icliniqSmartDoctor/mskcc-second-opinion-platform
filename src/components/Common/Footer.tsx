@@ -14,8 +14,8 @@ function Footer() {
                     <div className="grid grid-cols-2 gap-6 py-24">
                         <div className='col-span-2 lg:col-span-1'>
                             <div className='flex items-center justify-between'>
-                                <a href='https://www.mskcc.org/'><img className='h-16' title="MSK Logo" alt="MSK Logo" src="https://assets.icliniq.com/mskcc/logo/msk-logo-white.svg" /></a>
-                                <a href='https://www.icliniq.com/'><img className='h-10' title="iCliniq Logo" alt="iCliniq Logo" src="https://assets.icliniq.com/v2/assets/images/iCliniq-logo/ic-blue-logo.svg" /></a>
+                                <a href='https://www.mskcc.org/'><img className='w-72 h-16' width="1165" height="246" title="MSK Logo" alt="MSK Logo" src="https://assets.icliniq.com/mskcc/logo/msk-logo-white.svg" /></a>
+                                <a href='https://www.icliniq.com/'><img className='w-28	h-10' title="iCliniq Logo" alt="iCliniq Logo" src="https://assets.icliniq.com/v2/assets/images/iCliniq-logo/ic-blue-logo.svg" /></a>
                             </div>
                             <div className='mt-10 text-white leading-24'>Our experts treat every form of cancer, including the most important one—yours. MSK is able to provide guidance and care for patients in India through our collaboration with iCliniq, a leading global telemedicine provider. Our India-based team of dedicated clinical specialists and care coordinators will help you, your family, or representative access MSK’s doctors in New York.</div>
 
