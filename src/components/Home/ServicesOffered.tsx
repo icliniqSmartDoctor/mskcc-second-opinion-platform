@@ -8,7 +8,7 @@ function ServicesOffered() {
                 </a>
                 <div className="pt-5 text-center mt-2">
                     <a href='mskcc-india-services/remote-second-opinion' aria-label="remote-second-opinion">
-                        <h5 className="mb-2 text-2xl font-semibold hover:text-secondary transition-colors duration-500   text-gray-700 dark:text-white">Remote Second Opinions from MSK Oncologists</h5>
+                        <h3 className="mb-2 text-2xl font-semibold hover:text-secondary transition-colors duration-500   text-gray-700 dark:text-white">Remote Second Opinions from MSK Oncologists</h3>
                     </a>
                     <p className="my-3 text-md">Comprehensive and customized remote second opinion package, depending on your cancer diagnosis and care needs</p>
                 </div>
@@ -24,7 +24,7 @@ function ServicesOffered() {
                 </a>
                 <div className="pt-5 text-center mt-2">
                     <a href='mskcc-india-services/travel-guide-to-mskcc-new-york'>
-                        <h5 className="mb-2 text-2xl font-semibold hover:text-secondary transition-colors duration-500   text-gray-700 dark:text-white">Care at MSK in New York</h5>
+                        <h3 className="mb-2 text-2xl font-semibold hover:text-secondary transition-colors duration-500   text-gray-700 dark:text-white">Care at MSK in New York</h3>
                     </a>
                     <p className="my-3 text-md">For patients interested in receiving care at MSK's main campus in New York City, and for whom on-site care is clinically advisable as determined by MSK physicians</p>
 
