@@ -7,7 +7,27 @@ import AccordionExample from "components/Home/AccordionExample"
 
 export const prerender = true;
 ---
-<Layout title="MSK India | Get Second Opinion From Best Cancer Experts">
+<Layout title="About Us - MSK India">
+	<meta 
+		name="title" 
+		content="About Us - MSK India"
+		slot="meta-header" 
+	/>
+	<meta 
+		name="description" 
+		content="MSK India, a first of its kind, will guide you and your family members to consult the best cancer specialists in the world. Book an appointment now!" 
+		slot="meta-header"
+	/>
+	<meta 
+		name="Keywords" 
+		content="About MSK"
+		slot="meta-header"
+	/>
+	<link 
+		rel="canonical" 
+		href="https://mskcc.icliniq.com/about-mskcc-india" 
+		slot="meta-header"
+	/>
 	<Nav client:idle />
 	<MenuNav />
 	<div class="container-alternate mx-auto mb-32 pt-28">
