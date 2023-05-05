@@ -38,27 +38,24 @@ const docArr = DOCTOR_DETAILS.find((data) => data.path === doctor);
             </div>
         </div>
 
-        <div class="lg:flex justify-between lg:pt-20">
-            <div class="w-11/12">
-                <section class="">
-                    <div class="text-4xl font-medium pt-10 pb-5">
-                        About {docArr!.drName}
-                    </div>
-                    <div class="pb-4">
-                        <img
-                            src="https://assets.icliniq.com/v2/assets/images/mskcc/img/mskcc-cancer/img-compress/section-title-line.svg" width="140" height="3"
-                            alt="Title line"
-                            title="Title line"
-                        />
-                    </div>
+        <div class="grid grid-cols-12 gap-4 justify-between lg:pt-20">
+            <div class="col-span-12 lg:col-span-7 md:col-span-7 lg:order-1 md:order-1 order-2">
+                <div class="text-4xl font-medium pt-10 pb-5">
+                    About {docArr!.drName}
+                </div>
+                <div class="pb-4">
+                    <img
+                        src="https://assets.icliniq.com/v2/assets/images/mskcc/img/mskcc-cancer/img-compress/section-title-line.svg" width="140" height="3"
+                        alt="Title line"
+                        title="Title line"
+                    />
+                </div>
 
-                    <div class="pt-10">
-                        <div class="w-11/12">
-                            {docArr!.about}
-                        </div>
+                <div class="pt-10">
+                    <div class="w-11/12">
+                        {docArr!.about}
                     </div>
-                </section>
-
+                </div>
                 <div class="pt-10 pb-4">
                     <img
                         src="https://assets.icliniq.com/v2/assets/images/mskcc/img/mskcc-cancer/img-compress/section-title-line.svg" width="140" height="3"
@@ -67,12 +64,11 @@ const docArr = DOCTOR_DETAILS.find((data) => data.path === doctor);
                     />
                 </div>
 
-                <section class="pt-7 text-darkblue">
+                <div class="pt-7 text-darkblue">
                     <DoctorInfo doctorInfo={docArr!.doctorInfo} />
-                </section>
+                </div>
             </div>
-
-            <div class="pt-10 w-3/5">
+            <div class="pt-10 col-span-12 lg:col-span-5 md:col-span-5 order-1 lg:order-2 md:order-2">
                 <DoctorCard
                     doctorName={docArr!.drName}
                     speciality={docArr!.specialist}

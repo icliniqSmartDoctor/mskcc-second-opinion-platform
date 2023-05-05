@@ -8,7 +8,7 @@ type doctor_info = {
 
 const DoctorCard = (props: doctor_info) => {
   return (
-    <div className="bg-white pb-20">
+    <div className="bg-white pb-5 lg:pb-20 md:pb-20">
       <div className="border-t-4 border-t-blue-500 w-full">
         <div className="p-7 pt-10 shadow-lg mb-10">
           <div className=" bg-white text-center mb-30">
