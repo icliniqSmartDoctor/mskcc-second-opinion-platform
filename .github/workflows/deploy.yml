@@ -35,6 +35,8 @@ jobs:
           directory: dist
 
   publish-to-prod:
+    needs: publish-to-test
+    
     runs-on: ubuntu-latest
     permissions:
         contents: read
