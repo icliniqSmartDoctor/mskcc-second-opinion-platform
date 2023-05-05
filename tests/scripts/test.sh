@@ -1,8 +1,6 @@
 #!/bin/sh
 pnpm run build-storybook --quiet
 
-trap 'kill $(jobs -p)' EXIT
-
 npx http-server storybook-static --port 6006 --silent --no-clipboard &
 
 while ! nc -z localhost 6006; do
