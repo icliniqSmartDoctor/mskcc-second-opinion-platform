@@ -21,7 +21,7 @@ jobs:
         run: pnpm build
 
       - name: Run Tests
-        run: pnpm run test-storybook
+        run: pnpm run storybook --ci && pnpm run test-storybook
 
       - name: Publish to Cloudflare Pages
         uses: cloudflare/pages-action@v1
