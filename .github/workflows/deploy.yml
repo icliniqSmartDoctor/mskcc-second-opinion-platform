@@ -36,11 +36,12 @@ jobs:
 
   publish-to-prod:
     needs: publish-to-test
-    
+
     runs-on: ubuntu-latest
     permissions:
         contents: read
         deployments: write
+    name: Publish to Production
     steps:
         - name: Checkout
           uses: actions/checkout@v3
