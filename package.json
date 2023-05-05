@@ -10,7 +10,8 @@
     "preview-cf": "wrangler pages dev ./dist",
     "astro": "astro",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "test-storybook": "test-storybook"
   },
   "dependencies": {
     "@astrojs/cloudflare": "^6.2.4",
@@ -56,6 +57,7 @@
     "@storybook/blocks": "^7.0.8",
     "@storybook/react": "^7.0.8",
     "@storybook/react-webpack5": "^7.0.8",
+    "@storybook/test-runner": "^0.10.0",
     "@storybook/testing-library": "0.0.14-next.2",
     "@testing-library/jest-dom": "^5.16.5",
     "autoprefixer": "^10.4.14",

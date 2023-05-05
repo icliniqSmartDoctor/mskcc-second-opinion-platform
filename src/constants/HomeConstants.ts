@@ -1,13 +1,11 @@
-
-
-export type CancerSpecialty = {
+type CancerSpecialty = {
   cancer_label: string;
   cancer_description: string;
   cancer_path_url: string;
 };
 
 
-export type MskDoctorsType = {
+type MskDoctorsType = {
   drName: string,
   specialist: string,
   doctorPage: string,
@@ -15,9 +13,9 @@ export type MskDoctorsType = {
 }
 
 
-export type MskccMenuTypes = { [key: string]: string | { [key: string]: string }[] }
+type MskccMenuTypes = { [key: string]: string | { [key: string]: string }[] }
 
-export type MskccIndiaTeam = {
+type MskccIndiaTeam = {
   "Medical Team":
   {
     drName: string,
@@ -37,7 +35,13 @@ export type MskccIndiaTeam = {
   }[]
 }
 
-export const MSKCC_MENU: MskccMenuTypes  = {
+type FaqQuestionType = {
+  question: string;
+  answer: Array<string | string[]>;
+}
+
+
+export const MSKCC_MENU: MskccMenuTypes = {
   "home": "https://mskcc.icliniq.com/",
   "about us": [
     {
@@ -564,5 +568,72 @@ export const DOCTOR_DETAILS = [
   },
 ];
 
-
-
+export const FAQ_QUESTIONS: FaqQuestionType[] = [
+  {
+    question: 'When should you get a remote second opinion?',
+    answer: [
+      'When you’re diagnosed with cancer, seeking a second opinion is an important step. It can help ensure that you have the most accurate diagnosis and the best care plan.'
+    ]
+  },
+  {
+    question: 'Who should request a remote second opinion ? ',
+    answer: [
+      'A second opinion is recommended when:',
+      [
+        'You have received a new cancer or blood disorder diagnosis',
+        'Your diagnosis is unclear',
+        'Your condition or diagnosis has changed',
+        'You are not responding to treatment as expected',
+        'Your treatment plan has changed',
+        'You want to explore other treatment option',
+        'Your condition is rare',
+        'Your doctor recommends surgery',
+        'You want the peace of mind that you have an accurate diagnosis and treatment plan'
+      ],
+      'Note: Remote second opinions are appropriate for non-emergent cases where MSK can provide timely and meaningful treatment recommendations.'
+    ]
+  },
+  {
+    question: 'What is included in a remote second opinion from MSK? ',
+    answer: [
+      'Our comprehensive remote second opinion package can include several types of services, depending on your cancer diagnosis and care needs. An MSK oncologist specializing in your disease will review your medical records, test results, and other materials. They’ll provide a detailed written opinion or participate in a live video conference with a local treating physician to discuss your diagnosis and care plan.',
+      'We understand that not everyone needs a comprehensive second opinion. For people who require select services, our standalone consults include:',
+      [
+        'Pathology and radiology review',
+        'Pathology and radiology review',
+        'Customized written care plan',
+        'Live video consultation',
+        'Integrative care plan'
+      ]
+    ]
+  },
+  {
+    question: 'What does MSK need from me or my doctor to provide a remote opinion?',
+    answer: [
+      'A remote opinion from an MSK oncologist will be based on the quality and quantity of information provided. Our Chennai-based team will help you gather the necessary medical records which may include pathology slides, radiology images and any other relevant medical records. All documentation must be submitted in English.'
+    ]
+  },
+  {
+    question: 'How long does it take to get a remote second opinion?',
+    answer: [
+      'Timing varies depending on the type of services requested.',
+      [
+        'Written or video consults: Approximately 1-2 weeks following MSK’s receipt of complete medical records',
+        'Cases requiring separate pathology and/or radiology review: Approximately 2-3 weeks following MSK’s receipt of complete medical records'
+      ],
+      'Note: Timing varies depending on your case complexity and availability to participate in a live call with our India Center Team, who will review each patient’s medical history.'
+    ]
+  },
+  {
+    question: 'Who will be providing the consultation?',
+    answer: [
+      'An MSK doctor in New York will provide the consultation. MSK in India is built on the concierge model of care. The team in India will coordinate with you, your family members, or your representative to schedule the clinically advisable services.'
+    ]
+  },
+  {
+    question: 'Do patients need to travel to the center in Chennai for the consultation?',
+    answer: [
+      'No. MSK’s expert doctors and services in New York can be accessed from the comfort of your home or office. Some patients and their family members may choose to meet with MSK’s India Center team in person, but travel is not required.'
+    ]
+  }
+]

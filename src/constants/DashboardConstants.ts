@@ -1,21 +1,21 @@
-export type Activities = {
+type Activities = {
     id: number;
     activity: string;
     timestamp: string;
 }[];
 
 
-export type CaseDetailLableVal = {
+type CaseDetailLableVal = {
     label: string,
     value: string | number
 }
 
-export type CaseDetailQueryResp = {
+type CaseDetailQueryResp = {
     query: string,
     response: string | number
 }
 
-export type CaseDetailType = {
+type CaseDetailType = {
     general_info: {
         [key: string]: CaseDetailLableVal
     }
