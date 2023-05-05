@@ -20,6 +20,9 @@ jobs:
       - name: Build
         run: pnpm build
 
+      - name: Run Tests
+        run: pnpm run test-storybook
+
       - name: Publish to Cloudflare Pages
         uses: cloudflare/pages-action@v1
         with:
