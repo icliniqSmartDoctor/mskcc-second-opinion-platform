@@ -4,12 +4,12 @@ on:
             - master
 
 jobs:
-  publish:
+  publish-to-test:
     runs-on: ubuntu-latest
     permissions:
       contents: read
       deployments: write
-    name: Publish to Cloudflare Pages
+    name: Publish to Test Enviroinment
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -26,10 +26,39 @@ jobs:
     #   - name: Run Tests
     #     run:  pnpm run test
 
-      - name: Publish to Cloudflare Pages
+      - name: Publish to mkscc-test.icliniq.com
         uses: cloudflare/pages-action@v1
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           projectName: mskcc-second-opinion-platform
           directory: dist
+
+  publish-to-prod:
+    runs-on: ubuntu-latest
+    permissions:
+        contents: read
+        deployments: write
+    steps:
+        - name: Checkout
+          uses: actions/checkout@v3
+
+        - name: Merge master into production
+          run: git merge --no-ff origin/master
+        
+        - name: Install pnpm
+          run: npm install -g pnpm
+            
+        - name: Install dependencies
+          run: pnpm install --no-frozen-lockfile
+    
+        - name: Build
+          run: pnpm build
+    
+        - name: Publish to mkscc-test.icliniq.com
+          uses: cloudflare/pages-action@v1
+          with:
+            apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+            accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+            projectName: mskcc-second-opinion-platform
+            directory: dist
