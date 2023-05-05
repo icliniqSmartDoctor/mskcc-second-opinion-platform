@@ -23,8 +23,8 @@ jobs:
       - name: Build
         run: pnpm build
 
-    #   - name: Run Tests
-    #     run:  pnpm run test
+      - name: Run Tests
+        run:  pnpm run test
 
       - name: Publish to mkscc-test.icliniq.com
         uses: cloudflare/pages-action@v1
