@@ -47,7 +47,10 @@ jobs:
           uses: actions/checkout@v3
 
         - name: Merge master into production
-          run: git checkout origin/prod && git merge --no-ff origin/master && git push origin prod
+          run: git checkout -b prod && git merge --no-ff origin/master
+
+        - name: check
+          run: git status && git branch
         
         - name: Install pnpm
           run: npm install -g pnpm
