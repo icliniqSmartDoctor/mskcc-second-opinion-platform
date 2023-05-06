@@ -52,8 +52,3 @@ export const FormFunctionality: Story = {
     expect(await canvas.getByRole('button')).toHaveStyle({backgroundColor: ''})
   },
 };
-
-export const ButtonColor = Template.bind({});
-ButtonColor.args = {
-  color: "blue",
-};
