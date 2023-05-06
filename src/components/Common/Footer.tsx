@@ -34,7 +34,7 @@ function Footer() {
 
                         <div className='col-span-2 mt-10 lg:mt-0 lg:col-span-1'>
                             <h3 className='text-white text-2xl font-semibold'>Specialities</h3>
-                            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 justify-items-center gap-10'>
+                            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 ml-10 md:ml:0 lg:justify-items-center gap-10'>
                                 <div className='col-span-1 md:col-span-1 lg:col-span-1'>
                                     {firstSpecialities.map((specialites) => (
                                         <div className="mt-5 w-auto break-words ">
