@@ -3,14 +3,14 @@ import type { Meta, StoryFn, StoryObj } from "@storybook/react";
 
 import { userEvent, within } from "@storybook/testing-library";
 import { expect } from "@storybook/jest";
-import "../index.css";
+
 import ChangePassword from "components/Dashboard/Account/settings/ChangePassword";
 
 const submit = (oldPassword: string, newPassword: string) =>
   console.log(oldPassword, newPassword);
 
 const meta = {
-  title: "ChangePassword",
+  title: "Dashboard/Change Password",
   component: ChangePassword,
   args: {
     onSubmit: submit,

@@ -3,12 +3,12 @@ import type { Meta, StoryObj,StoryFn } from "@storybook/react";
 
 import { userEvent, within } from "@storybook/testing-library";
 import {expect} from '@storybook/jest'
-import '../index.css'
+
 import TextInputs from "components/Dashboard/Messages/Message-Window/TextInput";
 import type { ChatData } from "components/Dashboard/Messages/Message-Window/ChatBox";
 
 const meta = {
-  title: "Text input",
+  title: "Dashboard/Text input",
   component: TextInputs,
   args: {
     color: "blue",

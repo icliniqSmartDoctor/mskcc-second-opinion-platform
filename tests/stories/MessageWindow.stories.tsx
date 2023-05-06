@@ -1,10 +1,10 @@
 
-// import '../index.css'
+
 import type { Meta, StoryFn, StoryObj } from "@storybook/react";
 import MessageWindow from "components/Dashboard/Messages/Message-Window/MessageWindow";
 
 const meta = {
-    title: "MessageWindow",
+    title: "Dashboard/Message Window",
     component: MessageWindow,
   } satisfies Meta<typeof MessageWindow>;
   

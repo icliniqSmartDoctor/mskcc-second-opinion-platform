@@ -1,5 +1,5 @@
 
-import '../index.css'
+
 import type { Meta, StoryFn, StoryObj } from "@storybook/react";
 
 import { userEvent, within } from "@storybook/testing-library";
@@ -7,7 +7,7 @@ import { expect } from "@storybook/jest";
 import Settings from 'components/Dashboard/Account/settings';
 
 const meta = {
-  title: "Settings",
+  title: "Dashboard/Settings",
   component: Settings,
   
 } as Meta<typeof Settings>;

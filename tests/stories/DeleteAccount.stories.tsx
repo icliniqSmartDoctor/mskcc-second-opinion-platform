@@ -3,12 +3,12 @@ import type { Meta, StoryFn, StoryObj } from "@storybook/react";
 
 import { userEvent, within } from "@storybook/testing-library";
 import { expect } from "@storybook/jest";
-import '../index.css'
+
 
 import DeleteAccount from "components/Dashboard/Account/settings/DeleteAccount";
 
 const meta = {
-  title: "DeleteAccount",
+  title: "Dashboard/Delete Account",
   component: DeleteAccount,
   args: {
     onsubmit: "",

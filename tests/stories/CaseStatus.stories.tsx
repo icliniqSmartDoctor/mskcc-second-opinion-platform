@@ -1,12 +1,12 @@
 
 import CaseStatus from "components/Dashboard/Home/CaseStatus";
-import "../index.css";
+
 
 import type { Meta, StoryFn } from "@storybook/react";
 import { CASE_STATUS } from "constants/DashboardConstants";
 
 export default {
-  title: "CaseStatus",
+  title: "Dashboard/Case Status",
   component: CaseStatus,
 }as Meta;
 

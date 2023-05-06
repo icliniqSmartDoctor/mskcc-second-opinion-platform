@@ -1,10 +1,10 @@
 
 import type { Meta, StoryFn, StoryObj } from "@storybook/react";
-import '../index.css'
+
 import ScanCode from "components/Dashboard/Home/ScanCode";
 
 const meta = {
-    title: "ScanCode",
+    title: "Dashboard/Scan Code",
     component: ScanCode,
   } as Meta<typeof ScanCode>;
   

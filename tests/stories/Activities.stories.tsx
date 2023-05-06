@@ -1,6 +1,6 @@
 import Activities from 'components/Dashboard/Home/Activities';
 import { ACTIVITIES } from 'constants/DashboardConstants';
-import '../index.css'
+
 import type { Meta } from '@storybook/react';
 
 export default{
@@ -10,5 +10,5 @@ export default{
 
 const Template=()=><Activities Acts={ACTIVITIES}/>
 
-export const ActivityOne=Template.bind({})
+export const ActivityCard=Template.bind({})
 
