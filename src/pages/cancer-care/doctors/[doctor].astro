@@ -7,15 +7,15 @@ import Nav from "components/Common/Nav";
 import MenuNav from "components/Common/MenuNav";
 import DoctorInfo from "components/Home/DoctorInfo";
 
-export function getStaticPaths() {
-    return [
-        DOCTOR_DETAILS.map((data) => {
-            return {
-                params: { doctor: data.path },
-            };
-        }),
-    ];
-}
+// export function getStaticPaths() {
+//     return [
+//         DOCTOR_DETAILS.map((data) => {
+//             return {
+//                 params: { doctor: data.path },
+//             };
+//         }),
+//     ];
+// }
 
 const { doctor } = Astro.params;
 
@@ -44,7 +44,7 @@ const docArr = DOCTOR_DETAILS.find((data) => data.path === doctor);
 		href={`${docArr!.canonicalUrl}${docArr!.path}`}
         slot="meta-header"
 	/>
-    <Nav />
+    <Nav client:idle/>
     <MenuNav />
     <div class="container-alternate pt-20">
         <h2 class="text-md font-semibold text-gray-600 mb-12">
