@@ -1,4 +1,4 @@
-type Activities = {
+export type Activity = {
     id: number;
     activity: string;
     timestamp: string;
@@ -52,7 +52,7 @@ export const SIDEMENU = [
 
 
 
-export const ACTIVITIES: Activities =
+export const ACTIVITIES: Activity =
     [
         {
             id: 1,

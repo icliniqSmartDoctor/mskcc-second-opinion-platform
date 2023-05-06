@@ -1,4 +1,4 @@
-import type { Activities } from 'constants/DashboardConstants';
+import type { Activity } from 'constants/DashboardConstants';
 
 const activity = [
   { id: 1, filename: "fa fa-comment", color: "bg-pink-200" },
@@ -12,7 +12,7 @@ const activity = [
 
 
 type Props= {
-  Acts: Activities
+  Acts: Activity
 }
 
 const Activities = ({Acts}:Props) => {
