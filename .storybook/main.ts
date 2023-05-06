@@ -3,7 +3,7 @@ const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 
 const config: StorybookConfig = {
 
-  stories: ["../src/**/*.mdx", "../src/**/*.stories.@(js|jsx|ts|tsx)"],
+  stories: ["../tests/**/*.mdx", "../tests/**/*.stories.@(js|jsx|ts|tsx)"],
   addons: [
     "@storybook/addon-links",
     "@storybook/addon-essentials",
@@ -19,6 +19,7 @@ const config: StorybookConfig = {
   ],
   webpackFinal: async (config: any, { configType }) => {
     config.resolve.plugins = [new TsconfigPathsPlugin()];
+    
     return config;
   }, /// Added for global paths
   
