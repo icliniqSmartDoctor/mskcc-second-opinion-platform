@@ -951,17 +951,18 @@ type CancerTestType = {
 type CancerSubItemType = {
   heading: string;
   body?: string;
-  subItems? : CancerSubItemType[] | string[]
+  subItems?: CancerSubItemType[] | string[]
 };
 
 type CancerInfoType = {
+  infoTitle?: string,
   heading: string;
   body?: string | (string[] | string)[];
   subItems?: CancerSubItemType[];
 };
 
 
-export const Cancer_type_test:CancerTestType[] = [
+export const Cancer_type_test: CancerTestType[] = [
   {
     path: "pediatric-cancers",
     title: "Pediatric (Childhood) Cancers",
@@ -1121,5 +1122,111 @@ export const Cancer_type_test:CancerTestType[] = [
         body: "MSK's kidney cancer experts treat all types of kidney cancer. Their goal is to diagnose and treat cancer accurately and to ensure the best possible quality of life. Surgery is the treatment of choice for people diagnosed with kidney cancer that has not spread to other organs. If that is not an option, then MSK interventional radiologists may be able to use minimally invasive techniques to destroy the tumor. For patients with kidney cancer that has metastasized, chemotherapy, focused radiation, and other treatment options are available at MSK. Patients also benefit from new chemotherapy drugs and other therapies through thousands of ongoing clinical trials at MSK, including comprehensive follow-up care and survivorship programs.",
       },
     ],
+  },
+  {
+    path: "benign-blood-disorders",
+    title: "Benign Blood Disorders",
+    breadCrumbName: "Benign Blood Disorders",
+    about:
+      "Certain cancer treatment or some types of cancer puts cancer patients at risk for some blood disorders. These blood disorders or blood-related complications due to cancer treatment include blood clots, bleeding disorders, and anemia. These complications can make cancer treatment challenging. For patients with a pre-existing blood disorder, cancer treatments like chemotherapy may worsen it. MSK's blood specialists work hard to prevent blood conditions from becoming fatal and increase the patient's comfort during cancer therapy.",
+
+
+    info: [
+      {
+        heading: "What Are the Common Benign Blood Disorders Seen During Cancer Treatment?",
+        subItems: [
+          {
+            heading: "Blood Clots",
+            body: "Blood clotting or coagulation prevents excess blood loss during injury and is a normal physiological process. Platelets (a type of blood cells) and clotting factors (special proteins in the blood) help in clot formation. Sometimes, abnormal clotting of blood can result in a deep vein thrombosis (DVT), where a blood clot forms in a deep vein (the majority of times in the leg), which can also get detached from the vein and travel to major organs like the lungs (pulmonary embolism) and stop blood flow. Cancer patients are more at risk of developing these dangerous blood clots, as the genetic changes that cause cancer also hyperactivate the clotting factors. Some chemotherapy also has similar effects on the clotting factors. Blood clotting or coagulation prevents excess blood loss during injury and is a normal physiological process. Platelets (a type of blood cells) and clotting factors (special proteins in the blood) help in clot formation. Sometimes, abnormal clotting of blood can result in a deep vein thrombosis (DVT), where a blood clot forms in a deep vein (the majority of times in the leg), which can also get detached from the vein and travel to major organs like the lungs (pulmonary embolism) and stop blood flow. Cancer patients are more at risk of developing these dangerous blood clots, as the genetic changes that cause cancer also hyperactivate the clotting factors. Some chemotherapy also has similar effects on the clotting factors."
+          },
+          {
+            heading: "Anemia",
+            body: "Anemia or low red blood cells (RBC) is a prevalent cancer complication and its treatment. This is because some chemotherapeutic drugs block the production of red blood cells in the bone marrow. In contrast, others inhibit erythropoietin production (a hormone that assists in the production of red blood cells) by the kidneys. Radiation therapy using high-dose radiation also damages bone marrow, resulting in anemia. Surgical removal of tumors that contain large blood vessels can also result in anemia due to excessive blood loss. At MSK, hematologists regularly check the patient's RBC levels and adjust the cancer care accordingly. Also, cancer patients are advised to consume a diet rich in iron and folic acid even during recovery, while severe anemia is managed with blood transfusions.",
+          },
+          {
+            heading: "Thrombocytopenia",
+            body: "Thrombocytopenia, a type of bleeding disorder, results in extremely low levels of platelets in the blood, increasing the risk of bleeding. This condition is also a common side effect of cancer treatment. Chemotherapy drugs that damage the bone marrow (the place where platelets are produced) can cause this. These drugs also escalate platelet destruction in the blood, spleen, or liver. MSK specialists are experts in the diagnosis and management of thrombocytopenia. They also care for other cancer-related bleeding disorders. In case you do not have sufficient clotting factors, the doctor might infuse clotting factors, blood plasma, or platelets.",
+          },
+        ],
+      },
+      {
+        heading: "Can Blood-Related Complications Be Prevented?",
+        body: "The first step to prevent blood-related complications during cancer treatment is a complete medical and family history. As people with a pre-existing or family history of blood disorders are more at risk, the doctor will check for any blood problems symptoms. They will also perform blood tests before starting cancer treatment to plan the cancer care accordingly. Even during the treatment, all your blood parameters will be checked regularly to diagnose and treat any abnormality at the earliest and prevent such blood conditions from becoming life-threatening. This is exactly what hematologists at MSK do to prevent these blood-related complications.",
+      },
+    ]
+  },
+  {
+    path: "breast-cancer",
+    title: "Breast Cancer",
+    breadCrumbName: "Breast Cancer",
+    about:
+      "You will face many hard decisions if a loved one or you have been diagnosed with breast cancer. Including several questions like where should you go for treatment? What are the available treatment options? How to maintain your quality of life? We have tried to describe these concerns, the types, and possible treatment, which will help you decide.",
+    info: [
+      {
+        infoTitle: 'Female Breast Cancer',
+        heading: "What Is Female Breast Cancer?",
+        body: "In breast cancer, the cells in the breast grow out of control. When the genes in the cells of the breasts no longer work properly, the cells divide uncontrollably and form a tumor. Affected women may feel a lump under the breast skin, or some women do not realize it until the tumor shows up in a mammogram or breast X-ray. Most breast lumps are benign and do not spread to other parts of the body, and are not fatal. Tumors that are malignant, if left untreated, can invade and spread or metastasize to the axillary lymph nodes or other organs. <br/> The risk for breast cancer increases with age, and it is diagnosed mostly (80 %) in women older than 50. Most of them do not have any other risk factors. People with a family history of breast cancer are two to three times more likely to develop breast cancer. 5 to 10 % of breast cancers are linked to hereditary gene mutations (commonly BRCA1 and BRCA2 gene mutations). Try out MSK's Breast Cancer (Prediction Tool) nomogram!",
+      },
+      {
+        heading: "What Are the Types of Female Breast Cancer",
+        subItems: [
+          {
+            heading: " Ductal Carcinoma ",
+            body: "Most breast cancers are ductal carcinoma, which affects the milk ducts.",
+          },
+          {
+            heading: "Lobular Carcinoma ",
+            body: "The other types develop in the milk-producing lobules and are referred to as lobular carcinoma.",
+          },
+          {
+            heading: " Breast Sarcoma ",
+            body: "Sometimes, cancer develops in the connective tissue of the breast, known as sarcoma.",
+          },
+          {
+            heading: "Paget’s Disease of the Nipple ",
+            body: "Tumor forms in the skin covering the nipples.",
+          },
+
+        ],
+      },
+      {
+        heading: "What Are the Treatment Options for Female Breast Cancer?",
+        body: "Biopsy from the breast lump is analyzed in a lab, and it is determined if the tumor is sensitive to the female hormones estrogen and progesterone, which can trigger breast cancer. Certain genes or proteins, such as HER2, also affect cancer cell growth. Once MSK experts have the needed information, they might suggest surgery, chemotherapy, radiotherapy, or a combination of therapies. Patients can also benefit from the thousands of clinical trials ongoing at MSK that explore new therapies.",
+      },
+      {
+        infoTitle: 'Male Breast Cancer',
+        heading: "What Is Male Breast Cancer?",
+        body: "Even though rare, breast cancer affects men as well. The risk of a man developing breast cancer is 1 in 1,000. In the US, around 2,000 new cases of male breast cancer are diagnosed every year. It is commonly diagnosed in men between the ages of 65 and 70. As most men are not aware of the possibility of breast cancer, they often seek medical help late and at later stages of cancer, which affects the prognosis. Male and female breast cancers are similar in many features, but there are some aspects where they differ.",
+      },
+      {
+        heading: "What Are the Types of Male Breast Cancer?",
+        body: "The common types of male breast cancer include:",
+        subItems: [
+          {
+            heading: "  Invasive Breast Carcinoma ",
+            body: "The subtypes are -",
+            subItems: [
+              {
+                heading: "Invasive Ductal Carcinoma (IDC)",
+                body: "starts in the breast duct and can then spread to the duct wall."
+              },
+              {
+                heading: "Invasive Lobular Carcinoma ",
+                body: "which is less common in men and develops in the milk-producing glands."
+              }
+            ]
+          },
+          {
+            heading: "Ductal Carcinoma in Situ (DCIS)",
+            body: "Otherwise called intraductal carcinoma, DCIS generally does not spread to other parts of the body and are confined to the breast ducts.",
+          }
+
+        ],
+      },
+      {
+        heading: "What Are the Treatment Options for Male Breast Cancer?",
+        body: "All cancer patients at MSK are offered compassionate and personalized care from their experts. Specialists experienced in surgery, chemotherapy, radiation therapy, rehabilitation, and maintaining the quality of life will work closely to develop a customized treatment plan to ensure the best outcome possible.",
+      },
+    ]
   },
 ];
