@@ -1,18 +1,8 @@
----
+<!-- ---
 import MenuNav from "components/Common/MenuNav";
 import Nav from "components/Common/Nav";
 import { CANCER_TYPES } from "constants/HomeConstants";
 import Layout from "layouts/Layout.astro";
-
-// export function getStaticPaths() {
-//   return [
-//     CANCER_TYPES.map((data) => {
-//       return {
-//         params: { cancertypes: data.path },
-//       };
-//     }),
-//   ];
-// }
 
 const { cancertypes } = Astro.params;
 const cancerTypeArr = CANCER_TYPES.find((data) => data.path === cancertypes);
@@ -22,17 +12,6 @@ if (!cancerTypeArr) return Astro.redirect("/404");
 <Layout title="">
   <Nav client:idle />
   <MenuNav />
-  <!-- <meta 
-		name="title" 
-		content={``}
-		slot="meta-header" 
-	/>
-	<meta 
-		name="description" 
-		content={``}
-		slot="meta-header"
-	/>
-	 -->
   <div class="w-4/5 container-alternate bg-white">
     <h2 class="text-md font-semibold text-gray-600 pt-20 mb-12">
       We are here to care for you.
@@ -71,4 +50,4 @@ if (!cancerTypeArr) return Astro.redirect("/404");
 
     </div>
   </div>
-</Layout>
+</Layout> -->
