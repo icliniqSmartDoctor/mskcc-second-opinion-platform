@@ -835,3 +835,112 @@ export const FAQ_QUESTIONS: FaqQuestionType[] = [
     ]
   }
 ]
+
+
+export type CancerSubTypes = {
+  heading: string;
+  description: string;
+  subtype?: {
+    heading: string;
+    description: string;
+    subtype?: {
+      heading: string;
+      description: string;
+    }[];
+  }[];
+};
+
+export type Desc = {
+  heading: string;
+  value: string;
+};
+
+export type CancerType = {
+  path:string,
+  title: string;
+  about: string;
+  describtion: Desc;
+  subTypeHeading: string;
+  SubType: CancerSubTypes[];
+  TreatmentOptions: Desc;
+};
+
+export const CANCER_TYPES: CancerType[] = [
+  {
+    path:"kidney-cancer",
+    title:"Kidney Cancer (Renal Cell Cancer)",
+    about:
+      "You will face many hard decisions if a loved one or you have been diagnosed with kidney cancer. Including several questions like where should you go for treatment? What are the available treatment options? How to maintain your quality of life? We have tried to describe these concerns, the types, and possible treatment, which will help you decide.",
+    describtion: {
+      heading: "What Is Kidney Cancer?",
+      value:
+        "Kidney cancer or renal cell cancer is a cancerous tumor that develops in the kidneys, the two organs that are present on each side of your spine in the torso. Our kidneys' function is to turn the body's waste into urine, and they filter waste and excess salt from the blood. This urine then gets stored in the bladder through the ureter. With the help of the urethra that runs from the bladder, urine is discarded out. All these organs together form the urinary system. Try out MSK's Kidney Cancer - Risk of Recurrence Following Surgery (Prediction Tool) nomogram!",
+    },
+    subTypeHeading: "What Are the Types of Kidney Cancer",
+    SubType: [
+      {
+        heading: "Renal Cortical Tumors ",
+        description:
+          " - Almost 90 % of kidney tumors are this type. These tumors develop in the renal tubules, which are present in the main part of the kidney. The common subtypes include:",
+        subtype: [
+          {
+            heading: "Clear-Cell Tumors",
+            description:
+              " - Also called renal cell carcinoma, and it is seen in 60 to 65 % of patients diagnosed with kidney tumors.",
+            subtype: undefined,
+          },
+          {
+            heading: "Papillary Tumors ",
+            description:
+              " - Only 10 to 15 % of all kidney tumors are of this type. It begins as single or multiple tumors in either one or both kidneys. These tumors are linked to some genetic conditions like hereditary papillary renal carcinoma, renal cell carcinoma, and hereditary leiomyomatosis. Genetic testing can help identify such inherited syndromes. The two subtypes are:",
+            subtype: [
+              {
+                heading: "Type 1 ",
+                description: " - Grows slow and is more common.",
+              },
+              {
+                heading: "Type 2",
+                description: " - More aggressive.",
+              },
+            ],
+          },
+          {
+            heading: "Chromophobe Tumors ",
+            description:
+              " - These are less aggressive and account for 5 to 10 % of kidney tumors. Chromophobe tumors can grow very big before they spread to other parts.",
+            subtype: undefined,
+          },
+          {
+            heading: "Oncocytoma",
+            description:
+              "- These tumors are harmless as they pose no risk of spreading or cause life-threatening complications. Around 5 to 10 % of kidney tumors are this type.",
+            subtype: undefined,
+          },
+          {
+            heading: "Collecting Duct Tumors ",
+            description:
+              " - These are rare, less than 1 % of kidney tumors, aggressive, challenging to treat, and are usually seen in younger adults.",
+            subtype: undefined,
+          },
+          {
+            heading: "Unclassified Tumors ",
+            description:
+              "- These tumors are very aggressive, rare (3 to 5 %), and appear different microscopically than other kidney tumors.",
+            subtype: undefined,
+          },
+        ],
+      },
+      {
+        heading: "Transitional Cell or Urothelial Tumors ",
+        description:
+          "- These tumors develop in the renal pelvis (the part where renal tubules carry urine to the bladder from kidneys).",
+        subtype: undefined,
+      },
+    ],
+    TreatmentOptions: {
+      heading: "What Are the Treatment Options for Kidney Cancer?",
+      value:
+        "MSK's kidney cancer experts treat all types of kidney cancer. Their goal is to diagnose and treat cancer accurately and to ensure the best possible quality of life. Surgery is the treatment of choice for people diagnosed with kidney cancer that has not spread to other organs. If that is not an option, then MSK interventional radiologists may be able to use minimally invasive techniques to destroy the tumor. For patients with kidney cancer that has metastasized, chemotherapy, focused radiation, and other treatment options are available at MSK. Patients also benefit from new chemotherapy drugs and other therapies through thousands of ongoing clinical trials at MSK, including comprehensive follow-up care and survivorship programs.",
+    },
+  },
+];
