@@ -4,6 +4,9 @@
       "/*"
     ],
     "exclude": [
-      "/dist"
+      "/_astro/*",
+      "/_worker.js",
+      "/favicon.svg",
+      "/~partytown/*"
     ]
   }
