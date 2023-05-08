@@ -858,26 +858,28 @@ export type Desc = {
 export type CancerType = {
   path:string,
   title: string;
+  breadCrumbName:string;
   about: string;
-  describtion: Desc;
+  description: Desc;
   subTypeHeading: string;
-  SubType: CancerSubTypes[];
-  TreatmentOptions: Desc;
+  subType: CancerSubTypes[];
+  treatmentOptions: Desc;
 };
 
 export const CANCER_TYPES: CancerType[] = [
   {
     path:"kidney-cancer",
     title:"Kidney Cancer (Renal Cell Cancer)",
+    breadCrumbName:"Kidney Cancer",
     about:
       "You will face many hard decisions if a loved one or you have been diagnosed with kidney cancer. Including several questions like where should you go for treatment? What are the available treatment options? How to maintain your quality of life? We have tried to describe these concerns, the types, and possible treatment, which will help you decide.",
-    describtion: {
+    description: {
       heading: "What Is Kidney Cancer?",
       value:
         "Kidney cancer or renal cell cancer is a cancerous tumor that develops in the kidneys, the two organs that are present on each side of your spine in the torso. Our kidneys' function is to turn the body's waste into urine, and they filter waste and excess salt from the blood. This urine then gets stored in the bladder through the ureter. With the help of the urethra that runs from the bladder, urine is discarded out. All these organs together form the urinary system. Try out MSK's Kidney Cancer - Risk of Recurrence Following Surgery (Prediction Tool) nomogram!",
     },
     subTypeHeading: "What Are the Types of Kidney Cancer",
-    SubType: [
+    subType: [
       {
         heading: "Renal Cortical Tumors ",
         description:
@@ -937,7 +939,7 @@ export const CANCER_TYPES: CancerType[] = [
         subtype: undefined,
       },
     ],
-    TreatmentOptions: {
+    treatmentOptions: {
       heading: "What Are the Treatment Options for Kidney Cancer?",
       value:
         "MSK's kidney cancer experts treat all types of kidney cancer. Their goal is to diagnose and treat cancer accurately and to ensure the best possible quality of life. Surgery is the treatment of choice for people diagnosed with kidney cancer that has not spread to other organs. If that is not an option, then MSK interventional radiologists may be able to use minimally invasive techniques to destroy the tumor. For patients with kidney cancer that has metastasized, chemotherapy, focused radiation, and other treatment options are available at MSK. Patients also benefit from new chemotherapy drugs and other therapies through thousands of ongoing clinical trials at MSK, including comprehensive follow-up care and survivorship programs.",
