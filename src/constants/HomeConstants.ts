@@ -301,7 +301,7 @@ export const CANCER_SPECIALTIES: CancerSpecialty[] = [
     cancer_label: "View Other Types of Cancer",
     cancer_description: "Other Types of Cancer",
     cancer_path_url:
-      "/cancer-care/types/other-common-types-of-cancer",
+      "https://mskcc.icliniq.com/cancer-care/types/cancer-care/types/other-common-types-of-cancer",
   },
 ];
 
