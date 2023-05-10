@@ -14,7 +14,8 @@ import type { AstroCookies } from "astro";
 
 console.log("Cookies...");
 const cookies: AstroCookies = Astro.cookies;
-console.log(cookies);
+const headers = cookies.headers();
+Array.from(headers).map((value) => console.log(value));
 cookies.set("new-cookie", "test-cookie");
 ---
 
