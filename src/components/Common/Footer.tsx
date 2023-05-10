@@ -11,7 +11,7 @@ function Footer() {
         <>
             <div className='bg-primary h-auto relative mt-10 w-full'>
                 <div className='container-alternate mx-auto '>
-                    <div className="grid grid-cols-2 gap-6 py-24">
+                    <div className="grid grid-cols-2 gap-12 py-24">
                         <div className='col-span-2 lg:col-span-1'>
                             <div className='flex items-center justify-between'>
                                 <a href='https://www.mskcc.org/'><img className='w-72 h-16' width="1165" height="246" title="MSK Logo" alt="MSK Logo" src="https://assets.icliniq.com/mskcc/logo/msk-logo-white.svg" /></a>
@@ -34,7 +34,7 @@ function Footer() {
 
                         <div className='col-span-2 mt-10 lg:mt-0 lg:col-span-1'>
                             <h3 className='text-white text-2xl font-semibold'>Specialities</h3>
-                            <div className='grid grid-cols-1 md:grid-cols-2 ml-10 md:ml:0 lg:justify-items-center  lg:grid-cols-2  md:ml:0  gap-10'>
+                            <div className='grid grid-cols-1 md:grid-cols-2 lg:justify-items-center lg:grid-cols-2 gap-10'>
                                 <div className='col-span-1 md:col-span-1 lg:col-span-1'>
                                     {firstSpecialities.map((specialites) => (
                                         <div className="mt-5 w-auto break-words ">
