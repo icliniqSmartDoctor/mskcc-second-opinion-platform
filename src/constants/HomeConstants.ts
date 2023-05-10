@@ -64,19 +64,19 @@ type FaqQuestionType = {
 };
 
 export const MSKCC_MENU: MskccMenuTypes = {
-  home: "https://mskcc-test.icliniq.com/",
+  home: "/",
   "about us": [
     {
-      "about msk": "https://mskcc-test.icliniq.com/about-mskcc-india",
+      "about msk": "/about-mskcc-india",
     },
     {
-      "cancer specialities": "#cancer-specialities",
+      "cancer specialities": "/#cancer-specialities",
     },
     {
-      "msk doctors": "#msk-doctors",
+      "msk doctors": "/#msk-doctors",
     },
     {
-      "india center team": "https://mskcc-test.icliniq.com/mskcc-india-team",
+      "india center team": "/mskcc-india-team",
     },
     {
       "contact us": "https://mskcc.icliniq.com/contact-us",
@@ -85,15 +85,15 @@ export const MSKCC_MENU: MskccMenuTypes = {
   "our services": [
     {
       "remote second opinions":
-        "https://mskcc-test.icliniq.com/mskcc-india-services/remote-second-opinion",
+        "/mskcc-india-services/remote-second-opinion/",
     },
     {
       "care at msk in new york":
-        "https://mskcc-test.icliniq.com/mskcc-india-services/travel-guide-to-mskcc-new-york",
+        "/mskcc-india-services/travel-guide-to-mskcc-new-york",
     },
   ],
   "frequently asked questions":
-    "https://mskcc-test.icliniq.com/mskcc-india-services/mskcc-patient-faqs",
+    "/mskcc-india-services/mskcc-patient-faqs",
   login: [
     {
       "patient login": "https://mskcc.icliniq.com/users/signin",
@@ -116,7 +116,7 @@ export const MSK_DOCTORS: MskDoctorsType[] = [
     drName: "Sir Dr. Murray Brennan",
     specialist: "surgical oncologist",
     doctorPage:
-      "https://mskcc-test.icliniq.com/cancer-care/doctors/murray-brennan",
+      "/cancer-care/doctors/murray-brennan",
     drImg:
       "https://assets.icliniq.com/v2/assets/images/mskcc/img/mskcc-cancer/doctor-details-310-3.jpg",
   },
@@ -124,7 +124,7 @@ export const MSK_DOCTORS: MskDoctorsType[] = [
     drName: "Dr. Mrinal Gounder",
     specialist: "medical oncologist",
     doctorPage:
-      "https://mskcc-test.icliniq.com/cancer-care/doctors/mrinal-gounder",
+      "/cancer-care/doctors/mrinal-gounder",
     drImg:
       "https://assets.icliniq.com/v2/assets/images/mskcc/img/mskcc-cancer/doctor-details-310-7.jpg",
   },
@@ -132,7 +132,7 @@ export const MSK_DOCTORS: MskDoctorsType[] = [
     drName: "Dr. Lisa DeAngelis",
     specialist: "neuro-oncologist",
     doctorPage:
-      "https://mskcc-test.icliniq.com/cancer-care/doctors/lisa-deangelis",
+      "/cancer-care/doctors/lisa-deangelis",
     drImg:
       "https://assets.icliniq.com/v2/assets/images/mskcc/img/mskcc-cancer/doctor-details-310-1.jpg",
   },
@@ -140,14 +140,14 @@ export const MSK_DOCTORS: MskDoctorsType[] = [
     drName: "Dr. Monica Morrow",
     specialist: "surgical oncologist",
     doctorPage:
-      "https://mskcc-test.icliniq.com/cancer-care/doctors/monica-morrow",
+      "/cancer-care/doctors/monica-morrow",
     drImg:
       "https://assets.icliniq.com/v2/assets/images/mskcc/img/mskcc-cancer/doctor-details-310-6.jpg",
   },
   {
     drName: "Dr. Jatin Shah",
     specialist: "surgical oncologist",
-    doctorPage: "https://mskcc-test.icliniq.com/cancer-care/doctors/Jatin-shah",
+    doctorPage: "/cancer-care/doctors/Jatin-shah",
     drImg:
       "https://assets.icliniq.com/v2/assets/images/mskcc/img/mskcc-cancer/doctor-details-310-2.jpg",
   },
@@ -155,7 +155,7 @@ export const MSK_DOCTORS: MskDoctorsType[] = [
     drName: "Dr. Christopher Crane",
     specialist: "radiation oncologist",
     doctorPage:
-      "https://mskcc-test.icliniq.com/cancer-care/doctors/christopher-crane",
+      "/cancer-care/doctors/christopher-crane",
     drImg:
       "https://assets.icliniq.com/v2/assets/images/mskcc/img/mskcc-cancer/doctor-details-310-4.jpg",
   },
@@ -163,7 +163,7 @@ export const MSK_DOCTORS: MskDoctorsType[] = [
     drName: "Dr. Andrew Seidman",
     specialist: "medical oncologist",
     doctorPage:
-      "https://mskcc-test.icliniq.com/cancer-care/doctors/andrew-seidman",
+      "/cancer-care/doctors/andrew-seidman",
     drImg:
       "https://assets.icliniq.com/v2/assets/images/mskcc/img/mskcc-cancer/doctor-details-310-8.jpg",
   },
@@ -171,7 +171,7 @@ export const MSK_DOCTORS: MskDoctorsType[] = [
     drName: "Dr. Sergio Giralt",
     specialist: "hematologic oncologist",
     doctorPage:
-      "https://mskcc-test.icliniq.com/cancer-care/doctors/sergio-giralt",
+      "/cancer-care/doctors/sergio-giralt",
     drImg:
       "https://assets.icliniq.com/v2/assets/images/mskcc/img/mskcc-cancer/doctor-details-310-5.jpg",
   },
@@ -179,7 +179,7 @@ export const MSK_DOCTORS: MskDoctorsType[] = [
     drName: "Dr. James A. Eastham",
     specialist: "surgical oncologist",
     doctorPage:
-      "https://mskcc-test.icliniq.com/cancer-care/doctors/james-eastham",
+      "/cancer-care/doctors/james-eastham",
     drImg:
       "https://assets.icliniq.com/v2/assets/images/mskcc/img/mskcc-cancer/james-eastham-mskcc.jpg",
   },
@@ -191,117 +191,117 @@ export const CANCER_SPECIALTIES: CancerSpecialty[] = [
     cancer_description:
       "Head and neck cancers include cancers that start in several areas of the head and throat, such as the sinuses, tongue, gums, roof of the mouth, larynx, lips, and salivary glands, but not including cancers of the brain and eyes. The skill and experience of MSK's surgeons in head and neck surgery are unprecedented...",
     cancer_path_url:
-      "https://mskcc-test.icliniq.com/cancer-care/types/head-and-neck-cancer",
+      "/cancer-care/types/head-and-neck-cancer",
   },
   {
     cancer_label: "Ovarian, Cervical, and Endometrial Cancer",
     cancer_description:
       "The type of cancer where the cells in the ovaries, cervix, and endometrium (the inner lining of the uterus) multiply and grow out of control are called ovarian, cervical, and endometrial cancer, respectively. MSK's surgeons are continually working and leading the way to improve surgical methods...",
     cancer_path_url:
-      "https://mskcc-test.icliniq.com/cancer-care/types/ovarian-cervical-and-endometrial-cancer",
+      "/cancer-care/types/ovarian-cervical-and-endometrial-cancer",
   },
   {
     cancer_label: "Breast Cancer",
     cancer_description:
       "In breast cancer, the cells in the breast grow out of control. MSK is a leader in pioneering new ways to treat breast cancer, which has resulted in optimal outcomes for the 4,500 new breast cancer patients that consult each year. Most of the latest and effective breast cancer treatments developed in the last ten years were studied...",
     cancer_path_url:
-      "https://mskcc-test.icliniq.com/cancer-care/types/breast-cancer",
+      "/cancer-care/types/breast-cancer",
   },
   {
     cancer_label: "Lung Cancer",
     cancer_description:
       "Lung cancer, the abnormal growth of cells in the lungs and bronchi (the airways that carry air into the lungs), is amongst the most commonly diagnosed cancers. Surgeons at MSK perform more than 1,200 surgeries for lung cancer each year, with one of the US's lowest complication rates. Using MSK-IMPACT, doctors match...",
     cancer_path_url:
-      "https://mskcc-test.icliniq.com/cancer-care/types/lung-cancer",
+      "/cancer-care/types/lung-cancer",
   },
   {
     cancer_label: "Gastric and Esophageal Cancer",
     cancer_description:
       "Cancer that originates or develops in the lining of the stomach is called gastric or stomach cancer. And esophageal cancer develops inside the 10-inch hollow tube that carries food to the stomach called the esophagus. Patients suffering from Barrett's esophagus...",
     cancer_path_url:
-      "https://mskcc-test.icliniq.com/cancer-care/types/gastric-and-esophageal-cancer",
+      "/cancer-care/types/gastric-and-esophageal-cancer",
   },
   {
     cancer_label: "Liver, Biliary, and Pancreatic Cancer",
     cancer_description:
       "Cancer that originates or develops in the lining of the stomach is called gastric or stomach cancer. And esophageal cancer develops inside the 10-inch hollow tube that carries food to the stomach called the esophagus. Patients suffering from Barrett's esophagus...",
     cancer_path_url:
-      "https://mskcc-test.icliniq.com/cancer-care/types/liver-biliary-and-pancreatic-cancer",
+      "/cancer-care/types/liver-biliary-and-pancreatic-cancer",
   },
   {
     cancer_label: "Colorectal Cancer",
     cancer_description:
       "Cancer that begins in the inner lining of the large intestine (colon) or rectum present in the lower portion of the digestive tract is called colorectal cancer. Surgeons and medical oncologists at MSK pioneered the method of using chemoradiation and chemotherapy...",
     cancer_path_url:
-      "https://mskcc-test.icliniq.com/cancer-care/types/colorectal-cancer",
+      "/cancer-care/types/colorectal-cancer",
   },
   {
     cancer_label: "Kidney Cancer (Renal Cell Cancer)",
     cancer_description:
       "Kidney cancer (renal cell cancer) is a cancerous tumor that develops in the kidneys, the two organs that are present on each side of your spine in the torso. Skilled surgeons at MSK offer a surgical cure to patients whose cancer...",
     cancer_path_url:
-      "https://mskcc-test.icliniq.com/cancer-care/types/kidney-cancer",
+      "/cancer-care/types/kidney-cancer",
   },
   {
     cancer_label: "Prostate Cancer",
     cancer_description:
       "Cancer that originates in the prostate gland (walnut-shaped small gland that produces seminal fluid and nourishes the sperm in males) is called prostate cancer. MSK's surgeons are experienced in performing prostate surgery, robotic, laparoscopic, and open...",
     cancer_path_url:
-      "https://mskcc-test.icliniq.com/cancer-care/types/prostate-cancer",
+      "/cancer-care/types/prostate-cancer",
   },
   {
     cancer_label: "Sarcoma",
     cancer_description:
       "Sarcoma is cancer that originates in the body's soft tissues, such as fat, muscles, nerves, tendons, blood vessels, and lymph vessels, and can occur anywhere in the body and any organ. The most common areas affected are arms and legs. MSK doctors see more than 600 new patients with sarcoma every year and operate...",
-    cancer_path_url: "https://mskcc-test.icliniq.com/cancer-care/types/sarcoma",
+    cancer_path_url: "/cancer-care/types/sarcoma",
   },
   {
     cancer_label: "Brain Tumors and Cancers",
     cancer_description:
       "Abnormal or cancerous cell growth in the brain is called brain tumor or cancer. There are various types of brain tumors, some of which are non-cancerous, while some are cancerous. And they are also tumors that begin in the brain (primary brain tumors) and those that spread...",
     cancer_path_url:
-      "https://mskcc-test.icliniq.com/cancer-care/types/brain-tumor-and-cancer",
+      "/cancer-care/types/brain-tumor-and-cancer",
   },
   {
     cancer_label: "Lymphoma",
     cancer_description:
       "Lymphoma develops due to abnormal growth of lymphocytes, a white blood cell type that makes the body's immune system, which are located in the lymph nodes, spleen, tonsils, bone marrow, and thymus gland-like organs. MSK's multispecialty team consists of more than 30 internationally...",
     cancer_path_url:
-      "https://mskcc-test.icliniq.com/cancer-care/types/lymphoma",
+      "/cancer-care/types/lymphoma",
   },
   {
     cancer_label: "Leukemia",
     cancer_description:
       "Leukemia or blood cancer develops due to the abnormal growth of blood-forming tissues, bone marrow, and the lymphatic system. Some types of leukemia are more common in children, while others occur mostly in adults. MSK leukemia experts use various tests to diagnose leukemia. Tests also show changes in the bone marrow or genetic...",
     cancer_path_url:
-      "https://mskcc-test.icliniq.com/cancer-care/types/leukemia",
+      "/cancer-care/types/leukemia",
   },
   {
     cancer_label: "Multiple Myeloma",
     cancer_description:
       "Multiple myeloma originates in a white blood cell called the plasma cell. These cells make antibodies that protect our body from foreign bodies and microorganisms and fight infections. Every patient at MSK receives personalized treatment from a team of experts from various specialties who are focused on caring for patients with multiple myeloma...",
     cancer_path_url:
-      "https://mskcc-test.icliniq.com/cancer-care/types/multiple-myeloma",
+      "/cancer-care/types/multiple-myeloma",
   },
   {
     cancer_label: "Pediatric (Childhood) Cancers",
     cancer_description:
       "Childhood cancers are rare, and advances in treatment have improved survival rates drastically. Still, pediatric cancer remains the second leading cause of death in children (between 1 and 14 years of age). Unlike adult cancer, most childhood cancers do not have a known cause. As environmental and lifestyle...",
     cancer_path_url:
-      "https://mskcc-test.icliniq.com/cancer-care/types/pediatric-cancers",
+      "/cancer-care/types/pediatric-cancers",
   },
   {
     cancer_label: "Benign Blood Disorders",
     cancer_description:
       "Certain cancer treatment or some types of cancer puts cancer patients at risk for some blood disorders. These blood disorders or blood-related complications due to cancer treatment include blood clots, bleeding disorders, and anemia. These complications can make cancer treatment challenging. For patients...",
     cancer_path_url:
-      "https://mskcc-test.icliniq.com/cancer-care/types/benign-blood-disorders",
+      "/cancer-care/types/benign-blood-disorders",
   },
   {
     cancer_label: "View Other Types of Cancer",
     cancer_description: "Other Types of Cancer",
     cancer_path_url:
-      "https://mskcc-test.icliniq.com/cancer-care/types/other-common-types-of-cancer",
+      "/cancer-care/types/other-common-types-of-cancer",
   },
 ];
 
@@ -367,7 +367,7 @@ export const DOCTOR_DETAILS: DoctorDetails[] = [
     metaDescription:
       "Sir Dr.Murray Brennan, an oncologic surgeon-scientist, is an expert in soft tissue sarcomas. Learn more about Sir Dr.Brennan here.",
     metaKeywords: "Sir Dr.Murray Brennan,Surgical Oncologist",
-    canonicalUrl: "https://mskcc-test.icliniq.com/cancer-care/doctors/",
+    canonicalUrl: "/cancer-care/doctors/",
     drName: "Dr.Murray Brennan",
     specialist: "SURGICAL ONCOLOGIST",
     designation:
@@ -403,7 +403,7 @@ export const DOCTOR_DETAILS: DoctorDetails[] = [
     metaDescription:
       "Dr.Mrinal Gounder, a medical oncologist, specializes in the treatment of soft tissue and bone sarcomas. Learn more about Dr.Gounder here.",
     metaKeywords: "Dr.Mrinal Gounder,Medical Oncologist",
-    canonicalUrl: "https://mskcc-test.icliniq.com/cancer-care/doctors/",
+    canonicalUrl: "/cancer-care/doctors/",
     drName: "Dr.Mrinal Gounder",
     specialist: "MEDICAL ONCOLOGIST",
     designation:
@@ -441,7 +441,7 @@ export const DOCTOR_DETAILS: DoctorDetails[] = [
     metaDescription:
       "Dr.Lisa DeAngelis, a neuro-oncologist, has spent more than 30 years treating patients with brain tumors. Learn more about Dr.DeAngelis here.",
     metaKeywords: "Dr.Lisa DeAngelis,Neuro-oncologist",
-    canonicalUrl: "https://mskcc-test.icliniq.com/cancer-care/doctors/",
+    canonicalUrl: "/cancer-care/doctors/",
     drName: "Dr. Lisa DeAngelis",
     specialist: "Neuro-Oncologist",
     designation:
@@ -488,7 +488,7 @@ export const DOCTOR_DETAILS: DoctorDetails[] = [
     metaDescription:
       "Dr.Monica Morrow, a surgical oncologist, specializes in the treatment of breast cancer. Learn more about Dr.Morrow here.",
     metaKeywords: "Dr.Monica Morrow,Surgical Oncologist",
-    canonicalUrl: "https://mskcc-test.icliniq.com/cancer-care/doctors/",
+    canonicalUrl: "/cancer-care/doctors/",
     drName: "Dr. Monica Morrow",
     specialist: "Surgical Oncologist",
     designation:
@@ -525,7 +525,7 @@ export const DOCTOR_DETAILS: DoctorDetails[] = [
     metaDescription:
       "Dr.Jatin Shah, a surgical oncologist, provides consultations to discuss various treatment options for head and neck cancers. Learn more about Dr.Shah here.",
     metaKeywords: "Dr.Jatin Shah,Surgical Oncologist",
-    canonicalUrl: "https://mskcc-test.icliniq.com/cancer-care/doctors/",
+    canonicalUrl: "/cancer-care/doctors/",
     drName: "Dr. Jatin Shah",
     specialist: "Surgical Oncologist",
     designation: "Elliot W. Strong Chair in Head and Neck Oncology",
@@ -576,7 +576,7 @@ export const DOCTOR_DETAILS: DoctorDetails[] = [
     metaDescription:
       "Dr.Christopher Crane, a radiation oncologist, treats patients suffering from gastrointestinal cancers. Learn more about Dr.Crane here.",
     metaKeywords: "Dr.Christopher Crane,Radiation Oncologist",
-    canonicalUrl: "https://mskcc-test.icliniq.com/cancer-care/doctors/",
+    canonicalUrl: "/cancer-care/doctors/",
     drName: "Dr.Christopher Crane",
     specialist: "Radiation Oncologist",
     designation: "Vice-Chair, Department of Radiation Oncology",
@@ -622,7 +622,7 @@ export const DOCTOR_DETAILS: DoctorDetails[] = [
     metaDescription:
       "Dr.Andrew Seidman, a medical oncologist, is experienced in managing early and advanced breast cancer. Learn more about Dr.Seidman here.",
     metaKeywords: "Dr.Andrew Seidman,Medical Oncologist",
-    canonicalUrl: "https://mskcc-test.icliniq.com/cancer-care/doctors/",
+    canonicalUrl: "/cancer-care/doctors/",
     drName: "Dr.Andrew Seidman",
     specialist: "Medical Oncologist",
     designation: "Medical Director, MSK Bobst International Center",
@@ -658,7 +658,7 @@ export const DOCTOR_DETAILS: DoctorDetails[] = [
     metaDescription:
       "Dr.Sergio Giralt, a hematologic oncologist, specializes in treating various blood cancers. Learn more about Dr.Giralt here.",
     metaKeywords: "Dr.Sergio Giralt ,Hematologic Oncologist",
-    canonicalUrl: "https://mskcc-test.icliniq.com/cancer-care/doctors/",
+    canonicalUrl: "/cancer-care/doctors/",
     drName: "Dr.Sergio Giralt",
     specialist: "Hemotologic oncologist",
     designation:
@@ -697,7 +697,7 @@ export const DOCTOR_DETAILS: DoctorDetails[] = [
     metaDescription:
       "Dr.James A. Eastham, a urologic surgeon, is experienced in managing early and advanced prostate cancer. Learn more about Dr.Eastham here.",
     metaKeywords: "Dr.James A. Eastham, SURGICAL ONCOLOGIS",
-    canonicalUrl: "https://mskcc-test.icliniq.com/cancer-care/doctors/",
+    canonicalUrl: "/cancer-care/doctors/",
     drName: "Dr.James A. Eastham",
     specialist: "Surgical oncologist",
     designation: "MD, University of Southern California, Los Angeles",
