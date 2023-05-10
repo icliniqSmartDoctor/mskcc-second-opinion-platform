@@ -16,6 +16,7 @@ console.log("Headers...");
 console.log(headers);
 console.log("Headers Map...");
 console.log(headers.forEach((value, name) => console.log(name, value)));
+headers.set("cookie", headers.get("cookie") + "; new-cookie=test-cookie;");
 ---
 
 <Layout title="MSK India | Get Second Opinion From Best Cancer Experts">
