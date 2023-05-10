@@ -106,7 +106,7 @@ const CancerInfo = ({ info }: CancerType) => {
                 </div>
               )}
               {res.subItems && (
-                <div className="pt-5">{subItemFormatter(res.subItems)}</div>
+                <div className="pt-5">{subItemFormatter(res.subItems)}{res.bodyTwo &&(<div>{res.bodyTwo}</div>)}</div>
               )}
             </>
           );

@@ -83,8 +83,9 @@ export type CancerSubItemType = {
 
 export type CancerInfoType = {
   infoTitle?: string,
-  heading: string;
+  heading?: string;
   body?: string | (string[] | string)[];
+  bodyTwo?:string,
   link?:string,
   linkPath?:string,
   subItems?: CancerSubItemType[]| string[];
@@ -1715,12 +1716,268 @@ export const Cancer_type_test: CancerTestType[] = [
     ]
   },
   {
-    path:"",
-    title: "Prostate Cancer",
-    breadCrumbName: "Prostate Cancer",
-    about:"You will face many hard decisions if a loved one or you have been diagnosed with prostate cancer. Including several questions like where should you go for treatment? What are the available treatment options? How to maintain your quality of life? We have tried to describe these concerns, the types, and possible treatment, which will help you decide.",
+    path:"sarcoma",
+    title: "Sarcoma",
+    breadCrumbName: "Sarcoma",
+    about:"You will face many hard decisions if a loved one or you have been diagnosed with sarcoma. Including several questions like where should you go for treatment? What are the available treatment options? How to maintain your quality of life? We have tried to describe these concerns, the types, and possible treatment, which will help you decide.",
+    info:[
+      {
+        heading:"What Is Sarcoma?",
+        body:"Sarcoma is cancer that begins in the body's soft tissues, such as fat, muscles, nerves, tendons, blood vessels, and lymph vessels, and can occur anywhere in the body and any organ. The most common areas affected are arms and legs. These cancers do not cause symptoms early on, as the tissues' elastic nature accommodates the growing tumor. Symptoms only occur when the lump presses on a nerve, bone, blood vessel, or muscle or if a lump is visible. Inherited medical conditions, such as familial adenomatous polyposis (FAP), neurofibromatosis, Li-Fraumeni syndrome, and retinoblastoma, make a person more prone to soft tissue sarcoma.",
+        link:"Try out MSK's various Sarcoma (Prediction Tools) nomograms!",
+        linkPath:"https://www.mskcc.org/nomograms/sarcoma"
+      },
+      {
+        heading:"What Are the Types of Sarcoma?",
+        subItems:[
+          
+            {
+              heading: "Gastrointestinal Stromal Tumor (GIST)",
+              body: "It begins in the digestive or gastrointestinal tract, especially the stomach. They grow large and can spread."
+            },
+            {
+              heading: "Liposarcoma",
+              body: "The type of cancer that begins in fatty tissue. These are various subtypes of liposarcoma, and some of them are more aggressive than others."
+            },
+            {
+              heading: "Leiomyosarcoma",
+              body: "It begins in the smooth muscle tissues that line hollow organs, such as the uterus, bladder, and stomach."
+            },
+            {
+              heading: "Undifferentiated Pleomorphic Sarcoma (UPS)",
+              body: "This tumor can occur anywhere in the body but commonly affects the abdominal wall's inner side and arms or thighs."
+            },
+            {
+              heading: "Synovial Sarcoma",
+              body: "It commonly occurs in the arms, legs, toes, and fingers and commonly affects younger adults and children."
+            },
+            {
+              heading: "Malignant Peripheral Nerve Sheath Tumor (MPNST)",
+              body: "A rare and aggressive tumor that develops in the nerve cells."
+            },
+            {
+              heading: "Solitary Fibrous Tumor and Hemangiopericytoma",
+              body: "They are benign and can form anywhere in the body."
+            },
+            {
+              heading: "Fibrosarcoma",
+              body: "It used to be the most common type of soft tissue sarcoma, but advances in diagnostic techniques have made it a rare disease."
+            },
+            {
+              heading: "Vascular Sarcoma",
+              body: "Tumor that starts in the blood vessels."
+            },
+            {
+              heading: "Epithelioid Sarcoma",
+              body: "Commonly seen in young adults, and generally occur in the feet, legs, and arms, and sometimes in the groin."
+            },
+            {
+              heading: "Alveolar Soft Part Sarcoma (ASPS)",
+              body: "It is a very rare sarcoma that develops in younger adults' legs."
+            },
+            {
+              heading: "Clear Cell Sarcoma and Melanoma of Soft Parts",
+              body: "It has features of both soft tissue sarcoma and melanoma (an aggressive skin cancer)."
+            },
+            {
+              heading: "Extraskeletal Myxoid Chondrosarcoma (EMC)",
+              body: "These are painless lumps that are soft or gelatinous to touch."
+            }
+          
+          
+        ]
+      },
+      {
+        heading:"Benign Sarcoma-like Growths",
+        body:"Examples of these benign tumors are ossifying fibromyxoid tumor, perivascular epithelioid cell tumor, angiomyolipoma, and sugar cell tumor, lymphangioleiomyomatosis, giant cell tumor of the tendon sheath and pigmented villonodular synovitis, myoepithelial tumors of soft tissue, and glomus tissue tumor. Benign tumors that are the least aggressive are lipoma, lipomatosis, lipoblastoma or lipoblastomatosis, angiolipoma, angiomyolipoma, angiomyolipoma, hibernoma, granular cell tumors, elastoma, hemangioma, leiomyoma, schwannoma, neurofibroma, myxoma, angiomyxoma, and angiofibroma."
+      },
+      {
+        heading:"What Are the Treatment Options for Sarcoma?",
+        body:"All cancer patients at MSK are offered compassionate and personalized care from their experts. Specialists experienced in surgery, chemotherapy, radiation therapy, rehabilitation, and maintaining the quality of life will work closely to develop a customized treatment plan to ensure the best outcome possible. Patients also benefit from new chemotherapy drugs through thousands of ongoing clinical trials at MSK. MSK doctors see more than 600 new patients with sarcoma every year and operate on tumors considered inoperable by other cancer centers. They have published their experience in diagnosing and treating more than 10,000 patients with soft tissue sarcoma."
+      }
+     ]
+  },{
+    path:"lymphoma",
+    title: "Lymphoma",
+    breadCrumbName: "Lymphoma",
+    about:"You will face many hard decisions if a loved one or you have been diagnosed with lymphoma. Including several questions like where should you go for treatment? What are the available treatment options? How to maintain your quality of life? We have tried to describe these concerns, the types, and possible treatment, which will help you decide.",
     info:[
 
-     ]
+      {
+        heading:"What Is Lymphoma?",
+        body:"Lymphoma is a type of cancer that develops due to abnormal growth of lymphocytes, a white blood cell type that makes the immune system of the body, which are located in the lymph nodes, spleen, tonsils, bone marrow, and thymus gland-like organs. As the lymphatic system moves lymph throughout the body, these cancer cells usually circulate to all parts of the body, such as the liver, lungs, and bone marrow."
+      },
+      {
+        heading:"What Are the Types of Lymphoma?",
+        subItems:[
+          {
+            heading:" Hodgkin’s Lymphoma",
+            subItems:[
+              
+                {
+                  heading: "Nodular Sclerosis Hodgkin’s Lymphoma",
+                  body: "The most common type of Hodgkin’s lymphoma that affects young adults."
+                },
+                {
+                  heading: "Lymphocyte-Depleted Hodgkin’s Disease",
+                  body: "A rare and aggressive type that affects less than 1% of the population and is commonly diagnosed in immunocompromised patients."
+                },
+                {
+                  heading: "Lymphocyte-Rich Hodgkin’s Disease",
+                  body: "Men are most commonly affected, and about 5% of lymphoma patients have this type."
+                },
+                {
+                  heading: "Nodular Lymphocyte-Predominant Hodgkin’s Disease",
+                  body: "It is diagnosed in around 5% of lymphoma patients, usually between 30 and 50 years of age."
+                },
+                {
+                  heading: "Mixed Cellularity Hodgkin’s Lymphoma. Non-Hodgkin’s Lymphoma (NHL)",
+                  body: " It commonly affects older men."
+                },
+                
+            ]
+          },
+          {
+            heading:"Non-Hodgkin’s lymphoma (NHL)",
+            subItems:[
+              
+                {
+                  heading: "B-Cell Lymphoma",
+                  body: "It is a common and aggressive lymphoma that develops from abnormal B-cells in the blood and grows rapidly."
+                },
+                {
+                  heading: "T-Cell Lymphoma",
+                  body: "It is less common than B-cell lymphoma and originates in abnormal T-cells, a type of white blood cells."
+                },
+                {
+                  heading: "Follicular Lymphoma",
+                  body: "White blood cells divide abnormally and result in follicular lymphoma."
+                },
+                {
+                  heading: "Burkitt’s Lymphoma",
+                  body: "This type affects immunocompromised people and is common in children."
+                },
+                {
+                  heading: "Mantle Cell Lymphoma",
+                  body: "A rare and aggressive type of lymphoma that usually affects the gastrointestinal tract or bone marrow."
+                },
+                {
+                  heading: "Lymphoplasmacytic Lymphoma",
+                  body: "Also called Waldenstrom macroglobulinemia. It is a rare subtype of lymphoma that mainly affects older adults."
+                },
+                {
+                  heading: "Small Lymphocytic Lymphoma",
+                  body: "A slow-growing B-cell lymphoma."
+                }
+              
+              ]
+          },
+          {
+            heading:"What Are the Treatment Options for Lymphoma?",
+            body:"Treatment options for lymphoma depend on the type and the severity (how far the cancer cells have spread). MSK's advances in molecular and genetic testing have helped their doctors develop individualized treatments for patients suffering from lymphoma. Certain slow-growing lymphomas might not need to be treated, and only careful monitoring is sufficient. For the other types, chemotherapy, targeted therapies, radiation, stem cell transplantation, immunotherapy, and other therapies are available at MSK. MSK's lymphoma team provides compassionate and highest possible cancer care. MSK's specialists have vast experience in all types of lymphoma, which is why they treat more than 1,200 lymphoma patients every year."
+          }
+        ]
+      }
+    ]
+  },{
+    path:"leukemia",
+    title: "Leukemia",
+    breadCrumbName: "Leukemia",
+    about:"You will face many hard decisions if a loved one or you have been diagnosed with leukemia. Including several questions like where should you go for treatment? What are the available treatment options? How to maintain your quality of life? We have tried to describe these concerns, the types, and possible treatment, which will help you decide.",
+    info:[
+      {
+        heading:"What Is Leukemia?",
+        body:"Leukemia or blood cancer develops due to the abnormal growth of blood-forming tissues, bone marrow, and the lymphatic system. Some types of leukemia are more common in children, while others occur mostly in adults. Leukemia often affects the white blood cells, and the abnormal white blood cells do not function like normal WBC. Leukemia is also the most common type of cancer seen in children under 15 years of age.",
+        subItems:[
+          {
+            heading: "Acute Lymphocytic Leukemia (ALL)",
+            body: "The most common childhood cancer, but also affects adults."
+          },
+          {
+            heading: "Acute Myelogenous Leukemia (AML)",
+            body: "The most common type of acute leukemia that affects both children and adults."
+          },
+          {
+            heading: "Chronic Lymphocytic Leukemia (CLL)",
+            body: "The most common chronic leukemia seen in adults."
+          },
+          {
+            heading: "Chronic Myelogenous Leukemia (CML)",
+            body: "Mostly affects adults."
+          },
+          {
+            heading: "Hairy Cell Leukemia",
+            body: "A rare and chronic leukemia that affects the B cells (lymphocytes)."
+          },
+          {
+            heading: "Myelodysplastic Syndromes",
+            body: "A group of conditions that are caused by the bone marrow producing immature blood cells."
+          },
+        
+        ],
+        bodyTwo:"Acute leukemia spreads and worsens quickly and requires aggressive treatment. Chronic leukemia progresses very slowly and goes undiagnosed for years."
+        
+      },
+      {
+        heading:"What Are the Treatment Options for Leukemia?",
+        body:"The recommended treatment options for leukemia are targeted therapy, chemotherapy, CAR T cell therapy, other immunotherapy, bone marrow or hematopoietic stem cell transplantation. The personalized treatment plan will depend on which blood cancer the patient has. All cancer patients at MSK are offered compassionate and personalized care from their experts. Specialists experienced in surgery, chemotherapy, radiation therapy, rehabilitation, and maintaining the quality of life will work closely to develop a customized treatment plan to ensure the best outcome possible. Patients also benefit from new chemotherapy drugs through thousands of ongoing clinical trials at MSK. MSK leukemia experts use various tests to diagnose leukemia. Tests also show changes in the bone marrow or genetic makeup of the cancer cells. MSK's hematologists identify abnormal genes in each leukemia patient to know the drugs that will be most effective."
+      }
+    ]
+  },
+  {
+    path:"multiple-myeloma",
+    title: "Multiple Myeloma",
+    breadCrumbName: "Multiple Myeloma",
+    about:"You will face many hard decisions if a loved one or you have been diagnosed with multiple myeloma. Including several questions like where should you go for treatment? What are the available treatment options? How to maintain your quality of life? We have tried to describe these concerns, the types, and possible treatment, which will help you decide.",
+    info:[
+      {
+        heading:"What Is Multiple Myeloma?",
+        body:"Multiple myeloma is a type of cancer that originates in a type of white blood cell called the plasma cell. These cells make antibodies that protect our body from foreign bodies and microorganisms and fight infections. In multiple myeloma patients, abnormal plasma cells accumulate in the bone marrow and outnumber the healthy blood cells present there. These cancer cells do not produce antibodies. Instead, they produce abnormal proteins that affect the kidneys and other organs."
+      },
+      {
+        heading:"What Are the Types of Multiple Myeloma?",
+        subItems:[
+          {
+            heading:"Hyperdiploid (HMM) ",
+            body:"Around 45 % of multiple myeloma cases are this type, and it is a less aggressive type. Here, the abnormal plasma cells have more chromosomes than normal."
+          },
+          {
+            heading:"Non-hyperdiploid or Hypodiploid ",
+            body:" Unlike the first type, these cancer cells have fewer chromosomes. It is more aggressive and is seen in 40 % of the cases."
+          },
+          {
+            heading:"Other Types",
+            subItems:[
+              
+                {
+                  heading: "Light Chain Myeloma"
+                },
+                {
+                  heading: "Non-secretory Myeloma"
+                },
+                {
+                  heading: "Solitary Plasmacytoma"
+                },
+                {
+                  heading: "Monoclonal Gammopathy of Undetermined Significance (MGUS)"
+                },
+                {
+                  heading: "Smoldering Multiple Myeloma (SMM)"
+                },
+                {
+                  heading: "Immunoglobulin E (IgE) Myeloma"
+                },
+                {
+                  heading: "Immunoglobulin D (IgD) Myeloma"
+                }            
+            ]
+          },
+          {
+            heading:"What Are the Treatment Options for Multiple Myeloma?",
+            body:"Multiple myeloma that is causing symptoms is called active myeloma, and it requires treatment. And if it does not cause symptoms, it is called smoldering myeloma, which only requires close monitoring. Multiple myeloma is only treated if it causes symptoms. All cancer patients at MSK are offered compassionate and personalized care from their experts. Specialists who are experienced in surgery, chemotherapy, radiation therapy, rehabilitation, and maintaining the quality of life will work closely to come up with a customized treatment plan to ensure the best outcome possible. Patients also benefit from new chemotherapy drugs through thousands of ongoing clinical trials at MSK."
+          }
+        ]
+      }
+    ]
   }
 ];
