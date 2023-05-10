@@ -9,8 +9,14 @@ import MskDoctors from "components/Home/MskDoctors";
 import * as CONSTANTS from "constants/HomeConstants";
 import VideoFloat from "components/Home/VIdeoFloat";
 import AssetAccessor from "utils/AssetAccessor";
+import { C } from "@fullcalendar/core/internal-common";
 export const prerender = true;
 
+const headers: Headers = Astro.request.headers;
+console.log("Headers...");
+console.log(headers);
+console.log("Headers Map...");
+console.log(headers.forEach((value, name) => console.log(name, value)));
 ---
 
 <Layout title="MSK India | Get Second Opinion From Best Cancer Experts">
