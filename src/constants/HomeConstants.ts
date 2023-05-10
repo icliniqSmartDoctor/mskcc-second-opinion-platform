@@ -5,7 +5,11 @@ type CancerSpecialty = {
   cancer_description: string;
   cancer_path_url: string;
 };
-
+type OtherCancerSpecialty = {
+  label: string;
+  description: string;
+  imgUrl: string;
+}
 type MskDoctorsType = {
   drName: string;
   specialist: string;
@@ -38,6 +42,27 @@ export type DoctorDetails = {
   about: string;
   doctorInfo: DoctorInfo;
   education: string[];
+};
+
+type CancerTestType = {
+  path: string;
+  title: string;
+  breadCrumbName: string;
+  about: string;
+  info: CancerInfoType[];
+};
+
+type CancerSubItemType = {
+  heading: string;
+  body?: string;
+  subItems?: CancerSubItemType[] | string[]
+};
+
+type CancerInfoType = {
+  infoTitle?: string,
+  heading: string;
+  body?: string | (string[] | string)[];
+  subItems?: CancerSubItemType[];
 };
 
 type MskccMenuTypes = { [key: string]: string | { [key: string]: string }[] };
@@ -301,10 +326,176 @@ export const CANCER_SPECIALTIES: CancerSpecialty[] = [
     cancer_label: "View Other Types of Cancer",
     cancer_description: "Other Types of Cancer",
     cancer_path_url:
-      "https://mskcc.icliniq.com/cancer-care/types/cancer-care/types/other-common-types-of-cancer",
+      "/cancer-care/types/other-common-types-of-cancer",
   },
 ];
-
+export const OTHER_CANCER_SPECIALTIES: OtherCancerSpecialty[] = [
+  {
+    label: "AIDS-Associated Cancers",
+    description: "AIDS (Acquired immunodeficiency syndrome), a sexually transmitted infection caused by the human immunodeficiency virus (HIV), results in a weak immune system. This puts AIDS and HIV patients at an increased risk for infections and certain cancers. The common AIDS-associated cancers are Kaposi sarcoma, non-Hodgkin lymphoma, and invasive cervical cancer. Taking HAART (highly active antiretroviral therapy) helps reduce the risk of getting these cancers.",
+    imgUrl: "https://assets.icliniq.com/v2/assets/images/mskcc/img/mskcc-cancer/AIDS-Associated-Cancers.png"
+  },
+  {
+    label: "Acoustic Neuroma (Vestibular Schwannoma)",
+    description: "Acoustic neuroma, otherwise called vestibular schwannoma, is a benign tumor that originates in the cells that are present around the nerves that connect the ear to the brain and are responsible for hearing and balance. They are mostly slow-growing but can press on the brainstem and cerebellum as they grow, which results in symptoms.",
+    imgUrl: "https://assets.icliniq.com/v2/assets/images/mskcc/img/mskcc-cancer/Acoustic-Neuroma-(Vestibular Schwannoma).png"
+  },
+  {
+    label: "Adrenal Tumors",
+    description: "Abnormal growth in either of the two triangular glands present on top of the kidneys, the adrenal glands, is called an adrenal tumor or adrenocortical cancer. These glands secrete hormones, such as cortisol, aldosterone, DHEA, and Catecholamines, that provide instructions to all organs in the body. It commonly affects children below 5 years and people between 40 and 50 years of age. Adrenal tumors can be benign (noncancerous), functional (cancerous cells produce hormones and are mostly benign), and malignant (cancerous and can spread to other areas of the body).",
+    imgUrl: "https://assets.icliniq.com/v2/assets/images/mskcc/img/mskcc-cancer/Adrenal-Tumors.png"
+  },
+  {
+    label: "Anal Cancer",
+    description: "Cancer or abnormal growth of cells in the anus (the end of the rectum) is called anal cancer. The anus helps solid waste pass from the body. Anal cancer is rare and is more common in women. More than 90 % of anal cancer is due to the human papillomavirus (HPV), a common sexually transmitted virus. The common signs of anal cancer are anal itching, blood in stools, pain on defecation, or a lump inside the anus.",
+    imgUrl: "https://assets.icliniq.com/v2/assets/images/mskcc/img/mskcc-cancer/Anal-Cancer.png"
+  },
+  {
+    label: "Appendiceal Cancer",
+    description: "Cancer or abnormal growth of cells in the anus (the end of the rectum) is called anal cancer. The anus helps solid waste pass from the body. Anal cancer is rare and is more common in women. More than 90 % of anal cancer is due to the human papillomavirus (HPV), a common sexually transmitted virus. The common signs of anal cancer are anal itching, blood in stools, pain on defecation, or a lump inside the anus.",
+    imgUrl: "https://assets.icliniq.com/v2/assets/images/mskcc/img/mskcc-cancer/Appendiceal-Cancer.png"
+  },
+  {
+    label: "Basal Cell Carcinoma",
+    description: "It is the most common type of skin cancer in the world. This cancer begins in the basal cells (a type of skin cell that produces new skin cells when the old cells die). This cancer appears as a transparent bump on the skin and occurs most often on the skin's sun-exposed areas (head and neck). Using sunscreen and avoiding long-term ultraviolet (UV) radiation from sunlight can protect against basal cell carcinoma.",
+    imgUrl: "https://assets.icliniq.com/v2/assets/images/mskcc/img/mskcc-cancer/Basal-Cell-Carcinoma.png"
+  },
+  {
+    label: "Bladder Cancer",
+    description: "Bladder cancer begins in the cells that line the inner surface of the bladder. It is generally seen in people older than 70 years, especially men. This cancer is the fifth most common type of cancer overall and the fourth most common in men. Prognosis is good when diagnosed early, but it can recur even years later.",
+    imgUrl: "https://assets.icliniq.com/v2/assets/images/mskcc/img/mskcc-cancer/Bladder-Cancer.png"
+  },
+  {
+    label: "Bone Cancer",
+    description: "Bone cancer that starts in the bone cells (primary bone cancer) is rare. Most bone cancers grow in other organs or tissues in the body and then spread to the bone (secondary bone cancer). The common bones affected are the long bones of the arms and legs, pelvis, ribs, and spine, and more children and young adults get diagnosed with this cancer.",
+    imgUrl: "https://assets.icliniq.com/v2/assets/images/mskcc/img/mskcc-cancer/Bone-Cancer.png"
+  },
+  {
+    label: "Cancer of Unknown Primary Origin",
+    description: "Any cell in the body can turn cancerous and start multiplying uncontrollably. The primary site of the cancer is the organ or part of the body where cancer develops. Cancerous cells from one organ can spread elsewhere in the body and form tumors, which is called metastatic cancer. Cancer of unknown primary (CUP) origin has spread from other parts of the body. Around 2 to 5 % of all people diagnosed with cancer have metastatic cancer, and tests cannot locate where cancer originated. This type of cancer is commonly seen in the liver, lymph nodes, lungs, skin, and bones.",
+    imgUrl: "https://assets.icliniq.com/v2/assets/images/mskcc/img/mskcc-cancer/Cancer-of-Unknown-Primary-Origin.png"
+  },
+  {
+    label: "Central Nervous System (CNS) Lymphoma",
+    description: "This is a rare type of non-Hodgkin lymphoma, cancer that originates in white blood cells. The two types of CNS lymphoma are primary CNS lymphoma (generally limited to the areas of the nervous system, such as eyes, brain, spine, and cerebrospinal fluid) and secondary CNS lymphoma (originates in other parts of the body and then spreads to the nervous system). Around 10 to 15 % of people with non-Hodgkin lymphoma affecting almost the entire body are at risk of developing secondary CNS lymphoma.",
+    imgUrl: "https://assets.icliniq.com/v2/assets/images/mskcc/img/mskcc-cancer/Central-Nervous-System-(CNS)-Lymphoma.png"
+  },
+  {
+    label: "Colon Cancer",
+    description: "The starting part of the large intestine is called the colon, and cancer that develops in the inner lining of the colon is called colon cancer. Colon cancer is often slow-growing and develops over several years. It is usually contained within the colon, but it can spread to the liver, lungs, and other organs if not treated.",
+    imgUrl: "https://assets.icliniq.com/v2/assets/images/mskcc/img/mskcc-cancer/Colon-Cancer.png"
+  },
+  {
+    label: "Gallbladder Cancer",
+    description: "Cancer that develops in the gallbladder, the small, pear-shaped organ present near the liver, is called gallbladder cancer. The gallbladder's function is to store bile, which is the digestive enzyme made by the liver. Gallbladder cancers are rare and typically affect older adults (age 70 and above). Most people are diagnosed when the cancer advances, which affects the prognosis.",
+    imgUrl: "https://assets.icliniq.com/v2/assets/images/mskcc/img/mskcc-cancer/Gallbladder-Cancer.png"
+  },
+  {
+    label: "Gastrointestinal Neuroendocrine Tumors",
+    description: "Neuroendocrine tumors, otherwise referred to as NETs, are tumors that arise from the neuroendocrine cells (cells of the endocrine and nervous system). These cells are found throughout the body, which makes neuroendocrine tumors possible in various organs, such as the gastrointestinal system, skin, lungs, etc. The most common type of neuroendocrine tumor found in the gastrointestinal system is carcinoid.",
+    imgUrl: "https://assets.icliniq.com/v2/assets/images/mskcc/img/mskcc-cancer/Gastrointestinal-Neuroendocrine-Tumors.png"
+  },
+  {
+    label: "Gestational Trophoblastic Disease",
+    description: "Gestational trophoblastic disease, otherwise called GTD, is a rare disease that results after conception due to abnormal trophoblast cell growth inside the uterus. Here, a tumor develops in the tissue that would normally become the placenta. The common types of GTD are choriocarcinoma and hydatidiform mole.",
+    imgUrl: "https://assets.icliniq.com/v2/assets/images/mskcc/img/mskcc-cancer/Gestational-Trophoblastic-Disease.png"
+  },
+  {
+    label: "Graft-Versus-Host Disease (GVHD)",
+    description: "Graft versus host disease (GvHD) is a disease that can follow an allogeneic transplant (allogeneic means the stem cells are obtained from a donor). The donated bone marrow or stem cells attack the recipient's body as they see the recipient's body as foreign. This abnormal immune reaction can affect various parts of the body, including the eyes, skin, mouth, gut, liver, and lungs.",
+    imgUrl: "https://assets.icliniq.com/v2/assets/images/mskcc/img/mskcc-cancer/Graft-Versus-Host-Disease.png"
+  },
+  {
+    label: "Histiocytosis",
+    description: "Histiocytosis, otherwise called Langerhans Cell Histiocytosis (LCH) or Histiocytosis X, is a group of rare disorders that are characterized by the abnormal increase in certain immune cells called histiocytes, including monocytes, macrophages, and dendritic cells. Histiocytes are normal immune cells found in many parts of the body, such as bone marrow, blood, skin, liver, etc. Abnormal proliferation of these immune cells can form tumors and affect various parts of the body.",
+    imgUrl: "https://assets.icliniq.com/v2/assets/images/mskcc/img/mskcc-cancer/Histiocytosis.png"
+  },
+  {
+    label: "Kaposi Sarcoma",
+    description: "Kaposi sarcoma (KS), a type of soft-tissue tumor, is seen in people with the human herpesvirus-8 (HHV-8) infection. The growth is deep purple or reddish-blue in color, and it commonly develops in the lining of the mouth, nose, throat, or digestive tract. Not all people with HHV-8 infection develop KS, only those with a weak immune system due to HIV, old age, immunosuppressant drugs, etc., who are unable to suppress the virus are at risk.",
+    imgUrl: "https://assets.icliniq.com/v2/assets/images/mskcc/img/mskcc-cancer/Kaposi-Sarcoma.png"
+  },
+  {
+    label: "Melanoma",
+    description: "Melanoma, a type of malignant skin cancer, develops from the cells called melanocytes. Melanocytes are cells that produce melanin, which is the dark-colored pigment that gives color to the skin and protects against harmful ultraviolet rays. Melanoma can develop in the eyes, inside the nose, or throat. Women, especially those over the age of 40, are at risk of developing melanoma. This skin cancer can be treated successfully if diagnosed early.",
+    imgUrl: "https://assets.icliniq.com/v2/assets/images/mskcc/img/mskcc-cancer/Melanoma.png"
+  },
+  {
+    label: "Merkel Cell Carcinoma",
+    description: "Merkel cell carcinoma (MCC), also called neuroendocrine carcinoma of the skin, is a skin cancer that generally results in skin-colored or bluish-red lumps on the face, neck, or head. This cancer originates from the cells in the skin called Merkel cells. Merkel cell carcinoma is often seen in adults above the age of 70 years, and prolonged sun exposure or a weak immune system increases the risk. This skin cancer is fast-growing and spreads quickly to other parts of the body.",
+    imgUrl: "https://assets.icliniq.com/v2/assets/images/mskcc/img/mskcc-cancer/Merkel-Cell-Carcinoma.png"
+  },
+  {
+    label: "Mesothelioma",
+    description: "Cancer that affects the mesothelium, the lining that covers various internal organs, is called mesothelioma. Pleural (affects the membrane that protects the lungs) and peritoneal (affects the tissue that covers the abdominal organs) mesothelioma are the most common subtypes of this cancer. The other rare types include pericardial mesothelioma and testicular mesothelioma. Exposure to asbestos is the most common cause of mesothelioma.",
+    imgUrl: "https://assets.icliniq.com/v2/assets/images/mskcc/img/mskcc-cancer/Mesothelioma.png"
+  },
+  {
+    label: "Myelodysplastic Syndrome (MDS)",
+    description: "A group of disorders that result from poorly formed blood cells (red blood cells - RBC, white blood cells - WBC, and platelets) in the bone marrow is called myelodysplastic syndrome or MDS. The blood cells are either immature or do not function properly. Treatment for this syndrome is done by preventing or reducing complications, and in severe cases, chemotherapy or a bone marrow transplant might be needed.",
+    imgUrl: "https://assets.icliniq.com/v2/assets/images/mskcc/img/mskcc-cancer/Myelodysplastic-Syndrome-(MDS).png"
+  },
+  {
+    label: "Neurofibromatosis",
+    description: "Neurofibromatoses consist of a group of genetic disorders that result in nerve tissue tumors, which can develop anywhere in the nervous system, including the brain, spinal cord, and nerves. The three types of neurofibromatosis are neurofibromatosis 1 (NF1), neurofibromatosis 2 (NF2), and schwannomatosis. NF1 is generally diagnosed in childhood, and NF2 and schwannomatosis in early adulthood. These tumors are mostly noncancerous (benign), but sometimes they can become cancerous (malignant).",
+    imgUrl: "https://assets.icliniq.com/v2/assets/images/mskcc/img/mskcc-cancer/Neurofibromatosis.png"
+  },
+  {
+    label: "Pituitary Tumors",
+    description: "Pituitary tumors are cancers that develop in the pituitary gland, which is a pea-sized gland located near the base of the brain. Some of these tumors release too much of the pituitary hormones that regulate the body's vital functions, while some make the gland release fewer hormones. Most pituitary tumors are benign (adenomas). Treatment includes removing the tumor, or controlling its growth, and treating hormonal imbalance.",
+    imgUrl: "https://assets.icliniq.com/v2/assets/images/mskcc/img/mskcc-cancer/Pituitary-Tumors.png"
+  },
+  {
+    label: "Rectal Cancer",
+    description: "Cancer in the last six inches of the large intestine (the rectum) is called rectal cancer. The body stores stool in the rectum until the person has a bowel movement. Cancers of the rectum or rectal cancers often develop slowly over the years and typically start as a small painless growth called a polyp. If not treated timely, this cancer can also spread to the liver, lungs, and other organs.",
+    imgUrl: "https://assets.icliniq.com/v2/assets/images/mskcc/img/mskcc-cancer/Rectal-Cancer.png"
+  },
+  {
+    label: "Salivary Gland Tumors",
+    description: "Abnormal growth of cells in the salivary glands are called salivary gland tumors. These are rare and can affect any of the three pairs of major salivary glands - parotid, sublingual and submandibular, and various other small salivary glands are located in the lips, cheeks, mouth, and throat. Most salivary gland tumors are noncancerous and commonly affect the parotid glands. Treatment includes surgical removal of the tumor.",
+    imgUrl: "https://assets.icliniq.com/v2/assets/images/mskcc/img/mskcc-cancer/Salivary-Gland-Tumors.png"
+  },
+  {
+    label: "Skull Base Tumors",
+    description: "These are growths that develop along the base of the skull. Acoustic neuromas, chordomas, chondrosarcomas, craniopharyngiomas, meningiomas, paranasal sinus cancers, pituitary adenomas, and Rathke's cleft cysts are some examples. Most of these tumors are benign and slow-growing.",
+    imgUrl: "https://assets.icliniq.com/v2/assets/images/mskcc/img/mskcc-cancer/Skull-Base-Tumors.png"
+  },
+  {
+    label: "Skin Cancer",
+    description: "Skin cancer or abnormal growth of skin cells commonly develops on the part of the skin that is exposed to the sun. Squamous cell carcinoma, basal cell carcinoma, and melanoma are the most common types of skin cancer. The risk of these cancers can be reduced by avoiding exposure to ultraviolet (UV) radiation. Early diagnosis of skin cancer gives the greatest chance for successful treatment.",
+    imgUrl: "https://assets.icliniq.com/v2/assets/images/mskcc/img/mskcc-cancer/Skin-Cancer.png"
+  },
+  {
+    label: "Spine Tumors and Spinal Cancer",
+    description: "Tumors that develop in the nerves, bones, or any other tissues of the spine are called spine tumors. Less than 10 % of spine tumors start in the spine (primary tumors). These tumors can be noncancerous growths, slow-growing cancerous tumors, or aggressive cancerous tumors. Most spine tumors are secondary, meaning they spread from cancer in a different organ or body part.",
+    imgUrl: "https://assets.icliniq.com/v2/assets/images/mskcc/img/mskcc-cancer/Spine-Tumors-&-Spinal-Cancer.png"
+  },
+  {
+    label: "Squamous Cell Carcinoma",
+    description: "SCC or squamous cell carcinoma is a type of skin cancer that originates in the squamous cells (the cells that make the middle and outer layers of the skin). Squamous cell carcinoma is usually not fatal, even though it can be aggressive. If left untreated, it can grow big and metastasis to other parts of your body, resulting in severe complications. Like the cause for most other skin cancers, prolonged exposure to sunlight is to be blamed for SCC.",
+    imgUrl: "https://assets.icliniq.com/v2/assets/images/mskcc/img/mskcc-cancer/Squamous-Cell-Carcinoma.png"
+  },
+  {
+    label: "Testicular Cancer (Germ Cell Tumors)",
+    description: "Cancer that starts in the testicles, two small organs found inside the scrotum in men, is called testicular cancer. Germ cells are cells that make sperm, and more than 90% of testicular cancers start in these germ cells. Seminomas and nonseminomas are the main types of germ cell tumors (GCTs) in the testicles. Some testicular cancers can also contain both seminoma and nonseminoma cells.",
+    imgUrl: "https://assets.icliniq.com/v2/assets/images/mskcc/img/mskcc-cancer/Testicular-Cancer-(Germ Cell Tumors).png"
+  },
+  {
+    label: "Thymoma and Other Thymic Tumors",
+    description: "Tumors of the thymus gland, a small organ situated beneath the breastbone, are rare and account for less than 1 % of all cancers. The thymus produces lymphocytes that make antibodies to fight bacteria. The types of thymic tumors are - Thymoma - Almost 90 % of thymic tumors are this type. Thymomas are often benign and develop in the cells that line the thymus outside. Thymic Carcinoma - Unlike thymoma, thymic carcinoma grows fast and can spread outside the thymus. Around 1 in 10 thymic tumors are diagnosed to be thymic carcinoma. Thymic Carcinoids - These are rare and slow-growing cancers and are also called neuroendocrine tumors.",
+    imgUrl: "https://assets.icliniq.com/v2/assets/images/mskcc/img/mskcc-cancer/Thymoma-& Other-Thymic-Tumors.png"
+  },
+  {
+    label: "Tracheal Diseases",
+    description: "The trachea or the windpipe is the part of the airway that extends from the voice box or larynx into two airways that enter the lungs (bronchi). The types of tracheal diseases include: Tracheal and Bronchial Tumors - Tumors of the trachea and bronchi. Tracheal Stenosis - Narrowing of the trachea. Tracheobronchomalacia - Airway collapse during breathing or coughing.",
+    imgUrl: "https://assets.icliniq.com/v2/assets/images/mskcc/img/mskcc-cancer/Tracheal-Diseases.png"
+  },
+  {
+    label: "Uterine Sarcoma",
+    description: "Cancerous growth in the muscles or tissues of the uterus, a part of the female reproductive system where babies grow, is called uterine sarcoma. This type of cancer is rare and accounts for only 4 % of all uterine cancer. Leiomyosarcoma, carcinosarcoma, low-grade endometrial stromal sarcoma, high-grade undifferentiated sarcoma, adenosarcoma, adenosarcoma with sarcomatous overgrowth, and perivascular endothelial cell tumor (PEComa) are some of the common subtypes of uterine sarcoma. MSK pathologists who are familiar with all the types of uterine sarcoma will be a part of your cancer care, which ensures the best treatment.",
+    imgUrl: "https://assets.icliniq.com/v2/assets/images/mskcc/img/mskcc-cancer/Uterine-Sarcoma.png"
+  },
+]
 export const MSKCC_INDIA_TEAM: MskccIndiaTeam = {
   "Medical Team": [
     {
@@ -805,161 +996,6 @@ export const FAQ_QUESTIONS: FaqQuestionType[] = [
     ],
   },
 ];
-
-// export type CancerSubTypes = {
-//   heading: string;
-//   description: string;
-//   subtype?: {
-//     heading: string;
-//     description: string;
-//     subtype?: {
-//       heading: string;
-//       description: string;
-//     }[];
-//   }[];
-// };
-
-// export type Desc = {
-//   heading: string;
-//   value: string;
-// };
-
-// export type CancerType = {
-//   path: string;
-//   title: string;
-//   breadCrumbName: string;
-//   about: string;
-//   description: Desc;
-//   subTypeHeading: string;
-//   subType: CancerSubTypes[];
-//   treatmentOptions: Desc;
-// };
-
-// export const CANCER_TYPES: CancerType[] = [
-//   {
-//     path: "kidney-cancer",
-//     title: "Kidney Cancer (Renal Cell Cancer)",
-//     breadCrumbName: "Kidney Cancer",
-//     about:
-//       "You will face many hard decisions if a loved one or you have been diagnosed with kidney cancer. Including several questions like where should you go for treatment? What are the available treatment options? How to maintain your quality of life? We have tried to describe these concerns, the types, and possible treatment, which will help you decide.",
-//     description: {
-//       heading: "What Is Kidney Cancer?",
-//       value:
-//         "Kidney cancer or renal cell cancer is a cancerous tumor that develops in the kidneys, the two organs that are present on each side of your spine in the torso. Our kidneys' function is to turn the body's waste into urine, and they filter waste and excess salt from the blood. This urine then gets stored in the bladder through the ureter. With the help of the urethra that runs from the bladder, urine is discarded out. All these organs together form the urinary system. Try out MSK's Kidney Cancer - Risk of Recurrence Following Surgery (Prediction Tool) nomogram!",
-//     },
-//     subTypeHeading: "What Are the Types of Kidney Cancer",
-//     subType: [
-//       {
-//         heading: "Renal Cortical Tumors ",
-//         description:
-//           " - Almost 90 % of kidney tumors are this type. These tumors develop in the renal tubules, which are present in the main part of the kidney. The common subtypes include:",
-//         subtype: [
-//           {
-//             heading: "Clear-Cell Tumors",
-//             description:
-//               " - Also called renal cell carcinoma, and it is seen in 60 to 65 % of patients diagnosed with kidney tumors.",
-//             subtype: undefined,
-//           },
-//           {
-//             heading: "Papillary Tumors ",
-//             description:
-//               " - Only 10 to 15 % of all kidney tumors are of this type. It begins as single or multiple tumors in either one or both kidneys. These tumors are linked to some genetic conditions like hereditary papillary renal carcinoma, renal cell carcinoma, and hereditary leiomyomatosis. Genetic testing can help identify such inherited syndromes. The two subtypes are:",
-//             subtype: [
-//               {
-//                 heading: "Type 1 ",
-//                 description: " - Grows slow and is more common.",
-//               },
-//               {
-//                 heading: "Type 2",
-//                 description: " - More aggressive.",
-//               },
-//             ],
-//           },
-//           {
-//             heading: "Chromophobe Tumors ",
-//             description:
-//               " - These are less aggressive and account for 5 to 10 % of kidney tumors. Chromophobe tumors can grow very big before they spread to other parts.",
-//             subtype: undefined,
-//           },
-//           {
-//             heading: "Oncocytoma",
-//             description:
-//               "- These tumors are harmless as they pose no risk of spreading or cause life-threatening complications. Around 5 to 10 % of kidney tumors are this type.",
-//             subtype: undefined,
-//           },
-//           {
-//             heading: "Collecting Duct Tumors ",
-//             description:
-//               " - These are rare, less than 1 % of kidney tumors, aggressive, challenging to treat, and are usually seen in younger adults.",
-//             subtype: undefined,
-//           },
-//           {
-//             heading: "Unclassified Tumors ",
-//             description:
-//               "- These tumors are very aggressive, rare (3 to 5 %), and appear different microscopically than other kidney tumors.",
-//             subtype: undefined,
-//           },
-//         ],
-//       },
-//       {
-//         heading: "Transitional Cell or Urothelial Tumors ",
-//         description:
-//           "- These tumors develop in the renal pelvis (the part where renal tubules carry urine to the bladder from kidneys).",
-//         subtype: undefined,
-//       },
-//     ],
-//     treatmentOptions: {
-//       heading: "What Are the Treatment Options for Kidney Cancer?",
-//       value:
-//         "MSK's kidney cancer experts treat all types of kidney cancer. Their goal is to diagnose and treat cancer accurately and to ensure the best possible quality of life. Surgery is the treatment of choice for people diagnosed with kidney cancer that has not spread to other organs. If that is not an option, then MSK interventional radiologists may be able to use minimally invasive techniques to destroy the tumor. For patients with kidney cancer that has metastasized, chemotherapy, focused radiation, and other treatment options are available at MSK. Patients also benefit from new chemotherapy drugs and other therapies through thousands of ongoing clinical trials at MSK, including comprehensive follow-up care and survivorship programs.",
-//     },
-//   },
-// ];
-
-// type cancerTestType = {
-//   path: string;
-//   title: string;
-//   breadCrumbName: string;
-//   about: string;
-//   info: [
-//     {
-//       heading: string;
-//       body: string | [string | [string]];
-//       subItems?:[
-//        { 
-//         heading:string,
-//         body:string,
-//         subItems?:
-//           {
-//             heading:string,
-//             body:string
-//           }[]
-//         }
-//       ]
-//     }
-//   ];
-// };
-
-type CancerTestType = {
-  path: string;
-  title: string;
-  breadCrumbName: string;
-  about: string;
-  info: CancerInfoType[];
-};
-
-type CancerSubItemType = {
-  heading: string;
-  body?: string;
-  subItems?: CancerSubItemType[] | string[]
-};
-
-type CancerInfoType = {
-  infoTitle?: string,
-  heading: string;
-  body?: string | (string[] | string)[];
-  subItems?: CancerSubItemType[];
-};
 
 
 export const Cancer_type_test: CancerTestType[] = [
