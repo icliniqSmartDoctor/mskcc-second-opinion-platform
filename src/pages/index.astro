@@ -10,13 +10,12 @@ import * as CONSTANTS from "constants/HomeConstants";
 import VideoFloat from "components/Home/VIdeoFloat";
 import AssetAccessor from "utils/AssetAccessor";
 import { C } from "@fullcalendar/core/internal-common";
+import type { AstroCookies } from "astro";
 
-const headers: Headers = Astro.request.headers;
-console.log("Headers...");
-console.log(headers);
-console.log("Headers Map...");
-console.log(headers.forEach((value, name) => console.log(name, value)));
-headers.set("cookie", headers.get("cookie") + "; new-cookie=test-cookie;");
+console.log("Cookies...");
+const cookies: AstroCookies = Astro.cookies;
+console.log(cookies);
+cookies.set("new-cookie", "test-cookie");
 ---
 
 <Layout title="MSK India | Get Second Opinion From Best Cancer Experts">
