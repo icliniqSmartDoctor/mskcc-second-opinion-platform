@@ -25,7 +25,7 @@ console.log(headers.forEach((value, name) => console.log(name, value)));
 const { doctor } = Astro.params;
 
 const docArr = DOCTOR_DETAILS.find((data) => data.path === doctor);
-
+if(!docArr) return Astro.redirect("/404");
 ---
 
 <Layout title={`${docArr!.metaTitle}`}>

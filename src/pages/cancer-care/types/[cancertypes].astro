@@ -1,12 +1,18 @@
-<!-- ---
+---
+import Footer from "components/Common/Footer";
 import MenuNav from "components/Common/MenuNav";
 import Nav from "components/Common/Nav";
-import { CANCER_TYPES } from "constants/HomeConstants";
+import CancerInfo from "components/Home/CancerInfo";
+import { Cancer_type_test } from "constants/HomeConstants";
 import Layout from "layouts/Layout.astro";
 
+
 const { cancertypes } = Astro.params;
-const cancerTypeArr = CANCER_TYPES.find((data) => data.path === cancertypes);
+const cancerTypeArr = Cancer_type_test.find((data) => data.path === cancertypes);
 if (!cancerTypeArr) return Astro.redirect("/404");
+
+
+
 ---
 
 <Layout title="">
@@ -27,27 +33,17 @@ if (!cancerTypeArr) return Astro.redirect("/404");
         <span class="mr-2 text-gray-400 font-medium">|</span>
         <a href="" class="text-gray-400 font-medium mr-2">Cancer Care</a>
         <span class="mr-2 text-gray-400 font-medium">|</span>
-        <a class="text-primary mr-2">types</a>
+        <a class="text-gray-400 mr-2">types</a>
         <span class="mr-2 text-gray-400 font-medium">|</span>
         <a class="text-primary mr-2">{cancerTypeArr.breadCrumbName}</a>
       </div>
     </div>
-    <div class="pt-28">
-      <div>{cancerTypeArr.about}</div>
-      <div
-        class="pt-10 text-xl text-gray-800 tracking-wider font-semibold font-poppins"
-      >
-        {cancerTypeArr.description.heading}
-      </div>
-      <div class="pt-2 pb-20 relative">
-        <img
-          src="https://assets.icliniq.com/v2/assets/images/mskcc/img/shape/section-title-line-v1.png"
-          alt="Title line"
-          title="Title line"
-        />
-      </div>
-      <div></div>
+    <div class="pt-20 ">
+      <div class="pb-10">{cancerTypeArr.about}</div>
+      
+      <div><CancerInfo info={cancerTypeArr.info} client:idle/></div>
 
     </div>
   </div>
-</Layout> -->
+  <Footer/>
+</Layout>

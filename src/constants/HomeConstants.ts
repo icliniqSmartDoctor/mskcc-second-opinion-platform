@@ -44,27 +44,6 @@ export type DoctorDetails = {
   education: string[];
 };
 
-type CancerTestType = {
-  path: string;
-  title: string;
-  breadCrumbName: string;
-  about: string;
-  info: CancerInfoType[];
-};
-
-type CancerSubItemType = {
-  heading: string;
-  body?: string;
-  subItems?: CancerSubItemType[] | string[]
-};
-
-type CancerInfoType = {
-  infoTitle?: string,
-  heading: string;
-  body?: string | (string[] | string)[];
-  subItems?: CancerSubItemType[];
-};
-
 type MskccMenuTypes = { [key: string]: string | { [key: string]: string }[] };
 
 type MskccIndiaTeam = {
@@ -87,6 +66,30 @@ type FaqQuestionType = {
   question: string;
   answer: Array<string | string[]>;
 };
+
+export type CancerTestType = {
+  path: string;
+  title: string;
+  breadCrumbName: string;
+  about: string;
+  info: CancerInfoType[];
+};
+
+export type CancerSubItemType = {
+  heading: string;
+  body?: string;
+  subItems?: CancerSubItemType[] | string[]
+};
+
+export type CancerInfoType = {
+  infoTitle?: string,
+  heading: string;
+  body?: string | (string[] | string)[];
+  link?:string,
+  linkPath?:string,
+  subItems?: CancerSubItemType[]| string[];
+};
+
 
 export const MSKCC_MENU: MskccMenuTypes = {
   home: "/",
@@ -1102,7 +1105,9 @@ export const Cancer_type_test: CancerTestType[] = [
     info: [
       {
         heading: "What Is Kidney Cancer?",
-        body: "Kidney cancer or renal cell cancer is a cancerous tumor that develops in the kidneys, the two organs that are present on each side of your spine in the torso. Our kidneys' function is to turn the body's waste into urine, and they filter waste and excess salt from the blood. This urine then gets stored in the bladder through the ureter. With the help of the urethra that runs from the bladder, urine is discarded out. All these organs together form the urinary system. Try out MSK's Kidney Cancer - Risk of Recurrence Following Surgery (Prediction Tool) nomogram!",
+        body: "Kidney cancer or renal cell cancer is a cancerous tumor that develops in the kidneys, the two organs that are present on each side of your spine in the torso. Our kidneys' function is to turn the body's waste into urine, and they filter waste and excess salt from the blood. This urine then gets stored in the bladder through the ureter. With the help of the urethra that runs from the bladder, urine is discarded out. All these organs together form the urinary system. ",
+      link:"Try out MSK's Kidney Cancer - Risk of Recurrence Following Surgery (Prediction Tool) nomogram!",
+      linkPath:"https://www.mskcc.org/nomograms/renal"
       },
       {
         heading: "What Are the Types of Kidney Cancer?",
@@ -1201,7 +1206,7 @@ export const Cancer_type_test: CancerTestType[] = [
       {
         infoTitle: 'Female Breast Cancer',
         heading: "What Is Female Breast Cancer?",
-        body: "In breast cancer, the cells in the breast grow out of control. When the genes in the cells of the breasts no longer work properly, the cells divide uncontrollably and form a tumor. Affected women may feel a lump under the breast skin, or some women do not realize it until the tumor shows up in a mammogram or breast X-ray. Most breast lumps are benign and do not spread to other parts of the body, and are not fatal. Tumors that are malignant, if left untreated, can invade and spread or metastasize to the axillary lymph nodes or other organs. <br/> The risk for breast cancer increases with age, and it is diagnosed mostly (80 %) in women older than 50. Most of them do not have any other risk factors. People with a family history of breast cancer are two to three times more likely to develop breast cancer. 5 to 10 % of breast cancers are linked to hereditary gene mutations (commonly BRCA1 and BRCA2 gene mutations). Try out MSK's Breast Cancer (Prediction Tool) nomogram!",
+        body: "In breast cancer, the cells in the breast grow out of control. When the genes in the cells of the breasts no longer work properly, the cells divide uncontrollably and form a tumor. Affected women may feel a lump under the breast skin, or some women do not realize it until the tumor shows up in a mammogram or breast X-ray. Most breast lumps are benign and do not spread to other parts of the body, and are not fatal. Tumors that are malignant, if left untreated, can invade and spread or metastasize to the axillary lymph nodes or other organs.  The risk for breast cancer increases with age, and it is diagnosed mostly (80 %) in women older than 50. Most of them do not have any other risk factors. People with a family history of breast cancer are two to three times more likely to develop breast cancer. 5 to 10 % of breast cancers are linked to hereditary gene mutations (commonly BRCA1 and BRCA2 gene mutations). Try out MSK's Breast Cancer (Prediction Tool) nomogram!",
       },
       {
         heading: "What Are the Types of Female Breast Cancer",
@@ -1265,4 +1270,457 @@ export const Cancer_type_test: CancerTestType[] = [
       },
     ]
   },
+  {
+    path: "head-and-neck-cancer",
+      title: "Head & Neck Cancer (Oral Cancer)",
+      breadCrumbName: "Head & Neck Cancer (Oral Cancer)",
+      about:"You will face many hard decisions if a loved one or you have been diagnosed with head and neck cancer. Including several questions like where should you go for treatment? What are the available treatment options? How to maintain your quality of life? We have tried to describe these concerns, the types, and possible treatment, which will help you decide.",
+      info:[
+        {
+          heading:"What Is Head and Neck Cancer?",
+          body:"Head and neck cancers include cancers that start in several areas of the head and throat, such as the sinuses, tongue, gums, roof of the mouth, larynx, lips, and salivary glands, but not including cancers of the brain and eyes. The common cancers that occur in the head and neck region include:",
+          subItems:[
+            {
+              heading:"Laryngeal Cancer",
+              body:"This cancer originates in the larynx or voice box. It is the second most common type of head and neck cancer."
+            },
+            {
+              heading:"Mouth Cancer",
+              body:" Mouth cancer, also called oral cavity cancer, originates in the lips or the mouth."
+            },
+            {
+              heading:"Tongue Cancer ",
+              body:"The cells that line the tongue grow out of control and form a tumor."
+            },
+            {
+              heading:"Nasal Cavity and Sinus Cancer ",
+              body:"The cells in and surrounding the nose grow and multiply uncontrollably and form a tumor.."
+            },
+            {
+              heading:"Salivary Gland Cancer",
+              body:"TThis cancer originates in the glands that produce saliva. It is a rare type of head and neck cancer where the salivary glands' cells grow out of control and form tumors."
+            },
+            {
+              heading:"Skin Cancer ",
+              body:"Skin cancer commonly develops in areas of the skin that are exposed to the sun. The three most common types of skin cancer are basal cell carcinoma (BCC), squamous cell carcinoma (SCC), and melanoma."
+            },
+            {
+              heading:"Throat Cancer",
+              body:" A form of head and neck cancer that originates in the pharynx or throat, larynx or the voice box, vocal cords, or the tonsils."
+            },
+            {
+              heading:"Thyroid Cancer",
+              body:"This cancer begins in the small gland called the thyroid, located in the front of the neck and below the larynx. Noncancerous or benign tumors can also form in the head and neck region—for example, parathyroid tumors and salivary glands tumors."
+            },
+          ]
+        },
+        {
+          heading:"What Are the Treatment Options for Head and Neck Cancer?",
+          subItems:[
+            {
+              heading:"Surgery",
+              body:"Surgery is the typical treatment for head and neck cancer. Minimally invasive procedures, such as laser microsurgery, robotic approaches, and Mohs surgery, are enough to remove some tumors. But others need complex head and neck cancer operations. Careful preparation and planning are a must, and MSK's surgeons use specialized techniques to preserve the key functions (speech and swallowing) and appearance. This is the benefit of getting head and neck surgery done by surgeons who are board-certified in head and neck surgery and have years of experience treating such types of cancer."
+            },
+            {
+              heading:"Radiation Therapy",
+              body:" Radiation therapy for head and neck cancer can cure many patients. Radiation oncologists at MSK use advanced technologies to treat these cancers. Intensity-modulated radiation therapy and proton therapy are the most effective treatments for head and neck cancer. These techniques do not affect the patient's ability to eat or swallow and other such side effects."
+            },
+            {
+              heading:"Immunotherapy",
+              body:" It is the most promising cancer therapy available today for people with advanced head and neck cancer. Immunotherapy uses the patient's immune system to fight off cancer. MSK scientists and doctors work closely to help develop new treatment modalities for patients who come to MSK for immunotherapy treatment. Not everyone can benefit from immunotherapy, especially if cancer has recurred after standard treatment. Such patients can get more options with clinical trials. Such trials give you the opportunity to try a new treatment option that is not available elsewhere."
+            },
+            {
+              heading:"Genomic Testing for Head and Neck Cancer",
+              body:" In personalized medicine, the cells from a biopsy are screened for any genetic mutations. These gene mutations are linked to the type of cancer the patient has. Specific cancer drugs are more effective than others against cancer with specific gene mutations. This genomic testing can help determine the most effective therapy for a particular patient. Patients with advanced cancers (stage III or stage IV) and recurrent head and neck cancer have new treatment options with such advancements. Memorial Sloan Kettering also offers a genomic-sequencing test called MSK-IMPACT™. This test identifies genetic mutations and other abnormalities associated with specific cancer. MSK-IMPACT can help the doctors rule out treatments that might not work and also recommend clinical trials designed to target those mutations."
+            },
+            {
+              heading:"HPV-Associated Head and Neck Cancer",
+              body:"The majority of cases of head or neck cancers are linked to alcohol and tobacco use, but infection with the human papillomavirus (HPV) is becoming a leading cause. HPV-associated head and neck cancers usually affect the tonsils and other areas of the throat. The only positive to this is patients with HPV-positive tumors typically respond well to treatment and have a better prognosis. They might also require a less-intensive course of treatment, reducing side effects.In case you have been diagnosed with head and neck cancer related to HPV, it is best to find out if you can benefit from a less-intensive treatment plan at MSK."
+            },
+        
+
+          ]
+        }
+
+       ]
+        
+  },
+
+  {
+    path: "lung-cancer",
+    title: "Lung Cancer",
+    breadCrumbName: "Lung Cancer",
+    about:"You will face many hard decisions if a loved one or you have been diagnosed with lung cancer. Including several questions like where should you go for treatment? What are the available treatment options? How to maintain your quality of life? We have tried to describe these concerns, the types, and possible treatment, which will help you decide.",
+    info:[
+      {
+        heading:"What Is Lung Cancer?",
+        body:"Lung cancer, the abnormal growth of cells in the lungs and bronchi (the airways that carry air into the lungs), is amongst the most commonly diagnosed cancers. Smokers, especially female smokers, are at a greater risk for the disease, but it can be seen in people who have never smoked too. Cancer from the lungs can spread to lymph nodes or organs like the brain, and cancer from other organs can also spread to the lungs. Try out MSK's Lung Cancer - Risk Assessment (Prediction Tool) nomogram!",
+        
+      },
+      {
+        heading:"What Are the Types of Lung Cancer?",
+        body:"The two main types are:",
+        subItems:[
+          {
+            heading:"Small Cell Lung Cancer (SCLC)",
+            body: " Also called â€œoat cellâ€� cancer, as the cells look like oats under the microscope. This cancer usually develops in the cells that surround the bronchi (neuroendocrine cells), which then usually spreads to the lymph nodes and other parts. SCLC commonly affects smokers, and it accounts for around 13 % of lung cancers. The two types of SCLC include:",
+            subItems:[
+              "Small cell carcinoma (oat cell cancer).","Combined small cell carcinoma."
+            ]
+          },
+          {
+            heading:"Non-Small Cell Lung Cancer ",
+            body:"It is the most common type of lung cancer and is the cause of almost 9 out of every 10 lung cancer cases. It is a slow-growing cancer when compared to SCLC. The three main subtypes are:",
+            subItems:[
+              {
+                heading:"It is the most common type of lung cancer and is the cause of almost 9 out of every 10 lung cancer cases. It is a slow-growing cancer when compared to SCLC. The three main subtypes are:",
+                body:" It originates in the cells that line the tiny air sacs in the lungs (alveoli)."
+              },
+              {
+                heading:"Squamous Cell Lung Cancer ",
+                body:"This originates in the center of the lungs, more precisely in the cells that line the bronchial tubes."
+              },
+              {
+                heading:"Large-Cell Undifferentiated Carcinoma ",
+                body:"Tumors that do not belong to either of the above two types are named this. It accounts for about 5 % of non-small cell lung cancers."
+              }
+            ]
+          }
+        ]
+      },
+      {
+      heading:"What Are the Treatment Options for Lung Cancer?",
+      body:"If the specialist suspects lung cancer, a biopsy will be performed. Here a tissue sample from the lung growth will be obtained through needle biopsy, bronchoscopy, or surgery. The cells are then examined for cancerous changes, and the tumor will be typed and staged. All cancer patients at MSK are offered compassionate and personalized care from their experts. Specialists experienced in surgery, chemotherapy, radiation therapy, rehabilitation, and maintaining the quality of life will work closely to develop a customized treatment plan to ensure the best outcome possible. Surgeons at MSK perform more than 1,200 surgeries for lung cancer every year, with the lowest complication rates. Patients benefit from new chemotherapy drugs through thousands of ongoing clinical trials at MSK."
+      }
+
+    ]
+
+  },
+  {
+    path: "gastric-and-esophageal-cancer",
+    title: "Gastric and Esophageal Cancer",
+    breadCrumbName: "Gastric and Esophageal Cancer",
+    about:"You will face many hard decisions if a loved one or you have been diagnosed with gastric (stomach) or esophageal cancer. Including several questions like where should you go for treatment? What are the available treatment options? How to maintain your quality of life? We have tried to describe these concerns, the types, and possible treatment, which will help you decide.",
+    info:[
+      {
+        infoTitle:"Gastric Cancer",
+        heading:"What Is Gastric Cancer?",
+        body:"Cancer that originates or develops in the lining of the stomach is called gastric or stomach cancer. It usually grows slowly over several years before resulting in symptoms. This results in cancer getting diagnosed at a later stage, which usually affects the prognosis. Gastric cancer can develop at any part of the stomach, but mostly, they form in the main part (stomach body) or the esophagus (the part that carries food to the stomach when you swallow. ",
+        link:"Try out MSK's Gastric Cancer - Disease-Specific Survival Following Surgery (Prediction Tool) nomogram!",
+        linkPath:"https://www.mskcc.org/nomograms/gastric",
+        subItems:[
+          {
+            heading:"What Are the Types of Gastric Cancer?",
+            body:"Adenocarcinoma - Almost 95 % of people develop adenocarcinoma, which starts in the tissues that line the stomach. The three types of adenocarcinoma are:",
+            subItems:[
+              {
+                heading:" Non-cardia (Distal) Stomach Cancer",
+                body:"This type is associated with long-term infection with H.pylori (Helicobacter pylori) or long periods of inflammation or irritation in the stomach’s lower part. It is more commonly seen in people living in developing countries.",
+                subItems:[
+                  {
+                    heading:"Proximal Stomach Cancer",
+                    body:"The first part of the stomach that is connected to the esophagus is commonly affected. Proximal stomach cancer is common in the US and affects obese people and people with gastroesophageal reflux disease (GERD).",
+                  },
+                  {
+                    heading:"Diffuse Stomach Cancer",
+                    body:"It is an aggressive type of cancer that develops rapidly in the cells that line the stomach wall. As it does not form a growth or a mass, it is challenging to diagnose. This type commonly affects younger people with a family history or genetic mutations."
+                  },
+                  {
+                    heading:"Gastrointestinal Stromal Tumors",
+                    body:"Cancer that originates in the connective tissue or stomach muscle. Try out MSK's Gastrointestinal Stromal Tumor - Survival Without Recurrence Following Surgery (Prediction Tool) nomogram!"
+                  }
+                  
+                ]
+              },
+              {
+                heading:" Carcinoid Tumors",
+                body:"Tumor from the stomach’s hormone-producing cells."
+              },
+              {
+                heading:" Lymphoma",
+                body:"Cancer that develops in the stomach’s immune cells."
+              }
+            ]
+          }
+        ]
+     
+      },
+      {
+        heading:"What Are the Treatment Options for Gastric Cancer?",
+        body:"The location of stomach cancer determines the treatment plan. Surgery is recommended, along with other treatment options before or after the surgery. MSK's gastric cancer experts offer complete cancer care for people with all types of stomach cancer. These experts see more patients with this type of cancer than any other cancer center in the US. The advanced and accurate staging of gastric cancer and improved surgical techniques, diagnosis, treatment, and prognosis have significantly improved. Depending on the test results, the doctor might suggest surgery, chemotherapy, radiotherapy, or a combination of therapies. Patients can also benefit from the thousands of clinical trials ongoing at MSK that explore new therapies."
+      },
+      {
+        infoTitle:"Esophageal Cancer",
+        heading:"What Is Esophageal Cancer?",
+        body:"Instead of the stomach body, esophageal cancer develops inside the 10-inch hollow tube that carries food to the stomach called the esophagus. When the cells that line this tube start growing out of control, a tumor can form. The cells in the innermost layer mostly undergo a cancerous transformation, which can grow and multiply uncontrollably and invade the lymph nodes and other organs. Esophageal cancer is rare, but more people are developing the adenocarcinoma type in the past few years.",
+        
+      },
+      {
+        
+          heading:"What Are the Types of Esophageal Cancer?",
+          subItems:[
+            {
+              heading:"Adenocarcinoma ",
+              body:"t is the most common type of esophageal cancer in the US, and it accounts for almost 50 % of all new cases. This cancer begins in the glandular cells present in the lining of the esophagus and most commonly in the lower end of the esophagus and the upper part of the stomach. The recent increase in esophageal adenocarcinoma is believed due to an increase in the number of gastroesophageal reflux disease (GERD) cases, where the acid and stomach content move up into the esophagus repeatedly, resulting in chronic inflammation."
+            },
+            {
+              heading:" Squamous Cell Carcinoma",
+              body:" It is the second most common type of esophageal cancer, which originates in the thin and flat cells (squamous cells) that line the inside of the esophagus. This type is linked to smoking and alcoholism."
+            },
+            {
+              heading:"  Small Cell Carcinoma ",
+              body:"A rare type of esophageal cancer that begins in neuroendocrine cells (cells that releases hormones in response to nerve signals)."
+            }
+          ],
+        },
+        {
+          heading:"What Are the Treatment Options for Esophageal Cancer?",
+          body:"MSK's esophageal cancer experts use various methods, such as physical examination, imaging tests (CT scan, PET scan), and endoscopy, to diagnose and stage esophageal cancer. The type of surgery will be decided based on the cancer type and stage and the patient’s general health. Depending on the results, the doctor might suggest surgery, chemotherapy, radiotherapy, or a combination of therapies. Patients can also benefit from the thousands of clinical trials ongoing at MSK that explore new therapies. Patients with conditions that increase esophageal cancer risk, such as Barrett’s esophagus, get screened and monitored regularly for cancerous changes by MSK experts. Endoscopic or minimally invasive therapy is also available for precancerous and early-stage cancerous conditions."
+        }
+      
+    ]
+
+  },
+  {
+    path: "liver-biliary-and-pancreatic-cancer",
+    title: "Liver, Biliary, and Pancreatic Cancer",
+    breadCrumbName: "Liver, Biliary, and Pancreatic Cancer",
+    about:"You will face many hard decisions if a loved one or you have been diagnosed with liver, biliary (bile duct cancer or cholangiocarcinoma), or pancreatic cancer. Including several questions like where should you go for treatment? What are the available treatment options? How to maintain your quality of life? We have tried to describe these concerns, the types, and possible treatment, which will help you decide.",
+    info:[
+      {
+        infoTitle:"Liver Cancer",
+        heading:"What Is Liver Cancer?",
+        body:"Liver cancer is cancer that develops in the liver, the largest internal organ located below the right lung. Hepatocytes are the cells present in the liver, and these cells are responsible for breaking down and storing nutrients and removing waste from the body. Our liver also produces bile, a digestive fluid or enzyme, and also makes proteins that stop bleeding. Than primary liver cancers (cancer that starts in the liver), liver metastases (liver cancer that has spread from some other body part) are more common. But nowadays, the number of people with primary liver cancer is increasing in the US, as more people are affected by liver diseases that increase the risk of liver cancer, like hepatitis C.",
+        link:"Try out MSK's Liver Cancer - Risk of Perioperative Transfusion in Hepatectomy (Prediction Tool) nomogram!",
+        linkPath:"https://www.mskcc.org/nomograms/liver",
+        subItems:[
+
+          {
+            heading:"What Are the Types of Liver Cancer?",
+            subItems:[
+              {
+                heading:"Hepatocellular Carcinoma",
+                body:"It is the most common primary liver cancer that begins in hepatocytes. Usually, a single tumor forms that spread to other organs eventually. Excessive alcohol consumption, chronic hepatitis B and C infection, nonalcoholic fatty liver disease, and too much iron in the body are some risk factors."
+              },
+              {
+                heading:" Intrahepatic Cholangiocarcinoma ",
+                body:"It is the second most common type of primary liver cancer that starts in the bile duct (the tube that delivers bile). People infected with hepatitis B or C virus, those with primary sclerosing cholangitis (a condition resulting in inflammation and scarring of the bile ducts), and nonalcoholic fatty liver disease are at an increased risk of developing this type of liver cancer."
+              },
+              {
+                heading:"Fibrolamellar-Hepatocellular Carcinoma (FLL-HCC)",
+                body:"Otherwise called fibrolamellar carcinoma. It is a rare type of liver cancer that develops in young adults (ages between 20 and 30 years). It is less aggressive than the other forms.",
+        
+              },
+              {
+                heading:" Angiosarcomas, Hemangiosarcomas, and Hemangioendotheliomas ",
+                body:" Tumors that form in the inner lining of blood vessels. They are curable and almost always seen in infants."
+              },
+              {
+                heading:"Hepatoblastomas",
+                body:" These curable liver tumors consist of tissue that looks like fetal liver, bile duct cells, or mature liver cells when seen under the microscope."
+              },
+              {
+                heading:" Benign Liver Tumors",
+                body:"Non-cancerous tumors in the liver do not cause symptoms and are diagnosed accidentally. Adenomas, hemangiomas, liver cysts, and focal nodular hyperplasias are some of the most common benign liver tumors."
+              },
+              
+            ]
+          },
+          {
+            heading:"What Are the Treatment Options for Liver Cancer?",
+            body:"All cancer patients at MSK are offered compassionate and personalized care from their experts. Specialists experienced in surgery, chemotherapy, radiation therapy, rehabilitation, and maintaining the quality of life will work closely to develop a customized treatment plan to ensure the best outcome possible. Doctors at MSK have treated more than 5,000 liver cancer patients in the last 10 years. Patients also benefit from new chemotherapy drugs and other therapies through thousands of ongoing clinical trials at MSK."
+          }
+        ]
+      },
+      {
+        infoTitle:"Biliary Cancer (Bile Duct Cancer or Cholangiocarcinoma)",
+        heading:"What Is Biliary Cancer?",
+        body:"Biliary cancer or cholangiocarcinoma is cancer that forms in the thin bile ducts that carry the digestive enzyme bile. These ducts serve as the connection between the gallbladder and small intestine. Biliary cancer is common in people older than 50 but can occur at any age. It is a rare and extremely challenging cancer to treat.",
+        subItems:[
+          {
+            heading:"What Are the Types of Biliary Cancer?",
+            subItems:[
+              {
+                heading:"Intrahepatic Cholangiocarcinoma ",
+                body:"This develops in the parts of the bile ducts that are present within the liver, which is why it is also classified under liver cancer."
+              },
+              {
+                heading:" Hilar Cholangiocarcinoma ",
+                body:" Also called perihilar cholangiocarcinoma. It is when cancer develops in the bile ducts that exit the liver."
+              },
+              {
+                heading:" Distal Cholangiocarcinoma",
+                body:" This biliary cancer develops in the bile duct closest to the small intestine."
+              }
+            ]
+          }
+          
+        ]
+      },
+      {
+        
+          heading:"What Are the Treatment Options for Biliary Cancer?",
+          body:"Surgery to remove the bile duct and surrounding lymph nodes is the treatment of choice for bile duct cancer that is localized and has not metastasized. In some cases, more extensive surgery is necessary with other treatments, such as radiation or chemotherapy, or if the tumor is inoperable or surgery is contraindicated due to the patient's general health. All cancer patients at MSK are offered compassionate and personalized care from their experts. Specialists who are experienced in surgery, chemotherapy, radiation therapy, rehabilitation, and maintaining the quality of life will work closely to come up with a customized treatment plan to ensure the best outcome possible. Patients can also benefit from new chemotherapy drugs and other therapies through thousands of ongoing clinical trials at MSK."
+        
+      },
+      {
+        infoTitle:"Pancreatic Cancer",
+        heading:"What Is Pancreatic Cancer?",
+        body:"Pancreatic cancer originates in the cells of the pancreas, the small gland located in the abdomen behind the stomach. Our pancreas releases digestive enzymes and produces hormones that regulate blood sugar levels. Both cancerous and noncancerous tumors can occur in the pancreas. As pancreatic cancer does not cause symptoms unless it spreads to other organs, it is rarely detected at the early stages when it is most curable.",
+    
+      },
+      {
+        heading:"What Are the Types of Pancreatic Cancer?",
+        subItems:[
+          {
+            heading:"Exocrine Pancreatic Cancer ",
+            body:" The glands that produce enzymes that aid in digestion are called exocrine glands, and the tumors that develop from these glands are called exocrine pancreatic cancer. The common subtypes include:"
+          ,subItems:[
+            {
+              heading:"Adenocarcinomas"
+            },{
+              heading:"Adenosquamous carcinomas"
+            }
+            ,{
+              heading:"Acinar cell carcinoma."
+            },
+            {
+              heading:"Ampullary cancer"
+            },
+            {
+              heading:"Giant cell carcinomas."
+            }
+          ]
+          },
+          {
+            heading:"Endocrine Pancreatic Cancer",
+            body:" The islets of Langerhans (glands formed by clusters of cells) release the insulin and glucagon hormones and are called endocrine glands. Endocrine pancreatic cancer develops from these endocrine glands. The common subtypes include:"
+            ,subItems:[
+              {
+                heading:"Insulinomas"
+              },{
+                heading:"Glucagonomas"
+              }
+              ,{
+                heading:"VIPomas"
+              },
+              {
+                heading:"Gastrinomas"
+              },
+              {
+                heading:"Somatostatinomas"
+              }
+            ]
+          }
+          
+        ]
+      },
+      {
+        heading:"What Are the Treatment Options for Pancreatic Cancer?",
+        body:"If you have been diagnosed with pancreatic cancer, the doctor will then perform various tests to identify if cancer has spread through a PET scan. Depending on the results, cancer will be staged, and the treatment plan will be formed. All cancer patients at MSK are offered compassionate and personalized care from their experts. MSK's pancreatic cancer team is one of the US's largest and busiest clinical and research practices. Specialists experienced in surgery, chemotherapy, radiation therapy, rehabilitation, and maintaining the quality of life will work closely to develop a customized treatment plan to ensure the best outcome possible. MSK surgeons perform almost 300 pancreatic cancer surgeries (traditional as well as minimally invasive) every year. Patients also benefit from new chemotherapy drugs and other therapies through thousands of ongoing clinical trials at MSK."
+      }
+
+    ]
+
+  },
+  {
+    path: "colorectal-cancer",
+    title: "Colorectal Cancer",
+    breadCrumbName: "Colorectal Cancer",
+    about:"You will face many hard decisions if a loved one or you have been diagnosed with colorectal cancer. Including several questions like where should you go for treatment? What are the available treatment options? How to maintain your quality of life? We have tried to describe these concerns, the types, and possible treatment, which will help you decide.",
+    info:[
+      {
+        heading:"What Is Colorectal Cancer?",
+        body:"Cancer that develops in the inner lining of the large intestine (colon) or rectum present in the lower portion of the digestive tract is called colorectal cancer. It is estimated that 1 in 21 men and 1 in 23 women in the US will develop colorectal cancer in their lifetime. Advanced screening techniques and improved treatments have helped in the efficient screening of this cancer in susceptible people, and the death rate due to colorectal cancer is declining. Most cancers of the colon or rectum start as a growth, called a polyp, in the tissue lining these organs. If left untreated, some polyps, not all, become cancerous over many years. Try out MSK's various Colorectal Cancer (Prediction Tools) nomograms!"
+
+      },{
+        heading:"What Are the Types of Colorectal Cancer?",
+        subItems:[
+          {
+            heading:"Adenocarcinoma",
+            body:"It is cancer that develops in the mucus-producing cells present inside the colon and rectum. This is the most common type of colorectal cancer."
+          },
+          {
+            heading:" Gastrointestinal Carcinoid Tumors ",
+            body:"These start from special hormone-making cells in the intestine."
+
+          },
+          {
+            heading:"Gastrointestinal Stromal Tumors (GISTs) ",
+            body:"These tumors develop in the interstitial cells of Cajal, which are special cells in the wall of the colon, some of which are benign."
+
+          },
+          {
+            heading:"Lymphomas",
+            body:"Tumors of the immune system cells can also develop in the colon, rectum, or other organs."
+
+          },
+          {
+            heading:"Sarcomas",
+            body:"Tumors that develop in the soft tissues, such as blood vessels, muscles, or connective tissues in the colon and rectum."
+          }
+        ]
+      },
+      {
+        heading:"What Are the Treatment Options for Colorectal Cancer?",
+        body:"MSK experts determine the type of colorectal cancer and its stage through biopsy and other tests. Depending on the results, the doctor might suggest surgery, chemotherapy, radiotherapy, or a combination of therapies. Patients can also benefit from the thousands of clinical trials ongoing at MSK that explore new therapies."
+      }
+    ]
+  },
+  {
+    path:"prostate-cancer",
+    title: "Prostate Cancer",
+    breadCrumbName: "Prostate Cancer",
+    about:"You will face many hard decisions if a loved one or you have been diagnosed with prostate cancer. Including several questions like where should you go for treatment? What are the available treatment options? How to maintain your quality of life? We have tried to describe these concerns, the types, and possible treatment, which will help you decide.",
+    info:[
+      {
+        heading:"What Is Prostate Cancer?",
+        body:"Cancer that originates in the prostate gland, the walnut-shaped small gland that produces seminal fluid and nourishes the sperm in males, is called prostate cancer. As the prostate is located below the bladder and near the rectum and urethra, prostate diseases, including cancer, may affect the urinary system. And the nerves and blood vessels that help men get an erection are located close to the prostate, which makes prostate cancer or radiation treatment for the prostate to affect sexual function. It is the second most common cancer seen in men after skin cancer in the US. Most prostate cancers (90 %) are slow-growing, do not spread to the adjacent areas, and need no or minimal treatment. But, some types can be aggressive, spread quickly, and need radical treatment. In such cases, the cancer cells can reach lymph nodes or bones in the pelvis.",
+        link:"Try out MSK's various Prostate Cancer (Prediction Tools) nomograms!",
+        linkPath:"https://www.mskcc.org/nomograms/prostate"
+      },
+      {
+        heading:"What Are the Types of Prostate Cancer?",
+        subItems:[
+          {
+            heading:"Acinar Adenocarcinoma ",
+            body:"This common type of prostate cancer develops in the gland cells. The majority of men diagnosed with prostate cancer have this type."
+          },
+          {
+            heading:" Ductal Adenocarcinoma ",
+            body:" This tumor develops in the lining of the ducts or tubes of the prostate gland. It is a little more aggressive than acinar adenocarcinoma."
+          },
+          {
+            heading:"Transitional Cell or Urothelial Cancer ",
+            body:" Urothelial cancer develops in the cells that line the urethra (the tube that carries urine out of the body) and then spreads to the prostate. Very rarely, this type can begin in the prostate and spread to the bladder."
+          },
+          {
+            heading:"Squamous Cell Cancer",
+            body:"The flat cells covering the prostate can start multiplying abnormally and form this type of cancer. They are fast-growing when compared to adenocarcinoma"
+          },
+          {
+            heading:" Small-Cell Prostate Cancer",
+            body:"This cancer has small round cells, and it is a type of neuroendocrine cancer that develops from neuroendocrine cells (cells that release hormones in response to nerve signals)."
+          },
+          {
+            heading:"Sarcoma",
+            body:"This rare soft tissue cancer can also affect the prostate."
+          }
+        ]
+      },
+      {
+        heading:"What Are the Treatment Options for Prostate Cancer?",
+        body:"Only regular screening is needed for men with slow-growing prostate cancer without any symptoms. Screening includes regular monitoring of the tumor’s growths and looking for any changes. MSK's surgeons are highly experienced in performing prostate surgery, robotic, laparoscopic, and open surgery for patients needing surgery. Their surgeons are working tirelessly to improve the outcome of radical prostatectomy. MSK surgeons are also experienced in performing radical salvage prostatectomy. This is done for patients with prostate cancer recurrence after radiation therapy. MSK's radiation oncology team is leading in treating this cancer with various types of radiotherapy, such as image-guided, intensity-modulated radiation therapy (IG-IMRT), stereotactic high-precision radiosurgery (similar to CyberKnife), stereotactic hypofractionated radiation therapy (MSK PreciseTM), and low-dose-rate permanent seed implants and high-dose-rate temporary seed implants (both forms of brachytherapy).For localized prostate tumors, patients can benefit from focal therapy, a term used for non-invasive techniques like freezing, electricity, heat, or highly targeted seed implants. These therapies are targeted to destroy only the cancerous part of the prostate. For aggressive prostate cancers, patients are offered a combined treatment approach, including hormone therapy, brachytherapy, and radiation therapy. MSK is also the coordinating center for the Prostate Cancer Clinical Trials Consortium, which is a collaboration between 13 leading centers focused on early drug development and clinical trial design. MSK's follow-up care experts help patients with aggressive prostate cancers cope with maintaining a good quality of life. And patients who experience sexual problems can benefit from MSK's Male Sexual and Reproductive Medicine Program."
+      }
+    ]
+  },
+  {
+    path:"",
+    title: "Prostate Cancer",
+    breadCrumbName: "Prostate Cancer",
+    about:"You will face many hard decisions if a loved one or you have been diagnosed with prostate cancer. Including several questions like where should you go for treatment? What are the available treatment options? How to maintain your quality of life? We have tried to describe these concerns, the types, and possible treatment, which will help you decide.",
+    info:[
+
+     ]
+  }
 ];
