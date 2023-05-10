@@ -24,17 +24,15 @@ import { CANCER_SPECIALTIES } from "constants/HomeConstants";
       </div>
     </div>
     <div class="p-8 pt-24">
-      {
-        CANCER_SPECIALTIES.map((data) => (
-          <>
-            <ul class="list-disc">
-              <li class="hover:text-blue-600 leading-9">
-                <a href={`${data.cancer_path_url}`}>{data.cancer_label}</a>
-              </li>
-            </ul>
-          </>
-        ))
-      }
+      <>
+        <ul class="list-disc">
+          {CANCER_SPECIALTIES.map((data) => (
+            <li class="hover:text-blue-600 leading-9">
+              <a href={`${data.cancer_path_url}`}>{data.cancer_label}</a>
+            </li>
+          ))}
+        </ul>
+      </>
     </div>
   </div>
 
