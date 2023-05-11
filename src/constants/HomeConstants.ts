@@ -355,7 +355,7 @@ export const OTHER_CANCER_SPECIALTIES: OtherCancerSpecialty[] = [
   },
   {
     label: "Appendiceal Cancer",
-    description: "Cancer or abnormal growth of cells in the anus (the end of the rectum) is called anal cancer. The anus helps solid waste pass from the body. Anal cancer is rare and is more common in women. More than 90 % of anal cancer is due to the human papillomavirus (HPV), a common sexually transmitted virus. The common signs of anal cancer are anal itching, blood in stools, pain on defecation, or a lump inside the anus.",
+    description: "Appendix cancer or appendiceal cancer is the type of gastrointestinal cancer that originates in the appendix, a small vestigial organ present near the area where the small and large intestine meet. As humans can live everyday life without this organ, and its function is still unknown, the appendix is often removed when it is infected or inflamed. This cancer does not result in any symptoms unless they metastasize to other parts of the body and are often diagnosed accidentally.",
     imgUrl: "https://assets.icliniq.com/v2/assets/images/mskcc/img/mskcc-cancer/Appendiceal-Cancer.png"
   },
   {
@@ -1178,7 +1178,7 @@ export const Cancer_type_test: CancerTestType[] = [
         subItems: [
           {
             heading: "Blood Clots",
-            body: "Blood clotting or coagulation prevents excess blood loss during injury and is a normal physiological process. Platelets (a type of blood cells) and clotting factors (special proteins in the blood) help in clot formation. Sometimes, abnormal clotting of blood can result in a deep vein thrombosis (DVT), where a blood clot forms in a deep vein (the majority of times in the leg), which can also get detached from the vein and travel to major organs like the lungs (pulmonary embolism) and stop blood flow. Cancer patients are more at risk of developing these dangerous blood clots, as the genetic changes that cause cancer also hyperactivate the clotting factors. Some chemotherapy also has similar effects on the clotting factors. Blood clotting or coagulation prevents excess blood loss during injury and is a normal physiological process. Platelets (a type of blood cells) and clotting factors (special proteins in the blood) help in clot formation. Sometimes, abnormal clotting of blood can result in a deep vein thrombosis (DVT), where a blood clot forms in a deep vein (the majority of times in the leg), which can also get detached from the vein and travel to major organs like the lungs (pulmonary embolism) and stop blood flow. Cancer patients are more at risk of developing these dangerous blood clots, as the genetic changes that cause cancer also hyperactivate the clotting factors. Some chemotherapy also has similar effects on the clotting factors."
+            body: "Blood clotting or coagulation prevents excess blood loss during injury and is a normal physiological process. Platelets (a type of blood cells) and clotting factors (special proteins in the blood) help in clot formation. Sometimes, abnormal clotting of blood can result in a deep vein thrombosis (DVT), where a blood clot forms in a deep vein (the majority of times in the leg), which can also get detached from the vein and travel to major organs like the lungs (pulmonary embolism) and stop blood flow. Cancer patients are more at risk of developing these dangerous blood clots, as the genetic changes that cause cancer also hyperactivate the clotting factors. Some chemotherapy also has similar effects on the clotting factors. \nDuring cancer treatment at MSK, patients who develop blood clots have access to various treatment options. Specialists at MSK's Anticoagulation Clinic are experienced in providing a combination of blood clot treatments, such as blood thinners or anticoagulants (Heparin), inferior vena cava filter (a special filter is inserted into the large vein that delivers blood to the heart from the legs), thrombolytics (tissue plasminogen activator), and thrombectomy (clot removal surgery). Hematologists at MSK are also developing a new oral anticoagulant drug, which may cause fewer blood-related complications in the future."
           },
           {
             heading: "Anemia",
@@ -1373,7 +1373,7 @@ export const Cancer_type_test: CancerTestType[] = [
             body:"It is the most common type of lung cancer and is the cause of almost 9 out of every 10 lung cancer cases. It is a slow-growing cancer when compared to SCLC. The three main subtypes are:",
             subItems:[
               {
-                heading:"It is the most common type of lung cancer and is the cause of almost 9 out of every 10 lung cancer cases. It is a slow-growing cancer when compared to SCLC. The three main subtypes are:",
+                heading:"Adenocarcinoma of the Lung ",
                 body:" It originates in the cells that line the tiny air sacs in the lungs (alveoli)."
               },
               {
@@ -1710,7 +1710,7 @@ export const Cancer_type_test: CancerTestType[] = [
       },
       {
         heading:"What Are the Treatment Options for Prostate Cancer?",
-        body:"Only regular screening is needed for men with slow-growing prostate cancer without any symptoms. Screening includes regular monitoring of the tumor’s growths and looking for any changes. MSK's surgeons are highly experienced in performing prostate surgery, robotic, laparoscopic, and open surgery for patients needing surgery. Their surgeons are working tirelessly to improve the outcome of radical prostatectomy. MSK surgeons are also experienced in performing radical salvage prostatectomy. This is done for patients with prostate cancer recurrence after radiation therapy. MSK's radiation oncology team is leading in treating this cancer with various types of radiotherapy, such as image-guided, intensity-modulated radiation therapy (IG-IMRT), stereotactic high-precision radiosurgery (similar to CyberKnife), stereotactic hypofractionated radiation therapy (MSK PreciseTM), and low-dose-rate permanent seed implants and high-dose-rate temporary seed implants (both forms of brachytherapy).For localized prostate tumors, patients can benefit from focal therapy, a term used for non-invasive techniques like freezing, electricity, heat, or highly targeted seed implants. These therapies are targeted to destroy only the cancerous part of the prostate. For aggressive prostate cancers, patients are offered a combined treatment approach, including hormone therapy, brachytherapy, and radiation therapy. MSK is also the coordinating center for the Prostate Cancer Clinical Trials Consortium, which is a collaboration between 13 leading centers focused on early drug development and clinical trial design. MSK's follow-up care experts help patients with aggressive prostate cancers cope with maintaining a good quality of life. And patients who experience sexual problems can benefit from MSK's Male Sexual and Reproductive Medicine Program."
+        body:"Only regular screening is needed for men with slow-growing prostate cancer without any symptoms. Screening includes regular monitoring of the tumor’s growths and looking for any changes. MSK's surgeons are highly experienced in performing prostate surgery, robotic, laparoscopic, and open surgery for patients needing surgery. Their surgeons are working tirelessly to improve the outcome of radical prostatectomy. MSK surgeons are also experienced in performing radical salvage prostatectomy. This is done for patients with prostate cancer recurrence after radiation therapy. MSK's radiation oncology team is leading in treating this cancer with various types of radiotherapy, such as image-guided, intensity-modulated radiation therapy (IG-IMRT), stereotactic high-precision radiosurgery (similar to CyberKnife), stereotactic hypofractionated radiation therapy (MSK PreciseTM), and low-dose-rate permanent seed implants and high-dose-rate temporary seed implants (both forms of brachytherapy). \n For localized prostate tumors, patients can benefit from focal therapy, a term used for non-invasive techniques like freezing, electricity, heat, or highly targeted seed implants. These therapies are targeted to destroy only the cancerous part of the prostate. For aggressive prostate cancers, patients are offered a combined treatment approach, including hormone therapy, brachytherapy, and radiation therapy. MSK is also the coordinating center for the Prostate Cancer Clinical Trials Consortium, which is a collaboration between 13 leading centers focused on early drug development and clinical trial design. MSK's follow-up care experts help patients with aggressive prostate cancers cope with maintaining a good quality of life. And patients who experience sexual problems can benefit from MSK's Male Sexual and Reproductive Medicine Program."
       }
     ]
   },
@@ -1870,12 +1870,13 @@ export const Cancer_type_test: CancerTestType[] = [
                 }
               
               ]
-          },
-          {
-            heading:"What Are the Treatment Options for Lymphoma?",
-            body:"Treatment options for lymphoma depend on the type and the severity (how far the cancer cells have spread). MSK's advances in molecular and genetic testing have helped their doctors develop individualized treatments for patients suffering from lymphoma. Certain slow-growing lymphomas might not need to be treated, and only careful monitoring is sufficient. For the other types, chemotherapy, targeted therapies, radiation, stem cell transplantation, immunotherapy, and other therapies are available at MSK. MSK's lymphoma team provides compassionate and highest possible cancer care. MSK's specialists have vast experience in all types of lymphoma, which is why they treat more than 1,200 lymphoma patients every year."
           }
+         
         ]
+      },
+      {
+        heading:"What Are the Treatment Options for Lymphoma?",
+        body:"Treatment options for lymphoma depend on the type and the severity (how far the cancer cells have spread). MSK's advances in molecular and genetic testing have helped their doctors develop individualized treatments for patients suffering from lymphoma. Certain slow-growing lymphomas might not need to be treated, and only careful monitoring is sufficient. For the other types, chemotherapy, targeted therapies, radiation, stem cell transplantation, immunotherapy, and other therapies are available at MSK. MSK's lymphoma team provides compassionate and highest possible cancer care. MSK's specialists have vast experience in all types of lymphoma, which is why they treat more than 1,200 lymphoma patients every year."
       }
     ]
   },{
@@ -1970,12 +1971,13 @@ export const Cancer_type_test: CancerTestType[] = [
                   heading: "Immunoglobulin D (IgD) Myeloma"
                 }            
             ]
-          },
-          {
-            heading:"What Are the Treatment Options for Multiple Myeloma?",
-            body:"Multiple myeloma that is causing symptoms is called active myeloma, and it requires treatment. And if it does not cause symptoms, it is called smoldering myeloma, which only requires close monitoring. Multiple myeloma is only treated if it causes symptoms. All cancer patients at MSK are offered compassionate and personalized care from their experts. Specialists who are experienced in surgery, chemotherapy, radiation therapy, rehabilitation, and maintaining the quality of life will work closely to come up with a customized treatment plan to ensure the best outcome possible. Patients also benefit from new chemotherapy drugs through thousands of ongoing clinical trials at MSK."
           }
+          
         ]
+      },
+      {
+        heading:"What Are the Treatment Options for Multiple Myeloma?",
+        body:"Multiple myeloma that is causing symptoms is called active myeloma, and it requires treatment. And if it does not cause symptoms, it is called smoldering myeloma, which only requires close monitoring. Multiple myeloma is only treated if it causes symptoms. All cancer patients at MSK are offered compassionate and personalized care from their experts. Specialists who are experienced in surgery, chemotherapy, radiation therapy, rehabilitation, and maintaining the quality of life will work closely to come up with a customized treatment plan to ensure the best outcome possible. Patients also benefit from new chemotherapy drugs through thousands of ongoing clinical trials at MSK."
       }
     ]
   },
