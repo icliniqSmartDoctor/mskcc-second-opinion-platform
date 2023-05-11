@@ -1408,42 +1408,43 @@ export const Cancer_type_test: CancerTestType[] = [
         body:"Cancer that originates or develops in the lining of the stomach is called gastric or stomach cancer. It usually grows slowly over several years before resulting in symptoms. This results in cancer getting diagnosed at a later stage, which usually affects the prognosis. Gastric cancer can develop at any part of the stomach, but mostly, they form in the main part (stomach body) or the esophagus (the part that carries food to the stomach when you swallow. ",
         link:"Try out MSK's Gastric Cancer - Disease-Specific Survival Following Surgery (Prediction Tool) nomogram!",
         linkPath:"https://www.mskcc.org/nomograms/gastric",
-        subItems:[
-          {
-            heading:"What Are the Types of Gastric Cancer?",
-            body:"Adenocarcinoma - Almost 95 % of people develop adenocarcinoma, which starts in the tissues that line the stomach. The three types of adenocarcinoma are:",
-            subItems:[
-              {
-                heading:" Non-cardia (Distal) Stomach Cancer",
-                body:"This type is associated with long-term infection with H.pylori (Helicobacter pylori) or long periods of inflammation or irritation in the stomach’s lower part. It is more commonly seen in people living in developing countries.",
-                subItems:[
-                  {
-                    heading:"Proximal Stomach Cancer",
-                    body:"The first part of the stomach that is connected to the esophagus is commonly affected. Proximal stomach cancer is common in the US and affects obese people and people with gastroesophageal reflux disease (GERD).",
-                  },
-                  {
-                    heading:"Diffuse Stomach Cancer",
-                    body:"It is an aggressive type of cancer that develops rapidly in the cells that line the stomach wall. As it does not form a growth or a mass, it is challenging to diagnose. This type commonly affects younger people with a family history or genetic mutations."
-                  },
-                  {
-                    heading:"Gastrointestinal Stromal Tumors",
-                    body:"Cancer that originates in the connective tissue or stomach muscle. Try out MSK's Gastrointestinal Stromal Tumor - Survival Without Recurrence Following Surgery (Prediction Tool) nomogram!"
-                  }
-                  
-                ]
-              },
-              {
-                heading:" Carcinoid Tumors",
-                body:"Tumor from the stomach’s hormone-producing cells."
-              },
-              {
-                heading:" Lymphoma",
-                body:"Cancer that develops in the stomach’s immune cells."
-              }
-            ]
-          }
-        ]
+       
      
+      },
+      {
+        
+          heading:"What Are the Types of Gastric Cancer?",
+          body:"Adenocarcinoma - Almost 95 % of people develop adenocarcinoma, which starts in the tissues that line the stomach. The three types of adenocarcinoma are:",
+          subItems:[
+            {
+              heading:" Non-cardia (Distal) Stomach Cancer",
+              body:"This type is associated with long-term infection with H.pylori (Helicobacter pylori) or long periods of inflammation or irritation in the stomach’s lower part. It is more commonly seen in people living in developing countries.",
+              subItems:[
+                {
+                  heading:"Proximal Stomach Cancer",
+                  body:"The first part of the stomach that is connected to the esophagus is commonly affected. Proximal stomach cancer is common in the US and affects obese people and people with gastroesophageal reflux disease (GERD).",
+                },
+                {
+                  heading:"Diffuse Stomach Cancer",
+                  body:"It is an aggressive type of cancer that develops rapidly in the cells that line the stomach wall. As it does not form a growth or a mass, it is challenging to diagnose. This type commonly affects younger people with a family history or genetic mutations."
+                },
+                {
+                  heading:"Gastrointestinal Stromal Tumors",
+                  body:"Cancer that originates in the connective tissue or stomach muscle. Try out MSK's Gastrointestinal Stromal Tumor - Survival Without Recurrence Following Surgery (Prediction Tool) nomogram!"
+                }
+                
+              ]
+            },
+            {
+              heading:" Carcinoid Tumors",
+              body:"Tumor from the stomach’s hormone-producing cells."
+            },
+            {
+              heading:" Lymphoma",
+              body:"Cancer that develops in the stomach’s immune cells."
+            }
+          ]
+        
       },
       {
         heading:"What Are the Treatment Options for Gastric Cancer?",
@@ -1493,68 +1494,66 @@ export const Cancer_type_test: CancerTestType[] = [
         body:"Liver cancer is cancer that develops in the liver, the largest internal organ located below the right lung. Hepatocytes are the cells present in the liver, and these cells are responsible for breaking down and storing nutrients and removing waste from the body. Our liver also produces bile, a digestive fluid or enzyme, and also makes proteins that stop bleeding. Than primary liver cancers (cancer that starts in the liver), liver metastases (liver cancer that has spread from some other body part) are more common. But nowadays, the number of people with primary liver cancer is increasing in the US, as more people are affected by liver diseases that increase the risk of liver cancer, like hepatitis C.",
         link:"Try out MSK's Liver Cancer - Risk of Perioperative Transfusion in Hepatectomy (Prediction Tool) nomogram!",
         linkPath:"https://www.mskcc.org/nomograms/liver",
-        subItems:[
-
-          {
-            heading:"What Are the Types of Liver Cancer?",
-            subItems:[
-              {
-                heading:"Hepatocellular Carcinoma",
-                body:"It is the most common primary liver cancer that begins in hepatocytes. Usually, a single tumor forms that spread to other organs eventually. Excessive alcohol consumption, chronic hepatitis B and C infection, nonalcoholic fatty liver disease, and too much iron in the body are some risk factors."
-              },
-              {
-                heading:" Intrahepatic Cholangiocarcinoma ",
-                body:"It is the second most common type of primary liver cancer that starts in the bile duct (the tube that delivers bile). People infected with hepatitis B or C virus, those with primary sclerosing cholangitis (a condition resulting in inflammation and scarring of the bile ducts), and nonalcoholic fatty liver disease are at an increased risk of developing this type of liver cancer."
-              },
-              {
-                heading:"Fibrolamellar-Hepatocellular Carcinoma (FLL-HCC)",
-                body:"Otherwise called fibrolamellar carcinoma. It is a rare type of liver cancer that develops in young adults (ages between 20 and 30 years). It is less aggressive than the other forms.",
-        
-              },
-              {
-                heading:" Angiosarcomas, Hemangiosarcomas, and Hemangioendotheliomas ",
-                body:" Tumors that form in the inner lining of blood vessels. They are curable and almost always seen in infants."
-              },
-              {
-                heading:"Hepatoblastomas",
-                body:" These curable liver tumors consist of tissue that looks like fetal liver, bile duct cells, or mature liver cells when seen under the microscope."
-              },
-              {
-                heading:" Benign Liver Tumors",
-                body:"Non-cancerous tumors in the liver do not cause symptoms and are diagnosed accidentally. Adenomas, hemangiomas, liver cysts, and focal nodular hyperplasias are some of the most common benign liver tumors."
-              },
-              
-            ]
-          },
-          {
-            heading:"What Are the Treatment Options for Liver Cancer?",
-            body:"All cancer patients at MSK are offered compassionate and personalized care from their experts. Specialists experienced in surgery, chemotherapy, radiation therapy, rehabilitation, and maintaining the quality of life will work closely to develop a customized treatment plan to ensure the best outcome possible. Doctors at MSK have treated more than 5,000 liver cancer patients in the last 10 years. Patients also benefit from new chemotherapy drugs and other therapies through thousands of ongoing clinical trials at MSK."
-          }
-        ]
       },
+      {
+        
+          heading:"What Are the Types of Liver Cancer?",
+          subItems:[
+            {
+              heading:"Hepatocellular Carcinoma",
+              body:"It is the most common primary liver cancer that begins in hepatocytes. Usually, a single tumor forms that spread to other organs eventually. Excessive alcohol consumption, chronic hepatitis B and C infection, nonalcoholic fatty liver disease, and too much iron in the body are some risk factors."
+            },
+            {
+              heading:" Intrahepatic Cholangiocarcinoma ",
+              body:"It is the second most common type of primary liver cancer that starts in the bile duct (the tube that delivers bile). People infected with hepatitis B or C virus, those with primary sclerosing cholangitis (a condition resulting in inflammation and scarring of the bile ducts), and nonalcoholic fatty liver disease are at an increased risk of developing this type of liver cancer."
+            },
+            {
+              heading:"Fibrolamellar-Hepatocellular Carcinoma (FLL-HCC)",
+              body:"Otherwise called fibrolamellar carcinoma. It is a rare type of liver cancer that develops in young adults (ages between 20 and 30 years). It is less aggressive than the other forms.",
+      
+            },
+            {
+              heading:" Angiosarcomas, Hemangiosarcomas, and Hemangioendotheliomas ",
+              body:" Tumors that form in the inner lining of blood vessels. They are curable and almost always seen in infants."
+            },
+            {
+              heading:"Hepatoblastomas",
+              body:" These curable liver tumors consist of tissue that looks like fetal liver, bile duct cells, or mature liver cells when seen under the microscope."
+            },
+            {
+              heading:" Benign Liver Tumors",
+              body:"Non-cancerous tumors in the liver do not cause symptoms and are diagnosed accidentally. Adenomas, hemangiomas, liver cysts, and focal nodular hyperplasias are some of the most common benign liver tumors."
+            },
+            
+          ]
+        },
+        {
+          heading:"What Are the Treatment Options for Liver Cancer?",
+          body:"All cancer patients at MSK are offered compassionate and personalized care from their experts. Specialists experienced in surgery, chemotherapy, radiation therapy, rehabilitation, and maintaining the quality of life will work closely to develop a customized treatment plan to ensure the best outcome possible. Doctors at MSK have treated more than 5,000 liver cancer patients in the last 10 years. Patients also benefit from new chemotherapy drugs and other therapies through thousands of ongoing clinical trials at MSK."
+        }
+      ,
       {
         infoTitle:"Biliary Cancer (Bile Duct Cancer or Cholangiocarcinoma)",
         heading:"What Is Biliary Cancer?",
         body:"Biliary cancer or cholangiocarcinoma is cancer that forms in the thin bile ducts that carry the digestive enzyme bile. These ducts serve as the connection between the gallbladder and small intestine. Biliary cancer is common in people older than 50 but can occur at any age. It is a rare and extremely challenging cancer to treat.",
+      
+      },
+      {
+
+        heading:"What Are the Types of Biliary Cancer?",
         subItems:[
           {
-            heading:"What Are the Types of Biliary Cancer?",
-            subItems:[
-              {
-                heading:"Intrahepatic Cholangiocarcinoma ",
-                body:"This develops in the parts of the bile ducts that are present within the liver, which is why it is also classified under liver cancer."
-              },
-              {
-                heading:" Hilar Cholangiocarcinoma ",
-                body:" Also called perihilar cholangiocarcinoma. It is when cancer develops in the bile ducts that exit the liver."
-              },
-              {
-                heading:" Distal Cholangiocarcinoma",
-                body:" This biliary cancer develops in the bile duct closest to the small intestine."
-              }
-            ]
+            heading:"Intrahepatic Cholangiocarcinoma ",
+            body:"This develops in the parts of the bile ducts that are present within the liver, which is why it is also classified under liver cancer."
+          },
+          {
+            heading:" Hilar Cholangiocarcinoma ",
+            body:" Also called perihilar cholangiocarcinoma. It is when cancer develops in the bile ducts that exit the liver."
+          },
+          {
+            heading:" Distal Cholangiocarcinoma",
+            body:" This biliary cancer develops in the bile duct closest to the small intestine."
           }
-          
         ]
       },
       {
@@ -1888,36 +1887,42 @@ export const Cancer_type_test: CancerTestType[] = [
       {
         heading:"What Is Leukemia?",
         body:"Leukemia or blood cancer develops due to the abnormal growth of blood-forming tissues, bone marrow, and the lymphatic system. Some types of leukemia are more common in children, while others occur mostly in adults. Leukemia often affects the white blood cells, and the abnormal white blood cells do not function like normal WBC. Leukemia is also the most common type of cancer seen in children under 15 years of age.",
-        subItems:[
-          {
-            heading: "Acute Lymphocytic Leukemia (ALL)",
-            body: "The most common childhood cancer, but also affects adults."
-          },
-          {
-            heading: "Acute Myelogenous Leukemia (AML)",
-            body: "The most common type of acute leukemia that affects both children and adults."
-          },
-          {
-            heading: "Chronic Lymphocytic Leukemia (CLL)",
-            body: "The most common chronic leukemia seen in adults."
-          },
-          {
-            heading: "Chronic Myelogenous Leukemia (CML)",
-            body: "Mostly affects adults."
-          },
-          {
-            heading: "Hairy Cell Leukemia",
-            body: "A rare and chronic leukemia that affects the B cells (lymphocytes)."
-          },
-          {
-            heading: "Myelodysplastic Syndromes",
-            body: "A group of conditions that are caused by the bone marrow producing immature blood cells."
-          },
-        
-        ],
-        bodyTwo:"Acute leukemia spreads and worsens quickly and requires aggressive treatment. Chronic leukemia progresses very slowly and goes undiagnosed for years."
         
       },
+      {
+heading:"What Are the Types of Leukemia?",
+subItems:[
+  {
+    heading: "Acute Lymphocytic Leukemia (ALL)",
+    body: "The most common childhood cancer, but also affects adults."
+  },
+  {
+    heading: "Acute Myelogenous Leukemia (AML)",
+    body: "The most common type of acute leukemia that affects both children and adults."
+  },
+  {
+    heading: "Chronic Lymphocytic Leukemia (CLL)",
+    body: "The most common chronic leukemia seen in adults."
+  },
+  {
+    heading: "Chronic Myelogenous Leukemia (CML)",
+    body: "Mostly affects adults."
+  },
+  {
+    heading: "Hairy Cell Leukemia",
+    body: "A rare and chronic leukemia that affects the B cells (lymphocytes)."
+  },
+  {
+    heading: "Myelodysplastic Syndromes",
+    body: "A group of conditions that are caused by the bone marrow producing immature blood cells."
+  },
+
+],
+bodyTwo:"Acute leukemia spreads and worsens quickly and requires aggressive treatment. Chronic leukemia progresses very slowly and goes undiagnosed for years."
+
+
+      },
+
       {
         heading:"What Are the Treatment Options for Leukemia?",
         body:"The recommended treatment options for leukemia are targeted therapy, chemotherapy, CAR T cell therapy, other immunotherapy, bone marrow or hematopoietic stem cell transplantation. The personalized treatment plan will depend on which blood cancer the patient has. All cancer patients at MSK are offered compassionate and personalized care from their experts. Specialists experienced in surgery, chemotherapy, radiation therapy, rehabilitation, and maintaining the quality of life will work closely to develop a customized treatment plan to ensure the best outcome possible. Patients also benefit from new chemotherapy drugs through thousands of ongoing clinical trials at MSK. MSK leukemia experts use various tests to diagnose leukemia. Tests also show changes in the bone marrow or genetic makeup of the cancer cells. MSK's hematologists identify abnormal genes in each leukemia patient to know the drugs that will be most effective."
@@ -2050,8 +2055,10 @@ export const Cancer_type_test: CancerTestType[] = [
       body:"Uterine or endometrial cancer is a type of cancer that develops in the endometrium, the inner lining of the uterus (the inverted-pear-shaped hollow female reproductive organ). Women who have been diagnosed with endometrial hyperplasia, those who are obese, had their menarche before 12 years and menopause after 55 years, etc., are at risk of this cancer.",
       link:"Try out MSK's Endometrial Cancer - Overall Survival Probability Following Surgery (Prediction Tool) nomogram!",
       linkPath:"https://www.mskcc.org/nomograms/endometrial",
-      subItems:[
-        {
+      
+      
+     },
+     {
           heading:"What Are the Types of Uterine Cancer?",
           subItems:[
             {
@@ -2071,10 +2078,8 @@ export const Cancer_type_test: CancerTestType[] = [
               body:"This is also a rare type that was thought to be a type of uterine sarcoma. They have a higher risk of spreading to other body parts and lymph nodes."
             }
           ],
-          
-        }
-      ],
-      bodyTwo:"MSK physicians treat almost 1,300 women every year with some form of gynecologic cancer. From which, around 300 have uterine cancer. They form customized treatment plans for every woman suffering from cancer."
+          bodyTwo:"MSK physicians treat almost 1,300 women every year with some form of gynecologic cancer. From which, around 300 have uterine cancer. They form customized treatment plans for every woman suffering from cancer."
+
      },
      {
       heading:"What Are the Treatment Options for Uterine Cancer?",

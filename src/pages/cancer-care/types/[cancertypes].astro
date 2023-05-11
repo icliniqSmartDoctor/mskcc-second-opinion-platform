@@ -38,10 +38,10 @@ if (!cancerTypeArr) return Astro.redirect("/404");
         <a class="text-primary mr-2">{cancerTypeArr.breadCrumbName}</a>
       </div>
     </div>
-    <div class="pt-20 ">
+    <div class="pt-16 ">
       <div class="pb-10">{cancerTypeArr.about}</div>
       
-      <div><CancerInfo info={cancerTypeArr.info} client:idle/></div>
+      <div><CancerInfo info={cancerTypeArr.info} /></div>
 
 
     </div>

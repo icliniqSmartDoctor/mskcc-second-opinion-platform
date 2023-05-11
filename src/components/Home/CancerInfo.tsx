@@ -30,7 +30,14 @@ function bodyFormatter(body: string | (string | string[])[]): ReactNode {
           })}
         </>
       ) : (
-        <p className="">{body.split('\n').map((data)=>(<>{data}<br/></>))}</p>
+        <p className="">
+          {body.split("\n").map((data) => (
+            <>
+              {data}
+              <br />
+            </>
+          ))}
+        </p>
       )}
     </>
   );
@@ -56,8 +63,21 @@ function subItemFormatter(subItems: string[] | CancerSubItemType[]): ReactNode {
       <div key={index}>
         <ul className="list-disc list-inside">
           <li>
-            <span className="font-semibold tracking-widest ">{subItem.heading}</span> 
-            {subItem.body && <span className="leading-4 font-rubik "> - {subItem.body.split('\n').map((data)=>(<>{data}<br/></>))}</span>}
+            <span className="font-semibold tracking-widest ">
+              {subItem.heading}
+            </span>
+            {subItem.body && (
+              <span className="leading-4 font-rubik ">
+                {" "}
+                -{" "}
+                {subItem.body.split("\n").map((data) => (
+                  <>
+                    {data}
+                    <br />
+                  </>
+                ))}
+              </span>
+            )}
             <div className="pl-10 pt-5">
               {subItemFormatter(subItem.subItems!)}
             </div>
@@ -76,7 +96,7 @@ const CancerInfo = ({ info }: CancerType) => {
           return (
             <>
               {res.infoTitle && (
-                <h1 className="text-4xl font-semibold font-poppins tracking-wider pt-5">
+                <h1 className="text-4xl font-semibold font-poppins tracking-wider pt-9">
                   {res.infoTitle}
                 </h1>
               )}
@@ -106,7 +126,13 @@ const CancerInfo = ({ info }: CancerType) => {
                 </p>
               )}
               {res.subItems && (
-                <div className="pt-5">{subItemFormatter(res.subItems)}{res.bodyTwo &&(<div>{res.bodyTwo}</div>)}</div>
+                <>
+                  <div className="pt-3 pl-5">
+                    {subItemFormatter(res.subItems)}
+                  </div>
+
+                  {res.bodyTwo && <div>{res.bodyTwo}</div>}
+                </>
               )}
             </>
           );
