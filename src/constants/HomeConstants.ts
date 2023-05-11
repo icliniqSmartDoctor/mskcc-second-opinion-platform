@@ -1,3 +1,4 @@
+import { s } from "@fullcalendar/core/internal-common";
 import type { SlotString } from "astro/dist/runtime/server/render/slot";
 
 type CancerSpecialty = {
@@ -1977,6 +1978,200 @@ export const Cancer_type_test: CancerTestType[] = [
             body:"Multiple myeloma that is causing symptoms is called active myeloma, and it requires treatment. And if it does not cause symptoms, it is called smoldering myeloma, which only requires close monitoring. Multiple myeloma is only treated if it causes symptoms. All cancer patients at MSK are offered compassionate and personalized care from their experts. Specialists who are experienced in surgery, chemotherapy, radiation therapy, rehabilitation, and maintaining the quality of life will work closely to come up with a customized treatment plan to ensure the best outcome possible. Patients also benefit from new chemotherapy drugs through thousands of ongoing clinical trials at MSK."
           }
         ]
+      }
+    ]
+  },
+  {
+    path:"ovarian-cervical-and-endometrial-cancer",
+    title: "Ovarian, Cervical, and Endometrial Cancer",
+    breadCrumbName: "Ovarian, Cervical, and Endometrial Cancer",
+    about:"You will face many hard decisions if a loved one or you have been diagnosed with multiple myeloma. Including several questions like where should you go for treatment? What are the available treatment options? How to maintain your quality of life? We have tried to describe these concerns, the types, and possible treatment, which will help you decide.",
+    info:[
+      {
+        infoTitle:"Ovarian Cancer",
+        heading:"What Is Ovarian Cancer?",
+        body:"The type of cancer where the cells in the ovaries, two almond-sized female reproductive organs that produce eggs and female hormones (estrogen and progesterone), multiply and grow out of control is called ovarian cancer. When the genes in the cells of the ovaries no longer work properly, the cells divide uncontrollably and form a tumor. Ovarian cancer is the second most common cancer seen in women, and one in seventy women is at risk of developing it. One in ten women with ovarian cancer also has a positive family history or a genetic mutation that increases their risk. Genetic tests at MSK can help identify such women at risk.",
+        link:" Try out MSK's Ovarian Cancer - Cancer-Specific Survival Following Surgery (Prediction Tool) nomogram!",
+        linkPath:"https://www.mskcc.org/nomograms/ovarian"
+      },
+      {
+        heading:"What Are the Types of Ovarian Cancer?",
+        body:"All ovarian cancer patients are different, and all of them need a customized treatment plan according to the type of ovarian cancer. Ovarian cancer has more than 30 different types, and they are named based on the ovarian cell they develop from. The common types include:",
+        subItems:[
+          {
+            heading:"Ovarian Epithelial Cancer ",
+            body:" These tumors originate in the epithelial cells that line the outer surface of the ovaries. This type accounts for 85 to 90 % of all ovarian cancers.",
+          },
+          {
+            heading:"Germ Cell Tumors",
+            body:"Tumors can also form from the egg-producing cells of the ovaries, and most of these growths are benign."
+          },
+          {
+            heading:"Sex Cord-Stromal Tumors",
+            body:"This type accounts for about 1 % of ovarian cancers. These tumors develop from the stroma tissue cells (the cells that produce female hormones - estrogen and progesterone)."
+          }
+        ]
+  
+      },
+      {
+        heading:"What Are the Treatment Options for Ovarian Cancer?",
+        body:"The main treatment option is surgery for both early and advanced ovarian cancer. The type of surgery will be decided based on the cancer type and stage, the patient’s general health, and if the patient plans on having children in the future. MSK experts suggest chemotherapy after surgery to prevent a recurrence."
+      },
+      {
+        infoTitle:"Cervical Cancer",
+        heading:"What Is Cervical Cancer?",
+        body:"The type of cancer that originates in the cervix, which is the lower part of the uterus that connects to the vagina. The majority of this cancer (almost 90 %) results from sexually transmitted infections with various strains of human papillomavirus strains (HPV). Once infected, the virus survives for years in some women and changes the tissue lining the cervix. This is called dysplasia or precancer, which can lead to cancer if not treated. It is a slow-growing tumor, and before the actual cancerous transformation occurs, dysplastic cells can be removed, and cancer can be prevented."
+      },
+     {
+      heading:"What Are the Types of Cervical Cancer?",
+      subItems:[
+        {
+          heading:"Squamous Cell Carcinoma (SCC)",
+          body:"The squamous cells (thin and flat cells) present in the lowermost part of the cervix divide uncontrollably and form this type of cervical cancer. Almost 70 % of all cervical cancer is SCC.",
+
+        },
+        {
+          heading:"Adenocarcinoma",
+          body:"It is the second most common type and accounts for 20 % of cancer in the cervix. The glandular cells (column-shaped) that line the cervix and produce mucus undergo cancerous transformation."
+        },
+        {
+          heading:"Adenosquamous Carcinoma ",
+          body:"It is a mix of both squamous and glandular cancer cells. It is rare and is seen in only 5 to 6 % of cervical cancer cases."
+        }
+      ]
+     },
+     {
+      heading:"What Are the Treatment Options for Ovarian Cancer?",
+      body:"The main treatment option is surgery for both early and advanced ovarian cancer. The type of surgery will be decided based on the cancer type and stage, the patient’s general health, and if the patient plans on having children in the future. MSK experts suggest chemotherapy after surgery to prevent a recurrence."
+     },
+     {
+      infoTitle:"Uterine (Endometrial) Cancer",
+      heading:"What Is Uterine Cancer?",
+      body:"Uterine or endometrial cancer is a type of cancer that develops in the endometrium, the inner lining of the uterus (the inverted-pear-shaped hollow female reproductive organ). Women who have been diagnosed with endometrial hyperplasia, those who are obese, had their menarche before 12 years and menopause after 55 years, etc., are at risk of this cancer.",
+      link:"Try out MSK's Endometrial Cancer - Overall Survival Probability Following Surgery (Prediction Tool) nomogram!",
+      linkPath:"https://www.mskcc.org/nomograms/endometrial",
+      subItems:[
+        {
+          heading:"What Are the Types of Uterine Cancer?",
+          subItems:[
+            {
+              heading:"Endometrioid Adenocarcinoma ",
+              body:"Cancer develops in the glandular cells that line the uterus. Almost 75 % of all uterine cancers are this type."
+            },
+            {
+              heading:"Serous Adenocarcinoma",
+              body:"This type most commonly spreads to lymph nodes and other areas of the body. Around 10 % of women diagnosed with uterine cancer have this type."
+            },
+            {
+              heading:"Adenosquamous Carcinoma ",
+              body:"This is a rare type of uterine cancer that affects the glandular cells and the flat squamous cells that line the uterus."
+            },
+            {
+              heading:"Carcinosarcoma",
+              body:"This is also a rare type that was thought to be a type of uterine sarcoma. They have a higher risk of spreading to other body parts and lymph nodes."
+            }
+          ],
+          
+        }
+      ],
+      bodyTwo:"MSK physicians treat almost 1,300 women every year with some form of gynecologic cancer. From which, around 300 have uterine cancer. They form customized treatment plans for every woman suffering from cancer."
+     },
+     {
+      heading:"What Are the Treatment Options for Uterine Cancer?",
+      body:"MSK experts determine the type of uterine cancer and its stage through biopsy and other tests. Depending on the results, the doctor might suggest surgery, chemotherapy, radiotherapy, or a combination of therapies. Patients can also benefit from the thousands of clinical trials ongoing at MSK that explore new therapies."
+     }
+
+    ]
+  
+  },
+  {
+
+    path:"brain-tumor-and-cancer",
+    title: "Brain Tumors and Cancers",
+    breadCrumbName: "Brain Tumors and Cancers",
+    about:"You will face many hard decisions if a loved one or you have been diagnosed with a brain tumor or cancer. Including several questions like where should you go for treatment? What are the available treatment options? How to maintain your quality of life? We have tried to describe these concerns, the types, and possible treatment, which will help you decide.",
+    info:[
+      {
+        heading:"What Are Brain Tumors and Cancers?",
+        body:"Abnormal cell growth in the brain is called brain tumor or cancer. There are various types of brain tumors, some of which are non-cancerous, while some are cancerous. And they are also tumors that begin in the brain (primary brain tumors) and those that spread from other body parts (secondary or metastatic brain tumors). Anyone can get brain cancer or tumor, and the exact cause is still not known. Some risk factors are exposure to radiation and family history. Treatment depends on the location, stage, size, and type of brain tumor, and the treatment options are radiotherapy, surgery, and chemotherapy."
+      },
+      {
+        heading:"What Are the Types of Brain Tumors?",
+        subItems:[
+          {
+            heading:"Primary Brain Tumors:",
+            subItems:[
+              {
+                heading:"Gangliocytoma",
+                body:" A rare type of brain tumor that originates from mature neurons."
+              },
+              {
+                heading:"Meningiomas",
+                body:"This tumor starts in the meninges (membranes that surround the brain and spinal cord). About 10 to 15 % of all brain tumors are this type, and it is the most common benign brain tumor."
+              },
+              {
+                heading:"Craniopharyngiomas",
+                body:"These tumors originate in some part of the pituitary gland and are located deep in the brain."
+              },
+              {
+                heading:"Pineocytomas",
+                body:"These tumors develop from the pineal cells. They are well-defined and slow-growing."
+              },
+              {
+                heading:"Schwannomas",
+                body:"These are primary tumors that originate in the Schwann cells (cells that assist in nerve impulses)."
+              },
+              {
+                heading:"Gliomas",
+                body:"These tumors form in the glia (a type of cell in the brain or spinal cord), and almost 78 % of all adult cancerous brain tumors are this type. The subtypes include:"
+                ,subItems:[
+                  {
+                    heading:"Ependymomas"
+                  },{
+                    heading:"Glioblastoma Multiforme (GBM)."
+                  },
+                  {
+                    heading:"Astrocytomas."
+                  },
+                  {
+                    heading:"Brainstem Glioma."
+                  },
+                  {
+                    heading:"Medulloblastomas."
+                  },
+                  {
+                    heading:"Oligodendrogliomas."
+                  }
+                ]
+              }
+            ]
+          
+          }
+        ]
+      },
+      {
+        heading:"Secondary Brain Tumors:",
+        body:"The following types of cancer can metastasis and result in secondary brain tumors:",
+        subItems:[
+          {
+            heading:" Breast cancer."
+          },{
+            heading:" Lung cancer."
+          },
+          {
+            heading:"Melanoma."
+          },
+          {
+            heading:"Colon cancer."
+          },
+          {
+            heading:" Kidney cancer."
+          }
+        ]
+      },
+      {
+        heading:"What Are the Treatment Options for Brain Tumors and Cancers?",
+        body:"Experts at MSK are dedicated to caring for people with brain tumors and are working hard to find new treatment options for inoperable and aggressive brain tumors. Specialists who are experienced in surgery, chemotherapy, radiation therapy, rehabilitation, and maintaining the quality of life will work closely to come up with a customized treatment plan to ensure the best outcome possible. MSK neurosurgeons use the most advanced surgical technologies like intraoperative MRI scanning, brain mapping, and stereotactic radiosurgery to help their patients."
       }
     ]
   }
