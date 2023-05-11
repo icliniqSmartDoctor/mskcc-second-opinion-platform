@@ -1,5 +1,3 @@
-import { s } from "@fullcalendar/core/internal-common";
-import type { SlotString } from "astro/dist/runtime/server/render/slot";
 
 type CancerSpecialty = {
   cancer_label: string;
