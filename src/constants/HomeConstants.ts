@@ -945,7 +945,7 @@ export const FAQ_QUESTIONS: FaqQuestionType[] = [
         "Your condition or diagnosis has changed",
         "You are not responding to treatment as expected",
         "Your treatment plan has changed",
-        "You want to explore other treatment option",
+        "You want to explore other treatment options",
         "Your condition is rare",
         "Your doctor recommends surgery",
         "You want the peace of mind that you have an accurate diagnosis and treatment plan",
