@@ -73,6 +73,10 @@ type FaqQuestionType = {
 
 export type CancerTestType = {
   path: string;
+  metaTitle: string,
+  metaDescription:string,
+  metaKeywords: string,
+  canonicalUrl: string,
   title: string;
   breadCrumbName: string;
   about: string;
@@ -566,7 +570,7 @@ export const DOCTOR_DETAILS: DoctorDetails[] = [
     metaDescription:
       "Sir Dr.Murray Brennan, an oncologic surgeon-scientist, is an expert in soft tissue sarcomas. Learn more about Sir Dr.Brennan here.",
     metaKeywords: "Sir Dr.Murray Brennan,Surgical Oncologist",
-    canonicalUrl: "/cancer-care/doctors/",
+    canonicalUrl: "https://mskcc-test.icliniq.com/cancer-care/doctors/",
     drName: "Dr.Murray Brennan",
     specialist: "SURGICAL ONCOLOGIST",
     designation:
@@ -602,7 +606,7 @@ export const DOCTOR_DETAILS: DoctorDetails[] = [
     metaDescription:
       "Dr.Mrinal Gounder, a medical oncologist, specializes in the treatment of soft tissue and bone sarcomas. Learn more about Dr.Gounder here.",
     metaKeywords: "Dr.Mrinal Gounder,Medical Oncologist",
-    canonicalUrl: "/cancer-care/doctors/",
+    canonicalUrl: "https://mskcc-test.icliniq.com/cancer-care/doctors/",
     drName: "Dr.Mrinal Gounder",
     specialist: "MEDICAL ONCOLOGIST",
     designation:
@@ -640,7 +644,7 @@ export const DOCTOR_DETAILS: DoctorDetails[] = [
     metaDescription:
       "Dr.Lisa DeAngelis, a neuro-oncologist, has spent more than 30 years treating patients with brain tumors. Learn more about Dr.DeAngelis here.",
     metaKeywords: "Dr.Lisa DeAngelis,Neuro-oncologist",
-    canonicalUrl: "/cancer-care/doctors/",
+    canonicalUrl: "https://mskcc-test.icliniq.com/cancer-care/doctors/",
     drName: "Dr. Lisa DeAngelis",
     specialist: "Neuro-Oncologist",
     designation:
@@ -687,7 +691,7 @@ export const DOCTOR_DETAILS: DoctorDetails[] = [
     metaDescription:
       "Dr.Monica Morrow, a surgical oncologist, specializes in the treatment of breast cancer. Learn more about Dr.Morrow here.",
     metaKeywords: "Dr.Monica Morrow,Surgical Oncologist",
-    canonicalUrl: "/cancer-care/doctors/",
+    canonicalUrl: "https://mskcc-test.icliniq.com/cancer-care/doctors/",
     drName: "Dr. Monica Morrow",
     specialist: "Surgical Oncologist",
     designation:
@@ -724,7 +728,7 @@ export const DOCTOR_DETAILS: DoctorDetails[] = [
     metaDescription:
       "Dr.Jatin Shah, a surgical oncologist, provides consultations to discuss various treatment options for head and neck cancers. Learn more about Dr.Shah here.",
     metaKeywords: "Dr.Jatin Shah,Surgical Oncologist",
-    canonicalUrl: "/cancer-care/doctors/",
+    canonicalUrl: "https://mskcc-test.icliniq.com/cancer-care/doctors/",
     drName: "Dr. Jatin Shah",
     specialist: "Surgical Oncologist",
     designation: "Elliot W. Strong Chair in Head and Neck Oncology",
@@ -780,7 +784,7 @@ export const DOCTOR_DETAILS: DoctorDetails[] = [
     metaDescription:
       "Dr.Christopher Crane, a radiation oncologist, treats patients suffering from gastrointestinal cancers. Learn more about Dr.Crane here.",
     metaKeywords: "Dr.Christopher Crane,Radiation Oncologist",
-    canonicalUrl: "/cancer-care/doctors/",
+    canonicalUrl: "https://mskcc-test.icliniq.com/cancer-care/doctors/",
     drName: "Dr.Christopher Crane",
     specialist: "Radiation Oncologist",
     designation: "Vice-Chair, Department of Radiation Oncology",
@@ -828,7 +832,7 @@ export const DOCTOR_DETAILS: DoctorDetails[] = [
     metaDescription:
       "Dr.Andrew Seidman, a medical oncologist, is experienced in managing early and advanced breast cancer. Learn more about Dr.Seidman here.",
     metaKeywords: "Dr.Andrew Seidman,Medical Oncologist",
-    canonicalUrl: "/cancer-care/doctors/",
+    canonicalUrl: "https://mskcc-test.icliniq.com/cancer-care/doctors/",
     drName: "Dr.Andrew Seidman",
     specialist: "Medical Oncologist",
     designation: "Medical Director, MSK Bobst International Center",
@@ -864,7 +868,7 @@ export const DOCTOR_DETAILS: DoctorDetails[] = [
     metaDescription:
       "Dr.Sergio Giralt, a hematologic oncologist, specializes in treating various blood cancers. Learn more about Dr.Giralt here.",
     metaKeywords: "Dr.Sergio Giralt ,Hematologic Oncologist",
-    canonicalUrl: "/cancer-care/doctors/",
+    canonicalUrl: "https://mskcc-test.icliniq.com/cancer-care/doctors/",
     drName: "Dr.Sergio Giralt",
     specialist: "Hemotologic oncologist",
     designation:
@@ -903,7 +907,7 @@ export const DOCTOR_DETAILS: DoctorDetails[] = [
     metaDescription:
       "Dr.James A. Eastham, a urologic surgeon, is experienced in managing early and advanced prostate cancer. Learn more about Dr.Eastham here.",
     metaKeywords: "Dr.James A. Eastham, SURGICAL ONCOLOGIS",
-    canonicalUrl: "/cancer-care/doctors/",
+    canonicalUrl: "https://mskcc-test.icliniq.com/cancer-care/doctors/",
     drName: "Dr.James A. Eastham",
     specialist: "Surgical oncologist",
     designation: "MD, University of Southern California, Los Angeles",
@@ -1016,6 +1020,11 @@ export const FAQ_QUESTIONS: FaqQuestionType[] = [
 export const Cancer_type_test: CancerTestType[] = [
   {
     path: "pediatric-cancers",
+    metaTitle: "Pediatric Cancer Treatment | MSKCC-India",
+    metaDescription:
+      "Find information on pediatric or childhood cancer types, the latest treatment options available at MSK, and the team of expert oncologists.",
+    metaKeywords: "Pediactric Cancers",
+    canonicalUrl: "https://mskcc-test.icliniq.com/cancer-care/types/pediatric-cancers",
     title: "Pediatric (Childhood) Cancers",
     breadCrumbName: "Pediatric (Childhood) Cancers",
     about:
@@ -1110,6 +1119,12 @@ export const Cancer_type_test: CancerTestType[] = [
   },
   {
     path: "kidney-cancer",
+    metaTitle: "Kidney Cancer (Renal Cell Cancer)",
+    metaDescription:
+      "You will face many hard decisions if a loved one or you have been diagnosed with kidney cancer. Including several questions like where should you go for treatment? What are the available treatment options? How to maintain your quality of life? We have tried to describe these concerns, the types, and possible treatment, which will help you decide.",
+    metaKeywords: "Kidney Cancer",
+    canonicalUrl: "https://mskcc-test.icliniq.com/cancer-care/types/",
+    
     title: "Kidney Cancer (Renal Cell Cancer)",
     breadCrumbName: "Kidney Cancer",
     about:
@@ -1178,6 +1193,11 @@ export const Cancer_type_test: CancerTestType[] = [
   },
   {
     path: "benign-blood-disorders",
+    metaTitle: "Benign Blood Disorders Prevention | MSKCC-India",
+    metaDescription:
+      "Find information on the common blood disorders that occur due to cancer treatment and the latest treatment and preventive options available at MSK.",
+    metaKeywords: "Benign Blood Disorders Cancer Treatment",
+    canonicalUrl: "https://mskcc-test.icliniq.com/cancer-care/types/benign-blood-disorders",
     title: "Benign Blood Disorders",
     breadCrumbName: "Benign Blood Disorders",
     about:
@@ -1210,6 +1230,11 @@ export const Cancer_type_test: CancerTestType[] = [
   },
   {
     path: "breast-cancer",
+    metaTitle: "Breast Cancer Treatment | MSKCC-India",
+    metaDescription:
+      "Find information on breast cancer types, the latest treatment options available at MSK, and the team of expert oncologists.",
+    metaKeywords: "Breast Cancer Treatment",
+    canonicalUrl: "https://mskcc-test.icliniq.com/cancer-care/types/breast-cancer",
     title: "Breast Cancer",
     breadCrumbName: "Breast Cancer",
     about:
@@ -1284,6 +1309,10 @@ export const Cancer_type_test: CancerTestType[] = [
   },
   {
     path: "head-and-neck-cancer",
+    metaTitle:  "Head and Neck Cancer Treatment | MSKCC-India",
+    metaDescription:"Find information on head and neck cancer types, the latest treatment options available at MSK, and the team of expert oncologists.",
+    metaKeywords: "Head and Neck Cancer Treatment",
+    canonicalUrl: "https://mskcc-test.icliniq.com/cancer-care/types/head-and-neck-cancer",
       title: "Head & Neck Cancer (Oral Cancer)",
       breadCrumbName: "Head & Neck Cancer (Oral Cancer)",
       about:"You will face many hard decisions if a loved one or you have been diagnosed with head and neck cancer. Including several questions like where should you go for treatment? What are the available treatment options? How to maintain your quality of life? We have tried to describe these concerns, the types, and possible treatment, which will help you decide.",
@@ -1360,6 +1389,11 @@ export const Cancer_type_test: CancerTestType[] = [
 
   {
     path: "lung-cancer",
+    metaTitle: "Lung Cancer Treatment | MSKCC-India",
+    metaDescription:
+      "Find information on lung cancer types, the latest treatment options available at MSK, and the team of expert oncologists.",
+    metaKeywords: "Lung Cancer Treatment",
+    canonicalUrl: "https://mskcc-test.icliniq.com/cancer-care/types/lung-cancer",
     title: "Lung Cancer",
     breadCrumbName: "Lung Cancer",
     about:"You will face many hard decisions if a loved one or you have been diagnosed with lung cancer. Including several questions like where should you go for treatment? What are the available treatment options? How to maintain your quality of life? We have tried to describe these concerns, the types, and possible treatment, which will help you decide.",
@@ -1410,6 +1444,11 @@ export const Cancer_type_test: CancerTestType[] = [
   },
   {
     path: "gastric-and-esophageal-cancer",
+    metaTitle: "Gastric and Esophageal Cancer Treatment | MSKCC-India",
+    metaDescription:
+      "Find information on gastric and esophageal cancer types, the latest treatment options available at MSK, and the team of expert oncologists.",
+    metaKeywords: "Gastric and Esophageal Cancer Treatment",
+    canonicalUrl: "https://mskcc-test.icliniq.com/cancer-care/types/gastric-and-esophageal-cancer",
     title: "Gastric and Esophageal Cancer",
     breadCrumbName: "Gastric and Esophageal Cancer",
     about:"You will face many hard decisions if a loved one or you have been diagnosed with gastric (stomach) or esophageal cancer. Including several questions like where should you go for treatment? What are the available treatment options? How to maintain your quality of life? We have tried to describe these concerns, the types, and possible treatment, which will help you decide.",
@@ -1496,6 +1535,11 @@ export const Cancer_type_test: CancerTestType[] = [
   },
   {
     path: "liver-biliary-and-pancreatic-cancer",
+    metaTitle: "Liver, Biliary, and Pancreatic Cancer Treatment | MSKCC-India ",
+    metaDescription:
+      "Find information on liver, biliary, and pancreatic cancer types, the latest treatment options available at MSK, and the team of expert oncologists.",
+    metaKeywords: "Liver, Biliary, and Pancreatic Cancer Treatment",
+    canonicalUrl: "https://mskcc-test.icliniq.com/cancer-care/types/liver-biliary-and-pancreatic-cancer",
     title: "Liver, Biliary, and Pancreatic Cancer",
     breadCrumbName: "Liver, Biliary, and Pancreatic Cancer",
     about:"You will face many hard decisions if a loved one or you have been diagnosed with liver, biliary (bile duct cancer or cholangiocarcinoma), or pancreatic cancer. Including several questions like where should you go for treatment? What are the available treatment options? How to maintain your quality of life? We have tried to describe these concerns, the types, and possible treatment, which will help you decide.",
@@ -1636,6 +1680,11 @@ export const Cancer_type_test: CancerTestType[] = [
   },
   {
     path: "colorectal-cancer",
+    metaTitle: "Colorectal Cancer Treatment | MSKCC-India",
+    metaDescription:
+      "Find information on colorectal cancer types, the latest treatment options available at MSK, and the team of expert oncologists.",
+    metaKeywords: "Colorectal Cancer Treatment",
+    canonicalUrl: "https://mskcc-test.icliniq.com/cancer-care/types/colorectal-cancer",
     title: "Colorectal Cancer",
     breadCrumbName: "Colorectal Cancer",
     about:"You will face many hard decisions if a loved one or you have been diagnosed with colorectal cancer. Including several questions like where should you go for treatment? What are the available treatment options? How to maintain your quality of life? We have tried to describe these concerns, the types, and possible treatment, which will help you decide.",
@@ -1680,6 +1729,11 @@ export const Cancer_type_test: CancerTestType[] = [
   },
   {
     path:"prostate-cancer",
+    metaTitle: "Prostate Cancer Treatment | MSKCC-India",
+    metaDescription:
+      "Find information on prostate cancer types, the latest treatment options available at MSK, and the team of expert oncologists.",
+    metaKeywords: "Prostate Cancer Treatment",
+    canonicalUrl: "https://mskcc-test.icliniq.com/cancer-care/types/prostate-cancer",
     title: "Prostate Cancer",
     breadCrumbName: "Prostate Cancer",
     about:"You will face many hard decisions if a loved one or you have been diagnosed with prostate cancer. Including several questions like where should you go for treatment? What are the available treatment options? How to maintain your quality of life? We have tried to describe these concerns, the types, and possible treatment, which will help you decide.",
@@ -1727,6 +1781,11 @@ export const Cancer_type_test: CancerTestType[] = [
   },
   {
     path:"sarcoma",
+    metaTitle: "Sarcoma Treatment | MSKCC-India",
+    metaDescription:
+      "Find information on soft tissue sarcoma types, the latest treatment options available at MSK, and the team of expert oncologists.",
+    metaKeywords: "Sarcoma Treatment",
+    canonicalUrl: "https://mskcc-test.icliniq.com/cancer-care/types/sarcoma",
     title: "Sarcoma",
     breadCrumbName: "Sarcoma",
     about:"You will face many hard decisions if a loved one or you have been diagnosed with sarcoma. Including several questions like where should you go for treatment? What are the available treatment options? How to maintain your quality of life? We have tried to describe these concerns, the types, and possible treatment, which will help you decide.",
@@ -1808,6 +1867,11 @@ export const Cancer_type_test: CancerTestType[] = [
      ]
   },{
     path:"lymphoma",
+    metaTitle: "Lymphoma Treatment | MSKCC-India",
+    metaDescription:
+      "Find information on lymphoma types, the latest treatment options available at MSK, and the team of expert oncologists.",
+    metaKeywords: "Lymphoma Treatment",
+    canonicalUrl: "https://mskcc-test.icliniq.com/cancer-care/types/lymphoma",
     title: "Lymphoma",
     breadCrumbName: "Lymphoma",
     about:"You will face many hard decisions if a loved one or you have been diagnosed with lymphoma. Including several questions like where should you go for treatment? What are the available treatment options? How to maintain your quality of life? We have tried to describe these concerns, the types, and possible treatment, which will help you decide.",
@@ -1892,6 +1956,11 @@ export const Cancer_type_test: CancerTestType[] = [
     ]
   },{
     path:"leukemia",
+    metaTitle: "Leukemia Treatment | MSKCC-India",
+    metaDescription:
+      "Find information on leukemia types, the latest treatment options available at MSK, and the team of expert oncologists.",
+    metaKeywords: "Leukemia Treatment",
+    canonicalUrl: "https://mskcc-test.icliniq.com/cancer-care/types/leukemia",
     title: "Leukemia",
     breadCrumbName: "Leukemia",
     about:"You will face many hard decisions if a loved one or you have been diagnosed with leukemia. Including several questions like where should you go for treatment? What are the available treatment options? How to maintain your quality of life? We have tried to describe these concerns, the types, and possible treatment, which will help you decide.",
@@ -1943,6 +2012,11 @@ bodyTwo:"Acute leukemia spreads and worsens quickly and requires aggressive trea
   },
   {
     path:"multiple-myeloma",
+    metaTitle: "Multiple Myeloma Treatment | MSKCC-India",
+    metaDescription:
+      "Find information on multiple myeloma types, the latest treatment options available at MSK, and the team of expert oncologists.",
+    metaKeywords: "Multiple Myeloma Treatment",
+    canonicalUrl: "https://mskcc-test.icliniq.com/cancer-care/types/multiple-myeloma",
     title: "Multiple Myeloma",
     breadCrumbName: "Multiple Myeloma",
     about:"You will face many hard decisions if a loved one or you have been diagnosed with multiple myeloma. Including several questions like where should you go for treatment? What are the available treatment options? How to maintain your quality of life? We have tried to describe these concerns, the types, and possible treatment, which will help you decide.",
@@ -2000,6 +2074,11 @@ bodyTwo:"Acute leukemia spreads and worsens quickly and requires aggressive trea
   },
   {
     path:"ovarian-cervical-and-endometrial-cancer",
+    metaTitle: "Ovarian, Cervical, and Endometrial Cancer Treatment | MSKCC-India",
+    metaDescription:
+      "Find information on ovarian, cervical, and endometrial cancer types, the latest treatment options available at MSK, and the team of expert oncologists.",
+    metaKeywords: "Ovarian, Cervical, and Endometrial Cancer Treatment",
+    canonicalUrl: "https://mskcc-test.icliniq.com/cancer-care/types/ovarian-cervical-and-endometrial-cancer",
     title: "Ovarian, Cervical, and Endometrial Cancer",
     breadCrumbName: "Ovarian, Cervical, and Endometrial Cancer",
     about:"You will face many hard decisions if a loved one or you have been diagnosed with multiple myeloma. Including several questions like where should you go for treatment? What are the available treatment options? How to maintain your quality of life? We have tried to describe these concerns, the types, and possible treatment, which will help you decide.",
@@ -2104,6 +2183,11 @@ bodyTwo:"Acute leukemia spreads and worsens quickly and requires aggressive trea
   {
 
     path:"brain-tumor-and-cancer",
+    metaTitle: "Brain Tumor and Cancer Treatment | MSKCC-India",
+    metaDescription:
+      "Find information on various brain tumors and cancer types, the latest treatment options available at MSK, and the team of expert oncologists.",
+    metaKeywords: "Brain Tumor and Cancer Treatment",
+    canonicalUrl: "https://mskcc-test.icliniq.com/cancer-care/types/brain-tumor-and-cancer",
     title: "Brain Tumors and Cancers",
     breadCrumbName: "Brain Tumors and Cancers",
     about:"You will face many hard decisions if a loved one or you have been diagnosed with a brain tumor or cancer. Including several questions like where should you go for treatment? What are the available treatment options? How to maintain your quality of life? We have tried to describe these concerns, the types, and possible treatment, which will help you decide.",
