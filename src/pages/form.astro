@@ -1,4 +1,5 @@
 ---
+import fs, { readFile } from 'fs';
 if (Astro.request.method === "POST") {
   try {
     const data: FormData = await Astro.request.formData();
@@ -6,14 +7,14 @@ if (Astro.request.method === "POST") {
     console.log('name', data.get("name"));
     console.log('email', data.get("email"));
     console.log('password', data.get("password"));
+    
     const file = data.get("fileToUpload")! as File;
-    const reader = new FileReader();
-    reader.readAsText(file);
-    reader.onload = () => {
-      const contents = reader.result as string;
-      console.log(contents);
-    };
     console.log('file', file);
+    const textDecoder = new TextDecoder();
+    file.arrayBuffer().then((buffer: ArrayBuffer) => {
+      console.log('buffer', buffer);
+      console.log('content', textDecoder.decode(buffer))
+    });
   } catch (error) {
     if (error instanceof Error) {
       console.error(error.message);
@@ -22,7 +23,7 @@ if (Astro.request.method === "POST") {
 }
 ---
 <h1>Register</h1>
-<form method="POST">
+<form method="POST" enctype="multipart/form-data">
   <label>
     Username:
     <input type="text" name="name" required />
