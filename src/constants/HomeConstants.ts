@@ -960,7 +960,7 @@ export const FAQ_QUESTIONS: FaqQuestionType[] = [
       "We understand that not everyone needs a comprehensive second opinion. For people who require select services, our standalone consults include:",
       [
         "Pathology and radiology review",
-        "Pathology and radiology review",
+        "Genetic sequencing and analysis of cancer",
         "Customized written care plan",
         "Live video consultation",
         "Integrative care plan",
