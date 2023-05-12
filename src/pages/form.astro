@@ -1,0 +1,31 @@
+---
+if (Astro.request.method === "POST") {
+  try {
+    const data = await Astro.request.formData();
+    
+    console.log('field1', data.get("field1"));
+    console.log('field2', data.get("field2"));
+    console.log('field3', data.get("field3"));
+  } catch (error) {
+    if (error instanceof Error) {
+      console.error(error.message);
+    }
+  }
+}
+---
+<h1>Register</h1>
+<form method="POST">
+  <label>
+    Username:
+    <input type="text" name="field1" required />
+  </label>
+  <label>
+    Email:
+    <input type="email" name="field2" required />
+  </label>
+  <label>
+    Password:
+    <input type="password" name="field3" required minlength="6" />
+  </label>
+  <button>Submit</button>
+</form>
