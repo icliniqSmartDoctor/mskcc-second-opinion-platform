@@ -1,12 +1,15 @@
 ---
 if (Astro.request.method === "POST") {
   try {
-    const data = await Astro.request.formData();
+    const data: FormData = await Astro.request.formData();
 
     console.log('name', data.get("name"));
     console.log('email', data.get("email"));
     console.log('password', data.get("password"));
-    const file = data.get("fileToUpload");
+    const file = data.get("fileToUpload")! as File;
+    file.arrayBuffer().then((buffer) => {
+      console.log('buffer', buffer);
+    });
     console.log('file', file);
   } catch (error) {
     if (error instanceof Error) {
