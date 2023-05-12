@@ -18,8 +18,13 @@ type MskDoctorsType = {
 
 export type DoctorInfoParams = {
   lable: string;
+  subHead?:subHeading[];
   values: string[];
 };
+export type subHeading={
+  lable:string
+  values:string[]
+}
 
 export type DoctorInfo = {
   residency: DoctorInfoParams;
@@ -645,8 +650,8 @@ export const DOCTOR_DETAILS: DoctorDetails[] = [
       "Dr. DeAngelis is a neuro-oncologist who has more than 30 years of experience in treating patients with brain tumors and associated complications, such as cognitive impairment and strokes. As the Physician-in-Chief and Chief Medical Officer at Memorial Sloan Kettering, Dr. DeAngelis oversees all clinical, research, and medical education efforts. She is also a co-founder and member of the Brain Tumor Center at Memorial Sloan Kettering. She has conducted and led various national trials of investigational drugs used in the treatment of primary central nervous system lymphoma and new brain tumor treatments.",
     doctorInfo: {
       residency: {
-        lable: "Residency",
-        values: ["Northwestern University"],
+        lable: "",
+        values: [],
       },
 
       fellowships: {
@@ -746,20 +751,25 @@ export const DOCTOR_DETAILS: DoctorDetails[] = [
       },
       areaOfExpertise: {
         lable: "Area Of Expertise",
-        values: [
-          "Head and Neck Surgery for:",
-          "Mouth",
-          "Throat",
-          "Larynx",
-          "Sinuses",
-          "Skull base",
-          "Thyroid",
-          "Salivary glands",
-          "Skin",
-          "Soft tissues",
-          "Bone tumors",
+        subHead:[
+          {
+            lable:"Head and Neck Surgery for:",
+            values:[
+            "Mouth",
+            "Throat",
+            "Larynx",
+            "Sinuses",
+            "Skull base",
+            "Thyroid",
+            "Salivary glands",
+            "Skin",
+            "Soft tissues",
+            "Bone tumors"]
+          }
         ],
-      },
+        values: []
+        
+         },
     },
     education: ["MD - Maharaja Sayajirao University"],
   },
@@ -797,14 +807,16 @@ export const DOCTOR_DETAILS: DoctorDetails[] = [
       },
       areaOfExpertise: {
         lable: "Area Of Expertise",
+        subHead:[
+          {
+            lable:"Radiation therapy for:",
+            values:[
+              "Anal cancer","Gallbladder cancer","Liver cancer","Bile duct cancer","Gastric cancer","Pancreatic cancer"
+            ]
+          }
+        ],
         values: [
-          "Radiation therapy for:",
-          "Anal cancer",
-          "Gallbladder cancer",
-          "Liver cancer",
-          "Bile duct cancer",
-          "Gastric cancer",
-          "Pancreatic cancer",
+          
         ],
       },
     },
