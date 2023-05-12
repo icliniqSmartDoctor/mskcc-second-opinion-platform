@@ -795,15 +795,13 @@ export const DOCTOR_DETAILS: DoctorDetails[] = [
       residency: {
         lable: "Residency",
         values: [
-          "General Surgery - SSG Hospital",
-          "Surgical Oncology - Memorial Sloan Kettering Cancer Center",
-          "Surgery - New York Infirmary",
+          "Radiation Oncology - University of Virginia"
         ],
       },
 
       fellowships: {
         lable: "Fellowships",
-        values: ["Memorial Sloan Kettering Cancer Center"],
+        values: ["Radiation Oncology"],
       },
       boardOfCertification: {
         lable: "",
