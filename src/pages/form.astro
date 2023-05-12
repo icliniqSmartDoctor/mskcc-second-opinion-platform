@@ -7,9 +7,12 @@ if (Astro.request.method === "POST") {
     console.log('email', data.get("email"));
     console.log('password', data.get("password"));
     const file = data.get("fileToUpload")! as File;
-    file.arrayBuffer().then((buffer) => {
-      console.log('buffer', buffer);
-    });
+    const reader = new FileReader();
+    reader.readAsText(file);
+    reader.onload = () => {
+      const contents = reader.result as string;
+      console.log(contents);
+    };
     console.log('file', file);
   } catch (error) {
     if (error instanceof Error) {
