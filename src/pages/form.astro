@@ -2,10 +2,12 @@
 if (Astro.request.method === "POST") {
   try {
     const data = await Astro.request.formData();
-    
-    console.log('field1', data.get("field1"));
-    console.log('field2', data.get("field2"));
-    console.log('field3', data.get("field3"));
+
+    console.log('name', data.get("name"));
+    console.log('email', data.get("email"));
+    console.log('password', data.get("password"));
+    const file = data.get("fileToUpload");
+    console.log('file', file);
   } catch (error) {
     if (error instanceof Error) {
       console.error(error.message);
@@ -17,15 +19,20 @@ if (Astro.request.method === "POST") {
 <form method="POST">
   <label>
     Username:
-    <input type="text" name="field1" required />
+    <input type="text" name="name" required />
   </label>
   <label>
     Email:
-    <input type="email" name="field2" required />
+    <input type="email" name="email" required />
   </label>
   <label>
     Password:
-    <input type="password" name="field3" required minlength="6" />
+    <input type="password" name="password" required minlength="6" />
   </label>
+  <label>
+    File:
+    <input type="file" name="fileToUpload" id="fileToUpload">
+  </label>
+  
   <button>Submit</button>
 </form>
