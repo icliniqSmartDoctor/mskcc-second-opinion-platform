@@ -1,5 +1,4 @@
 ---
-import fs, { readFile } from 'fs';
 if (Astro.request.method === "POST") {
   try {
     const data: FormData = await Astro.request.formData();
@@ -7,7 +6,7 @@ if (Astro.request.method === "POST") {
     console.log('name', data.get("name"));
     console.log('email', data.get("email"));
     console.log('password', data.get("password"));
-    
+
     const file = data.get("fileToUpload")! as File;
     console.log('file', file);
     const textDecoder = new TextDecoder();
