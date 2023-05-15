@@ -12,7 +12,7 @@ const DoctorCard = (props: doctor_info) => {
       <div className="border-t-4 border-t-blue-500 w-full">
         <div className="p-7 pt-10 shadow-lg mb-10">
           <div className=" bg-white text-center mb-30">
-            <div className="pl-5 pr-5">
+            <div className="flex justify-center">
               <img
                 src={`${props.image}`}
                 alt={`${props.doctorName}`}

@@ -30,7 +30,14 @@ function bodyFormatter(body: string | (string | string[])[]): ReactNode {
           })}
         </>
       ) : (
-        <p className="">{body}</p>
+        <p className="">
+          {body.split("\n").map((data) => (
+            <>
+              {data}
+              <br />
+            </>
+          ))}
+        </p>
       )}
     </>
   );
@@ -56,9 +63,22 @@ function subItemFormatter(subItems: string[] | CancerSubItemType[]): ReactNode {
       <div key={index}>
         <ul className="list-disc list-inside">
           <li>
-            <span className="font-medium ">{subItem.heading}</span> 
-            {subItem.body && <span>-{subItem.body}</span>}
-            <div className="pl-10 pt-3 pb-3">
+            <span className="font-semibold tracking-widest ">
+              {subItem.heading}
+            </span>
+            {subItem.body && (
+              <span className="leading-4 font-rubik ">
+                {" "}
+                -{" "}
+                {subItem.body.split("\n").map((data) => (
+                  <>
+                    {data}
+                    <br />
+                  </>
+                ))}
+              </span>
+            )}
+            <div className="pl-10 pt-5">
               {subItemFormatter(subItem.subItems!)}
             </div>
           </li>
@@ -76,14 +96,14 @@ const CancerInfo = ({ info }: CancerType) => {
           return (
             <>
               {res.infoTitle && (
-                <h1 className="text-4xl font-semibold font-poppins tracking-wider pt-5">
+                <h1 className="text-4xl font-semibold font-poppins tracking-wider pt-9">
                   {res.infoTitle}
                 </h1>
               )}
               <div className="mt-6 font-semibold text-xl font-poppins tracking-wider pt-5">
                 {res.heading}
               </div>
-              <div className="mb-5 mt-2">
+              <div className="mb-8 mt-2">
                 <img
                   src="https://assets.icliniq.com/v2/assets/images/mskcc/img/shape/section-title-line-v1.png"
                   alt="Title line"
@@ -91,7 +111,7 @@ const CancerInfo = ({ info }: CancerType) => {
                 />
               </div>
               {res.body && (
-                <div>
+                <p>
                   {bodyFormatter(res.body)}{" "}
                   <span>
                     {res.link && (
@@ -103,10 +123,16 @@ const CancerInfo = ({ info }: CancerType) => {
                       </a>
                     )}
                   </span>{" "}
-                </div>
+                </p>
               )}
               {res.subItems && (
-                <div className="pt-5">{subItemFormatter(res.subItems)}{res.bodyTwo &&(<div>{res.bodyTwo}</div>)}</div>
+                <>
+                  <div className="pt-3 pl-5">
+                    {subItemFormatter(res.subItems)}
+                  </div>
+
+                  {res.bodyTwo && <div>{res.bodyTwo}</div>}
+                </>
               )}
             </>
           );

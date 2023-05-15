@@ -18,8 +18,13 @@ type MskDoctorsType = {
 
 export type DoctorInfoParams = {
   lable: string;
+  subHead?:subHeading[];
   values: string[];
 };
+export type subHeading={
+  lable:string
+  values:string[]
+}
 
 export type DoctorInfo = {
   residency: DoctorInfoParams;
@@ -68,6 +73,10 @@ type FaqQuestionType = {
 
 export type CancerTestType = {
   path: string;
+  metaTitle: string,
+  metaDescription:string,
+  metaKeywords: string,
+  canonicalUrl: string,
   title: string;
   breadCrumbName: string;
   about: string;
@@ -355,7 +364,7 @@ export const OTHER_CANCER_SPECIALTIES: OtherCancerSpecialty[] = [
   },
   {
     label: "Appendiceal Cancer",
-    description: "Cancer or abnormal growth of cells in the anus (the end of the rectum) is called anal cancer. The anus helps solid waste pass from the body. Anal cancer is rare and is more common in women. More than 90 % of anal cancer is due to the human papillomavirus (HPV), a common sexually transmitted virus. The common signs of anal cancer are anal itching, blood in stools, pain on defecation, or a lump inside the anus.",
+    description: "Appendix cancer or appendiceal cancer is the type of gastrointestinal cancer that originates in the appendix, a small vestigial organ present near the area where the small and large intestine meet. As humans can live everyday life without this organ, and its function is still unknown, the appendix is often removed when it is infected or inflamed. This cancer does not result in any symptoms unless they metastasize to other parts of the body and are often diagnosed accidentally.",
     imgUrl: "https://assets.icliniq.com/v2/assets/images/mskcc/img/mskcc-cancer/Appendiceal-Cancer.png"
   },
   {
@@ -561,7 +570,7 @@ export const DOCTOR_DETAILS: DoctorDetails[] = [
     metaDescription:
       "Sir Dr.Murray Brennan, an oncologic surgeon-scientist, is an expert in soft tissue sarcomas. Learn more about Sir Dr.Brennan here.",
     metaKeywords: "Sir Dr.Murray Brennan,Surgical Oncologist",
-    canonicalUrl: "/cancer-care/doctors/",
+    canonicalUrl: "https://mskcc-test.icliniq.com/cancer-care/doctors/",
     drName: "Dr.Murray Brennan",
     specialist: "SURGICAL ONCOLOGIST",
     designation:
@@ -597,7 +606,7 @@ export const DOCTOR_DETAILS: DoctorDetails[] = [
     metaDescription:
       "Dr.Mrinal Gounder, a medical oncologist, specializes in the treatment of soft tissue and bone sarcomas. Learn more about Dr.Gounder here.",
     metaKeywords: "Dr.Mrinal Gounder,Medical Oncologist",
-    canonicalUrl: "/cancer-care/doctors/",
+    canonicalUrl: "https://mskcc-test.icliniq.com/cancer-care/doctors/",
     drName: "Dr.Mrinal Gounder",
     specialist: "MEDICAL ONCOLOGIST",
     designation:
@@ -635,7 +644,7 @@ export const DOCTOR_DETAILS: DoctorDetails[] = [
     metaDescription:
       "Dr.Lisa DeAngelis, a neuro-oncologist, has spent more than 30 years treating patients with brain tumors. Learn more about Dr.DeAngelis here.",
     metaKeywords: "Dr.Lisa DeAngelis,Neuro-oncologist",
-    canonicalUrl: "/cancer-care/doctors/",
+    canonicalUrl: "https://mskcc-test.icliniq.com/cancer-care/doctors/",
     drName: "Dr. Lisa DeAngelis",
     specialist: "Neuro-Oncologist",
     designation:
@@ -645,8 +654,8 @@ export const DOCTOR_DETAILS: DoctorDetails[] = [
       "Dr. DeAngelis is a neuro-oncologist who has more than 30 years of experience in treating patients with brain tumors and associated complications, such as cognitive impairment and strokes. As the Physician-in-Chief and Chief Medical Officer at Memorial Sloan Kettering, Dr. DeAngelis oversees all clinical, research, and medical education efforts. She is also a co-founder and member of the Brain Tumor Center at Memorial Sloan Kettering. She has conducted and led various national trials of investigational drugs used in the treatment of primary central nervous system lymphoma and new brain tumor treatments.",
     doctorInfo: {
       residency: {
-        lable: "Residency",
-        values: ["Northwestern University"],
+        lable: "",
+        values: [],
       },
 
       fellowships: {
@@ -682,7 +691,7 @@ export const DOCTOR_DETAILS: DoctorDetails[] = [
     metaDescription:
       "Dr.Monica Morrow, a surgical oncologist, specializes in the treatment of breast cancer. Learn more about Dr.Morrow here.",
     metaKeywords: "Dr.Monica Morrow,Surgical Oncologist",
-    canonicalUrl: "/cancer-care/doctors/",
+    canonicalUrl: "https://mskcc-test.icliniq.com/cancer-care/doctors/",
     drName: "Dr. Monica Morrow",
     specialist: "Surgical Oncologist",
     designation:
@@ -719,7 +728,7 @@ export const DOCTOR_DETAILS: DoctorDetails[] = [
     metaDescription:
       "Dr.Jatin Shah, a surgical oncologist, provides consultations to discuss various treatment options for head and neck cancers. Learn more about Dr.Shah here.",
     metaKeywords: "Dr.Jatin Shah,Surgical Oncologist",
-    canonicalUrl: "/cancer-care/doctors/",
+    canonicalUrl: "https://mskcc-test.icliniq.com/cancer-care/doctors/",
     drName: "Dr. Jatin Shah",
     specialist: "Surgical Oncologist",
     designation: "Elliot W. Strong Chair in Head and Neck Oncology",
@@ -746,20 +755,25 @@ export const DOCTOR_DETAILS: DoctorDetails[] = [
       },
       areaOfExpertise: {
         lable: "Area Of Expertise",
-        values: [
-          "Head and Neck Surgery for:",
-          "Mouth",
-          "Throat",
-          "Larynx",
-          "Sinuses",
-          "Skull base",
-          "Thyroid",
-          "Salivary glands",
-          "Skin",
-          "Soft tissues",
-          "Bone tumors",
+        subHead:[
+          {
+            lable:"Head and Neck Surgery for:",
+            values:[
+            "Mouth",
+            "Throat",
+            "Larynx",
+            "Sinuses",
+            "Skull base",
+            "Thyroid",
+            "Salivary glands",
+            "Skin",
+            "Soft tissues",
+            "Bone tumors"]
+          }
         ],
-      },
+        values: []
+        
+         },
     },
     education: ["MD - Maharaja Sayajirao University"],
   },
@@ -770,7 +784,7 @@ export const DOCTOR_DETAILS: DoctorDetails[] = [
     metaDescription:
       "Dr.Christopher Crane, a radiation oncologist, treats patients suffering from gastrointestinal cancers. Learn more about Dr.Crane here.",
     metaKeywords: "Dr.Christopher Crane,Radiation Oncologist",
-    canonicalUrl: "/cancer-care/doctors/",
+    canonicalUrl: "https://mskcc-test.icliniq.com/cancer-care/doctors/",
     drName: "Dr.Christopher Crane",
     specialist: "Radiation Oncologist",
     designation: "Vice-Chair, Department of Radiation Oncology",
@@ -781,15 +795,13 @@ export const DOCTOR_DETAILS: DoctorDetails[] = [
       residency: {
         lable: "Residency",
         values: [
-          "General Surgery - SSG Hospital",
-          "Surgical Oncology - Memorial Sloan Kettering Cancer Center",
-          "Surgery - New York Infirmary",
+          "Radiation Oncology - University of Virginia"
         ],
       },
 
       fellowships: {
         lable: "Fellowships",
-        values: ["Memorial Sloan Kettering Cancer Center"],
+        values: ["Radiation Oncology"],
       },
       boardOfCertification: {
         lable: "",
@@ -797,14 +809,16 @@ export const DOCTOR_DETAILS: DoctorDetails[] = [
       },
       areaOfExpertise: {
         lable: "Area Of Expertise",
+        subHead:[
+          {
+            lable:"Radiation therapy for:",
+            values:[
+              "Anal cancer","Gallbladder cancer","Liver cancer","Bile duct cancer","Gastric cancer","Pancreatic cancer"
+            ]
+          }
+        ],
         values: [
-          "Radiation therapy for:",
-          "Anal cancer",
-          "Gallbladder cancer",
-          "Liver cancer",
-          "Bile duct cancer",
-          "Gastric cancer",
-          "Pancreatic cancer",
+          
         ],
       },
     },
@@ -816,7 +830,7 @@ export const DOCTOR_DETAILS: DoctorDetails[] = [
     metaDescription:
       "Dr.Andrew Seidman, a medical oncologist, is experienced in managing early and advanced breast cancer. Learn more about Dr.Seidman here.",
     metaKeywords: "Dr.Andrew Seidman,Medical Oncologist",
-    canonicalUrl: "/cancer-care/doctors/",
+    canonicalUrl: "https://mskcc-test.icliniq.com/cancer-care/doctors/",
     drName: "Dr.Andrew Seidman",
     specialist: "Medical Oncologist",
     designation: "Medical Director, MSK Bobst International Center",
@@ -852,7 +866,7 @@ export const DOCTOR_DETAILS: DoctorDetails[] = [
     metaDescription:
       "Dr.Sergio Giralt, a hematologic oncologist, specializes in treating various blood cancers. Learn more about Dr.Giralt here.",
     metaKeywords: "Dr.Sergio Giralt ,Hematologic Oncologist",
-    canonicalUrl: "/cancer-care/doctors/",
+    canonicalUrl: "https://mskcc-test.icliniq.com/cancer-care/doctors/",
     drName: "Dr.Sergio Giralt",
     specialist: "Hemotologic oncologist",
     designation:
@@ -891,7 +905,7 @@ export const DOCTOR_DETAILS: DoctorDetails[] = [
     metaDescription:
       "Dr.James A. Eastham, a urologic surgeon, is experienced in managing early and advanced prostate cancer. Learn more about Dr.Eastham here.",
     metaKeywords: "Dr.James A. Eastham, SURGICAL ONCOLOGIS",
-    canonicalUrl: "/cancer-care/doctors/",
+    canonicalUrl: "https://mskcc-test.icliniq.com/cancer-care/doctors/",
     drName: "Dr.James A. Eastham",
     specialist: "Surgical oncologist",
     designation: "MD, University of Southern California, Los Angeles",
@@ -945,7 +959,7 @@ export const FAQ_QUESTIONS: FaqQuestionType[] = [
         "Your condition or diagnosis has changed",
         "You are not responding to treatment as expected",
         "Your treatment plan has changed",
-        "You want to explore other treatment option",
+        "You want to explore other treatment options",
         "Your condition is rare",
         "Your doctor recommends surgery",
         "You want the peace of mind that you have an accurate diagnosis and treatment plan",
@@ -960,7 +974,7 @@ export const FAQ_QUESTIONS: FaqQuestionType[] = [
       "We understand that not everyone needs a comprehensive second opinion. For people who require select services, our standalone consults include:",
       [
         "Pathology and radiology review",
-        "Pathology and radiology review",
+        "Genetic sequencing and analysis of cancer",
         "Customized written care plan",
         "Live video consultation",
         "Integrative care plan",
@@ -1004,6 +1018,11 @@ export const FAQ_QUESTIONS: FaqQuestionType[] = [
 export const Cancer_type_test: CancerTestType[] = [
   {
     path: "pediatric-cancers",
+    metaTitle: "Pediatric Cancer Treatment | MSKCC-India",
+    metaDescription:
+      "Find information on pediatric or childhood cancer types, the latest treatment options available at MSK, and the team of expert oncologists.",
+    metaKeywords: "Pediactric Cancers",
+    canonicalUrl: "https://mskcc-test.icliniq.com/cancer-care/types/pediatric-cancers",
     title: "Pediatric (Childhood) Cancers",
     breadCrumbName: "Pediatric (Childhood) Cancers",
     about:
@@ -1098,6 +1117,12 @@ export const Cancer_type_test: CancerTestType[] = [
   },
   {
     path: "kidney-cancer",
+    metaTitle: "Kidney Cancer (Renal Cell Cancer)",
+    metaDescription:
+      "You will face many hard decisions if a loved one or you have been diagnosed with kidney cancer. Including several questions like where should you go for treatment? What are the available treatment options? How to maintain your quality of life? We have tried to describe these concerns, the types, and possible treatment, which will help you decide.",
+    metaKeywords: "Kidney Cancer",
+    canonicalUrl: "https://mskcc-test.icliniq.com/cancer-care/types/",
+    
     title: "Kidney Cancer (Renal Cell Cancer)",
     breadCrumbName: "Kidney Cancer",
     about:
@@ -1166,6 +1191,11 @@ export const Cancer_type_test: CancerTestType[] = [
   },
   {
     path: "benign-blood-disorders",
+    metaTitle: "Benign Blood Disorders Prevention | MSKCC-India",
+    metaDescription:
+      "Find information on the common blood disorders that occur due to cancer treatment and the latest treatment and preventive options available at MSK.",
+    metaKeywords: "Benign Blood Disorders Cancer Treatment",
+    canonicalUrl: "https://mskcc-test.icliniq.com/cancer-care/types/benign-blood-disorders",
     title: "Benign Blood Disorders",
     breadCrumbName: "Benign Blood Disorders",
     about:
@@ -1178,7 +1208,7 @@ export const Cancer_type_test: CancerTestType[] = [
         subItems: [
           {
             heading: "Blood Clots",
-            body: "Blood clotting or coagulation prevents excess blood loss during injury and is a normal physiological process. Platelets (a type of blood cells) and clotting factors (special proteins in the blood) help in clot formation. Sometimes, abnormal clotting of blood can result in a deep vein thrombosis (DVT), where a blood clot forms in a deep vein (the majority of times in the leg), which can also get detached from the vein and travel to major organs like the lungs (pulmonary embolism) and stop blood flow. Cancer patients are more at risk of developing these dangerous blood clots, as the genetic changes that cause cancer also hyperactivate the clotting factors. Some chemotherapy also has similar effects on the clotting factors. Blood clotting or coagulation prevents excess blood loss during injury and is a normal physiological process. Platelets (a type of blood cells) and clotting factors (special proteins in the blood) help in clot formation. Sometimes, abnormal clotting of blood can result in a deep vein thrombosis (DVT), where a blood clot forms in a deep vein (the majority of times in the leg), which can also get detached from the vein and travel to major organs like the lungs (pulmonary embolism) and stop blood flow. Cancer patients are more at risk of developing these dangerous blood clots, as the genetic changes that cause cancer also hyperactivate the clotting factors. Some chemotherapy also has similar effects on the clotting factors."
+            body: "Blood clotting or coagulation prevents excess blood loss during injury and is a normal physiological process. Platelets (a type of blood cells) and clotting factors (special proteins in the blood) help in clot formation. Sometimes, abnormal clotting of blood can result in a deep vein thrombosis (DVT), where a blood clot forms in a deep vein (the majority of times in the leg), which can also get detached from the vein and travel to major organs like the lungs (pulmonary embolism) and stop blood flow. Cancer patients are more at risk of developing these dangerous blood clots, as the genetic changes that cause cancer also hyperactivate the clotting factors. Some chemotherapy also has similar effects on the clotting factors. \nDuring cancer treatment at MSK, patients who develop blood clots have access to various treatment options. Specialists at MSK's Anticoagulation Clinic are experienced in providing a combination of blood clot treatments, such as blood thinners or anticoagulants (Heparin), inferior vena cava filter (a special filter is inserted into the large vein that delivers blood to the heart from the legs), thrombolytics (tissue plasminogen activator), and thrombectomy (clot removal surgery). Hematologists at MSK are also developing a new oral anticoagulant drug, which may cause fewer blood-related complications in the future."
           },
           {
             heading: "Anemia",
@@ -1198,6 +1228,11 @@ export const Cancer_type_test: CancerTestType[] = [
   },
   {
     path: "breast-cancer",
+    metaTitle: "Breast Cancer Treatment | MSKCC-India",
+    metaDescription:
+      "Find information on breast cancer types, the latest treatment options available at MSK, and the team of expert oncologists.",
+    metaKeywords: "Breast Cancer Treatment",
+    canonicalUrl: "https://mskcc-test.icliniq.com/cancer-care/types/breast-cancer",
     title: "Breast Cancer",
     breadCrumbName: "Breast Cancer",
     about:
@@ -1272,6 +1307,10 @@ export const Cancer_type_test: CancerTestType[] = [
   },
   {
     path: "head-and-neck-cancer",
+    metaTitle:  "Head and Neck Cancer Treatment | MSKCC-India",
+    metaDescription:"Find information on head and neck cancer types, the latest treatment options available at MSK, and the team of expert oncologists.",
+    metaKeywords: "Head and Neck Cancer Treatment",
+    canonicalUrl: "https://mskcc-test.icliniq.com/cancer-care/types/head-and-neck-cancer",
       title: "Head & Neck Cancer (Oral Cancer)",
       breadCrumbName: "Head & Neck Cancer (Oral Cancer)",
       about:"You will face many hard decisions if a loved one or you have been diagnosed with head and neck cancer. Including several questions like where should you go for treatment? What are the available treatment options? How to maintain your quality of life? We have tried to describe these concerns, the types, and possible treatment, which will help you decide.",
@@ -1348,6 +1387,11 @@ export const Cancer_type_test: CancerTestType[] = [
 
   {
     path: "lung-cancer",
+    metaTitle: "Lung Cancer Treatment | MSKCC-India",
+    metaDescription:
+      "Find information on lung cancer types, the latest treatment options available at MSK, and the team of expert oncologists.",
+    metaKeywords: "Lung Cancer Treatment",
+    canonicalUrl: "https://mskcc-test.icliniq.com/cancer-care/types/lung-cancer",
     title: "Lung Cancer",
     breadCrumbName: "Lung Cancer",
     about:"You will face many hard decisions if a loved one or you have been diagnosed with lung cancer. Including several questions like where should you go for treatment? What are the available treatment options? How to maintain your quality of life? We have tried to describe these concerns, the types, and possible treatment, which will help you decide.",
@@ -1373,7 +1417,7 @@ export const Cancer_type_test: CancerTestType[] = [
             body:"It is the most common type of lung cancer and is the cause of almost 9 out of every 10 lung cancer cases. It is a slow-growing cancer when compared to SCLC. The three main subtypes are:",
             subItems:[
               {
-                heading:"It is the most common type of lung cancer and is the cause of almost 9 out of every 10 lung cancer cases. It is a slow-growing cancer when compared to SCLC. The three main subtypes are:",
+                heading:"Adenocarcinoma of the Lung ",
                 body:" It originates in the cells that line the tiny air sacs in the lungs (alveoli)."
               },
               {
@@ -1398,6 +1442,11 @@ export const Cancer_type_test: CancerTestType[] = [
   },
   {
     path: "gastric-and-esophageal-cancer",
+    metaTitle: "Gastric and Esophageal Cancer Treatment | MSKCC-India",
+    metaDescription:
+      "Find information on gastric and esophageal cancer types, the latest treatment options available at MSK, and the team of expert oncologists.",
+    metaKeywords: "Gastric and Esophageal Cancer Treatment",
+    canonicalUrl: "https://mskcc-test.icliniq.com/cancer-care/types/gastric-and-esophageal-cancer",
     title: "Gastric and Esophageal Cancer",
     breadCrumbName: "Gastric and Esophageal Cancer",
     about:"You will face many hard decisions if a loved one or you have been diagnosed with gastric (stomach) or esophageal cancer. Including several questions like where should you go for treatment? What are the available treatment options? How to maintain your quality of life? We have tried to describe these concerns, the types, and possible treatment, which will help you decide.",
@@ -1408,42 +1457,43 @@ export const Cancer_type_test: CancerTestType[] = [
         body:"Cancer that originates or develops in the lining of the stomach is called gastric or stomach cancer. It usually grows slowly over several years before resulting in symptoms. This results in cancer getting diagnosed at a later stage, which usually affects the prognosis. Gastric cancer can develop at any part of the stomach, but mostly, they form in the main part (stomach body) or the esophagus (the part that carries food to the stomach when you swallow. ",
         link:"Try out MSK's Gastric Cancer - Disease-Specific Survival Following Surgery (Prediction Tool) nomogram!",
         linkPath:"https://www.mskcc.org/nomograms/gastric",
-        subItems:[
-          {
-            heading:"What Are the Types of Gastric Cancer?",
-            body:"Adenocarcinoma - Almost 95 % of people develop adenocarcinoma, which starts in the tissues that line the stomach. The three types of adenocarcinoma are:",
-            subItems:[
-              {
-                heading:" Non-cardia (Distal) Stomach Cancer",
-                body:"This type is associated with long-term infection with H.pylori (Helicobacter pylori) or long periods of inflammation or irritation in the stomach’s lower part. It is more commonly seen in people living in developing countries.",
-                subItems:[
-                  {
-                    heading:"Proximal Stomach Cancer",
-                    body:"The first part of the stomach that is connected to the esophagus is commonly affected. Proximal stomach cancer is common in the US and affects obese people and people with gastroesophageal reflux disease (GERD).",
-                  },
-                  {
-                    heading:"Diffuse Stomach Cancer",
-                    body:"It is an aggressive type of cancer that develops rapidly in the cells that line the stomach wall. As it does not form a growth or a mass, it is challenging to diagnose. This type commonly affects younger people with a family history or genetic mutations."
-                  },
-                  {
-                    heading:"Gastrointestinal Stromal Tumors",
-                    body:"Cancer that originates in the connective tissue or stomach muscle. Try out MSK's Gastrointestinal Stromal Tumor - Survival Without Recurrence Following Surgery (Prediction Tool) nomogram!"
-                  }
-                  
-                ]
-              },
-              {
-                heading:" Carcinoid Tumors",
-                body:"Tumor from the stomach’s hormone-producing cells."
-              },
-              {
-                heading:" Lymphoma",
-                body:"Cancer that develops in the stomach’s immune cells."
-              }
-            ]
-          }
-        ]
+       
      
+      },
+      {
+        
+          heading:"What Are the Types of Gastric Cancer?",
+          body:"Adenocarcinoma - Almost 95 % of people develop adenocarcinoma, which starts in the tissues that line the stomach. The three types of adenocarcinoma are:",
+          subItems:[
+            {
+              heading:" Non-cardia (Distal) Stomach Cancer",
+              body:"This type is associated with long-term infection with H.pylori (Helicobacter pylori) or long periods of inflammation or irritation in the stomach’s lower part. It is more commonly seen in people living in developing countries.",
+              subItems:[
+                {
+                  heading:"Proximal Stomach Cancer",
+                  body:"The first part of the stomach that is connected to the esophagus is commonly affected. Proximal stomach cancer is common in the US and affects obese people and people with gastroesophageal reflux disease (GERD).",
+                },
+                {
+                  heading:"Diffuse Stomach Cancer",
+                  body:"It is an aggressive type of cancer that develops rapidly in the cells that line the stomach wall. As it does not form a growth or a mass, it is challenging to diagnose. This type commonly affects younger people with a family history or genetic mutations."
+                },
+                {
+                  heading:"Gastrointestinal Stromal Tumors",
+                  body:"Cancer that originates in the connective tissue or stomach muscle. Try out MSK's Gastrointestinal Stromal Tumor - Survival Without Recurrence Following Surgery (Prediction Tool) nomogram!"
+                }
+                
+              ]
+            },
+            {
+              heading:" Carcinoid Tumors",
+              body:"Tumor from the stomach’s hormone-producing cells."
+            },
+            {
+              heading:" Lymphoma",
+              body:"Cancer that develops in the stomach’s immune cells."
+            }
+          ]
+        
       },
       {
         heading:"What Are the Treatment Options for Gastric Cancer?",
@@ -1483,6 +1533,11 @@ export const Cancer_type_test: CancerTestType[] = [
   },
   {
     path: "liver-biliary-and-pancreatic-cancer",
+    metaTitle: "Liver, Biliary, and Pancreatic Cancer Treatment | MSKCC-India ",
+    metaDescription:
+      "Find information on liver, biliary, and pancreatic cancer types, the latest treatment options available at MSK, and the team of expert oncologists.",
+    metaKeywords: "Liver, Biliary, and Pancreatic Cancer Treatment",
+    canonicalUrl: "https://mskcc-test.icliniq.com/cancer-care/types/liver-biliary-and-pancreatic-cancer",
     title: "Liver, Biliary, and Pancreatic Cancer",
     breadCrumbName: "Liver, Biliary, and Pancreatic Cancer",
     about:"You will face many hard decisions if a loved one or you have been diagnosed with liver, biliary (bile duct cancer or cholangiocarcinoma), or pancreatic cancer. Including several questions like where should you go for treatment? What are the available treatment options? How to maintain your quality of life? We have tried to describe these concerns, the types, and possible treatment, which will help you decide.",
@@ -1493,68 +1548,66 @@ export const Cancer_type_test: CancerTestType[] = [
         body:"Liver cancer is cancer that develops in the liver, the largest internal organ located below the right lung. Hepatocytes are the cells present in the liver, and these cells are responsible for breaking down and storing nutrients and removing waste from the body. Our liver also produces bile, a digestive fluid or enzyme, and also makes proteins that stop bleeding. Than primary liver cancers (cancer that starts in the liver), liver metastases (liver cancer that has spread from some other body part) are more common. But nowadays, the number of people with primary liver cancer is increasing in the US, as more people are affected by liver diseases that increase the risk of liver cancer, like hepatitis C.",
         link:"Try out MSK's Liver Cancer - Risk of Perioperative Transfusion in Hepatectomy (Prediction Tool) nomogram!",
         linkPath:"https://www.mskcc.org/nomograms/liver",
-        subItems:[
-
-          {
-            heading:"What Are the Types of Liver Cancer?",
-            subItems:[
-              {
-                heading:"Hepatocellular Carcinoma",
-                body:"It is the most common primary liver cancer that begins in hepatocytes. Usually, a single tumor forms that spread to other organs eventually. Excessive alcohol consumption, chronic hepatitis B and C infection, nonalcoholic fatty liver disease, and too much iron in the body are some risk factors."
-              },
-              {
-                heading:" Intrahepatic Cholangiocarcinoma ",
-                body:"It is the second most common type of primary liver cancer that starts in the bile duct (the tube that delivers bile). People infected with hepatitis B or C virus, those with primary sclerosing cholangitis (a condition resulting in inflammation and scarring of the bile ducts), and nonalcoholic fatty liver disease are at an increased risk of developing this type of liver cancer."
-              },
-              {
-                heading:"Fibrolamellar-Hepatocellular Carcinoma (FLL-HCC)",
-                body:"Otherwise called fibrolamellar carcinoma. It is a rare type of liver cancer that develops in young adults (ages between 20 and 30 years). It is less aggressive than the other forms.",
-        
-              },
-              {
-                heading:" Angiosarcomas, Hemangiosarcomas, and Hemangioendotheliomas ",
-                body:" Tumors that form in the inner lining of blood vessels. They are curable and almost always seen in infants."
-              },
-              {
-                heading:"Hepatoblastomas",
-                body:" These curable liver tumors consist of tissue that looks like fetal liver, bile duct cells, or mature liver cells when seen under the microscope."
-              },
-              {
-                heading:" Benign Liver Tumors",
-                body:"Non-cancerous tumors in the liver do not cause symptoms and are diagnosed accidentally. Adenomas, hemangiomas, liver cysts, and focal nodular hyperplasias are some of the most common benign liver tumors."
-              },
-              
-            ]
-          },
-          {
-            heading:"What Are the Treatment Options for Liver Cancer?",
-            body:"All cancer patients at MSK are offered compassionate and personalized care from their experts. Specialists experienced in surgery, chemotherapy, radiation therapy, rehabilitation, and maintaining the quality of life will work closely to develop a customized treatment plan to ensure the best outcome possible. Doctors at MSK have treated more than 5,000 liver cancer patients in the last 10 years. Patients also benefit from new chemotherapy drugs and other therapies through thousands of ongoing clinical trials at MSK."
-          }
-        ]
       },
+      {
+        
+          heading:"What Are the Types of Liver Cancer?",
+          subItems:[
+            {
+              heading:"Hepatocellular Carcinoma",
+              body:"It is the most common primary liver cancer that begins in hepatocytes. Usually, a single tumor forms that spread to other organs eventually. Excessive alcohol consumption, chronic hepatitis B and C infection, nonalcoholic fatty liver disease, and too much iron in the body are some risk factors."
+            },
+            {
+              heading:" Intrahepatic Cholangiocarcinoma ",
+              body:"It is the second most common type of primary liver cancer that starts in the bile duct (the tube that delivers bile). People infected with hepatitis B or C virus, those with primary sclerosing cholangitis (a condition resulting in inflammation and scarring of the bile ducts), and nonalcoholic fatty liver disease are at an increased risk of developing this type of liver cancer."
+            },
+            {
+              heading:"Fibrolamellar-Hepatocellular Carcinoma (FLL-HCC)",
+              body:"Otherwise called fibrolamellar carcinoma. It is a rare type of liver cancer that develops in young adults (ages between 20 and 30 years). It is less aggressive than the other forms.",
+      
+            },
+            {
+              heading:" Angiosarcomas, Hemangiosarcomas, and Hemangioendotheliomas ",
+              body:" Tumors that form in the inner lining of blood vessels. They are curable and almost always seen in infants."
+            },
+            {
+              heading:"Hepatoblastomas",
+              body:" These curable liver tumors consist of tissue that looks like fetal liver, bile duct cells, or mature liver cells when seen under the microscope."
+            },
+            {
+              heading:" Benign Liver Tumors",
+              body:"Non-cancerous tumors in the liver do not cause symptoms and are diagnosed accidentally. Adenomas, hemangiomas, liver cysts, and focal nodular hyperplasias are some of the most common benign liver tumors."
+            },
+            
+          ]
+        },
+        {
+          heading:"What Are the Treatment Options for Liver Cancer?",
+          body:"All cancer patients at MSK are offered compassionate and personalized care from their experts. Specialists experienced in surgery, chemotherapy, radiation therapy, rehabilitation, and maintaining the quality of life will work closely to develop a customized treatment plan to ensure the best outcome possible. Doctors at MSK have treated more than 5,000 liver cancer patients in the last 10 years. Patients also benefit from new chemotherapy drugs and other therapies through thousands of ongoing clinical trials at MSK."
+        }
+      ,
       {
         infoTitle:"Biliary Cancer (Bile Duct Cancer or Cholangiocarcinoma)",
         heading:"What Is Biliary Cancer?",
         body:"Biliary cancer or cholangiocarcinoma is cancer that forms in the thin bile ducts that carry the digestive enzyme bile. These ducts serve as the connection between the gallbladder and small intestine. Biliary cancer is common in people older than 50 but can occur at any age. It is a rare and extremely challenging cancer to treat.",
+      
+      },
+      {
+
+        heading:"What Are the Types of Biliary Cancer?",
         subItems:[
           {
-            heading:"What Are the Types of Biliary Cancer?",
-            subItems:[
-              {
-                heading:"Intrahepatic Cholangiocarcinoma ",
-                body:"This develops in the parts of the bile ducts that are present within the liver, which is why it is also classified under liver cancer."
-              },
-              {
-                heading:" Hilar Cholangiocarcinoma ",
-                body:" Also called perihilar cholangiocarcinoma. It is when cancer develops in the bile ducts that exit the liver."
-              },
-              {
-                heading:" Distal Cholangiocarcinoma",
-                body:" This biliary cancer develops in the bile duct closest to the small intestine."
-              }
-            ]
+            heading:"Intrahepatic Cholangiocarcinoma ",
+            body:"This develops in the parts of the bile ducts that are present within the liver, which is why it is also classified under liver cancer."
+          },
+          {
+            heading:" Hilar Cholangiocarcinoma ",
+            body:" Also called perihilar cholangiocarcinoma. It is when cancer develops in the bile ducts that exit the liver."
+          },
+          {
+            heading:" Distal Cholangiocarcinoma",
+            body:" This biliary cancer develops in the bile duct closest to the small intestine."
           }
-          
         ]
       },
       {
@@ -1625,6 +1678,11 @@ export const Cancer_type_test: CancerTestType[] = [
   },
   {
     path: "colorectal-cancer",
+    metaTitle: "Colorectal Cancer Treatment | MSKCC-India",
+    metaDescription:
+      "Find information on colorectal cancer types, the latest treatment options available at MSK, and the team of expert oncologists.",
+    metaKeywords: "Colorectal Cancer Treatment",
+    canonicalUrl: "https://mskcc-test.icliniq.com/cancer-care/types/colorectal-cancer",
     title: "Colorectal Cancer",
     breadCrumbName: "Colorectal Cancer",
     about:"You will face many hard decisions if a loved one or you have been diagnosed with colorectal cancer. Including several questions like where should you go for treatment? What are the available treatment options? How to maintain your quality of life? We have tried to describe these concerns, the types, and possible treatment, which will help you decide.",
@@ -1669,6 +1727,11 @@ export const Cancer_type_test: CancerTestType[] = [
   },
   {
     path:"prostate-cancer",
+    metaTitle: "Prostate Cancer Treatment | MSKCC-India",
+    metaDescription:
+      "Find information on prostate cancer types, the latest treatment options available at MSK, and the team of expert oncologists.",
+    metaKeywords: "Prostate Cancer Treatment",
+    canonicalUrl: "https://mskcc-test.icliniq.com/cancer-care/types/prostate-cancer",
     title: "Prostate Cancer",
     breadCrumbName: "Prostate Cancer",
     about:"You will face many hard decisions if a loved one or you have been diagnosed with prostate cancer. Including several questions like where should you go for treatment? What are the available treatment options? How to maintain your quality of life? We have tried to describe these concerns, the types, and possible treatment, which will help you decide.",
@@ -1710,12 +1773,17 @@ export const Cancer_type_test: CancerTestType[] = [
       },
       {
         heading:"What Are the Treatment Options for Prostate Cancer?",
-        body:"Only regular screening is needed for men with slow-growing prostate cancer without any symptoms. Screening includes regular monitoring of the tumor’s growths and looking for any changes. MSK's surgeons are highly experienced in performing prostate surgery, robotic, laparoscopic, and open surgery for patients needing surgery. Their surgeons are working tirelessly to improve the outcome of radical prostatectomy. MSK surgeons are also experienced in performing radical salvage prostatectomy. This is done for patients with prostate cancer recurrence after radiation therapy. MSK's radiation oncology team is leading in treating this cancer with various types of radiotherapy, such as image-guided, intensity-modulated radiation therapy (IG-IMRT), stereotactic high-precision radiosurgery (similar to CyberKnife), stereotactic hypofractionated radiation therapy (MSK PreciseTM), and low-dose-rate permanent seed implants and high-dose-rate temporary seed implants (both forms of brachytherapy).For localized prostate tumors, patients can benefit from focal therapy, a term used for non-invasive techniques like freezing, electricity, heat, or highly targeted seed implants. These therapies are targeted to destroy only the cancerous part of the prostate. For aggressive prostate cancers, patients are offered a combined treatment approach, including hormone therapy, brachytherapy, and radiation therapy. MSK is also the coordinating center for the Prostate Cancer Clinical Trials Consortium, which is a collaboration between 13 leading centers focused on early drug development and clinical trial design. MSK's follow-up care experts help patients with aggressive prostate cancers cope with maintaining a good quality of life. And patients who experience sexual problems can benefit from MSK's Male Sexual and Reproductive Medicine Program."
+        body:"Only regular screening is needed for men with slow-growing prostate cancer without any symptoms. Screening includes regular monitoring of the tumor’s growths and looking for any changes. MSK's surgeons are highly experienced in performing prostate surgery, robotic, laparoscopic, and open surgery for patients needing surgery. Their surgeons are working tirelessly to improve the outcome of radical prostatectomy. MSK surgeons are also experienced in performing radical salvage prostatectomy. This is done for patients with prostate cancer recurrence after radiation therapy. MSK's radiation oncology team is leading in treating this cancer with various types of radiotherapy, such as image-guided, intensity-modulated radiation therapy (IG-IMRT), stereotactic high-precision radiosurgery (similar to CyberKnife), stereotactic hypofractionated radiation therapy (MSK PreciseTM), and low-dose-rate permanent seed implants and high-dose-rate temporary seed implants (both forms of brachytherapy). \n For localized prostate tumors, patients can benefit from focal therapy, a term used for non-invasive techniques like freezing, electricity, heat, or highly targeted seed implants. These therapies are targeted to destroy only the cancerous part of the prostate. For aggressive prostate cancers, patients are offered a combined treatment approach, including hormone therapy, brachytherapy, and radiation therapy. MSK is also the coordinating center for the Prostate Cancer Clinical Trials Consortium, which is a collaboration between 13 leading centers focused on early drug development and clinical trial design. MSK's follow-up care experts help patients with aggressive prostate cancers cope with maintaining a good quality of life. And patients who experience sexual problems can benefit from MSK's Male Sexual and Reproductive Medicine Program."
       }
     ]
   },
   {
     path:"sarcoma",
+    metaTitle: "Sarcoma Treatment | MSKCC-India",
+    metaDescription:
+      "Find information on soft tissue sarcoma types, the latest treatment options available at MSK, and the team of expert oncologists.",
+    metaKeywords: "Sarcoma Treatment",
+    canonicalUrl: "https://mskcc-test.icliniq.com/cancer-care/types/sarcoma",
     title: "Sarcoma",
     breadCrumbName: "Sarcoma",
     about:"You will face many hard decisions if a loved one or you have been diagnosed with sarcoma. Including several questions like where should you go for treatment? What are the available treatment options? How to maintain your quality of life? We have tried to describe these concerns, the types, and possible treatment, which will help you decide.",
@@ -1797,6 +1865,11 @@ export const Cancer_type_test: CancerTestType[] = [
      ]
   },{
     path:"lymphoma",
+    metaTitle: "Lymphoma Treatment | MSKCC-India",
+    metaDescription:
+      "Find information on lymphoma types, the latest treatment options available at MSK, and the team of expert oncologists.",
+    metaKeywords: "Lymphoma Treatment",
+    canonicalUrl: "https://mskcc-test.icliniq.com/cancer-care/types/lymphoma",
     title: "Lymphoma",
     breadCrumbName: "Lymphoma",
     about:"You will face many hard decisions if a loved one or you have been diagnosed with lymphoma. Including several questions like where should you go for treatment? What are the available treatment options? How to maintain your quality of life? We have tried to describe these concerns, the types, and possible treatment, which will help you decide.",
@@ -1870,16 +1943,22 @@ export const Cancer_type_test: CancerTestType[] = [
                 }
               
               ]
-          },
-          {
-            heading:"What Are the Treatment Options for Lymphoma?",
-            body:"Treatment options for lymphoma depend on the type and the severity (how far the cancer cells have spread). MSK's advances in molecular and genetic testing have helped their doctors develop individualized treatments for patients suffering from lymphoma. Certain slow-growing lymphomas might not need to be treated, and only careful monitoring is sufficient. For the other types, chemotherapy, targeted therapies, radiation, stem cell transplantation, immunotherapy, and other therapies are available at MSK. MSK's lymphoma team provides compassionate and highest possible cancer care. MSK's specialists have vast experience in all types of lymphoma, which is why they treat more than 1,200 lymphoma patients every year."
           }
+         
         ]
+      },
+      {
+        heading:"What Are the Treatment Options for Lymphoma?",
+        body:"Treatment options for lymphoma depend on the type and the severity (how far the cancer cells have spread). MSK's advances in molecular and genetic testing have helped their doctors develop individualized treatments for patients suffering from lymphoma. Certain slow-growing lymphomas might not need to be treated, and only careful monitoring is sufficient. For the other types, chemotherapy, targeted therapies, radiation, stem cell transplantation, immunotherapy, and other therapies are available at MSK. MSK's lymphoma team provides compassionate and highest possible cancer care. MSK's specialists have vast experience in all types of lymphoma, which is why they treat more than 1,200 lymphoma patients every year."
       }
     ]
   },{
     path:"leukemia",
+    metaTitle: "Leukemia Treatment | MSKCC-India",
+    metaDescription:
+      "Find information on leukemia types, the latest treatment options available at MSK, and the team of expert oncologists.",
+    metaKeywords: "Leukemia Treatment",
+    canonicalUrl: "https://mskcc-test.icliniq.com/cancer-care/types/leukemia",
     title: "Leukemia",
     breadCrumbName: "Leukemia",
     about:"You will face many hard decisions if a loved one or you have been diagnosed with leukemia. Including several questions like where should you go for treatment? What are the available treatment options? How to maintain your quality of life? We have tried to describe these concerns, the types, and possible treatment, which will help you decide.",
@@ -1887,36 +1966,42 @@ export const Cancer_type_test: CancerTestType[] = [
       {
         heading:"What Is Leukemia?",
         body:"Leukemia or blood cancer develops due to the abnormal growth of blood-forming tissues, bone marrow, and the lymphatic system. Some types of leukemia are more common in children, while others occur mostly in adults. Leukemia often affects the white blood cells, and the abnormal white blood cells do not function like normal WBC. Leukemia is also the most common type of cancer seen in children under 15 years of age.",
-        subItems:[
-          {
-            heading: "Acute Lymphocytic Leukemia (ALL)",
-            body: "The most common childhood cancer, but also affects adults."
-          },
-          {
-            heading: "Acute Myelogenous Leukemia (AML)",
-            body: "The most common type of acute leukemia that affects both children and adults."
-          },
-          {
-            heading: "Chronic Lymphocytic Leukemia (CLL)",
-            body: "The most common chronic leukemia seen in adults."
-          },
-          {
-            heading: "Chronic Myelogenous Leukemia (CML)",
-            body: "Mostly affects adults."
-          },
-          {
-            heading: "Hairy Cell Leukemia",
-            body: "A rare and chronic leukemia that affects the B cells (lymphocytes)."
-          },
-          {
-            heading: "Myelodysplastic Syndromes",
-            body: "A group of conditions that are caused by the bone marrow producing immature blood cells."
-          },
-        
-        ],
-        bodyTwo:"Acute leukemia spreads and worsens quickly and requires aggressive treatment. Chronic leukemia progresses very slowly and goes undiagnosed for years."
         
       },
+      {
+heading:"What Are the Types of Leukemia?",
+subItems:[
+  {
+    heading: "Acute Lymphocytic Leukemia (ALL)",
+    body: "The most common childhood cancer, but also affects adults."
+  },
+  {
+    heading: "Acute Myelogenous Leukemia (AML)",
+    body: "The most common type of acute leukemia that affects both children and adults."
+  },
+  {
+    heading: "Chronic Lymphocytic Leukemia (CLL)",
+    body: "The most common chronic leukemia seen in adults."
+  },
+  {
+    heading: "Chronic Myelogenous Leukemia (CML)",
+    body: "Mostly affects adults."
+  },
+  {
+    heading: "Hairy Cell Leukemia",
+    body: "A rare and chronic leukemia that affects the B cells (lymphocytes)."
+  },
+  {
+    heading: "Myelodysplastic Syndromes",
+    body: "A group of conditions that are caused by the bone marrow producing immature blood cells."
+  },
+
+],
+bodyTwo:"Acute leukemia spreads and worsens quickly and requires aggressive treatment. Chronic leukemia progresses very slowly and goes undiagnosed for years."
+
+
+      },
+
       {
         heading:"What Are the Treatment Options for Leukemia?",
         body:"The recommended treatment options for leukemia are targeted therapy, chemotherapy, CAR T cell therapy, other immunotherapy, bone marrow or hematopoietic stem cell transplantation. The personalized treatment plan will depend on which blood cancer the patient has. All cancer patients at MSK are offered compassionate and personalized care from their experts. Specialists experienced in surgery, chemotherapy, radiation therapy, rehabilitation, and maintaining the quality of life will work closely to develop a customized treatment plan to ensure the best outcome possible. Patients also benefit from new chemotherapy drugs through thousands of ongoing clinical trials at MSK. MSK leukemia experts use various tests to diagnose leukemia. Tests also show changes in the bone marrow or genetic makeup of the cancer cells. MSK's hematologists identify abnormal genes in each leukemia patient to know the drugs that will be most effective."
@@ -1925,6 +2010,11 @@ export const Cancer_type_test: CancerTestType[] = [
   },
   {
     path:"multiple-myeloma",
+    metaTitle: "Multiple Myeloma Treatment | MSKCC-India",
+    metaDescription:
+      "Find information on multiple myeloma types, the latest treatment options available at MSK, and the team of expert oncologists.",
+    metaKeywords: "Multiple Myeloma Treatment",
+    canonicalUrl: "https://mskcc-test.icliniq.com/cancer-care/types/multiple-myeloma",
     title: "Multiple Myeloma",
     breadCrumbName: "Multiple Myeloma",
     about:"You will face many hard decisions if a loved one or you have been diagnosed with multiple myeloma. Including several questions like where should you go for treatment? What are the available treatment options? How to maintain your quality of life? We have tried to describe these concerns, the types, and possible treatment, which will help you decide.",
@@ -1970,17 +2060,23 @@ export const Cancer_type_test: CancerTestType[] = [
                   heading: "Immunoglobulin D (IgD) Myeloma"
                 }            
             ]
-          },
-          {
-            heading:"What Are the Treatment Options for Multiple Myeloma?",
-            body:"Multiple myeloma that is causing symptoms is called active myeloma, and it requires treatment. And if it does not cause symptoms, it is called smoldering myeloma, which only requires close monitoring. Multiple myeloma is only treated if it causes symptoms. All cancer patients at MSK are offered compassionate and personalized care from their experts. Specialists who are experienced in surgery, chemotherapy, radiation therapy, rehabilitation, and maintaining the quality of life will work closely to come up with a customized treatment plan to ensure the best outcome possible. Patients also benefit from new chemotherapy drugs through thousands of ongoing clinical trials at MSK."
           }
+          
         ]
+      },
+      {
+        heading:"What Are the Treatment Options for Multiple Myeloma?",
+        body:"Multiple myeloma that is causing symptoms is called active myeloma, and it requires treatment. And if it does not cause symptoms, it is called smoldering myeloma, which only requires close monitoring. Multiple myeloma is only treated if it causes symptoms. All cancer patients at MSK are offered compassionate and personalized care from their experts. Specialists who are experienced in surgery, chemotherapy, radiation therapy, rehabilitation, and maintaining the quality of life will work closely to come up with a customized treatment plan to ensure the best outcome possible. Patients also benefit from new chemotherapy drugs through thousands of ongoing clinical trials at MSK."
       }
     ]
   },
   {
     path:"ovarian-cervical-and-endometrial-cancer",
+    metaTitle: "Ovarian, Cervical, and Endometrial Cancer Treatment | MSKCC-India",
+    metaDescription:
+      "Find information on ovarian, cervical, and endometrial cancer types, the latest treatment options available at MSK, and the team of expert oncologists.",
+    metaKeywords: "Ovarian, Cervical, and Endometrial Cancer Treatment",
+    canonicalUrl: "https://mskcc-test.icliniq.com/cancer-care/types/ovarian-cervical-and-endometrial-cancer",
     title: "Ovarian, Cervical, and Endometrial Cancer",
     breadCrumbName: "Ovarian, Cervical, and Endometrial Cancer",
     about:"You will face many hard decisions if a loved one or you have been diagnosed with multiple myeloma. Including several questions like where should you go for treatment? What are the available treatment options? How to maintain your quality of life? We have tried to describe these concerns, the types, and possible treatment, which will help you decide.",
@@ -2048,8 +2144,10 @@ export const Cancer_type_test: CancerTestType[] = [
       body:"Uterine or endometrial cancer is a type of cancer that develops in the endometrium, the inner lining of the uterus (the inverted-pear-shaped hollow female reproductive organ). Women who have been diagnosed with endometrial hyperplasia, those who are obese, had their menarche before 12 years and menopause after 55 years, etc., are at risk of this cancer.",
       link:"Try out MSK's Endometrial Cancer - Overall Survival Probability Following Surgery (Prediction Tool) nomogram!",
       linkPath:"https://www.mskcc.org/nomograms/endometrial",
-      subItems:[
-        {
+      
+      
+     },
+     {
           heading:"What Are the Types of Uterine Cancer?",
           subItems:[
             {
@@ -2069,10 +2167,8 @@ export const Cancer_type_test: CancerTestType[] = [
               body:"This is also a rare type that was thought to be a type of uterine sarcoma. They have a higher risk of spreading to other body parts and lymph nodes."
             }
           ],
-          
-        }
-      ],
-      bodyTwo:"MSK physicians treat almost 1,300 women every year with some form of gynecologic cancer. From which, around 300 have uterine cancer. They form customized treatment plans for every woman suffering from cancer."
+          bodyTwo:"MSK physicians treat almost 1,300 women every year with some form of gynecologic cancer. From which, around 300 have uterine cancer. They form customized treatment plans for every woman suffering from cancer."
+
      },
      {
       heading:"What Are the Treatment Options for Uterine Cancer?",
@@ -2085,6 +2181,11 @@ export const Cancer_type_test: CancerTestType[] = [
   {
 
     path:"brain-tumor-and-cancer",
+    metaTitle: "Brain Tumor and Cancer Treatment | MSKCC-India",
+    metaDescription:
+      "Find information on various brain tumors and cancer types, the latest treatment options available at MSK, and the team of expert oncologists.",
+    metaKeywords: "Brain Tumor and Cancer Treatment",
+    canonicalUrl: "https://mskcc-test.icliniq.com/cancer-care/types/brain-tumor-and-cancer",
     title: "Brain Tumors and Cancers",
     breadCrumbName: "Brain Tumors and Cancers",
     about:"You will face many hard decisions if a loved one or you have been diagnosed with a brain tumor or cancer. Including several questions like where should you go for treatment? What are the available treatment options? How to maintain your quality of life? We have tried to describe these concerns, the types, and possible treatment, which will help you decide.",

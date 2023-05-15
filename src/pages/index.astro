@@ -16,7 +16,7 @@ console.log("Cookies...");
 const cookies: AstroCookies = Astro.cookies;
 const headers: Headers = Astro.request.headers;
 Array.from(headers).map((key, value) => console.log(key, value));
-cookies.set("new-cookie", "test-cookie");
+cookies.set("new-cookie", "test-cookie; Secure;");
 ---
 
 <Layout title="MSK India | Get Second Opinion From Best Cancer Experts">

@@ -1,0 +1,44 @@
+---
+if (Astro.request.method === "POST") {
+  try {
+    const data: FormData = await Astro.request.formData();
+
+    console.log('name', data.get("name"));
+    console.log('email', data.get("email"));
+    console.log('password', data.get("password"));
+
+    const file = data.get("fileToUpload")! as File;
+    console.log('file', file);
+    const textDecoder = new TextDecoder();
+    file.arrayBuffer().then((buffer: ArrayBuffer) => {
+      console.log('buffer', buffer);
+      console.log('content', textDecoder.decode(buffer))
+    });
+  } catch (error) {
+    if (error instanceof Error) {
+      console.error(error.message);
+    }
+  }
+}
+---
+<h1>Register</h1>
+<form method="POST" enctype="multipart/form-data">
+  <label>
+    Username:
+    <input type="text" name="name" required />
+  </label>
+  <label>
+    Email:
+    <input type="email" name="email" required />
+  </label>
+  <label>
+    Password:
+    <input type="password" name="password" required minlength="6" />
+  </label>
+  <label>
+    File:
+    <input type="file" name="fileToUpload" id="fileToUpload">
+  </label>
+  
+  <button>Submit</button>
+</form>

@@ -5,7 +5,28 @@ import Nav from "components/Common/Nav";
 import Layout from "layouts/Layout.astro";
 ---
 
-<Layout title="Personalized Therapy - Early Phase Clinical Trials" />
+<Layout title="Personalized Therapy - Early Phase Clinical Trials | MSK-India" />
+
+<meta 
+  name="title" 
+  content={`Personalized Therapy - Early Phase Clinical Trials | MSK-India`}
+  slot="meta-header" 
+/>
+<meta 
+  name="description" 
+  content={`Personalized Therapy - Early Phase Clinical Trials`}
+  slot="meta-header"
+/>
+<meta 
+  name="Keywords" 
+  content={`Personalized Therapy - Early Phase Clinical Trials`}
+  slot="meta-header"
+/>
+<link 
+  rel="canonical" 
+  href={`https://mskcc.icliniq.com/cancer-care/clinical-trails`}
+      slot="meta-header"
+/>
 <Nav />
 <MenuNav />
 
@@ -23,7 +44,7 @@ import Layout from "layouts/Layout.astro";
       </h1>
     </div>
     <div class="mr-6 font-medium pt-4 text-sm md:text-lg">
-      <a href="https://mskcc.icliniq.com/" class="text-gray-400 mr-2">Home</a>
+      <a href="https://mskcc-test.icliniq.com/" class="text-gray-400 mr-2">Home</a>
       <span class="mr-2 text-gray-400 font-medium">|</span>
       <a href="" class="text-gray-400 font-medium mr-2">Cancer Care</a>
       <span class="mr-2 text-gray-400 font-medium">|</span>

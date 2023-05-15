@@ -86,6 +86,25 @@ const DoctorInfo = ({ doctorInfo }: DocInfo) => {
           </div>
         )
       )}
+      {doctorInfo.areaOfExpertise.subHead?.map((data) =>
+        data.lable.length === 0 ? (
+          ""
+        ) : (
+          <div className="pl-5">
+            <div>{data.lable}</div>
+            <ul
+              
+              className="pl-5 list-inside list-image-[url(/src/assets/img/tick.svg)]"
+            >
+              {data.values.map((res) => (
+                <>
+                  <li className="pt-3">{res}</li>
+                </>
+              ))}
+            </ul>
+          </div>
+        )
+      )}
     </div>
   );
 };

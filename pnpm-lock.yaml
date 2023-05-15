@@ -16,6 +16,12 @@ dependencies:
   '@fontsource/material-icons-outlined':
     specifier: ^4.5.4
     version: 4.5.4
+  '@fontsource/montserrat':
+    specifier: ^4.5.14
+    version: 4.5.14
+  '@fontsource/nunito-sans':
+    specifier: ^4.5.10
+    version: 4.5.10
   '@fontsource/poppins':
     specifier: ^4.5.10
     version: 4.5.10
@@ -2326,6 +2332,14 @@ packages:
 
   /@fontsource/material-icons-outlined@4.5.4:
     resolution: {integrity: sha512-2SLQe/pAlOzoE2Kd5cBxqTgI9U63hf3a7RrCF8GFvgPkYhF6WOcIzFzsLc1Fdf+UhcYS+Hgpp6o8peguwZGK9Q==}
+    dev: false
+
+  /@fontsource/montserrat@4.5.14:
+    resolution: {integrity: sha512-fTvrteVzuFUePhr4QYBGoK8G/YHLJ3IhF1HhKg0AxcFvZajJT7rM7ULdmKLSd2PkX44R3aaFZq1zDbmjbGGI+w==}
+    dev: false
+
+  /@fontsource/nunito-sans@4.5.10:
+    resolution: {integrity: sha512-GVKc3mEfnk3fLEuiQXNYhlP/Z9SrCgD831xZJ7J+6OgFzEf6LNnyHPiqWfjW671sAmOBQTLgm/21z78K/beWEw==}
     dev: false
 
   /@fontsource/poppins@4.5.10:

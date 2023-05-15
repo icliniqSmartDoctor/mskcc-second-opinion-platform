@@ -15,7 +15,27 @@ if (!cancerTypeArr) return Astro.redirect("/404");
 
 ---
 
-<Layout title="">
+<Layout title={cancerTypeArr.metaTitle}>
+  <meta 
+  name="title" 
+  content={`${cancerTypeArr.metaTitle}`}
+  slot="meta-header" 
+/>
+<meta 
+  name="description" 
+  content={`${cancerTypeArr.metaDescription}`}
+  slot="meta-header"
+/>
+<meta 
+  name="Keywords" 
+  content={`${cancerTypeArr.metaKeywords}`}
+  slot="meta-header"
+/>
+<link 
+  rel="canonical" 
+  href={`${cancerTypeArr.canonicalUrl}`}
+      slot="meta-header"
+/>
   <Nav client:idle />
   <MenuNav />
   <div class="w-4/5 container-alternate bg-white">
@@ -38,10 +58,10 @@ if (!cancerTypeArr) return Astro.redirect("/404");
         <a class="text-primary mr-2">{cancerTypeArr.breadCrumbName}</a>
       </div>
     </div>
-    <div class="pt-20 ">
+    <div class="pt-16 ">
       <div class="pb-10">{cancerTypeArr.about}</div>
       
-      <div><CancerInfo info={cancerTypeArr.info} client:idle/></div>
+      <div><CancerInfo info={cancerTypeArr.info} /></div>
 
 
     </div>
