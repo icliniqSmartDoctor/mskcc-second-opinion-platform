@@ -26,6 +26,8 @@ const { doctor } = Astro.params;
 
 const docArr = DOCTOR_DETAILS.find((data) => data.path === doctor);
 if(!docArr) return Astro.redirect("/404");
+
+Astro.response.headers.set("Cache-Control", "public, max-age=3600");
 ---
 
 <Layout title={`${docArr!.metaTitle}`}>
