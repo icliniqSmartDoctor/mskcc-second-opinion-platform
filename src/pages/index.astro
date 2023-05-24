@@ -10,9 +10,12 @@ import * as CONSTANTS from "constants/HomeConstants";
 import VideoFloat from "components/Home/VIdeoFloat";
 import AssetAccessor from "utils/AssetAccessor";
 
+const factResponse = await fetch('https://catfact.ninja/fact');
+const factData = await factResponse.json();
 ---
 
 <Layout title="MSK India | Get Second Opinion From Best Cancer Experts">
+	<p>{factData.fact}</p>
 	<meta
 		name="title"
 		content="MSK India | Get Second Opinion From Best Cancer Experts"
