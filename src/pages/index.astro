@@ -9,14 +9,7 @@ import MskDoctors from "components/Home/MskDoctors";
 import * as CONSTANTS from "constants/HomeConstants";
 import VideoFloat from "components/Home/VIdeoFloat";
 import AssetAccessor from "utils/AssetAccessor";
-import { C } from "@fullcalendar/core/internal-common";
-import type { AstroCookies } from "astro";
 
-console.log("Cookies...");
-const cookies: AstroCookies = Astro.cookies;
-const headers: Headers = Astro.request.headers;
-Array.from(headers).map((key, value) => console.log(key, value));
-cookies.set("new-cookie", "test-cookie; Secure;");
 ---
 
 <Layout title="MSK India | Get Second Opinion From Best Cancer Experts">
@@ -56,7 +49,6 @@ cookies.set("new-cookie", "test-cookie; Secure;");
 	<VideoFloat client:load />
 
 	<MenuNav />
-	hii
 	<section id="Banner MSK" class="flex items-center slider-height-3 lg:pt-28">
 		<div class="container-alternate mx-auto !px-0">
 			<div class="grid grid-cols-6 gap-4 relative lg:left-10 lg:px-20">
