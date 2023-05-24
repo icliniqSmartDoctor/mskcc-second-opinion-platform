@@ -12,6 +12,9 @@ import AssetAccessor from "utils/AssetAccessor";
 
 const factResponse = await fetch('https://catfact.ninja/fact');
 const factData = await factResponse.json();
+
+export const prerender = true;
+
 ---
 
 <Layout title="MSK India | Get Second Opinion From Best Cancer Experts">
