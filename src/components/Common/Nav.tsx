@@ -37,7 +37,7 @@ function Nav() {
                 className='z-30 w-full relative left-0 right-0 pt-7 pb-7'
             >
                 <div className='container-alternate mx-auto flex w-full justify-between items-center !p-0'>
-                    <Navbar.Brand href="https://mskcc.icliniq.com/">
+                    <Navbar.Brand href="https://mskcc-app-dev.icliniq.com/">
                         <img
                             src='https://assets.icliniq.com/mskcc/logo/msk-logo-blue.svg'
                             className="pr-3 h-14 md:h-14 pl-2 md:w-64 w-auto"
@@ -47,7 +47,7 @@ function Nav() {
                     </Navbar.Brand>
                     <div className="flex md:order-2 md:!flex-row-reverse">
                         <div className="flex md:order-2  pr-3 md:pr-8 items-center">
-                            <a href="https://mskcc.icliniq.com/"><img className="h-14 md:h-14" width="120" height="47" title="iCliniq Logo" alt="iCliniq Logo" src="https://assets.icliniq.com/v2/assets/images/iCliniq-logo/ic-white-logo.svg" /></a>
+                            <a href="https://mskcc-app-dev.icliniq.com/"><img className="h-14 md:h-14" width="120" height="47" title="iCliniq Logo" alt="iCliniq Logo" src="https://assets.icliniq.com/v2/assets/images/iCliniq-logo/ic-white-logo.svg" /></a>
                         </div>
                         <Navbar.Toggle className='block md:!block lg:!hidden' onClick={openAccordation} />
                     </div>

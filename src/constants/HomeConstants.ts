@@ -116,7 +116,7 @@ export const MSKCC_MENU: MskccMenuTypes = {
       "india center team": "/mskcc-india-team",
     },
     {
-      "contact us": "https://mskcc.icliniq.com/contact-us",
+      "contact us": "https://mskcc-app-dev.icliniq.com/contact-us",
     },
   ],
   "our services": [
@@ -133,17 +133,17 @@ export const MSKCC_MENU: MskccMenuTypes = {
     "/mskcc-india-services/mskcc-patient-faqs",
   login: [
     {
-      "patient login": "https://mskcc.icliniq.com/users/signin",
+      "patient login": "https://mskcc-app-dev.icliniq.com/users/signin",
     },
     {
-      "msk physician login": "https://mskcc.icliniq.com/sso/web/index.php?sso",
+      "msk physician login": "https://mskcc-app-dev.icliniq.com/sso/web/index.php?sso",
     },
     {
-      "msk admin login": "https://mskcc.icliniq.com/sso/web/index.php?sso",
+      "msk admin login": "https://mskcc-app-dev.icliniq.com/sso/web/index.php?sso",
     },
 
     {
-      "msk india admin login": "https://mskcc.icliniq.com/h/admin",
+      "msk india admin login": "https://mskcc-app-dev.icliniq.com/h/admin",
     },
   ],
 };
