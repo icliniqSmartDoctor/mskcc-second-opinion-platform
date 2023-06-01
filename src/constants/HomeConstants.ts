@@ -116,7 +116,7 @@ export const MSKCC_MENU: MskccMenuTypes = {
       "india center team": "/mskcc-india-team",
     },
     {
-      "contact us": "https://mskcc.icliniq.com/contact-us",
+      "contact us": "https://mskcc-app-dev.icliniq.com/contact-us",
     },
   ],
   "our services": [
@@ -133,17 +133,17 @@ export const MSKCC_MENU: MskccMenuTypes = {
     "/mskcc-india-services/mskcc-patient-faqs",
   login: [
     {
-      "patient login": "https://mskcc.icliniq.com/users/signin",
+      "patient login": "https://mskcc-app-dev.icliniq.com/users/signin",
     },
     {
-      "msk physician login": "https://mskcc.icliniq.com/sso/web/index.php?sso",
+      "msk physician login": "https://mskcc-app-dev.icliniq.com/sso/web/index.php?sso",
     },
     {
-      "msk admin login": "https://mskcc.icliniq.com/sso/web/index.php?sso",
+      "msk admin login": "https://mskcc-app-dev.icliniq.com/sso/web/index.php?sso",
     },
 
     {
-      "msk india admin login": "https://mskcc.icliniq.com/h/admin",
+      "msk india admin login": "https://mskcc-app-dev.icliniq.com/h/admin",
     },
   ],
 };
@@ -873,7 +873,7 @@ export const DOCTOR_DETAILS: DoctorDetails[] = [
       "Chief, Adult Bone Marrow Transplant Service, Melvin Berlin Family Chair in Multiple Myeloma",
     about:
       "Dr.Giralt’s primary focus is stem cell transplantation for patients suffering from blood-related disorders. He is a board-certified hematologist-oncologist. He was the Deputy Chair of the Department of Stem Cell Transplantation and Cellular Therapies in the University of Texas MD Anderson Cancer Center. Dr.Giralt joined Memorial Sloan Kettering in May 2010 to lead the Adult Bone Marrow Transplant Service and served as Chief until February 2020. Until recently, Dr. Giralt chaired the executive board of the Center for International Blood and Marrow Transplant Research and was the Blood and Marrow Transplant Clinical Trials Network chair, a group that works on stem cell transplantation in the US. His research focus has been on improving treatments for older adults with acute and chronic leukemia, and he is an expert in the treatment of multiple myeloma.",
-    img: "https://assets.icliniq.com/v2/assets/images/mskcc/img/mskcc-cancer/doctor-details-370-4.jpg",
+    img: "https://assets.icliniq.com/v2/assets/images/mskcc/img/mskcc-cancer/doctor-details-370-5.jpg",
     doctorInfo: {
       residency: {
         lable: "Residency",
