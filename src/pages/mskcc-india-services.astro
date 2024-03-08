@@ -1,0 +1,70 @@
+---
+import Layout from "layouts/Layout.astro";
+import Nav from "components/Common/Nav";
+import MenuNav from "components/Common/MenuNav";
+import Footer from "components/Common/Footer";
+
+
+export const prerender = true;
+---
+
+<Layout title="Frequently Asked Question - MSK India">
+    <meta 
+		name="title" 
+		content="Frequently Asked Question - MSK India"
+		slot="meta-header" 
+	/>
+	<meta 
+		name="description" 
+		content="Have doubts? Read the frequently asked questions. Get answers to when to get a remote second opinion, how long the process takes, the documents needed, etc."
+		slot="meta-header"
+	/>
+	<meta 
+		name="Keywords" 
+		content="Frequently Asked Questions,FAQ,MSK India"
+		slot="meta-header"
+	/>
+	<link 
+		rel="canonical" 
+		href="https://mskcc-app-dev.icliniq.com/mskcc-india-services/mskcc-patient-faqs"
+        slot="meta-header"
+	/>
+    <Nav client:idle />
+    <MenuNav />
+    <div class="container-alternate mx-auto mb-32 pt-28">
+        <div class="block lg:flex items-center justify-between mb-32">
+            <div class="mb-5 w-5/6">
+                <p class="text-lg pb-15 text-gray-600 font-medium">
+                    We are here to care for you.
+                </p>
+                <h1 class="mt-5 font-semibold text-3xl md:text-6xl">
+                    MSK India Services
+                </h1>
+            </div>
+            <div class="font-medium w-full lg:w-60">
+                <a href="https://mskcc-app-dev.icliniq.com/" class="text-gray-400 mr-2"
+                    >Home</a
+                >
+                <span class="mr-2 text-gray-400">|</span>
+                <a
+                    class="text-gray-400 mr-2"
+                >
+                    MSK India Services</a
+                >
+            </div>
+        </div>
+        <div >
+            <ul class="list-disc pl-5 space-y-3">
+              <li class="text-black hover:text-blue-600 cursor-pointer"><a href="/mskcc-india-services/remote-second-opinion">Remote Second Opinion</a></li>
+              <li class="text-black hover:text-blue-600 cursor-pointer"><a href="/mskcc-india-services/mskcc-patient-faqs">Find All the Answers Here</a></li>
+              <li class="text-black hover:text-blue-600 cursor-pointer"><a href="/mskcc-india-services/travel-guide-to-mskcc-new-york">Travel to MSK</a></li>
+              <li class="text-black hover:text-blue-600 cursor-pointer"><a href="/mskcc-india-services/book-an-appointment-online">Request a consult</a></li>
+            </ul>
+          </div>
+    </div>
+    <Footer />
+</Layout>
+
+<script>
+
+</script>
