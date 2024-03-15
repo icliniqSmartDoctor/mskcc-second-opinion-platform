@@ -1,0 +1,125 @@
+---
+import Layout from "layouts/Layout.astro";
+import Nav from "components/Common/Nav";
+import MenuNav from "components/Common/MenuNav";
+import Footer from "components/Common/Footer";
+import ContactForm2 from 'constants/Contact-Form.tsx';
+
+export const prerender = true;
+
+---
+
+<Layout title="MSK India Services">
+    <meta 
+		name="title" 
+		content="MSK India Services"
+		slot="meta-header" 
+	/>
+	<meta 
+		name="description" 
+		content="MSK India Services"
+		slot="meta-header"
+	/>
+	<meta 
+		name="Keywords" 
+		content="MSK India Services"
+		slot="meta-header"
+	/>
+	<link 
+		rel="canonical" 
+		href="/mskcc-india-services/mskcc-patient-faqs"
+        slot="meta-header"
+	/>
+    <style>
+        .input-hidden {
+            display: none;
+        }
+    </style>
+    <Nav client:idle />
+    <MenuNav />
+    <section class="breadcrumb-bg pt-100 pb-0">
+    <div class="container-alternate mx-auto pt-28">
+        <div class="block lg:flex items-center justify-between">
+            <div class="mb-5 w-5/6">
+                <p class="text-lg pb-15 text-gray-600 font-medium">
+                    We are here to care for you.
+                </p>
+                <h1 class="mt-5 font-semibold text-3xl md:text-6xl">
+                   Contact Us
+                </h1>
+            </div>
+            <div class="font-medium w-full lg:w-60">
+                <a href="https://mskcc-app-dev.icliniq.com/" class="text-gray-400 mr-2"
+                    >Home</a
+                >
+                <span class="mr-2 text-gray-400">|</span>
+                <a
+                    class="text-primary mr-2"
+                >
+                Contact Us</a
+                >
+            </div>
+        </div>
+    </div>
+</section>
+<section class="pt-24 mb-10 gray-bg">
+    <ContactForm2 client:load />
+    
+</section>
+        <section class="contact-area pt-120 pb-90" data-background="assets/img/bg/bg-map.png">
+            <div class="flex justify-center items-center space-x-4">
+                <div class="max-w-sm rounded overflow-hidden shadow-lg bg-white p-6 border">
+                  <div class="flex justify-center mb-4">
+                    <div class="rounded-full bg-blue-500 p-4">
+                        <i class="fas fa-envelope">
+                      <svg class="w-12 h-12 text-white dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M2 5.6V18c0 1.1.9 2 2 2h16a2 2 0 0 0 2-2V5.6l-.9.7-7.9 6a2 2 0 0 1-2.4 0l-8-6-.8-.7Z"/>
+                        <path d="M20.7 4.1A2 2 0 0 0 20 4H4a2 2 0 0 0-.6.1l.7.6 7.9 6 7.9-6 .8-.6Z"/>
+                      </svg>
+                    </i>
+                    </div>
+                  </div>
+                  <div class="text-center">
+                    
+                    <h3 class="text-lg font-bold mb-2">To Mail</h3>
+                    <a  class="text-gray-700 mb-2" href="mailto:mskccindia@icliniq.com">mskccindia@icliniq.com</a>
+                  </div>
+                </div>
+                <div class="max-w-sm rounded overflow-hidden shadow-lg bg-white p-6 border">
+                  <div class="flex justify-center mb-4">
+                    <div class="rounded-full bg-blue-500 p-4">
+                      <svg class="w-12 h-12 text-white dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M8 4a2.6 2.6 0 0 0-2 .9 6.2 6.2 0 0 0-1.8 6 12 12 0 0 0 3.4 5.5 12 12 0 0 0 5.6 3.4 6.2 6.2 0 0 0 6.6-2.7 2.6 2.6 0 0 0-.7-3L18 12.9a2.7 2.7 0 0 0-3.8 0l-.6.6a.8.8 0 0 1-1.1 0l-1.9-1.8a.8.8 0 0 1 0-1.2l.6-.6a2.7 2.7 0 0 0 0-3.8L10 4.9A2.6 2.6 0 0 0 8 4Z"/>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="text-center">
+                    <h3 class="text-lg font-bold mb-2">To Call</h3>
+                    <a class="text-gray-700 mb-2" href="tel:+91 82 700 70000">+91 82 700 70000</a>
+                    <p class="text-gray-500 text-sm">10 AM to 7 PM IST (Monday-Friday)</p>
+                    <p class="text-gray-500 text-sm">10 AM to 2 PM IST (Saturday)</p>
+                  </div>
+                </div>
+              </div>
+         </section>
+    <Footer />
+</Layout>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const steps = document.querySelectorAll('.step');
+        steps.forEach((step, index) => {
+            if (index < steps.length - 1) { // Check if not the last step
+                const input = step.querySelector('input'); // Assuming each step has only one input for simplicity
+                input.addEventListener('input', () => {
+                    if (input.value.trim() !== '') {
+                        if (index + 1 < steps.length) {
+                            steps[index + 1].classList.remove('input-hidden');
+                        }
+                    }
+                });
+            }
+        });
+    });
+</script>

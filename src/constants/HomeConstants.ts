@@ -116,7 +116,7 @@ export const MSKCC_MENU: MskccMenuTypes = {
       "india center team": "/mskcc-india-team",
     },
     {
-      "contact us": "https://mskcc-app-dev.icliniq.com/contact-us",
+      "contact us": "/contact-us",
     },
   ],
   "our services": [
