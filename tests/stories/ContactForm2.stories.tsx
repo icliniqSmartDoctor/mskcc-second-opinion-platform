@@ -24,7 +24,8 @@ FillAndSubmit.play = async ({ canvasElement }) => {
   await userEvent.type(canvas.getByPlaceholderText('Your Message'), 'Hello, this is a test message.', { delay: 100 });
 
   // Click the submit button
-  await userEvent.click(canvas.getByRole('button', { name: '+' }));
+  // await userEvent.click(canvas.getByRole('button', { name: 'Submit' }));
+  await userEvent.click(canvas.getByRole('button', { name: /submit/i }));
 
   // Here you would add assertions if you need to verify certain behaviors after submit,
   // for instance, checking if a confirmation message appears.
