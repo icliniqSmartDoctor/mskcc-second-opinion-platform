@@ -60,7 +60,49 @@ h6,
 .card-with-no-padding>div {
     padding: 0px;
 }
-
+.default-sidebar {
+    transition: transform 0.3s;
+   border-radius: 0.9rem; /* 8px */
+    background-color: rgba(0, 37, 105, 1); /* Blue background */
+  }
+  .sidebar {
+    /* ...your styles... */
+    transition: transform 0.3s ease-in-out;
+  }
+  .rotated {
+    transition: transform 0.3s ease-in-out;
+    transform: rotate(90deg); /* Adjust the angle if needed */
+  }
+  .menu-button {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 50%;       /* Centered vertically */
+    left: 0;        /* At the left edge of the viewport */
+    transform: translateY(-50%); /* Adjusts the position to be truly centered vertically */
+    height: 120px;   /* Adjust as needed */
+    /* Additional styles for better appearance and interaction */
+    z-index: 100; /* Make sure it sits above other content */
+    background-color:rgba(0, 37, 105, 1); /* The color from your screenshot */ 
+    color: white; /* Text/icon color */
+    border: none; /* No border */
+    border-radius: 0 60px 60px 0; /* Rounded corners on the right side */
+    padding: 20px; /* Spacing inside the button */
+    cursor: pointer; /* Cursor indicates the element is clickable */
+    
+    /* Add any additional styling such as shadows, font size, etc. */
+  }
+  .menu-button.rotated svg {
+    transition: transform 0.3s ease-in-out;
+    transform: rotate(180deg); /* This rotates the SVG icon */
+  }
+  .sidebar.closed {
+    transform: translateX(-150%); /* Adjust as needed */
+  }
+  
+  .sidebar.open {
+    transform: translateX(0);
+  }
 .btn-icon {
     display: inline-flex;
     min-height: 60px;

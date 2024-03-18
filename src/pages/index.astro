@@ -9,6 +9,9 @@ import MskDoctors from "components/Home/MskDoctors";
 import * as CONSTANTS from "constants/HomeConstants";
 import VideoFloat from "components/Home/VIdeoFloat";
 import AssetAccessor from "utils/AssetAccessor";
+import SideBarContainer from "./mskcc-india-services/side-bar";
+import { useState } from "react";
+import { SideNavComponent } from "../../tests/stories/SideNav.stories";
 
 ---
 
@@ -45,10 +48,10 @@ import AssetAccessor from "utils/AssetAccessor";
 		href="https://mskcc-app-dev.icliniq.com/"
 		slot="meta-header"
 	/>
+	<SideBarContainer client:load />
 	<Nav client:idle />
 	<VideoFloat client:load />
-
-	<MenuNav />
+	<MenuNav />	
 	<section id="Banner MSK" class="flex items-center slider-height-3 lg:pt-28">
 		<div class="container-alternate mx-auto !px-0">
 			<div class="grid grid-cols-6 gap-4 relative lg:left-10 lg:px-20">
@@ -243,3 +246,4 @@ import AssetAccessor from "utils/AssetAccessor";
 	<Footer />
 </Layout>
 
+./mskcc-india-services/side-bar.tsx

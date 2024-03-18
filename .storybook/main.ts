@@ -9,13 +9,13 @@ const config: StorybookConfig = {
     "@storybook/addon-essentials",
     "@storybook/addon-interactions",
     "@locofy/storybook-addon",
-    
     {
       name: '@storybook/addon-styling',
       options: {
         postCss: true,
       },
     },
+    "@storybook/addon-webpack5-compiler-babel"
   ],
   webpackFinal: async (config: any, { configType }) => {
     config.resolve.plugins = [new TsconfigPathsPlugin()];
