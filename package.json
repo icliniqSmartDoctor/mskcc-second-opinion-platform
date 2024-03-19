@@ -36,12 +36,13 @@
     "astro": "^4.4.15",
     "css-loader": "^6.7.3",
     "flowbite": "^1.6.5",
-    "flowbite-react": "^0.4.4",
+    "flowbite-react": "^0.4.11",
     "http-server": "^14.1.1",
     "nanostores": "^0.8.1",
     "react": "^18.2.0",
     "react-cookie": "^4.1.1",
     "react-dom": "^18.2.0",
+    "react-icons": "^5.0.1",
     "stream": "^0.0.2",
     "style-loader": "^3.3.2",
     "tailwindcss": "^3.3.2",
@@ -61,7 +62,7 @@
     "@storybook/blocks": "^7.0.8",
     "@storybook/react": "^7.0.8",
     "@storybook/react-webpack5": "^7.0.8",
-    "@storybook/test-runner": "^0.10.0",
+    "@storybook/test-runner": "^0.17.0",
     "@storybook/testing-library": "0.0.14-next.2",
     "@testing-library/jest-dom": "^5.16.5",
     "autoprefixer": "^10.4.14",
@@ -71,6 +72,6 @@
     "prop-types": "^15.8.1",
     "storybook": "^7.0.8",
     "typescript": "^5.0.4",
-    "wrangler": "^2.18.0"
+    "wrangler": "^3.34.2"
   }
 }
