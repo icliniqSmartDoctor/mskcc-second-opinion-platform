@@ -9,9 +9,7 @@ import MskDoctors from "components/Home/MskDoctors";
 import * as CONSTANTS from "constants/HomeConstants";
 import VideoFloat from "components/Home/VIdeoFloat";
 import AssetAccessor from "utils/AssetAccessor";
-import SideBarContainer from "../components/Common/side-bar";
 import { useState } from "react";
-import { SideNavComponent } from "../../tests/stories/SideNav.stories";
 
 ---
 
@@ -48,7 +46,6 @@ import { SideNavComponent } from "../../tests/stories/SideNav.stories";
 		href="https://mskcc-app-dev.icliniq.com/"
 		slot="meta-header"
 	/>
-	<SideBarContainer client:load />
 	<Nav client:idle />
 	<VideoFloat client:load />
 	<MenuNav />	
