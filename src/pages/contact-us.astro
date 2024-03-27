@@ -107,19 +107,5 @@ export const prerender = true;
 
 
 <script>
-    document.addEventListener('DOMContentLoaded', function () {
-        const steps = document.querySelectorAll('.step');
-        steps.forEach((step, index) => {
-            if (index < steps.length - 1) { // Check if not the last step
-                const input = step.querySelector('input'); // Assuming each step has only one input for simplicity
-                input.addEventListener('input', () => {
-                    if (input.value.trim() !== '') {
-                        if (index + 1 < steps.length) {
-                            steps[index + 1].classList.remove('input-hidden');
-                        }
-                    }
-                });
-            }
-        });
-    });
+  
 </script>
