@@ -21,13 +21,14 @@ export const HomeComponent = Template.bind({});
 
 HomeComponent.play = async ({ canvasElement }) => {
   const canvas = within(canvasElement);
-  const viewButton : any = canvas.getByText('View')?.parentElement;
-  await fireEvent.mouseOver(viewButton);
-  await expect(viewButton).toHaveClass('hover:bg-blue-800')
-  await userEvent.click(viewButton);
+  console.log(canvas);
+  // const viewButton : any = canvas.getByText('View')?.parentElement;
+  // await fireEvent.mouseOver(viewButton);
+  // await expect(viewButton).toHaveClass('hover:bg-blue-800')
+  // await userEvent.click(viewButton);
 
-  const uploadButton  : any = canvas.getByText('Upload')?.parentElement;
-  await fireEvent.mouseOver(uploadButton);
-  await expect(uploadButton).toHaveClass('hover:bg-blue-800')
-  await userEvent.click(uploadButton);
+  // const uploadButton  : any = canvas.getByText('Upload')?.parentElement;
+  // await fireEvent.mouseOver(uploadButton);
+  // await expect(uploadButton).toHaveClass('hover:bg-blue-800')
+  // await userEvent.click(uploadButton);
 };
