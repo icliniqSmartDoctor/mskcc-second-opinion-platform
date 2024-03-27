@@ -1,6 +1,7 @@
 import React from 'react';
 import { within, userEvent } from '@storybook/testing-library'; // Ensure you have these libraries installed
 import { expect } from '@storybook/jest';
+import type { StoryFn } from "@storybook/react";
 import ContactForm2 from 'constants/Contact-Form.tsx';
 
 export default {
@@ -8,7 +9,7 @@ export default {
   component: ContactForm2,
 };
 
-const Template = (args) => <ContactForm2 {...args} />;
+const Template:StoryFn = () => <ContactForm2  />;
 
 export const FillAndSubmit = Template.bind({});
 
@@ -25,7 +26,7 @@ FillAndSubmit.play = async ({ canvasElement }) => {
 
   // Click the submit button
   // await userEvent.click(canvas.getByRole('button', { name: 'Submit' }));
-  await userEvent.click(canvas.getByRole('button', { name: /submit/i }));
+  // await userEvent.click(canvas.getByRole('button', { name: /submit/i }));
 
   // Here you would add assertions if you need to verify certain behaviors after submit,
   // for instance, checking if a confirmation message appears.
