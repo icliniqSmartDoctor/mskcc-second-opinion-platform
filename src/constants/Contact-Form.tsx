@@ -1,19 +1,36 @@
 
 
 import React, { useState } from 'react';
+import type { ReactElement } from 'react';
+interface FormValues {
+  name: string;
+  email: string;
+  phone: string;
+  subject: string;
+  message: string;
+}
 
-const initialState = {
+const initialState: FormValues = {
   name: '',
   email: '',
   phone: '',
   subject: '',
   message: ''
 };
+type StepInputProps = {
+  step: number;
+  currentStep: number;
+  formValues: FormValues;
+  handleInputChange: (event: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLTextAreaElement>) => void;
+  type: string;
+  name: keyof FormValues; // This ensures that `name` matches exactly a key in FormValues
+  placeholder: string;
+  icon: ReactElement;
+}
+const validateEmail = (email: string) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(String(email).toLowerCase());
+const validatePhone = (phone:string) => /^\d{10}$/.test(phone);
 
-const validateEmail = email => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(String(email).toLowerCase());
-const validatePhone = phone => /^\d{10}$/.test(phone);
-
-const StepInput = ({ step, currentStep, formValues, handleInputChange, type, name, placeholder, icon }) => {
+const StepInput = ({ step, currentStep, formValues, handleInputChange, type, name, placeholder, icon } : StepInputProps) => {
   if (currentStep < step) return null;
   return (
     <div className={`relative w-full md:w-1/2 px-3 mb-6`}>
@@ -33,11 +50,11 @@ const StepInput = ({ step, currentStep, formValues, handleInputChange, type, nam
   );
 };
 
-const ContactForm2 = () => {
+const ContactForm = () => {
   const [formValues, setFormValues] = useState(initialState);
   const [currentStep, setCurrentStep] = useState(1);
 
-  const handleInputChange = event => {
+  const handleInputChange = (event:React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLTextAreaElement>) => {
     const { name, value } = event.target;
     setFormValues(prev => ({ ...prev, [name]: value }));
 
@@ -53,6 +70,9 @@ const ContactForm2 = () => {
     const newStep = stepConditions.findIndex(condition => !condition) + 1;
     setCurrentStep(newStep === 0 ? 6 : newStep);
   };
+const submitForm = () => {
+ console.log("fsdfsdfsdfsdfsdf",formValues);
+}
 
   const isFormFilled = currentStep >= 6;
 
@@ -132,15 +152,15 @@ const ContactForm2 = () => {
                       value={formValues.message}
                       onChange={handleInputChange}
                       id="message"
-                      cols="30"
-                      rows="10"
+                      cols={30}
+                      rows={10}
                       placeholder="Your Message"
                       className="p-6 font-semibold bg-white text-gray-900 text-sm block w-full pl-10 pr-4 border border-white focus:outline-none"
                     ></textarea>
                   </div>
                 )}
                 <div className="w-full px-3 text-center mb-6">
-                  <button disabled={!isFormFilled} type="submit" className={`btn btn-icon ml-0 ${!isFormFilled ? 'opacity-50 cursor-not-allowed' : ''}`}>
+                  <button disabled={!isFormFilled}  type="button" onClick={submitForm} className={`btn btn-icon ml-0 ${!isFormFilled ? 'opacity-50 cursor-not-allowed' : ''}`}>
                     <span>+</span>Submit
                   </button>
                 </div>
@@ -153,4 +173,4 @@ const ContactForm2 = () => {
   );
 };
 
-export default ContactForm2;
+export default ContactForm;

@@ -2,14 +2,14 @@ import React from 'react';
 import { within, userEvent } from '@storybook/testing-library'; // Ensure you have these libraries installed
 import { expect } from '@storybook/jest';
 import type { StoryFn } from "@storybook/react";
-import ContactForm2 from 'constants/Contact-Form.tsx';
+import ContactForm from 'constants/Contact-Form.tsx';
 
 export default {
   title: 'Components/ContactForm2',
-  component: ContactForm2,
+  component: ContactForm,
 };
 
-const Template:StoryFn = () => <ContactForm2  />;
+const Template:StoryFn = () => <ContactForm  />;
 
 export const FillAndSubmit = Template.bind({});
 
